@@ -19,9 +19,9 @@
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixHPET</key>
-				<false/>
+				<true/>
 				<key>FixIPIC</key>
-				<false/>
+				<true/>
 				<key>FixRTC</key>
 				<false/>
 				<key>FixTMR</key>
@@ -238,7 +238,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 -cdfon -igfxnohdmi -enable-cfl-backlight-fix -v -igfxcflbklt=force debug=0x100 -disablegfxfirmware</string>
+		<string>dart=0 nv_disable=1 -cdfon -igfxcflbklt=1 -v debug=0x100 igfxcflbklt=1 enable-cfl-backlight-fix darkwake=8</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -364,7 +364,7 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<integer>29</integer>
+			<integer>88</integer>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
@@ -466,8 +466,12 @@
 			</dict>
 			<key>PciRoot(0)/Pci(0x1f,3)</key>
 			<dict>
-				<key>#layout-id</key>
-				<integer>3</integer>
+				<key>enable-cfl-backlight-fix</key>
+				<data>
+				AQAAAA==
+				</data>
+				<key>layout-id</key>
+				<integer>88</integer>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -539,7 +543,7 @@
 			<true/>
 		</dict>
 		<key>Theme</key>
-		<string>BGM</string>
+		<string>clover-theme-minimal</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -553,11 +557,11 @@
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
-			<true/>
+			<false/>
 			<key>Intel</key>
 			<false/>
 			<key>NVidia</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
