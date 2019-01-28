@@ -2,7 +2,11 @@
 
 仅在 Z7-KP7GZ 上测试，安装的 macOS 版本为 10.14.2；完成度大概有 98%.
 
-理论上也适用于 Z7m-KP7GZ / Z7-KP5GZ / Z7m-KP5GZ.
+理论上也适用于 Z7m-KP7GZ / Z7m-KP5GZ.
+
+# Screenshot
+
+![screenshot](https://wx2.sinaimg.cn/large/9f1137b1gy1fzgszolhkqj21hc0u0ap2.jpg)
 
 # Info
 
@@ -47,6 +51,7 @@
 # Update log
 
 19-1-23：更新最新版 Lilu.kext 和 WhateverGreen.kext；删除 VoodooHDA.kext 万能声卡驱动；添加 AppleALC.kext 仿冒驱动，注入 layout-id 为 88.
+
 19-1-28：删除无用 Kexts；使用 USBPorts.kext 替代 USBInjectAll.kext；修复睡眠。至此除了无法解决的问题之外，这台机器的黑苹果已经接近完美了。
 
 # Contribute
