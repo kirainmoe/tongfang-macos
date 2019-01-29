@@ -17,7 +17,7 @@
 | CPU | Intel Core(TM) i7-8750H | 
 | GPU | Intel UHD630 / Nvidia GTX1060
 | RAM | 8GB |
-| Wireless | Intel AC9560 |
+| Wireless | Intel AC9462 |
 | Ethernet | Realtek RTL8168H |
 | Audio | Realtek ALC269vc |
 
@@ -38,7 +38,7 @@
 # What's not working
 
 - 独立显卡（GTX1060 搞不定，而且目前也没有适用于 Mojave 的 Nvidia WebDriver）
-- 无线网卡（Intel AC9560 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
+- 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
 
 # How to fix the battery status
 
