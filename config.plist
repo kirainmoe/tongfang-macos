@@ -17,7 +17,7 @@
 				<key>AddDTGP</key>
 				<true/>
 				<key>AddPNLF</key>
-				<true/>
+				<false/>
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixHPET</key>
@@ -232,13 +232,17 @@
 			<key>NoOemTableId</key>
 			<false/>
 		</dict>
+		<key>SortedOrder</key>
+		<array>
+			<string>SSDT-PNLFCFL.aml</string>
+		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 darkwake=0 -igfxnohdmi  -cdfon igfxcflbklt=force -igfxcflbklt=force debug=0x100 -disablegfxfirmware</string>
+		<string>dart=0 nv_disable=1 darkwake=0 -igfxnohdmi  -cdfon debug=0x100 -disablegfxfirmware</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -366,7 +370,9 @@
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<integer>0</integer>
+			<integer>88</integer>
+			<key>ResetHDA</key>
+			<true/>
 		</dict>
 		<key>FakeID</key>
 		<dict>
@@ -462,13 +468,6 @@
 				<key>framebuffer-stolenmem</key>
 				<data>
 				AAAwAQ==
-				</data>
-			</dict>
-			<key>PciRoot(0)/Pci(0x1f,3)</key>
-			<dict>
-				<key>enable-cfl-backlight-fix</key>
-				<data>
-				AQAAAA==
 				</data>
 				<key>layout-id</key>
 				<integer>88</integer>
@@ -945,7 +944,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02753108GUJH4RJA</string>
+		<string>C02841306J9JH4RCB</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -975,9 +974,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro15,2</string>
 		<key>SerialNumber</key>
-		<string>C02W10DSJHCD</string>
+		<string>C02XJWYEJHCD</string>
 		<key>SmUUID</key>
-		<string>3B275405-DA27-4609-AED6-5E8E18C606E7</string>
+		<string>FDD175A5-4122-4A46-8A97-47CB5E4DC547</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>
@@ -985,6 +984,8 @@
 	<dict>
 		<key>InjectKexts</key>
 		<string>Detect</string>
+		<key>InjectSystemID</key>
+		<true/>
 	</dict>
 </dict>
 </plist>
