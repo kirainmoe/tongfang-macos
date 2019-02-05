@@ -23,7 +23,7 @@
 
 # What's working
 
-- 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS，1.3GHz-4.1GHz 16 档变频）
+- 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS，最高睿频 4.1GHz, 十几档变频。）
 - Intel UHD630
 - 亮度调节（可在设置中调节，小太阳快捷键需要外界 USB 键盘才能设置）
 - I2C HID 触控板（需要正确驱动电池后才可以设置手势）
@@ -51,7 +51,7 @@
 
 然后就没有然后了……什么？你问我为什么不用 Clover hotpatch？因为我不会还懒啊。
 
-友情提示：不要随意更改 SMBIOS 的型号哦~不然的话 USB 可能就不工作了哦~如果有更改 SMBIOS 的需要，请自行使用 Hackintool 定制新的 USBPorts.kext 驱动。
+友情提示：不要随意更改 SMBIOS 的型号哦~ 不然的话 USB 可能就不工作了哦~ 如果有更改 SMBIOS 的需要，请自行使用 Hackintool 定制新的 USBPorts.kext 驱动。
 
 # Update log
 
@@ -59,7 +59,9 @@
 
 19-1-28：删除无用 Kexts；使用 USBPorts.kext 替代 USBInjectAll.kext；修复睡眠。至此除了无法解决的问题之外，这台机器的黑苹果已经接近完美了。
 
-19-2-3: 去除 Clover 引导时添加的 `igfxcflbklt` 参数，去除勾选 Add PNLF；加入 SSDT-PNLF-CFL.aml 解决 Coffeelake UHD630 开机黑屏问题。
+~19-2-3: 去除 Clover 引导时添加的 `igfxcflbklt` 参数，去除勾选 Add PNLF；加入 SSDT-PNLF-CFL.aml 解决 Coffeelake UHD630 开机黑屏问题。~ 
+
+19-2-5 已发现上次更新的配置文件可能会导致休眠失败，已将 config.plist 回滚。添加 FakeSMC 及传感器相关驱动。
 
 # Contribute
 
