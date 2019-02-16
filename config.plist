@@ -200,6 +200,8 @@
 					</data>
 				</dict>
 			</array>
+			<key>SuspendOverride</key>
+			<true/>
 		</dict>
 		<key>DropTables</key>
 		<array>
@@ -216,6 +218,12 @@
 				<string>SSDT</string>
 				<key>TableId</key>
 				<string>xh_rvp10</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>_PNLFCFL</string>
 			</dict>
 		</array>
 		<key>FixHeaders</key>
@@ -238,7 +246,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 darkwake=0 -igfxnohdmi  -cdfon igfxcflbklt=force -igfxcflbklt=force debug=0x100 -disablegfxfirmware</string>
+		<string>dart=0 nv_disable=1 darkwake=0 -igfxnohdmi  -cdfon debug=0x100 -disablegfxfirmware</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
