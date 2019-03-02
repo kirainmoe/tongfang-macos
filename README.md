@@ -64,10 +64,7 @@ Q: 怎样驱动电池？
 A: 系统安装完成后，使用 Clover 按 F4 提取 DSDT，进入系统下载并打开 MaciASL，打开你提取的 DSDT（位于 /EFI/CLOVER/ACPI/origin 中），点击上方的 Patch，找到本仓库内的 dsdt-patch.txt，将里面的内容粘贴到 Patch 中，然后点击 Apply 应用即可，保存新的 DSDT 到 patched 目录中。记得配合 ACPIBatteryManager.kext 使用哦。什么？你问我为什么不用 Clover hotpatch？因为我不会还懒啊。  
 
 Q: 怎样完美睡眠？  
-A: 上面的补丁已包含 USB _PRW 补丁。确保正确加载 USBPorts.kext (注意不要使用 USBInjectAll.kext)，并给 DSDT 打好补丁即可正常睡眠。友情提示：不要随意更改 SMBIOS 的型号哦~ 不然的话 USB 可能就不工作了哦~ 如果有更改 SMBIOS 的需要，请自行使用 Hackintool 定制新的 USBPorts.kext 驱动。  
-
-Q: 为什么 USB 不工作？  
-A: 由于未知原因，将 USBPorts.kext 放在 /EFI/CLOVER/Kexts/Others 中，该驱动并不加载；解决方案是将 USBPorts.kext 安装到 /Library/Extensions 下，修复权限、重建缓存，重启即可。  
+A: 上面的补丁已包含 USB _PRW 补丁。确保正确加载 USBInjectAll.kext，并给 DSDT 打好补丁即可正常睡眠。    
 
 Q: 为什么触摸板不工作？  
 A: 出现此情况的原因可能是您对 DSDT 应用了 VoodooI2C 源的 DSDT 补丁，而这一步是不需要的。请从 Clover 全新提取一份 DSDT 打补丁。  
@@ -90,6 +87,8 @@ A: DSDT 补丁是在我的电脑上测试的，我可以保证在我的电脑上
 19-2-16 解决 SSDT-PNLF-CFL.aml 注入问题，解决 Coffeelake UHD630 黑屏问题。
 
 19-2-21 更新说明文件，确认 EFI 支持最新的版本 10.14.3。加入 SSDT-Disable-DGPU.aml，删除 drivers-off 文件夹。
+
+19-3-2 USBPorts.kext 可能引起兼容性问题，已使用 USBInjectAll.kext + SSDT-UIAC.aml 驱动 USB；更新部分 Kexts.
 
 # Detail screenshot
 

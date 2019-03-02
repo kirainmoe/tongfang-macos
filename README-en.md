@@ -57,7 +57,6 @@ Q: How to patch battery and USB _PRW?
 
 After you install the system, press F4 to extract DSDT from your BIOS when you are in Clover Bootloader. Boot into the macOS and open MaciASL, find the DSDT you extract in /EFI/CLOVER/ACPI/origin, click 'Patch', copy the content of [dsdt-patch.txt](dsdt-patch.txt) and paste it into 'Patch' window, then click 'Apply'. You should see 'XX Patches, XX Applied, 0 Rejected' while patching. Compile and save your patched DSDT to /EFI/CLOVER/ACPI/patched. Then check if you have ACPIBatteryManager.kext installed, reboot your system and you should see your battery status and sleep works.
 
-Warning: Do NOT change SMBIOS model randomly, or USB may not working anymore. If you do have the requirement of modifying SMBIOS model, you should use Hackinool to make a custom USBPorts.kext driver.
 
 # Detail screenshot
 

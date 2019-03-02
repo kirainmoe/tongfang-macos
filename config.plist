@@ -15,9 +15,9 @@
 			<key>Fixes</key>
 			<dict>
 				<key>AddDTGP</key>
-				<true/>
+				<false/>
 				<key>AddPNLF</key>
-				<true/>
+				<false/>
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixHPET</key>
@@ -49,7 +49,7 @@
 					<key>Comment</key>
 					<string>change _OSI to XOSI</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					X09TSQ==
@@ -231,6 +231,12 @@
 				<key>TableId</key>
 				<string>NDGP</string>
 			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>_UIAC</string>
+			</dict>
 		</array>
 		<key>FixHeaders</key>
 		<true/>
@@ -246,13 +252,19 @@
 			<key>NoOemTableId</key>
 			<false/>
 		</dict>
+		<key>SortedOrder</key>
+		<array>
+			<string>SSDT-PNLFCFL.aml</string>
+			<string>SSDT-DDGPU.aml</string>
+			<string>SSDT-UIAC.aml</string>
+		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 darkwake=0 -igfxnohdmi  -cdfon debug=0x100 -disablegfxfirmware</string>
+		<string>dart=0 nv_disable=1 darkwake=0 -igfxnohdmi -cdfon debug=0x100 -disablegfxfirmware</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -379,8 +391,10 @@
 		</array>
 		<key>Audio</key>
 		<dict>
-			<key>Inject</key>
-			<integer>0</integer>
+			<key>AFGLowPowerState</key>
+			<false/>
+			<key>ResetHDA</key>
+			<false/>
 		</dict>
 		<key>FakeID</key>
 		<dict>
