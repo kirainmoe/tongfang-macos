@@ -10,6 +10,9 @@
 
 # Tutorial
 
+**建议在本替换 EFI 前，提前备份好您能够正常启动的 EFI，以便在遇到问题时回滚。此外，建议您将 /EFI/CLOVER/Kexts/Others 下的 Kext 安装到 /Library/Extensions 中**。  
+**在替换 EFI 前请先阅读[注意事项](#FAQ)，了解电池、睡眠和 USB 的解决方案**。  
+
 如果你不知道如何在一台 Windows 设备上全新安装 macOS Mojave，请参考[该教程](http://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)。  
 如果你已经在 Z7(m)-KP7(5)GZ 上安装好 macOS Mojave 但仍有部分设备无法驱动，请参考[神舟战神 Z7-KP7GZ 黑苹果 macOS Mojave 安装指北](https://kirainmoe.com/blog/post/guide-on-hasee-z7-kp7gz-hackintosh-macos-mojave/).
 
@@ -53,16 +56,26 @@
 
 - 独立显卡（GTX1060 搞不定，而且目前也没有适用于 Mojave 的 Nvidia WebDriver）
 - 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
+- HDMI（该模具 HDMI 直接由独显输出）
 
-# Tips
+# FAQ
 
-关于电池：系统安装完成后，使用 Clover 按 F4 提取 DSDT，进入系统下载并打开 MaciASL，打开你提取的 DSDT（位于 /EFI/CLOVER/ACPI/origin 中），点击上方的 Patch，找到本仓库内的 dsdt-patch.txt，将里面的内容粘贴到 Patch 中，然后点击 Apply 应用即可，保存新的 DSDT 到 patched 目录中。记得配合 ACPIBatteryManager.kext 使用哦。
+Q: 怎样驱动电池？  
+A: 系统安装完成后，使用 Clover 按 F4 提取 DSDT，进入系统下载并打开 MaciASL，打开你提取的 DSDT（位于 /EFI/CLOVER/ACPI/origin 中），点击上方的 Patch，找到本仓库内的 dsdt-patch.txt，将里面的内容粘贴到 Patch 中，然后点击 Apply 应用即可，保存新的 DSDT 到 patched 目录中。记得配合 ACPIBatteryManager.kext 使用哦。什么？你问我为什么不用 Clover hotpatch？因为我不会还懒啊。  
 
-关于睡眠：上面的补丁已包含 USB _PRW 补丁。确保正确加载 USBPorts.kext (注意不要使用 USBInjectAll.kext)，并给 DSDT 打好补丁即可正常睡眠。
+Q: 怎样完美睡眠？  
+A: 上面的补丁已包含 USB _PRW 补丁。确保正确加载 USBPorts.kext (注意不要使用 USBInjectAll.kext)，并给 DSDT 打好补丁即可正常睡眠。友情提示：不要随意更改 SMBIOS 的型号哦~ 不然的话 USB 可能就不工作了哦~ 如果有更改 SMBIOS 的需要，请自行使用 Hackintool 定制新的 USBPorts.kext 驱动。  
 
-然后就没有然后了……什么？你问我为什么不用 Clover hotpatch？因为我不会还懒啊。
+Q: 为什么 USB 不工作？  
+A: 由于未知原因，将 USBPorts.kext 放在 /EFI/CLOVER/Kexts/Others 中，该驱动并不加载；解决方案是将 USBPorts.kext 安装到 /Library/Extensions 下，修复权限、重建缓存，重启即可。  
 
-友情提示：不要随意更改 SMBIOS 的型号哦~ 不然的话 USB 可能就不工作了哦~ 如果有更改 SMBIOS 的需要，请自行使用 Hackintool 定制新的 USBPorts.kext 驱动。
+Q: 为什么触摸板不工作？  
+A: 出现此情况的原因可能是您对 DSDT 应用了 VoodooI2C 源的 DSDT 补丁，而这一步是不需要的。请从 Clover 全新提取一份 DSDT 打补丁。  
+
+Q: 为什么应用 DSDT 补丁后，DSDT 编译出错？  
+A: DSDT 补丁是在我的电脑上测试的，我可以保证在我的电脑上是正常的，在大部分的电脑上也是，该现象发生的几率应该是很小的，但仍然无法保证因您更换过硬件、BIOS 设置不同等原因导致 DSDT 的变更。这种情况下需要您对 DSDT 有一些了解并手动排错。通常情况下，一般是部分补丁没有成功应用，或者 DSDT 语法错误（通常是多或少了一个花括号），可以尝试重新应用补丁或自己补上括号。    
+
+
 
 # Update log
 
