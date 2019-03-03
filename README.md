@@ -1,6 +1,6 @@
 # 神舟战神 Z7(m)-KP7(5)GZ macOS
 
-[English](README-en.md) | [提问](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues) | 已知或解决的问题(https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)
+[English](README-en.md) | [提问](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues) | [已知或解决的问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)
 
 用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件。
 
