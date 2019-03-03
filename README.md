@@ -1,12 +1,23 @@
 # 神舟战神 Z7(m)-KP7(5)GZ macOS
 
-[English](README-en.md)
+[English](README-en.md) | [提问](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues) | 已知或解决的问题(https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)
 
 用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件。
 
 仅在 Z7-KP7GZ 上测试，安装的 macOS 版本为 10.14.2 (已从 10.14.2 下升级到 10.14.3，确认该 EFI 同样支持 10.14.3)；完成度大概有 98%.
 
 理论上也适用于 Z7m-KP7GZ / Z7m-KP5GZ.
+
+# Table of Content
+
+- [开始之前的指南](#tutorial)  
+- [截图](#screenshot)
+- [配置信息](#info)
+- [硬件驱动情况](#whats-working)
+- [注意事项](#faq)
+- [更新日志](#update-log)
+- [详细截图](#detail-screenshot)
+- [提问和贡献](#contribute)
 
 # Tutorial
 
@@ -132,8 +143,12 @@ USB
 
 # Contribute
 
-欢迎大家一起完善该机型的 EFI. 
+关于提问：如果您在安装的过程中遇到问题，请在 GitHub 上提 issue，或将你的问题描述清楚发送邮件到 kirainmoe@gmail.com，或者到远景论坛给我留言。
 
-安装时遇到问题请提 issues（推荐），或者在远景论坛给我留言。
+由于我万年不上一次远景，所以你在远景的留言我不一定能及时看到, 因此推荐采用提 issue 或邮件的方式向我提问。
 
-如果你认为这份配置文件有可以改进的地方，请注册一个 Github 账号，fork 本仓库自行修改后提交 Pull Request.
+另外，为了节省您折腾的时间和我回复的精力，提问时请将问题的现象描述清楚，这样方便我定位问题发生的原因。注意，非 Z7-KP7GZ/Z7m-KP7GZ/Z7m-KP5GZ 的机型，使用本 EFI 出现的问题，由于我并没有对应的机型，因此大概率不会回答。
+
+如果方便的话，推荐您按照 tonymacx86 论坛的 Problem Reporting File 格式上传问题描述文件、IORegistryExplorer 导出信息、Clover EFI 文件夹等，请参照：https://www.tonymacx86.com/threads/tool-generate-proper-problem-reporting-files.235953/
+
+贡献和完善：欢迎大家一起完善该机型的 EFI. 如果你认为这份配置文件有可以改进的地方，请注册一个 Github 账号，fork 本仓库自行修改后提交 Pull Request.
