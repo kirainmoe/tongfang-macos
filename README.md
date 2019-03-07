@@ -8,6 +8,8 @@
 
 理论上也适用于 Z7m-KP7GZ / Z7m-KP5GZ.
 
+**前排寻求会制作电池 hotpatch 补丁的 julao 为此机型定制 hotpatch，共同完善本机的 EFI，我提供原机 DSDT 和打过补丁的 DSDT。如果您有意向请联系我: kirainmoe@gmail.com**
+
 # Table of Content
 
 - [开始之前的指南](#tutorial)  
@@ -69,7 +71,9 @@
 - 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
 - HDMI（该模具 HDMI 直接由独显输出, 独显无法驱动，所以 HDMI 也无法使用）
 
-注：根据 #5 的反馈，独显可能在 10.13.6 特供版下，安装 Nvidia WebDriver 后通过外接 HDMI 显示器驱动，但是存在一些问题。如果你确实有使用 DGPU 或外接 HDMI 显示器的需要，请安装 10.13.6 版本。除非 Nvidia 官方更新 10.14 的 WebDriver，否则独显、HDMI 不可用的问题将无法解决，请避免再提类似的 issues.
+注：<s>根据 #5 的反馈，独显可能在 10.13.6 特供版下，安装 Nvidia WebDriver 后通过外接 HDMI 显示器驱动，但是存在一些问题。如果你确实有使用 DGPU 或外接 HDMI 显示器的需要，请安装 10.13.6 版本。</s>  该问题反馈的是蓝天模具的船而不是 KP7GZ，10.13.6 下驱动的可行性有待尝试。
+
+除非 Nvidia 官方更新 10.14 的 WebDriver，否则独显、HDMI 不可用的问题将无法解决，请避免再提类似的 issues.
 
 # FAQ
 
