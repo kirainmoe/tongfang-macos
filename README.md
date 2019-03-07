@@ -4,11 +4,9 @@
 
 用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件。
 
-仅在 Z7-KP7GZ 上测试，安装的 macOS 版本为 10.14.2 (已从 10.14.2 下升级到 10.14.3，确认该 EFI 同样支持 10.14.3)；完成度大概有 98%.
+仅在 Z7-KP7GZ 上测试，安装的 macOS 版本为 10.14.2~10.14.3；**现全部使用 Clover Hotpatch 驱动**，完成度大概有 98%.
 
 理论上也适用于 Z7m-KP7GZ / Z7m-KP5GZ.
-
-**前排寻求会制作电池 hotpatch 补丁的 julao 为此机型定制 hotpatch，共同完善本机的 EFI，我提供原机 DSDT 和打过补丁的 DSDT。如果您有意向请联系我: kirainmoe@gmail.com**
 
 # Table of Content
 
@@ -24,7 +22,7 @@
 # Tutorial
 
 **建议在本替换 EFI 前，提前备份好您能够正常启动的 EFI，以便在遇到问题时回滚。此外，建议您将 /EFI/CLOVER/Kexts/Others 下的 Kext 安装到 /Library/Extensions 中**。  
-**在替换 EFI 前请先阅读[注意事项](#FAQ)，了解电池、睡眠和 USB 的解决方案**。  
+**在替换 EFI 前请先阅读[注意事项](#FAQ)，以了解一些常见问题的解决方案；如果 Hotpatch 版本（当前分支版本）在您的设备上不工作，请[点击这里](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/releases/tag/DSDT)下载 DSDT 补丁版的 EFI**。  
 
 如果你不知道如何在一台 Windows 设备上全新安装 macOS Mojave，请参考[该教程](http://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)。  
 如果你已经在 Z7(m)-KP7(5)GZ 上安装好 macOS Mojave 但仍有部分设备无法驱动，请参考[神舟战神 Z7-KP7GZ 黑苹果 macOS Mojave 安装指北](https://kirainmoe.com/blog/post/guide-on-hasee-z7-kp7gz-hackintosh-macos-mojave/).
@@ -56,9 +54,9 @@
 - I2C HID 触控板（需要正确驱动电池后才可以设置手势）
 - 有线网卡
 - 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 88，外放、耳机、麦克风全部正常）
-- 电池状态（非 Clover HotPatch，因为这台机器的电池 DSDT 与机械革命 X6Ti 的几乎完全一致，稍微修改 DSDT 补丁即可，请自行应用）
+- 电池状态（现已使用 Clover Hotpatch 驱动）
 - USB （已破除端口限制）
-- 睡眠（需要正确驱动 USB 并打 DSDT 补丁）
+- 睡眠（使用 Clover Hotpatch 修复）
 - etc.
 
 # What's partial working
@@ -71,17 +69,22 @@
 - 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
 - HDMI（该模具 HDMI 直接由独显输出, 独显无法驱动，所以 HDMI 也无法使用）
 
-注：根据远景论坛爬帖的情况和该模具的推测，Nvidia 显卡可以在 10.13.6 下被驱动。如果你有使用 DGPU/Cuda 或外接 HDMI 显示器的需要，请安装 macOS High Sierra 10.13.6，部分 EFI 配置可以参照本仓库。如果你有其它外接显示器的需要，请使用 MiniDP 接口。
+注：根据远景论坛爬帖的情况和该模具的推测，Nvidia 显卡可以在 10.13.6 下被驱动。如果你有使用 DGPU/Cuda 或外接 HDMI 显示器的需要，请安装 macOS High Sierra 10.13.6，部分 EFI 配置可以参照本仓库。如果你想用 10.14 外接显示器，请使用 MiniDP 接口。
 
 除非 Nvidia 官方更新 10.14 的 WebDriver，否则独显、HDMI 不可用的问题将无法解决，请避免再提类似的 issues.
 
 # FAQ
 
+Q: Hotpatch 在我的设备上无法工作（电池未驱动/睡眠秒醒），可以回滚到 DSDT 版本吗？  
+A: 你可以[在这里](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/releases/tag/DSDT)下载到原先的 DSDT 版本。  
+
 Q: 怎样驱动电池？  
-A: 系统安装完成后，使用 Clover 按 F4 提取 DSDT，进入系统下载并打开 MaciASL，打开你提取的 DSDT（位于 /EFI/CLOVER/ACPI/origin 中），点击上方的 Patch，找到本仓库内的 dsdt-patch.txt，将里面的内容粘贴到 Patch 中，然后点击 Apply 应用即可，保存新的 DSDT 到 patched 目录中。记得配合 ACPIBatteryManager.kext 使用哦。什么？你问我为什么不用 Clover hotpatch？因为我不会还懒啊。  
+A: 对于使用较新版本 commmit 的 EFI 的用户，电池已使用 Clover Hotpatch + SSDT 驱动。理论上，不需要任何操作，替换完 EFI 之后电池就能正常显示。  
+对于使用 DSDT 补丁版本的 EFI 用户，系统安装完成后，使用 Clover 按 F4 提取 DSDT，进入系统下载并打开 MaciASL，打开你提取的 DSDT（位于 /EFI/CLOVER/ACPI/origin 中），点击上方的 Patch，找到本仓库内的 dsdt-patch.txt，将里面的内容粘贴到 Patch 中，然后点击 Apply 应用即可，保存新的 DSDT 到 patched 目录中。记得配合 ACPIBatteryManager.kext 使用哦。  
 
 Q: 怎样完美睡眠？  
-A: 上面的补丁已包含 USB _PRW 补丁。确保正确加载 USBInjectAll.kext，并给 DSDT 打好补丁即可正常睡眠。如果遇到睡死、无法进入睡眠等问题，请确保你使用的是本仓库提供的 config.plist.    
+A: 对于使用 Hotpatch 版 EFI 的用户，不需要执行任何操作。  
+对于使用 DSDT 补丁版本 EFI 的用户，上面的补丁已包含 USB _PRW 补丁。确保正确加载 USBInjectAll.kext，并给 DSDT 打好补丁即可正常睡眠。如果遇到睡死、无法进入睡眠等问题，请确保你使用的是本仓库提供的 config.plist.    
 
 Q: 为什么触摸板不工作？  
 A: 出现此情况的原因可能是您对 DSDT 应用了 VoodooI2C 源的 DSDT 补丁，而这一步是不需要的。请从 Clover 全新提取一份 DSDT 打补丁。如果仍然无法驱动触摸板，请检查 VoodooI2C.kext, VoodooI2CService.kext, VoodooGPIO.kext, VoodooI2CHID.kext 是否正确加载。此外，触摸板完美驱动，要求电池也完美驱动。
@@ -90,7 +93,7 @@ Q: 为什么声卡不工作？
 A: 请确认 AppleALC.kext 驱动已正确加载。如果没有正确加载，请将其安装在 /Library/Extensions 下后重建缓存并重启。  
 
 Q: 为什么应用 DSDT 补丁后，DSDT 编译出错？  
-A: DSDT 补丁是在我的电脑上测试的，我可以保证在我的电脑上是正常的，在大部分的电脑上也是，该现象发生的几率应该是很小的，但仍然无法保证因您更换过硬件、BIOS 设置不同等原因导致 DSDT 的变更。这种情况下需要您对 DSDT 有一些了解并手动排错。通常情况下，一般是部分补丁没有成功应用，或者 DSDT 语法错误（通常是多或少了一个花括号），可以尝试重新应用补丁或自己补上括号。实在无法自己解决的，请提 issues 并附上你的 DSDT 文件。    
+A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补丁是在我的电脑上测试的，我可以保证在我的电脑上是正常的，在大部分的电脑上也是，该现象发生的几率应该是很小的，但仍然无法保证因您更换过硬件、BIOS 设置不同等原因导致 DSDT 的变更。这种情况下需要您对 DSDT 有一些了解并手动排错。通常情况下，一般是部分补丁没有成功应用，或者 DSDT 语法错误（通常是多或少了一个花括号），可以尝试重新应用补丁或自己补上括号。实在无法自己解决的，请提 issues 并附上你的 DSDT 文件。    
 
 
 
@@ -109,6 +112,8 @@ A: DSDT 补丁是在我的电脑上测试的，我可以保证在我的电脑上
 19-2-21 更新说明文件，确认 EFI 支持最新的版本 10.14.3。加入 SSDT-Disable-DGPU.aml，删除 drivers-off 文件夹。
 
 19-3-2 USBPorts.kext 可能引起兼容性问题，已使用 USBInjectAll.kext + SSDT-UIAC.aml 驱动 USB；更新部分 Kexts.
+
+19-3-7 使用 hotpatch + SSDT 驱动电池和修复睡眠。
 
 # Detail screenshot
 
