@@ -78,13 +78,22 @@
 Q: Hotpatch 在我的设备上无法工作（电池未驱动/睡眠秒醒），可以回滚到 DSDT 版本吗？  
 A: 你可以[在这里](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/releases/tag/DSDT)下载到原先的 DSDT 版本。  
 
+Q: post-install 优化脚本是什么？为什么需要执行它？  
+A: 指本仓库下的 optimize.sh, 用途是设置休眠参数、模拟 NVRAM、开启 HiDPI 等。如果您想手动执行这些操作，则不需要执行该脚本。否则我们建议其他普通用户在替换完 EFI 后执行一次该脚本。执行方式如下：
+```shell
+chmod +x ./optimize.sh
+sudo ./optimize.sh
+```
+
 Q: 怎样驱动电池？  
 A: 对于使用较新版本 commmit 的 EFI 的用户，电池已使用 Clover Hotpatch + SSDT 驱动。理论上，不需要任何操作，替换完 EFI 之后电池就能正常显示。  
 对于使用 DSDT 补丁版本的 EFI 用户，系统安装完成后，使用 Clover 按 F4 提取 DSDT，进入系统下载并打开 MaciASL，打开你提取的 DSDT（位于 /EFI/CLOVER/ACPI/origin 中），点击上方的 Patch，找到本仓库内的 dsdt-patch.txt，将里面的内容粘贴到 Patch 中，然后点击 Apply 应用即可，保存新的 DSDT 到 patched 目录中。记得配合 ACPIBatteryManager.kext 使用哦。  
 
 Q: 怎样完美睡眠？  
-A: 对于使用 Hotpatch 版 EFI 的用户，不需要执行任何操作。  
-对于使用 DSDT 补丁版本 EFI 的用户，上面的补丁已包含 USB _PRW 补丁。确保正确加载 USBInjectAll.kext，并给 DSDT 打好补丁即可正常睡眠。如果遇到睡死、无法进入睡眠等问题，请确保你使用的是本仓库提供的 config.plist.    
+A: 对于使用 Hotpatch 版 EFI 的用户，只需要运行本仓库下的 post-install 优化脚本调整睡眠参数即可。对于使用 DSDT 补丁版本 EFI 的用户，上面的补丁已包含 USB _PRW 补丁。确保正确加载 USBInjectAll.kext，并给 DSDT 打好补丁，执行上面的优化脚本后即可正常睡眠。如果遇到睡死、无法进入睡眠等问题，请确保你使用的是本仓库提供的 config.plist.    
+
+Q: 怎样保存亮度？  
+A: 模拟 NVRAM，运行上面的优化脚本即可。  
 
 Q: 为什么触摸板不工作？  
 A: 出现此情况的原因可能是您对 DSDT 应用了 VoodooI2C 源的 DSDT 补丁，而这一步是不需要的。请从 Clover 全新提取一份 DSDT 打补丁。如果仍然无法驱动触摸板，请检查 VoodooI2C.kext, VoodooI2CService.kext, VoodooGPIO.kext, VoodooI2CHID.kext 是否正确加载。此外，触摸板完美驱动，要求电池也完美驱动。
@@ -113,7 +122,9 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-3-2 USBPorts.kext 可能引起兼容性问题，已使用 USBInjectAll.kext + SSDT-UIAC.aml 驱动 USB；更新部分 Kexts.
 
-19-3-7 使用 hotpatch + SSDT 驱动电池和修复睡眠。
+19-3-7 使用 hotpatch + SSDT 驱动电池和修复睡眠。  
+
+19-3-8 新增 optimize.sh post-install 优化脚本。
 
 # Detail screenshot
 
