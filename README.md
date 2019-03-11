@@ -61,7 +61,7 @@
 
 # What's partial working
 
-- 蓝牙（半完美，不是太稳定，可共享网络，能不能连上设备全看玄学）
+- 蓝牙（需要热启动 macOS （即先进入 Winodws 后重启进入 macoS，或者在 macOS 下使用虚拟机模拟热启动过程）才可用，且不支持 AirDrop.
 
 # What's not working
 
@@ -69,7 +69,7 @@
 - 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
 - HDMI（该模具 HDMI 直接由独显输出, 独显无法驱动，所以 HDMI 也无法使用）
 
-注：根据远景论坛爬帖的情况和该模具的推测，Nvidia 显卡可以在 10.13.6 下被驱动。如果你有使用 DGPU/Cuda 或外接 HDMI 显示器的需要，请安装 macOS High Sierra 10.13.6，部分 EFI 配置可以参照本仓库。如果你想用 10.14 外接显示器，请使用 MiniDP 接口。
+注：根据远景论坛爬帖的情况和该模具的推测，Nvidia 显卡可以在 10.13.6 下被驱动。如果你有使用 DGPU/Cuda 或外接 HDMI 显示器的需要，请安装 macOS High Sierra 10.13.6，部分 EFI 配置可以参照本仓库。
 
 除非 Nvidia 官方更新 10.14 的 WebDriver，否则独显、HDMI 不可用的问题将无法解决，请避免再提类似的 issues.
 
@@ -125,6 +125,8 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 19-3-7 使用 hotpatch + SSDT 驱动电池和修复睡眠。  
 
 19-3-8 新增 optimize.sh post-install 优化脚本。
+
+19-3-11 添加遗失的 IntelMausiEthernet.kext, 修复有线网卡。
 
 # Detail screenshot
 
