@@ -12,6 +12,7 @@
 
 - [开始之前的指南](#tutorial)  
 - [截图](#screenshot)
+- [成功机型](#successfully-installed)
 - [配置信息](#info)
 - [硬件驱动情况](#whats-working)
 - [注意事项](#faq)
@@ -32,6 +33,20 @@
 ![screenshot](https://wx1.sinaimg.cn/large/9f1137b1gy1g0fim4a7ezj21770oan6a.jpg)
 
 （已隐去序列号）
+
+# Successfully Installed
+
+以下列举出本 EFI 适用的机型，和成功使用本 EFI 安装的其它机型。
+
+| Model | Description |
+|-------|-------------|
+| Z7-KP7GZ | 8750H + GTX1060, 本仓库维护者的设备 |
+| Z7m-KP7GZ | 8750H + GTX1050Ti, 反正独显都不能驱动 |
+| Z7m-KP5GZ | 8300H + GTX1050Ti |
+| Z7-KP7Z | 与 GZ 区别在于使用纯 SSD |
+| Z7m-KP7Z | 同上，该机型有成功案例，部分可能遇到的问题和成功案例请见 [issues #6](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues/6) |
+| Z7m-KP5Z | 同上 |
+| Z7-KP7EC | 根据远景论坛回复反馈，EC与GZ都为同方模具，文件可能通用，具体完整度未知 |
 
 # Info
 
@@ -61,7 +76,7 @@
 
 # What's partial working
 
-- 蓝牙（需要热启动 macOS （即先进入 Winodws 后重启进入 macoS，或者在 macOS 下使用虚拟机模拟热启动过程）才可用，且不支持 AirDrop.
+- 蓝牙（需要热启动 macOS （即先进入 Winodws 后重启进入 macOS，或者在 macOS 下使用虚拟机模拟热启动过程）才可用，且不支持 AirDrop.
 
 # What's not working
 
