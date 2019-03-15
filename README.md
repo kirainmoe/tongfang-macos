@@ -2,11 +2,9 @@
 
 [English](README-en.md) | [提问](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues/new) | [已知或解决的问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)
 
-用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件。
+用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 神舟战神Z7*-KP\*GZ / 神舟战神Z7\*-KP*Z；理论适用于炫龙耀7000 / 机械革命Z2 Air.
 
 仅在 Z7-KP7GZ 上测试，安装的 macOS 版本为 10.14.2~10.14.3；**现全部使用 Clover Hotpatch 驱动**，完成度大概有 98%.
-
-理论上也适用于 Z7m-KP7GZ / Z7m-KP5GZ.
 
 # Table of Content
 
@@ -84,7 +82,9 @@
 - 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
 - HDMI（该模具 HDMI 直接由独显输出, 独显无法驱动，所以 HDMI 也无法使用）
 
-注：根据远景论坛爬帖的情况和该模具的推测，Nvidia 显卡可以在 10.13.6 下被驱动。如果你有使用 DGPU/Cuda 或外接 HDMI 显示器的需要，请安装 macOS High Sierra 10.13.6，部分 EFI 配置可以参照本仓库。
+注：<s>根据远景论坛爬帖的情况和该模具的推测，Nvidia 显卡可以在 10.13.6 下被驱动。如果你有使用 DGPU/Cuda 或外接 HDMI 显示器的需要，请安装 macOS High Sierra 10.13.6，部分 EFI 配置可以参照本仓库。</s> 
+
+经过测试，10.13.6 下可安装 Nvidia WebDriver 并识别 GTX1060，但 VRAM 只有 256MB，推测是没有被驱动；外接显示器未测试。
 
 除非 Nvidia 官方更新 10.14 的 WebDriver，否则独显、HDMI 不可用的问题将无法解决，请避免再提类似的 issues.
 
