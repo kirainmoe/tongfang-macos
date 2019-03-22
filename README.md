@@ -2,9 +2,7 @@
 
 [English](README-en.md) | [提问](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues/new) | [已知或解决的问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)
 
-用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 神舟战神Z7*-KP\*GZ / 神舟战神Z7\*-KP*Z；理论适用于炫龙耀7000 / 机械革命Z2 Air.
-
-仅在 Z7-KP7GZ 上测试，安装的 macOS 版本为 10.14.2~10.14.3；**现全部使用 Clover Hotpatch 驱动**，完成度大概有 98%.
+用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 神舟战神Z7*-KP\*GZ / 神舟战神Z7\*-KP*Z；理论适用于炫龙耀7000 / 机械革命Z2 Air. 安装的 macOS 版本为 10.14.2~10.14.3；**现全部使用 Clover Hotpatch 驱动**，完成度大概有 98%.
 
 # Table of Content
 
@@ -20,11 +18,21 @@
 
 # Tutorial
 
-**建议在本替换 EFI 前，提前备份好您能够正常启动的 EFI，以便在遇到问题时回滚。此外，建议您将 /EFI/CLOVER/Kexts/Others 下的 Kext 安装到 /Library/Extensions 中**。  
-**在替换 EFI 前请先阅读[注意事项](#FAQ)，以了解一些常见问题的解决方案；如果 Hotpatch 版本（当前分支版本）在您的设备上不工作，请[点击这里](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/releases/tag/DSDT)下载 DSDT 补丁版的 EFI**。  
+## 请先认真阅读以下内容！非常重要！因您未阅读以下内容而操作导致的一系列诸如：系统无法启动、安装后发现某功能无法使用等问题，请自行解决！
 
-如果你不知道如何在一台 Windows 设备上全新安装 macOS Mojave，请参考[该教程](http://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)。  
-如果你已经在 Z7(m)-KP7(5)GZ 上安装好 macOS Mojave 但仍有部分设备无法驱动，请参考[神舟战神 Z7-KP7GZ 黑苹果 macOS Mojave 安装指北](https://kirainmoe.com/blog/post/guide-on-hasee-z7-kp7gz-hackintosh-macos-mojave/).
+1. **请先用镜像自带的 Clover EFI 配置安装完系统，确保进入桌面后再替换本文件夹。否则您可能会连 macOS 安装界面都看不到。**
+
+2. **建议在本替换 EFI 前，提前备份好您能够正常启动的 EFI，以便在遇到问题时回滚。**
+
+3. **此外，当您发现替换 EFI 后某设备无法被驱动时，建议您将 /EFI/CLOVER/Kexts/Others 下的 Kext 安装到 /Library/Extensions 中**。 
+
+4. **在替换 EFI 前请先阅读[注意事项](#FAQ)，以了解一些常见问题的解决方案；如果 Hotpatch 版本（当前分支版本）在您的设备上不工作，请[点击这里](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/releases/tag/DSDT)下载 DSDT 补丁版的 EFI**。  
+
+5. 如果你不知道如何在一台 Windows 设备上全新安装 macOS Mojave，请参考[该教程](http://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)  
+
+6. 如果你已经在 Z7(m)-KP7(5)GZ 上安装好 macOS Mojave 但仍有部分设备无法驱动，请参考[神舟战神 Z7-KP7GZ 黑苹果 macOS Mojave 安装指北](https://kirainmoe.com/blog/post/guide-on-hasee-z7-kp7gz-hackintosh-macos-mojave/).
+
+7. 其他情况下，如果您遇到了 README 中没有提到的问题（请确认你什么多余的事情都没做，例如安装其他驱动，自行打 DSDT 补丁等），请不要犹豫直接提 issue. 有关于提问的细则，请看 [提问和贡献](#contribute) 部分。
 
 # Screenshot
 
@@ -80,13 +88,11 @@
 
 - 独立显卡（GTX1060， 目前没有适用于 Mojave 的 Nvidia WebDriver）
 - 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
-- HDMI（该模具 HDMI 直接由独显输出, 独显无法驱动，所以 HDMI 也无法使用）
+- **HDMI（该模具 HDMI 直接由独显输出, 独显无法驱动，所以 HDMI 也无法使用）**
 
-注：<s>根据远景论坛爬帖的情况和该模具的推测，Nvidia 显卡可以在 10.13.6 下被驱动。如果你有使用 DGPU/Cuda 或外接 HDMI 显示器的需要，请安装 macOS High Sierra 10.13.6，部分 EFI 配置可以参照本仓库。</s> 
+注：经过测试，10.13.6 下可安装 Nvidia WebDriver 并识别 GTX1060，但 VRAM 只有 256MB，推测是没有被驱动；外接显示器未测试。
 
-经过测试，10.13.6 下可安装 Nvidia WebDriver 并识别 GTX1060，但 VRAM 只有 256MB，推测是没有被驱动；外接显示器未测试。
-
-除非 Nvidia 官方更新 10.14 的 WebDriver，否则独显、HDMI 不可用的问题将无法解决，请避免再提类似的 issues.
+**除非 Nvidia 官方更新 10.14 的 WebDriver，否则独显、HDMI 不可用的问题将无法解决，请避免再提类似的 issues.**
 
 # FAQ
 
@@ -115,6 +121,9 @@ A: 出现此情况的原因可能是您对 DSDT 应用了 VoodooI2C 源的 DSDT 
 
 Q: 为什么声卡不工作？  
 A: 请确认 AppleALC.kext 驱动已正确加载。如果没有正确加载，请将其安装在 /Library/Extensions 下后重建缓存并重启。  
+
+Q：为什么独显不工作？HDMI 外接不工作？DP 接口不工作？怎么外接显示器？  
+A：如果你想问这个问题，我的建议是再看一遍 README.
 
 Q: 为什么应用 DSDT 补丁后，DSDT 编译出错？  
 A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补丁是在我的电脑上测试的，我可以保证在我的电脑上是正常的，在大部分的电脑上也是，该现象发生的几率应该是很小的，但仍然无法保证因您更换过硬件、BIOS 设置不同等原因导致 DSDT 的变更。这种情况下需要您对 DSDT 有一些了解并手动排错。通常情况下，一般是部分补丁没有成功应用，或者 DSDT 语法错误（通常是多或少了一个花括号），可以尝试重新应用补丁或自己补上括号。实在无法自己解决的，请提 issues 并附上你的 DSDT 文件。    
@@ -184,7 +193,7 @@ USB
 
 由于我万年不上一次远景，所以你在远景的留言我不一定能及时看到, 因此推荐采用提 issue 或邮件的方式向我提问。
 
-另外，为了节省您折腾的时间和我回复的精力，提问时请将问题的现象描述清楚，这样方便我定位问题发生的原因。注意，非 Z7-KP7GZ/Z7m-KP7GZ/Z7m-KP5GZ 的机型，使用本 EFI 出现的问题，由于我并没有对应的机型，因此大概率不会回答。
+另外，为了节省您折腾的时间和我回复的精力，提问时请将问题的现象描述清楚，这样方便我定位问题发生的原因。注意，非 Z7(m)-KP7/5(G)Z 的机型，使用本 EFI 出现的问题，由于我并没有对应的机型，因此大概率不会回答。
 
 如果方便的话，推荐您按照 tonymacx86 论坛的 Problem Reporting File 格式上传问题描述文件、IORegistryExplorer 导出信息、Clover EFI 文件夹等，请参照：https://www.tonymacx86.com/threads/tool-generate-proper-problem-reporting-files.235953/
 
