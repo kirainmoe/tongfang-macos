@@ -2,7 +2,7 @@
 
 [English](README-en.md) | [提问](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues/new) | [已知或解决的问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)
 
-用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 神舟战神Z7*-KP\*GZ / 神舟战神Z7\*-KP*Z；理论适用于炫龙耀7000 / 机械革命Z2 Air. 安装的 macOS 版本为 10.14.2~10.14.3；**现全部使用 Clover Hotpatch 驱动**，完成度大概有 98%.
+用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 神舟战神Z7*-KP\*GZ / 神舟战神Z7\*-KP*Z；理论适用于炫龙耀7000 / 机械革命Z2 Air. macOS 版本 **10.14.2/10.14.3/10.14.4** 全部亲自测试安装成功；**全部使用 Clover Hotpatch 驱动**，完成度大概有 98%.
 
 # Table of Content
 
@@ -82,7 +82,7 @@
 
 # What's partial working
 
-- 蓝牙（需要热启动 macOS （即先进入 Winodws 后重启进入 macOS，或者在 macOS 下使用虚拟机模拟热启动过程）才可用，且不支持 AirDrop.
+- 蓝牙 (需要热启动 macOS （即先进入 Winodws 后重启进入 macOS，或者在 macOS 下使用虚拟机模拟热启动过程）才可用，且不支持 AirDrop.)
 
 # What's not working
 
@@ -151,6 +151,8 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 19-3-8 新增 optimize.sh post-install 优化脚本。
 
 19-3-11 添加遗失的 IntelMausiEthernet.kext, 修复有线网卡。
+
+19-3-26 更新 Clover 版本，更新 Lilu/WhateverGreen 到最新版本，确认最新 EFI 支持 10.14.4.
 
 # Detail screenshot
 
