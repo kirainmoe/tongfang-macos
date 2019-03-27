@@ -1,4 +1,4 @@
-<center>
+<p align="center">
 
 ![logo](https://ws2.sinaimg.cn/large/9f1137b1gy1g1hg3epia2j20n505jt9q.jpg)
 
@@ -6,12 +6,14 @@
 
 [English](README-en.md) | [使用须知](#tutorial) | [提问](#question) | [已知问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)
 
-</center>
+![built by](https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg)
+
+</p>
 
 
 ![screenshot](https://wx3.sinaimg.cn/large/9f1137b1gy1g1h312iytij21hb0tzdx0.jpg)
 
-用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7*-KP\*GZ / 神舟战神Z7\*-KP*Z**；理论适用于炫龙耀7000 / 机械革命Z2 Air. 
+用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7\*-KP\*GZ / 神舟战神Z7\*-KP\*Z**；理论适用于炫龙耀7000 / 机械革命Z2 Air. 
 
 该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4** 全部亲自测试安装成功；使用 Clover Hotpatch 驱动。
 
