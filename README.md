@@ -1,58 +1,66 @@
-# 神舟战神 Z7(m)-KP7(5)GZ macOS
+<center>
 
-[English](README-en.md) | [提问](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues/new) | [已知或解决的问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)
+![logo](https://ws2.sinaimg.cn/large/9f1137b1gy1g1hg3epia2j20n505jt9q.jpg)
 
-用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 神舟战神Z7*-KP\*GZ / 神舟战神Z7\*-KP*Z；理论适用于炫龙耀7000 / 机械革命Z2 Air. macOS 版本 **10.14.2/10.14.3/10.14.4** 全部亲自测试安装成功；**全部使用 Clover Hotpatch 驱动**，完成度大概有 98%.
+<h1>神舟战神 Z7(m)-KP7(5)GZ macOS</h1>
+
+[English](README-en.md) | [使用须知](#tutorial) | [提问](#question) | [已知问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)
+
+</center>
+
+
+![screenshot](https://wx3.sinaimg.cn/large/9f1137b1gy1g1h312iytij21hb0tzdx0.jpg)
+
+用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7*-KP\*GZ / 神舟战神Z7\*-KP*Z**；理论适用于炫龙耀7000 / 机械革命Z2 Air. 
+
+该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4** 全部亲自测试安装成功；使用 Clover Hotpatch 驱动。
+
+在开始之前，请务必确认您已经阅读了[使用须知](#tutorial)和[常见问题](#FAQ)。
 
 # Table of Content
 
-- [开始之前的指南](#tutorial)  
-- [截图](#screenshot)
-- [成功机型](#successfully-installed)
+- [使用须知 & 指南](#tutorial)  
+- [适用机型](#compatibility)
 - [配置信息](#info)
 - [硬件驱动情况](#whats-working)
 - [注意事项](#faq)
 - [更新日志](#update-log)
 - [详细截图](#detail-screenshot)
-- [提问和贡献](#contribute)
+- [贡献和捐赠](#contribute-and-donate)
 
 # Tutorial
 
-## 请先认真阅读以下内容！非常重要！因您未阅读以下内容而操作导致的一系列诸如：系统无法启动、安装后发现某功能无法使用等问题，请自行解决！
+1. 使用本仓库配置文件的方法：挂载 EFI 分区，备份并删除原先 /EFI/CLOVER 文件夹中的所有文件，将本仓库下的所有文件全部放到 /EFI/CLOVER 当中。
 
-1. **请先用镜像自带的 Clover EFI 配置安装完系统，确保进入桌面后再替换本文件夹。否则您可能会连 macOS 安装界面都看不到。**
+2. **请先用镜像自带的 Clover EFI 配置安装完系统，确保能够进入桌面后再替换本文件夹**。否则您可能会连 macOS 安装界面都看不到。
 
-2. **建议在本替换 EFI 前，提前备份好您能够正常启动的 EFI，以便在遇到问题时回滚。**
+3. 建议在本替换 EFI 前，**提前备份好您能够正常启动的 EFI，以便在遇到问题时回滚**。
 
-3. **此外，当您发现替换 EFI 后某设备无法被驱动时，建议您将 /EFI/CLOVER/Kexts/Others 下的 Kext 安装到 /Library/Extensions 中**。 
+4. 此外，当您发现替换 EFI 后某设备无法被驱动时，建议您将 /EFI/CLOVER/Kexts/Others 下的 Kext 安装到 /Library/Extensions 中。 
 
-4. **在替换 EFI 前请先阅读[注意事项](#FAQ)，以了解一些常见问题的解决方案；如果 Hotpatch 版本（当前分支版本）在您的设备上不工作，请[点击这里](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/releases/tag/DSDT)下载 DSDT 补丁版的 EFI**。  
+5. **在替换 EFI 前请先阅读[注意事项和常见问题](#FAQ)，以了解一些常见问题的解决方案**。
 
-5. 如果你不知道如何在一台 Windows 设备上全新安装 macOS Mojave，请参考[该教程](http://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)  
+6. 如果你不知道如何在一台 Windows 设备上全新安装 macOS Mojave，请参考[该教程](http://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)。  
 
-6. 如果你已经在 Z7(m)-KP7(5)GZ 上安装好 macOS Mojave 但仍有部分设备无法驱动，请参考[神舟战神 Z7-KP7GZ 黑苹果 macOS Mojave 安装指北](https://kirainmoe.com/blog/post/guide-on-hasee-z7-kp7gz-hackintosh-macos-mojave/).
+7. 如果你已经在 Z7(m)-KP7(5)GZ 上安装好 macOS Mojave 但仍有部分设备无法驱动，请参考[神舟战神 Z7-KP7GZ 黑苹果 macOS Mojave 安装指北](https://kirainmoe.com/blog/post/guide-on-hasee-z7-kp7gz-hackintosh-macos-mojave/).
 
-7. 其他情况下，如果您遇到了 README 中没有提到的问题（请确认你什么多余的事情都没做，例如安装其他驱动，自行打 DSDT 补丁等），请不要犹豫直接提 issue. 有关于提问的细则，请看 [提问和贡献](#contribute) 部分。
+8. 其他情况下，如果您遇到了 README 中没有提到的问题（请确认你什么多余的事情都没做，例如安装其他驱动，自行打 DSDT 补丁等），请不要犹豫直接提 issue. 有关于提问的细则，请看 [提问和贡献](#contribute) 部分。
 
-# Screenshot
+9. 当您使用本仓库的配置文件时，默认您已经阅读并知悉了上文及链接中的内容。**因您未详细阅读上文内容、不当操作导致的包括但不限于：安装失败、部分设备不工作、系统无法启动甚至是设备损坏等问题，一切后果请您自行承担。**
 
-![screenshot](https://wx3.sinaimg.cn/large/9f1137b1gy1g1h312iytij21hb0tzdx0.jpg)
+# Compatibility
 
-（已隐去序列号）
+ - 本仓库 EFI 配置文件适用于采用了 **同方模具** 并以 **Z/GZ** 结尾的神舟战神系列笔记本，包括：**Z7-KP7GZ, Z7m-KP7GZ, Z7m-KP5GZ, Z7-KP7Z, Z7m-KP7Z, Z7m-KP5Z.** 该系列笔记本的外观如下图所示，在替换 EFI 前请确认您的机型与下图一致：
 
-# Successfully Installed
+<center>
 
-以下列举出本 EFI 适用的机型，和成功使用本 EFI 安装的其它机型。
+![kp7gz](https://ws3.sinaimg.cn/large/9f1137b1gy1g1hglqrsw5j20h30bbtg1.jpg)
 
-| Model | Description |
-|-------|-------------|
-| Z7-KP7GZ | 8750H + GTX1060, 本仓库维护者的设备 |
-| Z7m-KP7GZ | 8750H + GTX1050Ti, 反正独显都不能驱动 |
-| Z7m-KP5GZ | 8300H + GTX1050Ti |
-| Z7-KP7Z | 与 GZ 区别在于使用纯 SSD |
-| Z7m-KP7Z | 同上，该机型有成功案例，部分可能遇到的问题和成功案例请见 [issues #6](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues/6) |
-| Z7m-KP5Z | 同上 |
-| Z7-KP7EC | 根据远景论坛回复反馈，EC与GZ都为同方模具，文件可能通用，具体完整度未知 |
+</center>
+
+ - 因为 Shinelon Yao-7000 (炫龙耀 7000) 和 Mechrevo Z2 Air (机械革命 Z2 Air) 与神舟战神 KP7GZ 属于同款模具且配置相近，因此理论可以在上述设备中使用本 EFI 配置文件。
+
+ - **神舟 Z7-KP7GC, Z7-KP7EC, Z7-KP7SC, Z7-KP7S1 等不属于该系列**，即便其中的某些机型也采用同方其它模具，但并不保证能完全兼容，这些机型也不是本仓库配置文件的目标机型，因此**针对此类设备的兼容性问题，请您自行解决**。
 
 # Info
 
@@ -82,7 +90,7 @@
 
 # What's partial working
 
-- 蓝牙 (需要热启动 macOS （即先进入 Winodws 后重启进入 macOS，或者在 macOS 下使用虚拟机模拟热启动过程）才可用，且不支持 AirDrop.)
+- 蓝牙 (需要热启动 macOS 才可用，即先进入 Winodws 后重启进入 macOS、或者在 macOS 下使用虚拟机模拟热启动过程，不支持 AirDrop.)
 
 # What's not working
 
@@ -96,8 +104,8 @@
 
 # FAQ
 
-Q: Hotpatch 在我的设备上无法工作（电池未驱动/睡眠秒醒），可以回滚到 DSDT 版本吗？  
-A: 你可以[在这里](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/releases/tag/DSDT)下载到原先的 DSDT 版本。  
+Q: 这东西怎么用？  
+A: 备份并删除 /EFI/CLOVER 下的所有文件，然后用本仓库中的文件替换，重启电脑执行本仓库下的 optimize.sh 即可。啥？还不会？洗洗睡吧。  
 
 Q: post-install 优化脚本是什么？为什么需要执行它？  
 A: 指本仓库下的 optimize.sh, 用途是设置休眠参数、模拟 NVRAM、开启 HiDPI 等。如果您想手动执行这些操作，则不需要执行该脚本。否则我们建议其他普通用户在替换完 EFI 后执行一次该脚本。执行方式如下：
@@ -114,10 +122,10 @@ Q: 怎样完美睡眠？
 A: 对于使用 Hotpatch 版 EFI 的用户，只需要运行本仓库下的 post-install 优化脚本调整睡眠参数即可。对于使用 DSDT 补丁版本 EFI 的用户，上面的补丁已包含 USB _PRW 补丁。确保正确加载 USBInjectAll.kext，并给 DSDT 打好补丁，执行上面的优化脚本后即可正常睡眠。如果遇到睡死、无法进入睡眠等问题，请确保你使用的是本仓库提供的 config.plist.    
 
 Q: 怎样保存亮度？  
-A: 模拟 NVRAM，运行上面的优化脚本即可。  
+A: 模拟 NVRAM，运行上面的优化脚本即可。如果上述操作后仍然无法保存亮度，请将 EFI 文件更新到本仓库的最新提交，最新更新加入了 SSDT-ALS0.aml 来解决亮度的保存问题。  
 
 Q: 为什么触摸板不工作？  
-A: 出现此情况的原因可能是您对 DSDT 应用了 VoodooI2C 源的 DSDT 补丁，而这一步是不需要的。请从 Clover 全新提取一份 DSDT 打补丁。如果仍然无法驱动触摸板，请检查 VoodooI2C.kext, VoodooI2CService.kext, VoodooGPIO.kext, VoodooI2CHID.kext 是否正确加载。此外，触摸板完美驱动，要求电池也完美驱动。
+A: 出现此情况的原因可能是您对 DSDT 应用了 VoodooI2C 源的 DSDT 补丁，而这一步是不需要的。请从 Clover 全新提取一份 DSDT 打补丁。如果仍然无法驱动触摸板，请检查 VoodooI2C.kext, VoodooI2CService.kext, VoodooGPIO.kext, VoodooI2CHID.kext 是否正确加载。此外，触摸板完美驱动，要求电池也完美驱动。当然，如果你的机型根本不是以 Z 结尾的战神系列，那么触摸板驱动是不适合你们的。
 
 Q: 为什么声卡不工作？  
 A: 请确认 AppleALC.kext 驱动已正确加载。如果没有正确加载，请将其安装在 /Library/Extensions 下后重建缓存并重启。  
@@ -125,10 +133,28 @@ A: 请确认 AppleALC.kext 驱动已正确加载。如果没有正确加载，�
 Q：为什么独显不工作？HDMI 外接不工作？DP 接口不工作？怎么外接显示器？  
 A：如果你想问这个问题，我的建议是再看一遍 README.
 
+Q: 为什么更新到新版本（10.14.4）开机读条卡死了，显示 `busy timeout(60s): AppleACPICPU`？  
+A: 请更新最新版本的 Clover, Lilu.kext 和 WhateverGreen.kext. 您可以手动更新，或者直接下载一份最新的 EFI 替换掉您现在正在用的 EFI. 
+
 Q: 为什么应用 DSDT 补丁后，DSDT 编译出错？  
 A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补丁是在我的电脑上测试的，我可以保证在我的电脑上是正常的，在大部分的电脑上也是，该现象发生的几率应该是很小的，但仍然无法保证因您更换过硬件、BIOS 设置不同等原因导致 DSDT 的变更。这种情况下需要您对 DSDT 有一些了解并手动排错。通常情况下，一般是部分补丁没有成功应用，或者 DSDT 语法错误（通常是多或少了一个花括号），可以尝试重新应用补丁或自己补上括号。实在无法自己解决的，请提 issues 并附上你的 DSDT 文件。    
 
+# Question
 
+关于提问：如果您在安装的过程中遇到问题，请在 GitHub 上提 issue，或将你的问题描述清楚发送邮件到 kirainmoe@gmail.com，或者到远景论坛给我留言。
+
+由于我万年不上一次远景，所以你在远景的留言我不一定能及时看到, 因此推荐采用提 issue 或邮件的方式向我提问。可以点这里创建一个新的 issue.
+
+有些问题可能已经被解决或已知，您可以在提问前看看[这里有没有您的问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)。
+
+另外，为了节省您折腾的时间和我回复的精力，提问时请将问题的现象描述清楚，这样方便我定位问题发生的原因。注意，非 Z7(m)-KP7/5(G)Z 的机型，使用本 EFI 出现的问题，由于我并没有对应的机型，因此大概率不会回答。
+
+如果方便的话，推荐您按照 tonymacx86 论坛的 Problem Reporting File 格式上传问题描述文件、IORegistryExplorer 导出信息、Clover EFI 文件夹等，请参照：https://www.tonymacx86.com/threads/tool-generate-proper-problem-reporting-files.235953/
+
+
+另外也欢迎该机型的朋友**加入 Z7(m)-KP7/5(G)Z 机型的交流 QQ 群：https://jq.qq.com/?_wv=1027&k=5G82zlQ ，群号 833022235**。
+
+![QQ-group](https://ws3.sinaimg.cn/large/9f1137b1gy1g1hh6nhk8gj20f00kkt9u.jpg)
 
 # Update log
 
@@ -191,14 +217,19 @@ USB
 终端截图  
 ![screenfetch](https://wx1.sinaimg.cn/large/9f1137b1gy1g0fitwobg3j20d5087my0.jpg)
 
-# Contribute
+# Contribute and Donate
 
-关于提问：如果您在安装的过程中遇到问题，请在 GitHub 上提 issue，或将你的问题描述清楚发送邮件到 kirainmoe@gmail.com，或者到远景论坛给我留言。
+### 关于贡献和完善
 
-由于我万年不上一次远景，所以你在远景的留言我不一定能及时看到, 因此推荐采用提 issue 或邮件的方式向我提问。
+欢迎大家一起完善该机型的 EFI. 如果你认为这份配置文件有可以改进的地方，请注册一个 Github 账号，fork 本仓库自行修改后提交 Pull Request.
 
-另外，为了节省您折腾的时间和我回复的精力，提问时请将问题的现象描述清楚，这样方便我定位问题发生的原因。注意，非 Z7(m)-KP7/5(G)Z 的机型，使用本 EFI 出现的问题，由于我并没有对应的机型，因此大概率不会回答。
+### 感想和捐赠
 
-如果方便的话，推荐您按照 tonymacx86 论坛的 Problem Reporting File 格式上传问题描述文件、IORegistryExplorer 导出信息、Clover EFI 文件夹等，请参照：https://www.tonymacx86.com/threads/tool-generate-proper-problem-reporting-files.235953/
+在我一月份刚买这台机器的时候，网上关于这台机型的黑苹果资源可以说是根本没有。这份配置文件是我自己一个人从零开始一点点地完善，耗费了将近一个月的时间，最终让它臻于完美。期间包括声卡、睡眠、显卡等的驱动都踩了很多坑，也爬了很多论坛的帖子，常常为了解决一个问题而发帖求助、爬好几天的帖子。每次新系统的更新，我都要重装、测试这份配置文件的可用性并更新。部分细节虽然不影响正常使用也在努力地做得更好。
 
-贡献和完善：欢迎大家一起完善该机型的 EFI. 如果你认为这份配置文件有可以改进的地方，请注册一个 Github 账号，fork 本仓库自行修改后提交 Pull Request.
+如你所见，安装黑苹果是一个过程很艰辛，却又令人很有成就感的过程——并且后期的维护更是一项充满未知却又耗费精力的工程。说实话，我曾经犹豫过，是否要将这份 EFI 共享并长期维护，我当初的想法是，干脆丢一个基本能用的配置（当然，当时的配置相对于今天而言是半成品中的半成品），或者是根本不要放出来了。但是，更多人可能更倾向于没有踩坑、一路顺利的安装过程。我在安装的过程中也借鉴了很多人的问题解决方案，本着“前人栽树后人乘凉”的信条。为了避免后人踩坑，我最终还是选择了长期维护这份配置，并将其放到了 Github——众人拾柴火焰高，我的本意是让更多人使用这份配置，并且大家的反馈也能让这份配置更加完善。
+
+说了这么多，只是我的一些个人感想，没有什么别的意思。当然，如果您认为我的付出为您节省了时间和精力，让您成功地体验了 macOS，也可以考虑捐赠。并没有什么金额的限制，捐赠也并不是强制性的。您仍然可以使用本仓库、提问并贡献，这都没有关系。
+
+<img src="https://ws4.sinaimg.cn/large/9f1137b1ly1g1hhtssjf6j20ri16sq7u.jpg" width="265px">
+<img src="https://wx2.sinaimg.cn/large/9f1137b1ly1g1hhtfgywuj20vn17ejvj.jpg" width="300px">
