@@ -193,6 +193,12 @@
 				<key>TableId</key>
 				<string>XPRW</string>
 			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>_ALS0</string>
+			</dict>
 		</array>
 		<key>FixHeaders</key>
 		<true/>
@@ -215,6 +221,7 @@
 			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-BATT.aml</string>
 			<string>SSDT-GPRW.aml</string>
+			<string>SSDT-ALS0.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>

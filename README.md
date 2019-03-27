@@ -36,7 +36,7 @@
 
 # Screenshot
 
-![screenshot](https://wx1.sinaimg.cn/large/9f1137b1gy1g0fim4a7ezj21770oan6a.jpg)
+![screenshot](https://wx3.sinaimg.cn/large/9f1137b1gy1g1h312iytij21hb0tzdx0.jpg)
 
 （已隐去序列号）
 
@@ -152,7 +152,9 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-3-11 添加遗失的 IntelMausiEthernet.kext, 修复有线网卡。
 
-19-3-26 更新 Clover 版本，更新 Lilu/WhateverGreen 到最新版本，确认最新 EFI 支持 10.14.4.
+19-3-26 更新 Clover 版本，更新 Lilu/WhateverGreen 到最新版本，确认最新 EFI 支持 10.14.4. 
+
+19-3-27 添加 SSDT-ALS0.aml 完善亮度保存。
 
 # Detail screenshot
 
