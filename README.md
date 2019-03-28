@@ -7,13 +7,12 @@
 <h1 align="center">神舟战神 Z7(m)-KP7(5)GZ macOS</h1>
 
 <p align="center">
-
-[English](README-en.md) | [使用须知](#tutorial) | [提问](#question) | [已知问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed) | [企鹅交流互助群](https://jq.qq.com/?_wv=1027&k=5G82zlQ)
-
-![built by](https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg)
-
+<a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="https://jq.qq.com/?_wv=1027&k=5G82zlQ">企鹅互助交流群</a>
 </p>
 
+<p align="center">
+<img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
+</p>
 
 ![screenshot](https://wx3.sinaimg.cn/large/9f1137b1gy1g1h312iytij21hb0tzdx0.jpg)
 
@@ -234,5 +233,5 @@ USB
 
 把捐赠通道放在最后，我也没指望能遇到什么有缘人就是了。当然，如果您认为我的付出为您节省了时间和精力，让您成功地体验了 macOS，也可以考虑捐赠。并没有什么金额的限制，捐赠也并不是强制性的。您仍然可以使用本仓库的配置文件、提问和贡献，这都没有关系。
 
-<img src="https://ws4.sinaimg.cn/large/9f1137b1ly1g1hhtssjf6j20ri16sq7u.jpg">
-<img src="https://wx2.sinaimg.cn/large/9f1137b1ly1g1hhtfgywuj20vn17ejvj.jpg">
+<img src="https://ws4.sinaimg.cn/large/9f1137b1ly1g1hhtssjf6j20ri16sq7u.jpg" width="300px">
+<img src="https://wx2.sinaimg.cn/large/9f1137b1ly1g1hhtfgywuj20vn17ejvj.jpg" width="300px">
