@@ -1,10 +1,14 @@
 <p align="center">
 
-![logo](https://ws2.sinaimg.cn/large/9f1137b1gy1g1hg3epia2j20n505jt9q.jpg)
+<img src="https://ws2.sinaimg.cn/large/9f1137b1gy1g1hg3epia2j20n505jt9q.jpg" width="300px" alt="logo">
 
-<h1>神舟战神 Z7(m)-KP7(5)GZ macOS</h1>
+<p>
 
-[English](README-en.md) | [使用须知](#tutorial) | [提问](#question) | [已知问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)
+<h1 align="center">神舟战神 Z7(m)-KP7(5)GZ macOS</h1>
+
+<p align="center">
+
+[English](README-en.md) | [使用须知](#tutorial) | [提问](#question) | [已知问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed) | [企鹅交流互助群](https://jq.qq.com/?_wv=1027&k=5G82zlQ)
 
 ![built by](https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg)
 
@@ -26,6 +30,7 @@
 - [配置信息](#info)
 - [硬件驱动情况](#whats-working)
 - [注意事项](#faq)
+- [提问相关事项](#question)
 - [更新日志](#update-log)
 - [详细截图](#detail-screenshot)
 - [贡献和捐赠](#contribute-and-donate)
@@ -46,7 +51,7 @@
 
 7. 如果你已经在 Z7(m)-KP7(5)GZ 上安装好 macOS Mojave 但仍有部分设备无法驱动，请参考[神舟战神 Z7-KP7GZ 黑苹果 macOS Mojave 安装指北](https://kirainmoe.com/blog/post/guide-on-hasee-z7-kp7gz-hackintosh-macos-mojave/).
 
-8. 其他情况下，如果您遇到了 README 中没有提到的问题（请确认你什么多余的事情都没做，例如安装其他驱动，自行打 DSDT 补丁等），请不要犹豫直接提 issue. 有关于提问的细则，请看 [提问和贡献](#contribute) 部分。
+8. 其他情况下，如果您遇到了 README 中没有提到的问题（请确认你什么多余的事情都没做，例如安装其他驱动，自行打 DSDT 补丁等），请不要犹豫直接提 issue. 有关于提问的细则，请看 [提问相关事项](#question) 部分。
 
 9. 当您使用本仓库的配置文件时，默认您已经阅读并知悉了上文及链接中的内容。**因您未详细阅读上文内容、不当操作导致的包括但不限于：安装失败、部分设备不工作、系统无法启动甚至是设备损坏等问题，一切后果请您自行承担。**
 
@@ -145,7 +150,7 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 关于提问：如果您在安装的过程中遇到问题，请在 GitHub 上提 issue，或将你的问题描述清楚发送邮件到 kirainmoe@gmail.com，或者到远景论坛给我留言。
 
-由于我万年不上一次远景，所以你在远景的留言我不一定能及时看到, 因此推荐采用提 issue 或邮件的方式向我提问。可以点这里创建一个新的 issue.
+由于我万年不上一次远景，所以你在远景的留言我不一定能及时看到, 因此推荐采用提 issue 或邮件的方式向我提问。可以[点这里创建一个新的 issue](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues/new).
 
 有些问题可能已经被解决或已知，您可以在提问前看看[这里有没有您的问题](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed)。
 
@@ -225,13 +230,9 @@ USB
 
 欢迎大家一起完善该机型的 EFI. 如果你认为这份配置文件有可以改进的地方，请注册一个 Github 账号，fork 本仓库自行修改后提交 Pull Request.
 
-### 感想和捐赠
+### 感捐赠
 
-在我一月份刚买这台机器的时候，网上关于这台机型的黑苹果资源可以说是根本没有。这份配置文件是我自己一个人从零开始一点点地完善，耗费了将近一个月的时间，最终让它臻于完美。期间包括声卡、睡眠、显卡等的驱动都踩了很多坑，也爬了很多论坛的帖子，常常为了解决一个问题而发帖求助、爬好几天的帖子。每次新系统的更新，我都要重装、测试这份配置文件的可用性并更新。部分细节虽然不影响正常使用也在努力地做得更好。
+把捐赠通道放在最后，我也没指望能遇到什么有缘人就是了。当然，如果您认为我的付出为您节省了时间和精力，让您成功地体验了 macOS，也可以考虑捐赠。并没有什么金额的限制，捐赠也并不是强制性的。您仍然可以使用本仓库的配置文件、提问和贡献，这都没有关系。
 
-如你所见，安装黑苹果是一个过程很艰辛，却又令人很有成就感的过程——并且后期的维护更是一项充满未知却又耗费精力的工程。说实话，我曾经犹豫过，是否要将这份 EFI 共享并长期维护，我当初的想法是，干脆丢一个基本能用的配置（当然，当时的配置相对于今天而言是半成品中的半成品），或者是根本不要放出来了。但是，更多人可能更倾向于没有踩坑、一路顺利的安装过程。我在安装的过程中也借鉴了很多人的问题解决方案，本着“前人栽树后人乘凉”的信条。为了避免后人踩坑，我最终还是选择了长期维护这份配置，并将其放到了 Github——众人拾柴火焰高，我的本意是让更多人使用这份配置，并且大家的反馈也能让这份配置更加完善。
-
-说了这么多，只是我的一些个人感想，没有什么别的意思。当然，如果您认为我的付出为您节省了时间和精力，让您成功地体验了 macOS，也可以考虑捐赠。并没有什么金额的限制，捐赠也并不是强制性的。您仍然可以使用本仓库、提问并贡献，这都没有关系。
-
-<img src="https://ws4.sinaimg.cn/large/9f1137b1ly1g1hhtssjf6j20ri16sq7u.jpg" width="265px">
-<img src="https://wx2.sinaimg.cn/large/9f1137b1ly1g1hhtfgywuj20vn17ejvj.jpg" width="300px">
+<img src="https://ws4.sinaimg.cn/large/9f1137b1ly1g1hhtssjf6j20ri16sq7u.jpg">
+<img src="https://wx2.sinaimg.cn/large/9f1137b1ly1g1hhtfgywuj20vn17ejvj.jpg">
