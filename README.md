@@ -11,10 +11,10 @@
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
+<img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.14.4-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-![screenshot](https://wx3.sinaimg.cn/large/9f1137b1gy1g1h312iytij21hb0tzdx0.jpg)
+![screenshot](https://ws4.sinaimg.cn/large/9f1137b1gy1g1m6rjq0r5j21hc0u07k7.jpg)
 
 用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7\*-KP\*GZ / 神舟战神Z7\*-KP\*Z**；理论适用于炫龙耀7000 / 机械革命Z2 Air. 
 
@@ -42,7 +42,7 @@
 
 3. 建议在本替换 EFI 前，**提前备份好您能够正常启动的 EFI，以便在遇到问题时回滚**。
 
-4. 此外，当您发现替换 EFI 后某设备无法被驱动时，建议您将 /EFI/CLOVER/Kexts/Others 下的 Kext 安装到 /Library/Extensions 中。 
+4. 此外，当您发现替换 EFI 后某设备无法被驱动时，建议您将 /EFI/CLOVER/Kexts/Other 下的 Kext 安装到 /Library/Extensions 中。 
 
 5. **在替换 EFI 前请先阅读[注意事项和常见问题](#FAQ)，以了解一些常见问题的解决方案**。
 
@@ -102,7 +102,7 @@
 
 - 独立显卡（GTX1060， 目前没有适用于 Mojave 的 Nvidia WebDriver）
 - 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
-- **HDMI（该模具 HDMI 直接由独显输出, 独显无法驱动，所以 HDMI 也无法使用）**
+- **HDMI/MiniDP（该模具 HDMI/MiniDP 直接由独显输出, 独显无法驱动，所以 HDMI/MiniDP 也无法使用）**
 
 注：经过测试，10.13.6 下可安装 Nvidia WebDriver 并识别 GTX1060，但 VRAM 只有 256MB，推测是没有被驱动；外接显示器未测试。
 
@@ -192,6 +192,8 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 19-3-27 添加 SSDT-ALS0.aml 完善亮度保存。
 
 19-3-28 完善 CPU 变频，最低频率现在可达 800MHz，使用电池、系统负载低时将会更省电。
+
+19-3-31 添加 10.14 的核显 Framebuffer 补丁。如果在部分设备上出现因此引起的不能正常休眠，请去除该补丁。
 
 # Detail screenshot
 
