@@ -185,7 +185,7 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-3-8 新增 optimize.sh post-install 优化脚本。
 
-19-3-11 添加遗失的 IntelMausiEthernet.kext, 修复有线网卡。
+19-3-11 <s>添加遗失的 IntelMausiEthernet.kext</s>, 修复有线网卡。
 
 19-3-26 更新 Clover 版本，更新 Lilu/WhateverGreen 到最新版本，确认最新 EFI 支持 10.14.4. 
 
@@ -194,6 +194,8 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 19-3-28 完善 CPU 变频，最低频率现在可达 800MHz，使用电池、系统负载低时将会更省电。
 
 19-3-31 添加 10.14 的核显 Framebuffer 补丁。如果在部分设备上出现因此引起的不能正常休眠，请去除该补丁。
+
+19-4-3 简化 Kexts 驱动文件夹，减少开机卡条概率；使用 VirtualSMC 替换 FakeSMC.
 
 # Detail screenshot
 

@@ -49,9 +49,9 @@ Before you start, be sure that you have already read [Toturial & Tips](#toturial
 
 7. If you have already installed macOS Mojave on your Z7(m)-KP7(5)GZ, but you have failed to make some devices work, please refer to my post [Installing macOS Mojave on Hasee God-of-War KP7GZ](https://kirainmoe.com/blog/post/guide-on-hasee-z7-kp7gz-hackintosh-macos-mojave/). (But it is in Chinese :D), or you may use my whole EFI folder directly.
 
-8. In some cases that you meet with other problems are not referred by README, please open an issue. About the issue format please see [Question part](#question).
+8. In some cases that you meet with other problems are not referred in README, please open an issue. About the issue format please see [Question part](#question).
 
-9. When you are use the config from this repo, you have read and known the tip content above. Some negative effects(incluing: failed installation, devices not working, failed system boot, even the damage of device) result from your mistake shoule be afforded by yourself.
+9. When you are use the config from this repo, you have read and known the tip content above. Some negative effects(incluing: failed installation, devices not working, failed system boot, even the damage of device) result from your mistake should be afforded by yourself.
 
 
 # Info
@@ -75,7 +75,7 @@ Before you start, be sure that you have already read [Toturial & Tips](#toturial
 - Sound (ALC269vc, using AppleALC, injecting layout-id 88. Speakers, Headphone Jack and Microphone all work)
 - Battery status (Not a Clover Hotpatch, please apply the dsdt patch in this repository using MaciASL by yourself)
 - USB (no port count limit)
-- Sleep (USB _PRW patch is required)
+- Sleep
 - etc.
 
 # What's partial working
@@ -86,7 +86,7 @@ Before you start, be sure that you have already read [Toturial & Tips](#toturial
 
 - DGPU (GTX1060 is not available because Optium is not supported by macOS, and we currently have no Nvidia WebDriver that supports Mojave)
 - WLAN (Intel Wireless AC9462 is not available)
-- HDMI/MiniDP (HDMI/MiniDP is linked to DGPU, so that it won't work)
+- HDMI/MiniDP (HDMI/MiniDP is linked to DGPU, so it won't work)
 
 
 # FAQ
