@@ -195,7 +195,7 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-3-31 添加 10.14 的核显 Framebuffer 补丁。如果在部分设备上出现因此引起的不能正常休眠，请去除该补丁。
 
-19-4-3 简化 Kexts 驱动文件夹，减少开机卡条概率；使用 VirtualSMC 替换 FakeSMC.
+19-4-3 简化 Kexts 驱动文件夹，减少开机卡条概率；使用 VirtualSMC 替换 FakeSMC；更新声卡驱动尝试解决卡条问题（待观察）。
 
 # Detail screenshot
 

@@ -365,8 +365,10 @@
 		<dict>
 			<key>AFGLowPowerState</key>
 			<false/>
+			<key>Inject</key>
+			<integer>29</integer>
 			<key>ResetHDA</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>FakeID</key>
 		<dict>
@@ -471,7 +473,7 @@
 				AQAAAA==
 				</data>
 				<key>layout-id</key>
-				<integer>88</integer>
+				<integer>29</integer>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -527,7 +529,7 @@
 				<data>
 				AAAAgA==
 				</data>
-			</dict>			
+			</dict>
 		</dict>
 		<key>USB</key>
 		<dict>
