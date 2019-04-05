@@ -11,12 +11,12 @@
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.14.4-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
+<img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.14.4-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
 ![screenshot](https://ws4.sinaimg.cn/large/9f1137b1gy1g1m6rjq0r5j21hc0u07k7.jpg)
 
-用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7\*-KP\*GZ / 神舟战神Z7\*-KP\*Z**；理论适用于炫龙耀7000 / 机械革命Z2 Air. 
+用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7\*-KP\*GZ / 神舟战神Z7\*-KP\*Z**（**请注意，并不是适用于所有以 Z7 开头的战神笔记本！**）；理论适用于炫龙耀7000 / 机械革命Z2 Air. 
 
 该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4** 全部亲自测试安装成功；使用 Clover Hotpatch 驱动。
 
@@ -32,7 +32,7 @@
 - [提问相关事项](#question)
 - [更新日志](#update-log)
 - [详细截图](#detail-screenshot)
-- [贡献和捐赠](#contribute-and-donate)
+- [贡献](#contribute)
 
 # Tutorial
 
@@ -232,15 +232,8 @@ USB
 终端截图  
 ![screenfetch](https://wx1.sinaimg.cn/large/9f1137b1gy1g0fitwobg3j20d5087my0.jpg)
 
-# Contribute and Donate
+# Contribute
 
 ### 关于贡献和完善
 
 欢迎大家一起完善该机型的 EFI. 如果你认为这份配置文件有可以改进的地方，请注册一个 Github 账号，fork 本仓库自行修改后提交 Pull Request.
-
-### 捐赠
-
-把捐赠通道放在最后，我也没指望能遇到什么有缘人就是了。当然，如果您认为我的付出为您节省了时间和精力，让您成功地体验了 macOS，也可以考虑捐赠。并没有什么金额的限制，捐赠也并不是强制性的。您仍然可以使用本仓库的配置文件、提问和贡献，这都没有关系。
-
-<img src="https://ws4.sinaimg.cn/large/9f1137b1ly1g1hhtssjf6j20ri16sq7u.jpg" width="300px">
-<img src="https://wx2.sinaimg.cn/large/9f1137b1ly1g1hhtfgywuj20vn17ejvj.jpg" width="300px">
