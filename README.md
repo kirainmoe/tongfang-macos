@@ -195,9 +195,11 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-3-31 添加 10.14 的核显 Framebuffer 补丁。如果在部分设备上出现因此引起的不能正常休眠，请去除该补丁。
 
-19-4-3 简化 Kexts 驱动文件夹，减少开机卡条概率；使用 VirtualSMC 替换 FakeSMC；更新声卡驱动尝试解决卡条问题(已修复)。
+19-4-3 简化 Kexts 驱动文件夹，减少开机卡条概率；<s>使用 VirtualSMC 替换 FakeSMC</s>；更新声卡驱动尝试解决卡条问题(已修复)。
 
 19-4-7 修复 SSDT-UIAC.aml 不加载导致的 USB3.1 降速问题。
+
+19-4-13 加入 SSDT-TPAD.aml, SSDT-XOSI.aml；更新 VoodooI2C 驱动；回滚 FakeSMC 防止在某些设备上出现兼容性问题。
 
 # Detail screenshot
 

@@ -5,26 +5,7 @@
 	<key>files</key>
 	<dict/>
 	<key>files2</key>
-	<dict>
-		<key>PlugIns/VoodooGPIO.kext</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			YVwZhdiVa5C/J3fnCmbLZAMZi6Y=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"b49218ff32baf6894f4b766a5da34967e00628b7" or cdhash H"615c1985d8956b90bf2777e70a66cb6403198ba6"</string>
-		</dict>
-		<key>PlugIns/VoodooI2CServices.kext</key>
-		<dict>
-			<key>cdhash</key>
-			<data>
-			I92GzNUg84ru8jY/5sJ6PYZk87I=
-			</data>
-			<key>requirement</key>
-			<string>cdhash H"a543b1439e02bfffae8107c83087e9d371733b98" or cdhash H"23dd86ccd520f38aeef2363fe6c27a3d8664f3b2"</string>
-		</dict>
-	</dict>
+	<dict/>
 	<key>rules</key>
 	<dict>
 		<key>^Resources/</key>

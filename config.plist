@@ -143,6 +143,42 @@
 					WFBSVwJwaA==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>I2C: change SBFI to SBFS</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					i1NCRkk=
+					</data>
+					<key>Replace</key>
+					<data>
+					i1NCRlM=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					VFBBRA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>I2C: change return value to SBFS</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					hFNCRkJTQkZJAA==
+					</data>
+					<key>Replace</key>
+					<data>
+					hFNCRkJTQkZTAA==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					VFBBRA==
+					</data>
+				</dict>				
 			</array>
 			<key>SuspendOverride</key>
 			<true/>
@@ -199,6 +235,18 @@
 				<key>TableId</key>
 				<string>_ALS0</string>
 			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>XOSI</string>
+			</dict>
+			<dict>
+				<key>Signature</key>
+				<string>SSDT</string>
+				<key>TableId</key>
+				<string>TPAD</string>
+			</dict>			
 		</array>
 		<key>FixHeaders</key>
 		<true/>
@@ -208,6 +256,10 @@
 			<false/>
 			<key>Generate</key>
 			<dict>
+				<key>CStates</key>
+				<true/>
+				<key>PStates</key>
+				<true/>			
 				<key>PluginType</key>
 				<true/>
 			</dict>
@@ -222,6 +274,8 @@
 			<string>SSDT-BATT.aml</string>
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-ALS0.aml</string>
+			<string>SSDT-XOSI.aml</string>
+			<string>SSDT-TPAD.aml</string>			
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -366,7 +420,7 @@
 			<key>AFGLowPowerState</key>
 			<false/>
 			<key>Inject</key>
-			<integer>29</integer>
+			<integer>88</integer>
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
@@ -473,7 +527,7 @@
 				AQAAAA==
 				</data>
 				<key>layout-id</key>
-				<integer>29</integer>
+				<integer>88</integer>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
