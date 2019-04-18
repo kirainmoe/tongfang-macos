@@ -20,6 +20,9 @@
 
 该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4** 全部亲自测试安装成功；使用 Clover Hotpatch 驱动。
 
+**接到反馈，最新版的 EFI 在个别设备上似乎无法工作（发生黑屏现象），目前我们需要更多的报告来定位问题。对于大部分用户，使用最新版应该没有问题；但如果您替换了 EFI 后无法启动，请尝试[最后一个稳定版本](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/releases/tag/20190409)。**
+
+
 在开始之前，请务必确认您已经阅读了[使用须知](#tutorial)和[常见问题](#FAQ)。
 
 # Table of Content
