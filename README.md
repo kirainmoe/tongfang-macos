@@ -4,10 +4,10 @@
 
 <p>
 
-<h1 align="center">神舟战神 Z7(m)-KP7(5)GZ macOS</h1>
+<h1 align="center">神舟战神 Z7(m)-KP7/5(G)Z macOS</h1>
 
 <p align="center">
-<a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="https://note.youdao.com/ynoteshare1/index.html?id=0ebe9470eeaee01e137b9504ceca78db&type=note">EFI 替换教程</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="https://jq.qq.com/?_wv=1027&k=5G82zlQ">企鹅互助交流群</a>
+<a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="https://note.youdao.com/ynoteshare1/index.html?id=0ebe9470eeaee01e137b9504ceca78db&type=note">EFI 替换教程</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="#group">企鹅互助交流群</a>
 </p>
 
 <p align="center">
@@ -41,7 +41,7 @@
 
 1. 使用本仓库配置文件的方法：挂载 EFI 分区，备份并删除原先 /EFI/CLOVER 文件夹中的所有文件，将本仓库下的所有文件全部放到 /EFI/CLOVER 当中。详细教程见[这里](https://note.youdao.com/ynoteshare1/index.html?id=0ebe9470eeaee01e137b9504ceca78db&type=note)。
 
-2. **请先用镜像自带的 Clover EFI 配置安装完系统，确保能够进入桌面后再替换本文件夹**。否则您可能会连 macOS 安装界面都看不到。
+2. **请先用镜像自带的 Clover EFI 配置安装完系统，确保能够进入桌面后再替换本文件夹**。否则您可能会连 macOS 安装界面都看不到。关于安装镜像，我们建议采用[黑果小兵集成 Clover 的最新版本](https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/).
 
 3. 建议在本替换 EFI 前，**提前备份好您能够正常启动的 EFI，以便在遇到问题时回滚**。
 
@@ -49,7 +49,7 @@
 
 5. **在替换 EFI 前请先阅读[注意事项和常见问题](#FAQ)，以了解一些常见问题的解决方案**。
 
-6. 如果你不知道如何在一台 Windows 设备上全新安装 macOS Mojave，请参考[该教程](http://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)。  
+6. 如果你不知道如何在一台 Windows 设备上全新安装 macOS Mojave，请参考[该教程](http://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)（注意，格盘不要按照这篇文章里的教程做，而是事先在 Windows 中分好区并抹掉对应分区；**确保你的安装硬盘有 200M 以上的 ESP 分区**）。如果你在安装系统的过程中遇到了问题，请在[macOS Mojave 10.14安装中常见的问题及解决方法](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Mojave-10.14-installation.html)这篇文章中看看有没有你的问题。
 
 7. 如果你已经在 Z7(m)-KP7(5)GZ 上安装好 macOS Mojave 但仍有部分设备无法驱动，请参考[神舟战神 Z7-KP7GZ 黑苹果 macOS Mojave 安装指北](https://kirainmoe.com/blog/post/guide-on-hasee-z7-kp7gz-hackintosh-macos-mojave/).
 
@@ -69,7 +69,7 @@
 
  - 因为 Shinelon Yao-7000 (炫龙耀 7000) 和 Mechrevo Z2 Air (机械革命 Z2 Air) 与神舟战神 KP7GZ 属于同款模具且配置相近，因此理论可以在上述设备中使用本 EFI 配置文件。
 
- - **神舟 Z7-KP7GC, Z7-KP7EC, Z7-KP7SC, Z7-KP7S1 等不属于该系列**，即便其中的某些机型也采用同方其它模具，但并不保证能完全兼容，这些机型也不是本仓库配置文件的目标机型，因此**针对此类设备的兼容性问题，请您自行解决**。
+ - **神舟 Z7-KP7GC, Z7-KP7EC, Z7-KP7SC, Z7-KP7S1, Z7-KP7GE, Z7-KP7GT, Z7-KP7D2 等不属于该系列**，即便其中的某些机型也采用同方其它模具，但并不保证能完全兼容，这些机型也不是本仓库配置文件的目标机型，因此**针对此类设备的兼容性问题，请您自行解决**。
 
 # Info
 
@@ -137,7 +137,7 @@ Q: 为什么触摸板不工作？
 A: 出现此情况的原因可能是您对 DSDT 应用了 VoodooI2C 源的 DSDT 补丁，而这一步是不需要的。请从 Clover 全新提取一份 DSDT 打补丁。如果仍然无法驱动触摸板，请检查 VoodooI2C.kext, VoodooI2CService.kext, VoodooGPIO.kext, VoodooI2CHID.kext 是否正确加载。此外，触摸板完美驱动，要求电池也完美驱动。当然，如果你的机型根本不是以 Z 结尾的战神系列，那么触摸板驱动是不适合你们的。
 
 Q: 为什么声卡不工作？  
-A: 请确认 AppleALC.kext 驱动已正确加载。如果没有正确加载，请将其安装在 /Library/Extensions 下后重建缓存并重启。  
+A: 一般情况下重启后即可正常。初步怀疑是 AppleALC 驱动的问题；目前我们仍然在调查问题发生的原因，如果你找到了解决方案，请告诉我们。    
 
 Q：为什么独显不工作？HDMI 外接不工作？DP 接口不工作？怎么外接显示器？  
 A：如果你想问这个问题，我的建议是再看一遍 README.
@@ -163,8 +163,11 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 如果方便的话，推荐您按照 tonymacx86 论坛的 Problem Reporting File 格式上传问题描述文件、IORegistryExplorer 导出信息、Clover EFI 文件夹等，请参照：https://www.tonymacx86.com/threads/tool-generate-proper-problem-reporting-files.235953/
 
+# Group
 
-另外也欢迎该机型的朋友**加入 Z7(m)-KP7/5(G)Z 机型的交流 QQ 群：https://jq.qq.com/?_wv=1027&k=5G82zlQ ，群号 833022235**。
+欢迎该机型或其它神舟战神笔记本机型的朋友**加入 Z7(m)-KP7/5(G)Z 机型的交流 QQ 群：https://jq.qq.com/?_wv=1027&k=5G82zlQ ，群号 833022235**。
+
+请注意，我们要求你具有基本的知识，如修复引导、重装系统、分区等；我们不会手把手教你安装 macOS，只能在你遇到问题时指出问题所在并提出可行的建议。如果没有上述基技能，建议先远景爬帖或左转淘宝。
 
 ![QQ-group](https://ws3.sinaimg.cn/large/9f1137b1gy1g1hh6nhk8gj20f00kkt9u.jpg)
 
