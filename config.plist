@@ -20,8 +20,10 @@
 				<false/>
 				<key>Comment-IRQ Fix</key>
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
+				<key>FixAirport</key>
+				<true/>
 				<key>FixHPET</key>
-				<false/>
+				<true/>
 				<key>FixIPIC</key>
 				<false/>
 				<key>FixRTC</key>
@@ -103,6 +105,20 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>Battery: change ECXP to XCXP</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUNYUA==
+					</data>
+					<key>Replace</key>
+					<data>
+					WENYUA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>Battery: change _BIF to XBIF</string>
 					<key>Disabled</key>
 					<false/>
@@ -127,6 +143,20 @@
 					<key>Replace</key>
 					<data>
 					WEJTVA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Battery: change ECBE to XCBE</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUNCRQA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WENCRQA=
 					</data>
 				</dict>
 				<dict>
@@ -178,27 +208,13 @@
 					<data>
 					VFBBRA==
 					</data>
-				</dict>				
+				</dict>
 			</array>
 			<key>SuspendOverride</key>
 			<true/>
 		</dict>
 		<key>DropTables</key>
 		<array>
-			<dict>
-				<key>Signature</key>
-				<string>#MCFG</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>xh_rvp10</string>
-			</dict>
 			<dict>
 				<key>Signature</key>
 				<string>SSDT</string>
@@ -246,7 +262,7 @@
 				<string>SSDT</string>
 				<key>TableId</key>
 				<string>TPAD</string>
-			</dict>			
+			</dict>
 		</array>
 		<key>FixHeaders</key>
 		<true/>
@@ -259,7 +275,7 @@
 				<key>CStates</key>
 				<true/>
 				<key>PStates</key>
-				<true/>			
+				<true/>
 				<key>PluginType</key>
 				<true/>
 			</dict>
@@ -275,13 +291,13 @@
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-ALS0.aml</string>
 			<string>SSDT-XOSI.aml</string>
-			<string>SSDT-TPAD.aml</string>			
+			<string>SSDT-TPAD.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 darkwake=0 -igfxnohdmi -cdfon debug=0x100</string>
+		<string>-igfxnohdmi debug=0x100 -alcbeta alcid=88</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -433,101 +449,12 @@
 		</dict>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0)/Pci(0x02,0)</key>
+			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
-				<key># DVMT-prealloc</key>
-				<string>32MB BIOS, 19MB framebuffer, 9MB cursor bytes (credit RehabMan)</string>
-				<key># Note1</key>
-				<string> no HDMI example in CoffeeLake, flags 86090000 seen in CannonLake?</string>
-				<key>#2 0204-&gt;0306</key>
-				<string>0x3e9b0000, 0306 instead of 0204, HDMI</string>
-				<key>#2 framebuffer-con2-alldata</key>
-				<data>
-				AwYIAAAEAADHAwAA
-				</data>
-				<key>#2 framebuffer-con2-enable</key>
-				<integer>1</integer>
-				<key>#3 framebuffer-con1-alldata</key>
-				<data>
-				/wAAAAEAAAAgAAAA/wAAAAABAAAAIAAA
-				</data>
-				<key>#3 framebuffer-con1-enable</key>
-				<integer>1</integer>
-				<key>#3 no external</key>
-				<string>0x3e9b0000, eliminate all external ports (0105 and 0204)</string>
-				<key>#framebuffer-con0-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con0-type</key>
-				<data>
-				AAQAAA==
-				</data>
-				<key>#framebuffer-con1-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con1-flags</key>
-				<data>
-				hwEAAA==
-				</data>
-				<key>#framebuffer-con1-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
-				<key>#framebuffer-con1-type</key>
-				<data>
-				AAgAAA==
-				</data>
-				<key>#framebuffer-con2-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con2-flags</key>
-				<data>
-				hwEAAA==
-				</data>
-				<key>#framebuffer-con2-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
-				<key>#framebuffer-con2-type</key>
-				<data>
-				AAgAAA==
-				</data>
-				<key>#framebuffer-con3-enable</key>
-				<integer>1</integer>
-				<key>#framebuffer-con3-flags</key>
-				<data>
-				hwEAAA==
-				</data>
-				<key>#framebuffer-con3-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
-				<key>#framebuffer-con3-type</key>
-				<data>
-				AAgAAA==
-				</data>
-				<key>#hda-gfx</key>
-				<string>onboard-1</string>
-				<key>AAPL,ig-platform-id</key>
-				<data>
-				AACbPg==
-				</data>
-				<key>framebuffer-fbmem</key>
-				<data>
-				AACQAA==
-				</data>
-				<key>framebuffer-patch-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-stolenmem</key>
-				<data>
-				AAAwAQ==
-				</data>
-			</dict>
-			<key>PciRoot(0)/Pci(0x1f,3)</key>
-			<dict>
-				<key>enable-cfl-backlight-fix</key>
-				<data>
-				AQAAAA==
-				</data>
 				<key>layout-id</key>
-				<integer>88</integer>
+				<data>
+				WAAAAA==
+				</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>

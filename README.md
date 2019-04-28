@@ -175,7 +175,7 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-1-23：更新最新版 Lilu.kext 和 WhateverGreen.kext；删除 VoodooHDA.kext 万能声卡驱动；添加 AppleALC.kext 仿冒驱动，注入 layout-id 为 88.
 
-19-1-28：删除无用 Kexts；使用 USBPorts.kext 替代 USBInjectAll.kext；修复睡眠。至此除了无法解决的问题之外，这台机器的黑苹果已经接近完美了。
+19-1-28：删除无用 Kexts；~使用 USBPorts.kext 替代 USBInjectAll.kext；修复睡眠。~至此除了无法解决的问题之外，这台机器的黑苹果已经接近完美了。
 
 ~19-2-3: 去除 Clover 引导时添加的 `igfxcflbklt` 参数，去除勾选 Add PNLF；加入 SSDT-PNLF-CFL.aml 解决 Coffeelake UHD630 开机黑屏问题。~ 
 
@@ -201,11 +201,13 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-3-31 添加 10.14 的核显 Framebuffer 补丁。如果在部分设备上出现因此引起的不能正常休眠，请去除该补丁。
 
-19-4-3 简化 Kexts 驱动文件夹，减少开机卡条概率；<s>使用 VirtualSMC 替换 FakeSMC</s>；更新声卡驱动尝试解决卡条问题(已修复)。
+19-4-3 简化 Kexts 驱动文件夹，减少开机卡条概率；~使用 VirtualSMC 替换 FakeSMC~；更新声卡驱动尝试解决卡条问题(已修复)。
 
 19-4-7 修复 SSDT-UIAC.aml 不加载导致的 USB3.1 降速问题。
 
 19-4-13 加入 SSDT-TPAD.aml, SSDT-XOSI.aml；更新 VoodooI2C 驱动；回滚 FakeSMC 防止在某些设备上出现兼容性问题。
+
+19-4-28 修正 SSDT-UIAC.aml 中 Type-C 接口节点错误；修改电池驱动部分；尝试修复声卡重启后 layout-id 丢失。
 
 # Detail screenshot
 
