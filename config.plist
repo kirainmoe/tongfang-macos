@@ -209,6 +209,34 @@
 					VFBBRA==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Fn: change _Q14 to XQ14</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1ExNA==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFExNA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Fn: change _Q15 to XQ15</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1ExNQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFExNQ==
+					</data>
+				</dict>
 			</array>
 			<key>SuspendOverride</key>
 			<true/>
@@ -292,6 +320,7 @@
 			<string>SSDT-ALS0.aml</string>
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-TPAD.aml</string>
+			<string>SSDT-FN.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
