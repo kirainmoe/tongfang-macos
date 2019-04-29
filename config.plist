@@ -23,7 +23,7 @@
 				<key>FixAirport</key>
 				<true/>
 				<key>FixHPET</key>
-				<true/>
+				<false/>
 				<key>FixIPIC</key>
 				<false/>
 				<key>FixRTC</key>
