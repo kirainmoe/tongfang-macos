@@ -1,0 +1,13 @@
+{
+    "package": "hasee-z7-kp7gz-macos",
+    "build": "20190429",
+    "author": "Yume Maruyama",
+    "mail": "kirainmoe@gmail.com",
+    "timestamp": 1556537570,
+    "repository": "https://github.com/kirainmoe/hasee-z7-kp7gz-macos",
+    "supported_macos_version": [
+        "10.14.2",
+        "10.14.3",
+        "10.14.4"
+    ]
+}
