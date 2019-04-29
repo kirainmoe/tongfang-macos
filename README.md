@@ -20,7 +20,7 @@
 
 该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4** 全部亲自测试安装成功；使用 Clover Hotpatch 驱动。
 
-在开始之前，请务必确认您已经阅读了[使用须知](#tutorial)和[常见问题](#FAQ)。
+在开始之前，请务必确认您已经阅读了[使用须知](#tutorial)和[常见问题](#FAQ)。**如果您在使用的时候遇到问题，请先尝试[快速排错](#troubleshooting)**.
 
 # Table of Content
 
@@ -29,6 +29,7 @@
 - [配置信息](#info)
 - [硬件驱动情况](#whats-working)
 - [注意事项](#faq)
+- [快速排错](#troubleshooting)
 - [提问相关事项](#question)
 - [更新日志](#update-log)
 - [详细截图](#detail-screenshot)
@@ -152,6 +153,19 @@ A: 出现此原因可能是因为您启用了 HiDPI。目前因为开启 HiDPI �
 
 Q: 为什么应用 DSDT 补丁后，DSDT 编译出错？  
 A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补丁是在我的电脑上测试的，我可以保证在我的电脑上是正常的，在大部分的电脑上也是，该现象发生的几率应该是很小的，但仍然无法保证因您更换过硬件、BIOS 设置不同等原因导致 DSDT 的变更。这种情况下需要您对 DSDT 有一些了解并手动排错。通常情况下，一般是部分补丁没有成功应用，或者 DSDT 语法错误（通常是多或少了一个花括号），可以尝试重新应用补丁或自己补上括号。实在无法自己解决的，请提 issues 并附上你的 DSDT 文件。    
+
+# Troubleshooting
+
+如果您使用的是 20190429 Build 1556543657 以上版本的配置文件，随配置文件附送了排错脚本，可以帮您排查简单的错误。要开始，请您挂载 EFI 分区（挂载教程参见[《EFI 替换教程》](https://note.youdao.com/ynoteshare1/index.html?id=0ebe9470eeaee01e137b9504ceca78db&type=note)第二部分使用终端挂载），然后使用终端进入 EFI 分区并运行下面的脚本：
+
+```shell
+cd ~/mnt/EFI/CLOVER/Addons
+./troubleshooting
+```
+
+效果如下图：
+
+![troubleshooting tools](https://i.loli.net/2019/04/29/5cc6f9c23d9a6.png)
 
 # Question
 

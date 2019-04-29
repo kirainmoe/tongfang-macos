@@ -1,0 +1,42 @@
+#! /usr/bin/php
+<?php
+$info = array(
+    "package" =>  "hasee-z7-kp7gz-macos",
+    "build" => date('Ymd'),
+    "author" => "Yume Maruyama",
+    "mail" => "kirainmoe@gmail.com",
+    "timestamp" => mktime(),
+    "repository" => "https://github.com/kirainmoe/hasee-z7-kp7gz-macos",
+    "supported_macos_version"=> [
+        "10.14.2",
+        "10.14.3",
+        "10.14.4"
+    ]
+);
+$res = [];
+$filter = array("themes", "LICENSE", "README.md", "README-en.md", "statement.pdf", "troubleshooting.php", "info.json", "generate_info.php");
+
+function showdir($path, &$ref) {
+    global $filter;
+    $dh = opendir($path);
+    while(($d = readdir($dh)) != false){
+        if($d[0] == '.' || in_array($d, $filter)){
+            continue;
+        }
+        if(is_dir($path . '/' . $d)){
+            $ref[$d] = array();
+            showdir($path . '/' . $d, $ref[$d]);
+        } else {
+            $ref[$d] = md5(file_get_contents($path . '/' . $d));
+        }
+    }
+}
+
+$path = dirname(dirname(__FILE__));
+showdir($path, $res);
+
+$info['hash'] = $res;
+
+$resjson = json_encode($info, JSON_PRETTY_PRINT);
+
+file_put_contents(dirname(dirname(__FILE__)) . "/info.json", str_replace("    ", "  ", $resjson));
