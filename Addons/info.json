@@ -1,0 +1,388 @@
+{
+  "package": "hasee-z7-kp7gz-macos",
+  "build": "20190430",
+  "author": "Yume Maruyama",
+  "mail": "kirainmoe@gmail.com",
+  "timestamp": 1556602086,
+  "repository": "https:\/\/github.com\/kirainmoe\/hasee-z7-kp7gz-macos",
+  "supported_macos_version": [
+    "10.14.2",
+    "10.14.3",
+    "10.14.4"
+  ],
+  "hash": {
+    "CLOVERX64.efi": "fd61f0fda3f07d5c7de47309b961d5ac",
+    "tools": {
+      "Shell32.efi": "7fa0023638de5dcb2dbf5d2fb684073a",
+      "Shell.inf": "6e47bee7d43c81355b4848f043f3aa0b",
+      "bdmesg.efi": "01a134d5e5ee871da09a940bdd4b96f8",
+      "Shell64U.efi": "14a40f59557ed0db827bb100a667423f",
+      "Shell64.efi": "d327f564b264976ca4d7765d8638320e"
+    },
+    "kexts": {
+      "Other": {
+        "CPUFriend.kext": {
+          "Contents": {
+            "Info.plist": "9b8dfca09ab602dc0f54f07c0ac138b3",
+            "MacOS": {
+              "CPUFriend": "98feacc69c9c2fb90e6fb2d68441e6d2"
+            }
+          }
+        },
+        "CPUFriendDataProvider.kext": {
+          "Contents": {
+            "Info.plist": "d53381da6b69e99dc8da6607cd6f42da"
+          }
+        },
+        "NoTouchID.kext": {
+          "Contents": {
+            "Info.plist": "40227667f14bae9b4f0c452b585f8b21",
+            "MacOS": {
+              "NoTouchID": "b849ca2f3700e16ca0ae1fad024c6011"
+            }
+          }
+        },
+        "FakeSMC_GPUSensors.kext": {
+          "Contents": {
+            "Info.plist": "baf05ebaabe5f68e213f28b0955ffb82",
+            "MacOS": {
+              "GPUSensors": "7c6d22fbd96d1c1616eaa51b32e35cbc"
+            }
+          }
+        },
+        "FakeSMC.kext": {
+          "Contents": {
+            "Info.plist": "fd6dca729a14630cf5f762c89a321329",
+            "MacOS": {
+              "FakeSMC": "a8693e43fa9abb4a64407e66a4d8438e"
+            }
+          }
+        },
+        "FakeSMC_CPUSensors.kext": {
+          "Contents": {
+            "Info.plist": "1b2f97d5a50e8fbcf39bfea7952a3b0f",
+            "MacOS": {
+              "CPUSensors": "b988e2765687e69d54d1bf05608c88e6"
+            }
+          }
+        },
+        "RealtekRTL8111.kext": {
+          "Contents": {
+            "Info.plist": "529bf90b5e27f41023c1fd95b5c1e8b8",
+            "Resources": {
+              "en.lproj": {
+                "InfoPlist.strings": "51ef59b60e5b41b91519cc662a9fe886"
+              }
+            },
+            "MacOS": {
+              "RealtekRTL8111": "6c8ef4d415d23cf347ad1e2fdb11eab0"
+            }
+          }
+        },
+        "ACPIBatteryManager.kext": {
+          "Contents": {
+            "Info.plist": "f435de769763061056b67f8745aca16b",
+            "MacOS": {
+              "ACPIBatteryManager": "0609ef648377ee79e21aeb7e02269385"
+            }
+          }
+        },
+        "AppleALC.kext": {
+          "Contents": {
+            "Info.plist": "55660557b6646f1e75e873df19972faf",
+            "MacOS": {
+              "AppleALC": "f1a4f3c511c0d31cd336b82c1eaf8799"
+            }
+          }
+        },
+        "VoodooI2CHID.kext": {
+          "Contents": {
+            "_CodeSignature": {
+              "CodeResources": "c48c1d9c6cf982c32580a9c58b0cce51"
+            },
+            "Info.plist": "0f9be49935bbdec76dad5f1080706dc2",
+            "MacOS": {
+              "VoodooI2CHID": "d5f4658e59e9b33f513e0af640cb73d0"
+            }
+          }
+        },
+        "VoodooPS2Controller.kext": {
+          "Contents": {
+            "PlugIns": {
+              "VoodooPS2Keyboard.kext": {
+                "Contents": {
+                  "Info.plist": "5f595577f4966d78db9883c3034c763c",
+                  "MacOS": {
+                    "VoodooPS2Keyboard": "b619147e8cfd5cbdb23f136380fb5d35"
+                  }
+                }
+              },
+              "VoodooPS2Trackpad.kext": {
+                "Contents": {
+                  "Info.plist": "047e8bd57798ac4c8a525d840dfbdd09",
+                  "MacOS": {
+                    "VoodooPS2Trackpad": "53a269891a72ba1c75fd508603b225ff"
+                  }
+                }
+              },
+              "VoodooPS2Mouse.kext": {
+                "Contents": {
+                  "Info.plist": "8638bf984ed2406fdfc8a8e637bace40",
+                  "MacOS": {
+                    "VoodooPS2Mouse": "17d32a4f6f4892f27f00ef89df7d4b06"
+                  }
+                }
+              }
+            },
+            "Info.plist": "55c91d3ff04eb42d879f5687701586b8",
+            "MacOS": {
+              "VoodooPS2Controller": "7b72f60e4451821af7babd3aa353250e"
+            }
+          }
+        },
+        "USBInjectAll.kext": {
+          "Contents": {
+            "Info.plist": "b38cecaef70a04d7d969173f3a4bf7ac",
+            "MacOS": {
+              "USBInjectAll": "aee653f4f9e6253da87407847e48bd79"
+            }
+          }
+        },
+        "FakeSMC_LPCSensors.kext": {
+          "Contents": {
+            "Info.plist": "dc8964ee190d8d236664a556577a57c7",
+            "MacOS": {
+              "LPCSensors": "591f0f63ee542cd46050672f6489dde0"
+            }
+          }
+        },
+        "VoodooI2C.kext": {
+          "Contents": {
+            "PlugIns": {
+              "VoodooGPIO.kext": {
+                "Contents": {
+                  "_CodeSignature": {
+                    "CodeResources": "c48c1d9c6cf982c32580a9c58b0cce51"
+                  },
+                  "Info.plist": "c7a75cfcdde609b4302c9236061df216",
+                  "MacOS": {
+                    "VoodooGPIO": "508a4f9dbd02ace40d09ef518719560f"
+                  }
+                }
+              },
+              "VoodooI2CServices.kext": {
+                "Contents": {
+                  "_CodeSignature": {
+                    "CodeResources": "c48c1d9c6cf982c32580a9c58b0cce51"
+                  },
+                  "Info.plist": "67fd6a7ab512edf8a0a7348331c216ac",
+                  "MacOS": {
+                    "VoodooI2CServices": "867f68c920967a17dbb3afe1bd9fb244"
+                  }
+                }
+              }
+            },
+            "_CodeSignature": {
+              "CodeResources": "24abe8a00e7ce50df80a66a607e96333"
+            },
+            "Info.plist": "ff09aee53adab2974d66c42e6aa9b072",
+            "MacOS": {
+              "VoodooI2C": "f178ecdead6792faacff3b122668b52f"
+            }
+          }
+        },
+        "FakeSMC_SMMSensors.kext": {
+          "Contents": {
+            "Info.plist": "ab880ed73bea200b48f812a4e559b0aa",
+            "MacOS": {
+              "SMMSensors": "704c3fe1c0cd944e433d3dc4096747f8"
+            }
+          }
+        },
+        "WhateverGreen.kext": {
+          "Contents": {
+            "Info.plist": "6e88ddee81e24b1863d54d4d1cfe9c9e",
+            "MacOS": {
+              "WhateverGreen": "626f015907495c85cd568d4f98de4858"
+            }
+          }
+        },
+        "FakeSMC_ACPISensors.kext": {
+          "Contents": {
+            "Info.plist": "a8b6724bc46f5cc3eb17330e1d106e13",
+            "MacOS": {
+              "ACPISensors": "e4e634dc5e516a0d6523b385ed875768"
+            }
+          }
+        },
+        "Lilu.kext": {
+          "Contents": {
+            "Info.plist": "e8b788f4acc863e388ad49f60a350da7",
+            "MacOS": {
+              "Lilu": "a096e90d4661909a527758d2beabecbe"
+            }
+          }
+        },
+        "AppleBacklightInjector.kext": {
+          "Contents": {
+            "Info.plist": "1bbb75ea774a32889d29996c0c1d165e"
+          }
+        }
+      },
+      "Alternative Kexts": {
+        "BrcmPatchRAM2.kext": {
+          "Contents": {
+            "Info.plist": "df0c2350bb604e670c7d6df6fe330602",
+            "MacOS": {
+              "BrcmPatchRAM2": "dc40256e478c2fc1f7496094e00d54fc"
+            }
+          }
+        },
+        "CPUFriend.kext": {
+          "Contents": {
+            "Info.plist": "9b8dfca09ab602dc0f54f07c0ac138b3",
+            "MacOS": {
+              "CPUFriend": "98feacc69c9c2fb90e6fb2d68441e6d2"
+            }
+          }
+        },
+        "CPUFriendDataProvider.kext": {
+          "Contents": {
+            "Info.plist": "6ad949a9a07574f6c830451613618eed"
+          }
+        },
+        "AirportBrcmFixup.kext": {
+          "Contents": {
+            "Info.plist": "5eab36c77775a7e9edaae92cf5440a63",
+            "MacOS": {
+              "AirportBrcmFixup": "f43a2a3147a82d50e03b6b6c8143e1ce"
+            }
+          }
+        },
+        "BrcmFirmwareRepo.kext": {
+          "Contents": {
+            "Info.plist": "d4b656d83b92f44c0be2074df05a7562",
+            "Resources": {
+              "BCM20702A1_001.002.014.1502.1770_v5866.zhx": "5780ea673ba26d7ab587241c64247c56",
+              "BCM20702A1_001.002.014.1443.1462_v5558.zhx": "0d39b0cc839e95fb8a00a7b62d921665",
+              "BCM20702A1_001.002.014.1502.1769_v5865.zhx": "a0b8ea0d86105d09a87ccf1b57629919",
+              "BCM20702A1_001.002.014.1443.1481_v5577.zhx": "f41d640476d5da50797b68108796d4de",
+              "BCM20702A1_001.002.014.1502.1759_v5855.zhx": "2a9101965e73efc4698cd7526b730270",
+              "BCM4350C5_003.006.007.0095.1703_v5799.zhx": "c8085ae1e74c5494884c668ce46d67a1",
+              "BCM20702A1_001.002.014.1502.1761_v5857.zhx": "ea589285942b87c4f1c2907f370a1a10",
+              "BCM20702A1_001.002.014.1443.1489_v5585.zhx": "7d26a673180c016aa7b95e96efd44136",
+              "BCM4335C0_003.001.009.0066.0105_v4201.zhx": "4edc2b81d6477c37559ff769f9d9e736",
+              "BCM20702A1_001.002.014.1443.1490_v5586.zhx": "bb12e1da085afcd376e260435771c8cb",
+              "BCM4350C5_003.006.007.0120.2118_v6214.zhx": "638d9a96b466fd96a77dbdc8e7cb42e2",
+              "BCM20702A1_001.002.014.1443.1461_v5557.zhx": "69cc5046839d84ce3a7b4f0235d89a16",
+              "BCM43142A0_001.001.011.0311.0312_v4408.zhx": "b39fd873a6a0c506ea0203bcd97fe6b0",
+              "BCM20702A1_001.002.014.1502.1764_v5860.zhx": "4f9be51769f671b841d11250e9ce7443",
+              "BCM20702A1_001.002.014.1443.1493_v5589.zhx": "20d491832bb68a7da89af115c9b09a2f",
+              "BCM43142A0_001.001.011.0311.0327_v4423.zhx": "64537eee79abbb0db783eac17ee8c3f0",
+              "BCM20702A1_001.002.014.1443.1484_v5580.zhx": "94736eab1015d97849cc5d62f4ae129e",
+              "BCM43142A0_001.001.011.0311.0335_v4431.zhx": "1071fbe96848332473ea1f913861c776",
+              "BCM20702A1_001.002.014.1502.1762_v5858.zhx": "bd839ce30fa38d5fa668b5ecacdae0cb",
+              "BCM4335C0_003.001.009.0066.0108_v4204.zhx": "821ff3cb3d653b94037f9483019172f4",
+              "BCM20702A1_001.002.014.1443.1482_v5578.zhx": "bba71377d1c6c18c07472f9977df2436",
+              "BCM20702A1_001.002.014.1443.1469_v5565.zhx": "78a96c273e843942bf21c28bd8d290c7",
+              "BCM20702A1_001.002.014.1443.1463_v5559.zhx": "80742ca89fbda06fbdd72efc2de4c141",
+              "BCM20702A1_001.002.014.1443.1447_v5543.zhx": "f7b64b5b6dfb56975308c471d7911c59",
+              "BCM20702A1_001.002.014.1502.1768_v5864.zhx": "8ceb881fd69a536336dc3fb4d7b3de36",
+              "BCM20702A1_001.002.014.1443.1488_v5584.zhx": "bba2dcdb5ca7367770fcb2c66967bd5c",
+              "BCM43142A0_001.001.011.0311.0339_v4435.zhx": "df462a179c1076b62bdc15b776a5eb6e",
+              "BCM20702A1_001.002.014.1443.1501_v5597.zhx": "4213b8134d7fbc5e6020d0e6961fff81",
+              "BCM20702A1_001.002.014.1443.1465_v5561.zhx": "d9550281cca9c366d95b1b4a5606b2dd",
+              "BCM4335C0_003.001.009.0066.0104_v4200.zhx": "02eebb7d4984b1bb6a38376a8e079284",
+              "BCM20702A1_001.002.014.1443.1480_v5576.zhx": "0938b87f3e07857f34e8ac8e78d8e65f",
+              "BCM20702A1_001.002.014.1443.1477_v5573.zhx": "6c3a3f44bf7b3398ca092a70c3363375",
+              "BCM20702A1_001.002.014.1502.1758_v5854.zhx": "682261f2025154e98b57f5a4263a6624",
+              "BCM4371C2_001.003.015.0093.0118_v4214.zhx": "e9e5c65e247c125945c8fcdc8d61b7b2",
+              "BCM20702A1_001.002.014.1502.1760_v5856.zhx": "abc8d0d0a4a50b44271c87b2a6bd92ef",
+              "BCM43142A0_001.001.011.0311.0316_v4412.zhx": "7912dbcff1076e15f22acb1654eae768",
+              "BCM20702A1_001.002.014.1502.1765_v5861.zhx": "5aea79ae68c212755dde6e0cccd1dd30",
+              "BCM20702A1_001.002.014.1502.1780_v5876.zhx": "b87aef9bb2c4b05c9e095d2a602d6733",
+              "BCM20702A1_001.002.014.1443.1460_v5556.zhx": "32b71e571c53b48a6aefcae19d3cc238",
+              "BCM20702A1_001.002.014.1502.1763_v5859.zhx": "db66067c47eb9dbcc09b11facc0ef640",
+              "BCM20702A1_001.002.014.1443.1485_v5581.zhx": "2ed16e46a06c17330b6b9d11111b254c",
+              "BCM43142A0_001.001.011.0311.0334_v4430.zhx": "51f086dcbab630f878e64b6690eed45d",
+              "BCM20702A1_001.002.014.1443.1468_v5564.zhx": "19e9deca0fd76dc9bf788bf57faf0a50",
+              "BCM20702A1_001.002.014.1443.1483_v5579.zhx": "413188edb22e8390f70cf0f03e76775f",
+              "BCM20702A1_001.002.014.1443.1502_v5598.zhx": "5877f83850013253247d4e9a487247c5",
+              "BCM20702A1_001.002.014.1443.1492_v5588.zhx": "1060ba0411e3c908dd91e444de8ce4a4",
+              "BCM43142A0_001.001.011.0311.0328_v4424.zhx": "e52e7eebfb5144b66f68380e28006c09",
+              "BCM20702A1_001.002.014.1443.1499_v5595.zhx": "bcd4e986e67deb9e3335c820bce3d07d",
+              "BCM43142A0_001.001.011.0311.0331_v4427.zhx": "98f371c9fe188d1c620100515ffc7e92",
+              "BCM4335C0_003.001.009.0066.0115_v4211.zhx": "ad6e726bb3db303c76cd73270b44d750",
+              "BCM20702A1_001.002.014.1443.1466_v5562.zhx": "6450d663511da576358d51beabea827b",
+              "BCM43142A0_001.001.011.0311.0340_v4436.zhx": "03a4566c3248f6b828508dc8a4d4c592",
+              "BCM20702A1_001.002.014.1483.1651_v5747.zhx": "c25320dd024f36f65cd1a78729f0db9d",
+              "BCM20702A1_001.002.014.1443.1532_v5628.zhx": "867bee9b11d5ab559c3de440d9af8e59",
+              "BCM20702A1_001.002.014.1443.1494_v5590.zhx": "9d60713ebac4171a2605d530c16e88f9",
+              "BCM20702A1_001.002.014.1443.1479_v5575.zhx": "bbcc2fb2eb304518937180da772ca0ad",
+              "BCM4371C2_001.003.015.0093.0116_v4212.zhx": "f22802dc55c8147a5597107f33937fa5",
+              "BCM20703A1_001.001.005.0214.0481_v4577.zhx": "63d6cf6f03eddd766b939ad0c1a6fe54",
+              "BCM43142A0_001.001.011.0311.0332_v4428.zhx": "d5aa9ad2bb9cebf1dd6d4bd39f2a759e",
+              "BCM20702A1_001.002.014.1443.1486_v5582.zhx": "a91537aeedd8ec3df8098fe985a46e6c",
+              "BCM20703A1_001.001.005.0214.0473_v4569.zhx": "ca81606acff0a44ba0e07c7377048e2f",
+              "BCM20702A1_001.002.014.1443.1572_v5668.zhx": "f71343f144445bb026bd7d2a9197cfe3",
+              "BCM20703A1_001.001.005.0214.0414_v4510.zhx": "258ae32694723cd57029e03573657917",
+              "BCM20702A1_001.002.014.1502.1766_v5862.zhx": "d2369f9c04835e8ff04da39f7a3b3ca4",
+              "BCM20702A1_001.002.014.1443.1449_v5545.zhx": "6aac2341bb9c78e4ba01cf832bbb8e74",
+              "BCM43142A0_001.001.011.0311.0347_v4443.zhx": "00fa18ac844dc62e0bc16f4efa18c34c",
+              "BCM20702A1_001.002.014.1443.1450_v5546.zhx": "d43ec373adae130c9a4857d5770722f0",
+              "BCM20703A1_001.001.005.0214.0422_v4518.zhx": "4514a03a49e014ff800feb8a5cf067e8",
+              "BCM20702A1_001.002.014.1443.1467_v5563.zhx": "886a85b9f8a881537946702291cacd2e",
+              "BCM43142A0_001.001.011.0311.0341_v4437.zhx": "7d5b92bda3e3c9b6f23dafbe05e7362c",
+              "BCM4350C5_003.006.007.0145.2724_v6820.zhx": "b51927c25c853749592c7b6dd21202b6",
+              "BCM43142A0_001.001.011.0311.0329_v4425.zhx": "e1f7f177ab0001832f2b8a3ae646d701",
+              "BCM43142A0_001.001.011.0311.0330_v4426.zhx": "6f61eb8dbfc25700f0ae393e448a3354",
+              "BCM20702A1_001.002.014.1443.1521_v5617.zhx": "0279637b879c7ad25818bd74ede79a40",
+              "BCM20702A1_001.002.014.1443.1714_v5810.zhx": "d8982df7d420954cb158bc53da63bf9d",
+              "BCM43142A0_001.001.011.0311.0333_v4429.zhx": "e005e650484fce6f9ba6c7e9beda4c3e",
+              "BCM20702A1_001.002.014.1443.1487_v5583.zhx": "d939121328a5cfb85afb33e4b8300910",
+              "BCM43142A0_001.001.011.0311.0336_v4432.zhx": "6650fbc2b7d2fec8d27987100b12e08b",
+              "BCM4335C0_003.001.009.0066.0121_v4217.zhx": "ca4c400759c5d0fe91e8d79c0eb601cf",
+              "BCM4371C2_001.003.015.0093.0117_v4213.zhx": "e5cb0dea853b8f31e0e1c41cf6e2c4e5",
+              "BCM20702A1_001.002.014.1502.1757_v5853.zhx": "5c15b5a4f97f64f4d231564152f91f41",
+              "BCM20702A1_001.002.014.1443.1478_v5574.zhx": "2e54bc51985018ebbda255ad91b8b449",
+              "BCM20702A1_001.002.014.1502.1767_v5863.zhx": "9beb9a9ba96463389232370125cd3449",
+              "BCM43142A0_001.001.011.0311.0346_v4442.zhx": "b6586666cf42a1412b8b919595fc6a36"
+            },
+            "MacOS": {
+              "BrcmFirmwareRepo": "968e237aab7ab09f62022fc91be19f92"
+            }
+          }
+        }
+      }
+    },
+    "Addons": {
+      "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
+      "optimize.sh": "db187c67a79289722b1c5389436fcba8"
+    },
+    "drivers64UEFI": {
+      "SMCHelper-64.efi": "da6d3a17406028386c32a769e53cdb2b",
+      "apfs.efi": "771dc3ea35c8b7a959f84d525b3e6c3a",
+      "HFSPlus.efi": "00b16648378521e1d63f606c6846cf1d",
+      "EmuVariableUefi-64.efi": "d9f68b3ec616cc3ed5cd3ce25d3eff83",
+      "FSInject-64.efi": "e2e78a084c0a19936350d30dd0fc08ad",
+      "AptioMemoryFix-64.efi": "d3f8b8621e7d32a641ef32ad1baeae32",
+      "ApfsDriverLoader-64.efi": "77525964bda7a7e8d3d32fd68dedd0f1",
+      "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
+      "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20"
+    },
+    "config.plist": "4e248dfee9fed6badb9c99094af3650f",
+    "ACPI": {
+      "patched": {
+        "SSDT-TPAD.aml": "a6daa12a53b3a0c86771a95799738490",
+        "SSDT-DDGPU.aml": "4c67fb04f2cc0b9ce3a9eb9447ee18e8",
+        "SSDT-FN.aml": "a7233d40ef577307f4ebadc80cf7360b",
+        "SSDT-XOSI.aml": "6deb62d7de51ea03f88e3c0faf100339",
+        "SSDT-UIAC.aml": "fbc812951f0928f8e8759c36bd42cae7",
+        "SSDT-GPRW.aml": "4d68d941799431476a2c4c3f91ac262f",
+        "SSDT-PNLFCFL.aml": "524b50ef64dc660a75bd5ae68c8c8283",
+        "SSDT-ALS0.aml": "8615f5e7a42a4ab3b345d288a0686ebe",
+        "SSDT-BATT.aml": "af4e41a641cbbd88e5e55be0c743fdba"
+      }
+    }
+  }
+}
