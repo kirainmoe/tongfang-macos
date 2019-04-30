@@ -61,7 +61,7 @@ disp("-----------------------------------------------------------");
 
 /* Read info.json from current EFI... */
 disp("[info] 正在初始化问题诊断工具...", "cyan");
-$jsonPath = dirname(dirname(__FILE__)) . DS . "info.json";
+$jsonPath = dirname(__FILE__) . DS . "info.json";
 if (!file_exists($jsonPath)) {
     disp("[error] 找不到 info.json，排错程序无法运行！请尝试重新下载或替换配置文件.", "red", 0);
     exit(0);
@@ -84,6 +84,19 @@ if (!in_array($match[1], $info['supported_macos_version'])) {
 }
 usleep(500000);
 
+/* Check if system using kirainmoe's EFI */
+$res = array();
+disp('[info] 正在检测当前系统是否使用 kirainmoe\'s EFI 启动...', 'cyan');
+exec("ioreg -l | grep YMR2 2>&1", $res);
+
+if (empty($res)) {
+    disp("[error] 检测到当前系统使用的配置文件是第三方配置文件。要确保系统各项功能正常工作必须使用指定的配置文件.", "red");
+    disp("[error] 请检查您的 EFI 配置文件是否替换正确，修复后请重新启动系统。", "red");
+    exit(0);
+} else {
+    disp("[ok] 当前系统正在使用 kirainmoe's EFI.", 'green');    
+}
+
 disp("[info] 开始比较文件，这可能需要一些时间...", "cyan");
 $basedir = dirname(dirname(__FILE__)) . '/';
 compare_files($info['hash'], $basedir);
@@ -100,7 +113,7 @@ usleep(500000);
 
 disp("[info] 正在检测远程分支版本...", "cyan", 0);
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://raw.githubusercontent.com/kirainmoe/hasee-z7-kp7gz-macos/master/info.json');
+curl_setopt($ch, CURLOPT_URL, 'https://raw.githubusercontent.com/kirainmoe/hasee-z7-kp7gz-macos/master/Addons/info.json');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 $res = curl_exec($ch);

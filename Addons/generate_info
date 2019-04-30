@@ -14,7 +14,7 @@ $info = array(
     ]
 );
 $res = [];
-$filter = array("themes", "LICENSE", "README.md", "README-en.md", "statement.pdf", "troubleshooting.php", "info.json", "generate_info.php");
+$filter = array("themes", "LICENSE", "README.md", "README-en.md", "statement.pdf", "troubleshooting", "info.json", "generate_info");
 
 function showdir($path, &$ref) {
     global $filter;
@@ -39,4 +39,4 @@ $info['hash'] = $res;
 
 $resjson = json_encode($info, JSON_PRETTY_PRINT);
 
-file_put_contents(dirname(dirname(__FILE__)) . "/info.json", str_replace("    ", "  ", $resjson));
+file_put_contents(dirname(__FILE__) . "/info.json", str_replace("    ", "  ", $resjson));

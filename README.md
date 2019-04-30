@@ -227,6 +227,8 @@ cd ~/mnt/EFI/CLOVER/Addons
 
 19-4-29 添加 SSDT-FN.aml，现在可以使用 Fn+F11, Fn+F12 调节显示器亮度了；添加 Kext 说明。调整目录结构。
 
+19-4-30 修改 SSDT-UIAC.aml Type-C 接口节点信息解决 Type-C 无法双面使用的问题。
+
 # Detail screenshot
 
 USB  
