@@ -14,7 +14,7 @@
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.14.4-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-![screenshot](https://ws4.sinaimg.cn/large/9f1137b1gy1g1m6rjq0r5j21hc0u07k7.jpg)
+![screenshot](https://i.loli.net/2019/04/30/5cc86b6e7ce00.jpg)
 
 用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7\*-KP\*GZ / 神舟战神Z7\*-KP\*Z**（**请注意，并不是适用于所有以 Z7 开头的战神笔记本！**）；理论适用于炫龙耀7000 / 机械革命Z2 Air. 
 
