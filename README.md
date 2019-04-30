@@ -156,16 +156,7 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 # Troubleshooting
 
-如果您使用的是 20190429 Build 1556543657 以上版本的配置文件，随配置文件附送了排错脚本，可以帮您排查简单的错误。要开始，请您挂载 EFI 分区（挂载教程参见[《EFI 替换教程》](https://note.youdao.com/ynoteshare1/index.html?id=0ebe9470eeaee01e137b9504ceca78db&type=note)第二部分使用终端挂载），然后使用终端进入 EFI 分区并运行下面的脚本：
-
-```shell
-cd ~/mnt/EFI/CLOVER/Addons
-./troubleshooting
-```
-
-效果如下图：
-
-![troubleshooting tools](https://i.loli.net/2019/04/29/5cc6f9c23d9a6.png)
+你必须使用 20190430 build.1556636386 及更高版本的 EFI 才可以使用快速排错脚本。使用教程参见：[问题排查指导](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting)#step-4-%E4%BD%BF%E7%94%A8%E8%87%AA%E5%8A%A9%E6%8E%92%E6%9F%A5%E7%A8%8B%E5%BA%8F%E6%8E%92%E6%9F%A5%E9%97%AE%E9%A2%98) 的第四步。
 
 # Question
 
