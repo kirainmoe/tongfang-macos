@@ -2,8 +2,7 @@
 <?php
 ini_set('date.timezone', 'Asia/Shanghai');
 define('DS', DIRECTORY_SEPARATOR);
-function disp($text, $color = false, $indentSize = 0, $newline = 1)
-{
+function disp($text, $color = false, $indentSize = 0, $newline = 1) {
   $colors = array(
     'black' => 30,
     'red' => 31,
@@ -53,6 +52,15 @@ function compare_files($array, $path) {
 }
 
 disp("-----------------------------------------------------------");
+?>
+        ██╗  ██╗ █████╗ ███████╗███████╗███████╗
+        ██║  ██║██╔══██╗██╔════╝██╔════╝██╔════╝
+        ███████║███████║███████╗█████╗  █████╗  
+        ██╔══██║██╔══██║╚════██║██╔══╝  ██╔══╝  
+        ██║  ██║██║  ██║███████║███████╗███████╗
+        ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
+                                        
+<?php 
 disp("       Hasee Z7-KP7GZ EFI troubleshooting script    ", 'green', 0, 2);
 disp("            KP7GZ EFI 文件故障自助排查工具            ", 'green', 0, 2);
 disp("    @Copyright 2019 Yume Maruyama<kirainmoe@gmail.com>", "blue", 0, 2);
@@ -102,7 +110,7 @@ $basedir = dirname(dirname(__FILE__)) . '/';
 compare_files($info['hash'], $basedir);
 
 if ($flag == 1) {
-    disp("[success] 文件完整性校验通过。", "green");
+    disp("[ok] 文件完整性校验通过。", "green");
 } else if ($flag == -1) {
     disp("[error] 文件完整性校验失败，未通过校验的文件已列出，这些文件可能已经丢失或损坏。请尝试手动修复这些文件。", 'red');
     exit(0);
@@ -130,6 +138,23 @@ if (empty($res)) {
         disp("[tips] 请考虑更新配置文件到最新版本，更新地址：https://github.com/kirainmoe/hasee-z7-kp7gz-macos", 'magenta');
     } else {
         disp("[ok] 您使用的是最新的配置文件。您当前的版本是：Build ${info['build']}, ${info['timestamp']}.", 'green');
+        usleep(500000);
+
+        if ($info['build'] == $remote['build'] && $info['timestamp'] == $remote['timestamp']) {
+            disp("[info] 正在与远程文件进行比较...", 'cyan');
+
+            $remoteFile = file_get_contents('https://raw.githubusercontent.com/kirainmoe/hasee-z7-kp7gz-macos/master/Addons/info.json');
+            $remoteJson = json_decode($remoteFile, true);
+    
+            $flag = 1;
+            compare_files($remoteJson['hash'], $basedir);
+    
+            if ($flag == 1) {
+                disp("[ok] 当前配置文件与远程分支保持一致，校验通过。", "green");
+            } else {
+                disp("[error] 本地完整性校验通过，但在与远程文件比较时发现文件不一致。请尝试手动修复不同的文件。", 'red');
+            }
+        }
     }
 }
 
