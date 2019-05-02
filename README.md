@@ -7,7 +7,7 @@
 <h1 align="center">神舟战神 Z7(m)-KP7/5(G)Z macOS</h1>
 
 <p align="center">
-<a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="https://note.youdao.com/ynoteshare1/index.html?id=0ebe9470eeaee01e137b9504ceca78db&type=note">EFI 替换教程</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="#group">企鹅互助交流群</a>
+<a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="https://note.youdao.com/ynoteshare1/index.html?id=0ebe9470eeaee01e137b9504ceca78db&type=note">EFI 替换教程</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting)">问题排查指导</a> | <a href="#group">企鹅互助交流群</a>
 </p>
 
 <p align="center">
@@ -214,11 +214,13 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-4-13 加入 SSDT-TPAD.aml, SSDT-XOSI.aml；更新 VoodooI2C 驱动；回滚 FakeSMC 防止在某些设备上出现兼容性问题。
 
-19-4-28 修正 SSDT-UIAC.aml 中 Type-C 接口节点错误；修改电池驱动部分；尝试修复声卡重启后 layout-id 丢失。
+19-4-28 修正 SSDT-UIAC.aml 中 Type-C 接口节点错误；修改电池驱动部分；<s>尝试修复声卡重启后 layout-id 丢失</s>。
 
 19-4-29 添加 SSDT-FN.aml，现在可以使用 Fn+F11, Fn+F12 调节显示器亮度了；添加 Kext 说明。调整目录结构。
 
 19-4-30 修改 SSDT-UIAC.aml Type-C 接口节点信息解决 Type-C 无法双面使用的问题。
+
+19-5-2 尝试修复声卡重启后找不到输出设备的问题，目前效果仍然处于观察阶段。
 
 # Detail screenshot
 

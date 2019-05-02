@@ -1,9 +1,9 @@
 {
   "package": "hasee-z7-kp7gz-macos",
-  "build": "20190430",
+  "build": "20190502",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1556636386,
+  "timestamp": 1556790650,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-z7-kp7gz-macos",
   "supported_macos_version": [
     "10.14.2",
@@ -26,6 +26,21 @@
             "Info.plist": "9b8dfca09ab602dc0f54f07c0ac138b3",
             "MacOS": {
               "CPUFriend": "98feacc69c9c2fb90e6fb2d68441e6d2"
+            }
+          }
+        },
+        "CodecCommander.kext": {
+          "Contents": {
+            "Info.plist": "136e2f55e4695f47c9421afd360957b1",
+            "Resources": {
+              "SSDT-ALC256-insanelydeepak.dsl": "d4b2a935e2786451e7cab602485a204d",
+              "SSDT-CX20752.dsl": "3b8de2a9e4f247d6515a435896504b8c",
+              "SSDT-AppleALC.dsl": "6feeb7fb5232f159ab0ab01e20fcab26",
+              "SSDT-ALC256-vbourachot.dsl": "1092a0d35756b915270a1779fa3f9fdd",
+              "SSDT-ALC1220.dsl": "03539444d414e58932e19dd9e914d01b"
+            },
+            "MacOS": {
+              "CodecCommander": "32f54b2fc466fe542e54d7ec7e22b35c"
             }
           }
         },
@@ -66,6 +81,11 @@
             }
           }
         },
+        "FakePCIID_Intel_HDMI_Audio.kext": {
+          "Contents": {
+            "Info.plist": "51677e47f38132cfe86da7f309b9486f"
+          }
+        },
         "RealtekRTL8111.kext": {
           "Contents": {
             "Info.plist": "529bf90b5e27f41023c1fd95b5c1e8b8",
@@ -76,6 +96,14 @@
             },
             "MacOS": {
               "RealtekRTL8111": "6c8ef4d415d23cf347ad1e2fdb11eab0"
+            }
+          }
+        },
+        "FakePCIID.kext": {
+          "Contents": {
+            "Info.plist": "02eab7ce5415e8754b13046c44384361",
+            "MacOS": {
+              "FakePCIID": "87003a57e3c6a0985fcdd5b89098464e"
             }
           }
         },
@@ -100,9 +128,9 @@
             "_CodeSignature": {
               "CodeResources": "c48c1d9c6cf982c32580a9c58b0cce51"
             },
-            "Info.plist": "0f9be49935bbdec76dad5f1080706dc2",
+            "Info.plist": "d88c797e37eef05ad94379dc7b7da085",
             "MacOS": {
-              "VoodooI2CHID": "d5f4658e59e9b33f513e0af640cb73d0"
+              "VoodooI2CHID": "179cbd9862eee37870efdcd149a42304"
             }
           }
         },
@@ -164,9 +192,9 @@
                   "_CodeSignature": {
                     "CodeResources": "c48c1d9c6cf982c32580a9c58b0cce51"
                   },
-                  "Info.plist": "c7a75cfcdde609b4302c9236061df216",
+                  "Info.plist": "657f311141ab4160f7ced4084c9da9b7",
                   "MacOS": {
-                    "VoodooGPIO": "508a4f9dbd02ace40d09ef518719560f"
+                    "VoodooGPIO": "d3b6adfcf64d69bff06bdff64c52aeca"
                   }
                 }
               },
@@ -175,19 +203,19 @@
                   "_CodeSignature": {
                     "CodeResources": "c48c1d9c6cf982c32580a9c58b0cce51"
                   },
-                  "Info.plist": "67fd6a7ab512edf8a0a7348331c216ac",
+                  "Info.plist": "5a5f39eff0b286b0fde4ae881098d1c0",
                   "MacOS": {
-                    "VoodooI2CServices": "867f68c920967a17dbb3afe1bd9fb244"
+                    "VoodooI2CServices": "53ff34f21a911575f60cdde95a5df6a3"
                   }
                 }
               }
             },
             "_CodeSignature": {
-              "CodeResources": "24abe8a00e7ce50df80a66a607e96333"
+              "CodeResources": "df8cf46a4bcdd20926ef3430c9b7a039"
             },
-            "Info.plist": "ff09aee53adab2974d66c42e6aa9b072",
+            "Info.plist": "870250b9ffe178df3b89cf8c05c20a50",
             "MacOS": {
-              "VoodooI2C": "f178ecdead6792faacff3b122668b52f"
+              "VoodooI2C": "0450b7f35e2572bcb3d18e8c2438215f"
             }
           }
         },
@@ -370,7 +398,7 @@
       "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
       "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20"
     },
-    "config.plist": "4e248dfee9fed6badb9c99094af3650f",
+    "config.plist": "cc4d992ded1d8bb1d4cd7450ee61b9ea",
     "ACPI": {
       "patched": {
         "SSDT-TPAD.aml": "a6daa12a53b3a0c86771a95799738490",

@@ -22,14 +22,18 @@
 				<string>The following fixes may be needed for onboard audio/USB/etc</string>
 				<key>FixAirport</key>
 				<true/>
+				<key>FixHDA</key>
+				<false/>
 				<key>FixHPET</key>
-				<false/>
+				<true/>
 				<key>FixIPIC</key>
-				<false/>
+				<true/>
+				<key>FixLAN</key>
+				<true/>
 				<key>FixRTC</key>
-				<false/>
+				<true/>
 				<key>FixTMR</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>Patches</key>
 			<array>
@@ -326,7 +330,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-igfxnohdmi debug=0x100 -alcbeta alcid=88</string>
+		<string>-igfxnohdmi debug=0x100 -alcbeta alcid=88 keepsyms=1</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -343,7 +347,7 @@
 		<key>C4</key>
 		<true/>
 		<key>C6</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>Comment</key>
 	<string>This file is for 10.14.x with native CoffeeLake support</string>
@@ -467,7 +471,7 @@
 			<key>Inject</key>
 			<integer>88</integer>
 			<key>ResetHDA</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>FakeID</key>
 		<dict>
@@ -480,6 +484,10 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
+				<key>device-id</key>
+				<data>
+				cKEAAA==
+				</data>
 				<key>layout-id</key>
 				<data>
 				WAAAAA==
