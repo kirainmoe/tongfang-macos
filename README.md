@@ -14,7 +14,7 @@
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.14.4-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-![screenshot](https://i.loli.net/2019/04/30/5cc86b6e7ce00.jpg)
+![screenshot](https://i.loli.net/2019/05/03/5ccc5901750fc.jpg)
 
 用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7\*-KP\*GZ / 神舟战神Z7\*-KP\*Z**（**请注意，并不是适用于所有以 Z7 开头的战神笔记本！**）；理论适用于炫龙耀7000 / 机械革命Z2 Air. 
 
@@ -75,12 +75,17 @@
 
 | Component | Model |
 |--|--|
-| CPU | Intel Core(TM) i7-8750H | 
-| GPU | Intel UHD630 / Nvidia GTX1060
-| RAM | 8GB |
-| Wireless | Intel AC9462 |
+| CPU | Intel Core(TM) i7-8750H (KP5(G)Z 为 i5-8300H) | 
+| GPU | Intel UHD630 / Nvidia GTX1060 (Z7m 为 1050Ti；两者皆无法驱动) |
+| RAM | Micron Crucial 8GB |
+| NVMe | Asgard NVMe SSD 256G |
+| SSD | Phison SATA SSD 128G (原装，macOS 系统盘) |
+| Wireless | Intel AC9462（无法驱动，已更换 BCM94360CS2） |
 | Ethernet | Realtek RTL8168H |
 | Audio | Realtek ALC269vc |
+
+如果想获得更好的 Hackintosh 体验，请考虑更换部分硬件。有关详情，参见[《硬件更换指南和兼容性报告
+》](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E7%A1%AC%E4%BB%B6%E6%9B%B4%E6%8D%A2%E6%8C%87%E5%8D%97%E5%92%8C%E5%85%BC%E5%AE%B9%E6%80%A7%E6%8A%A5%E5%91%8A)。
 
 # What's working
 
@@ -91,7 +96,7 @@
 - 有线网卡
 - 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 88，外放、耳机、麦克风全部正常）
 - 电池状态（现已使用 Clover Hotpatch 驱动）
-- USB （已破除端口限制）
+- USB （使用 USBInjectAll + SSDT 驱动，3.0 5G/s 速度正常，Type-C 可用）
 - 睡眠（使用 Clover Hotpatch 修复）
 - 读卡器
 - etc.
@@ -103,7 +108,7 @@
 # What's not working
 
 - 独立显卡（GTX1060， 目前没有适用于 Mojave 的 Nvidia WebDriver）
-- 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
+- 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代，或更换无线网卡）
 - **HDMI/MiniDP（该模具 HDMI/MiniDP 直接由独显输出, 独显无法驱动，所以 HDMI/MiniDP 也无法使用）**
 
 注：经过测试，10.13.6 下可安装 Nvidia WebDriver 并识别 GTX1060，但 VRAM 只有 256MB，推测是没有被驱动；外接显示器未测试。
@@ -139,8 +144,12 @@ A: 模拟 NVRAM，运行上面的优化脚本即可。如果上述操作后仍�
 Q: 为什么触摸板不工作？  
 A: 多数情况下是因为**您没有正确地替换 EFI 配置文件导致的**。请检查 VoodooI2C.kext, VoodooI2CService.kext, VoodooGPIO.kext, VoodooI2CHID.kext 是否正确加载。此外，触摸板完美驱动，要求电池也完美驱动。出现此情况的原因也有可能是您对 DSDT 应用了 VoodooI2C 源的 DSDT 补丁，而这一步是不需要的。当然，如果你的机型根本不是以 Z 结尾的战神系列，那么触摸板驱动是不适合你们的。
 
+Q: 为什么触摸板的单手指操作，每五次就会卡一次（第五次操作被忽略）？  
+A: 这是 VoodooI2C 触摸板驱动的 BUG. 因为 VoodooI2C 对 CoffeeLake 的支持并不是很完善，因此请耐心等待原作者 (@alexandred) 修复。
+
 Q: 为什么声卡不工作？  
-A: 一般情况下重启后即可正常。初步怀疑是 AppleALC 驱动的问题；目前我们仍然在调查问题发生的原因，如果你找到了解决方案，请告诉我们。    
+A: <s>一般情况下重启后即可正常。初步怀疑是 AppleALC 驱动的问题；目前我们仍然在调查问题发生的原因，如果你找到了解决方案，请告诉我们。</s>  
+**请更新到 20190502 Build 1556790650 及更高版本的配置文件以解决该问题。**    
 
 Q：为什么独显不工作？HDMI 外接不工作？DP 接口不工作？怎么外接显示器？  
 A：如果你想问这个问题，我的建议是再看一遍 README.
@@ -225,31 +234,32 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 # Detail screenshot
 
 USB  
-![usb](https://ws2.sinaimg.cn/large/9f1137b1gy1g0fimkywrfj20gv0bp3zn.jpg)
+![usb](https://i.loli.net/2019/05/03/5ccc59013f86b.jpg)
 
-网络  
+有线网络  
 ![network](https://wx3.sinaimg.cn/large/9f1137b1gy1g0finlomxaj20gv0bpaap.jpg)
 
-核显  
-![uhd630](https://ws1.sinaimg.cn/large/9f1137b1gy1g0fipr3magj20gv0bpjs9.jpg)
+核显 & 亮度调节  
+![uhd630](https://i.loli.net/2019/05/03/5ccc590160bef.jpg)
 
-电池（已隐去序列号）  
-![battery](https://wx3.sinaimg.cn/large/9f1137b1gy1g0fiq7gu9ej20gv0bpwfl.jpg)
+电池  
+![battery](https://i.loli.net/2019/05/03/5ccc5901380e9.jpg)
 
 蓝牙（已隐去 MAC 地址）  
-![bluetooth](https://ws4.sinaimg.cn/large/9f1137b1gy1g0fiqm7c70j20gv0bpdh4.jpg)
+![bluetooth](https://i.loli.net/2019/05/03/5ccc5901589b8.jpg)
 
 声音  
-![sound](https://wx2.sinaimg.cn/large/9f1137b1gy1g0fir5cqzmj20gv0bp751.jpg)  
-![sound-2](https://ws3.sinaimg.cn/large/9f1137b1gy1g0firigeyhj20f00b7t95.jpg)  
-
-亮度、HiDPI  
-![hidpi](https://wx3.sinaimg.cn/large/9f1137b1gy1g0firynbysj21770oa477.jpg)  
-![brightness-key](https://ws2.sinaimg.cn/large/9f1137b1gy1g0fisj7r1kj206j0660sx.jpg)  
+![sound](https://i.loli.net/2019/05/03/5ccc590160b2f.jpg)  
 
 睿频、电源管理  
 ![hwmonitor](https://wx3.sinaimg.cn/large/9f1137b1gy1g0fisxsg8jj206m0c3wf8.jpg)  
 ![lpc](https://wx2.sinaimg.cn/large/9f1137b1gy1g0fitafzljj20f00a1gm4.jpg)  
+
+Wi-Fi （需要更换硬件）  
+![wifi](https://i.loli.net/2019/05/03/5ccc5901589b8.jpg)
+
+隔空投送和接力（需要更换硬件）  
+![airdrop-handoff](https://i.loli.net/2019/05/03/5ccc59015838a.jpg)
 
 触摸板手势  
 ![gesture](https://wx4.sinaimg.cn/large/9f1137b1gy1g0fitjrcoqj20f00bk75e.jpg)  
