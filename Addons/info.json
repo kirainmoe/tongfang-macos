@@ -1,9 +1,9 @@
 {
   "package": "hasee-z7-kp7gz-macos",
-  "build": "20190502",
+  "build": "20190504",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1556790650,
+  "timestamp": 1556979085,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-z7-kp7gz-macos",
   "supported_macos_version": [
     "10.14.2",
@@ -385,7 +385,7 @@
     },
     "Addons": {
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
-      "optimize.sh": "db187c67a79289722b1c5389436fcba8"
+      "optimize.sh": "a8b4423def76ded307a15cb6d62124f7"
     },
     "drivers64UEFI": {
       "SMCHelper-64.efi": "da6d3a17406028386c32a769e53cdb2b",
