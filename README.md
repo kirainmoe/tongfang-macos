@@ -98,7 +98,6 @@
 - 电池状态（现已使用 Clover Hotpatch 驱动）
 - USB （使用 USBInjectAll + SSDT 驱动，3.0 5G/s 速度正常，Type-C 可用）
 - 睡眠（使用 Clover Hotpatch 修复）
-- 读卡器
 - etc.
 
 # What's partial working
@@ -110,6 +109,8 @@
 - 独立显卡（GTX1060， 目前没有适用于 Mojave 的 Nvidia WebDriver）
 - 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代，或更换无线网卡）
 - **HDMI/MiniDP（该模具 HDMI/MiniDP 直接由独显输出, 独显无法驱动，所以 HDMI/MiniDP 也无法使用）**
+- 读卡器（读卡器走的 USB 2.0 外置，无法使用）
+
 
 注：经过测试，10.13.6 下可安装 Nvidia WebDriver 并识别 GTX1060，但 VRAM 只有 256MB，推测是没有被驱动；外接显示器未测试。
 
