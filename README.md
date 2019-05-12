@@ -16,7 +16,8 @@
 
 ![screenshot](https://i.loli.net/2019/05/03/5ccc5901750fc.jpg)
 
-用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7\*-KP\*GZ / 神舟战神Z7\*-KP\*Z**（**请注意，并不是适用于所有以 Z7 开头的战神笔记本！**）；理论适用于炫龙耀7000 / 机械革命Z2 Air. 
+用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7\*-KP\*GZ / 神舟战神Z7\*-KP\*Z**（**请注意，并不是适用于所有以 Z7 开头的战神笔记本！**）；理论适用于[炫龙耀7000](https://github.com/jinmu333/Shinalon_YAO_7000_efi) / 机械革命Z2 Air. 
+
 
 该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4** 全部亲自测试安装成功；使用 Clover Hotpatch 驱动。
 
@@ -65,7 +66,7 @@
 
 </center>
 
- - 因为 Shinelon Yao-7000 (炫龙耀 7000) 和 Mechrevo Z2 Air (机械革命 Z2 Air) 与神舟战神 KP7GZ 属于同款模具且配置相近，因此理论可以在上述设备中使用本 EFI 配置文件。
+ - 因为 [Shinelon Yao-7000 (炫龙耀 7000)](https://github.com/jinmu333/Shinalon_YAO_7000_efi) 和 Mechrevo Z2 Air (机械革命 Z2 Air) 与神舟战神 KP7GZ 属于同款模具且配置相近，因此理论可以在上述设备中使用本 EFI 配置文件。
 
  - **神舟 Z7-KP7GC, Z7-KP7EC, Z7-KP7SC, Z7-KP7S1, Z7-KP7GE, Z7-KP7GT, Z7-KP7D2 等不属于该系列**，即便其中的某些机型也采用同方其它模具，但并不保证能完全兼容，这些机型也不是本仓库配置文件的目标机型，因此**针对此类设备的兼容性问题，请您自行解决**。
 
@@ -230,7 +231,9 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-4-30 修改 SSDT-UIAC.aml Type-C 接口节点信息解决 Type-C 无法双面使用的问题。
 
-19-5-2 尝试修复声卡重启后找不到输出设备的问题，目前效果仍然处于观察阶段。
+19-5-2 尝试修复声卡重启后找不到输出设备的问题，<s>目前效果仍然处于观察阶段</s> 经过长期测试确认已修复。
+
+19-5-12 添加 SSDT RTC 重命名，更新 VoodooPS2Controller 驱动（可能需要重新设置按键映射）；尝试适配同方模具神舟战神 G7-CT7VK.
 
 # Detail screenshot
 

@@ -241,7 +241,27 @@
 					WFExNQ==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>RTC: change _STA to XSTA</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1NUQQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFNUQQ==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					UlRDTw==
+					</data>
+				</dict>
 			</array>
+			<key>Rtc8Allowed</key>
+			<true/>
 			<key>SuspendOverride</key>
 			<true/>
 		</dict>

@@ -1,9 +1,9 @@
 {
   "package": "hasee-z7-kp7gz-macos",
-  "build": "20190504",
+  "build": "20190512",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1556979085,
+  "timestamp": 1557674942,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-z7-kp7gz-macos",
   "supported_macos_version": [
     "10.14.2",
@@ -139,32 +139,32 @@
             "PlugIns": {
               "VoodooPS2Keyboard.kext": {
                 "Contents": {
-                  "Info.plist": "5f595577f4966d78db9883c3034c763c",
+                  "Info.plist": "28f0d2377a9367dcea7bd6269951ac5c",
                   "MacOS": {
-                    "VoodooPS2Keyboard": "b619147e8cfd5cbdb23f136380fb5d35"
+                    "VoodooPS2Keyboard": "febbbd96062f0836ea9e652f7ddcd49e"
                   }
                 }
               },
               "VoodooPS2Trackpad.kext": {
                 "Contents": {
-                  "Info.plist": "047e8bd57798ac4c8a525d840dfbdd09",
+                  "Info.plist": "32da85bfefdbeba8e6bf30649cd4a9f0",
                   "MacOS": {
-                    "VoodooPS2Trackpad": "53a269891a72ba1c75fd508603b225ff"
+                    "VoodooPS2Trackpad": "fe4a14280e8bebd7383f699a486b4187"
                   }
                 }
               },
               "VoodooPS2Mouse.kext": {
                 "Contents": {
-                  "Info.plist": "8638bf984ed2406fdfc8a8e637bace40",
+                  "Info.plist": "ba0666bdd3d00dd1e2873074513be47d",
                   "MacOS": {
-                    "VoodooPS2Mouse": "17d32a4f6f4892f27f00ef89df7d4b06"
+                    "VoodooPS2Mouse": "89d30ec09bff182ea1743f1514c76c61"
                   }
                 }
               }
             },
-            "Info.plist": "55c91d3ff04eb42d879f5687701586b8",
+            "Info.plist": "123bdc8035fd671f0f31685a5e7cd602",
             "MacOS": {
-              "VoodooPS2Controller": "7b72f60e4451821af7babd3aa353250e"
+              "VoodooPS2Controller": "f3b1c82458a53645398e72ecc3de7b50"
             }
           }
         },
@@ -398,7 +398,7 @@
       "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
       "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20"
     },
-    "config.plist": "cc4d992ded1d8bb1d4cd7450ee61b9ea",
+    "config.plist": "eee23eb8b4a72cc943eacfcb99704132",
     "ACPI": {
       "patched": {
         "SSDT-TPAD.aml": "a6daa12a53b3a0c86771a95799738490",
