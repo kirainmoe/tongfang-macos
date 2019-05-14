@@ -179,6 +179,20 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>I2C: change USTP, 8 to XSTP, 8</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					VVNUUAg=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFNUUAg=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>I2C: change SBFI to SBFS</string>
 					<key>Disabled</key>
 					<false/>
@@ -345,12 +359,13 @@
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-TPAD.aml</string>
 			<string>SSDT-FN.aml</string>
+			<string>SSDT-USTP.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-igfxnohdmi debug=0x100 -alcbeta alcid=88 keepsyms=1</string>
+		<string>-igfxnohdmi debug=0x100 -alcbeta alcid=88 keepsyms=1 abm_firstpolldelay=16000 darkwake=0 nv_disable=1</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>

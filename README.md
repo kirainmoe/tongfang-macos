@@ -11,16 +11,16 @@
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.14.4-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
+<img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.14.5-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-![screenshot](https://i.loli.net/2019/05/03/5ccc5901750fc.jpg)
+![screenshot](https://i.loli.net/2019/05/14/5cda65189a08439627.jpg)
 
 用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7\*-KP\*GZ / 神舟战神Z7\*-KP\*Z**（**请注意，并不是适用于所有以 Z7 开头的战神笔记本！**）；理论适用于[炫龙耀7000](https://github.com/jinmu333/Shinalon_YAO_7000_efi) / 机械革命Z2 Air. 
 
 **现寻找机型为 G7-CT7VK, Z7-CT7GK 的用户测试本 EFI 的兼容性。如果您有上述机型并且有意向安装黑苹果，请联系我们。**
 
-该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4** 全部亲自测试安装成功；使用 Clover Hotpatch 驱动。
+该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4/10.14.5** 全部亲自测试安装成功（全新安装/系统内 OTA 更新）；使用 Clover Hotpatch 驱动。
 
 在开始之前，请务必确认您已经阅读了[使用须知](#tutorial)和[常见问题](#FAQ)。**如果您在使用的时候遇到问题，请先尝试[快速排错](#troubleshooting)**.
 
@@ -234,7 +234,9 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-5-2 尝试修复声卡重启后找不到输出设备的问题，<s>目前效果仍然处于观察阶段</s> 经过长期测试确认已修复。
 
-19-5-12 添加 SSDT RTC 重命名，更新 VoodooPS2Controller 驱动（可能需要重新设置按键映射）；尝试适配同方模具神舟战神 G7-CT7VK.
+19-5-12 添加 SSDT RTC 重命名，更新 VoodooPS2Controller 驱动（可能需要重新设置按键映射）；<s>尝试适配同方模具神舟战神 G7-CT7VK</s>.
+
+19-5-14 添加 I2C 触摸板 SSDT；更新 10.14.5 新版本支持。
 
 # Detail screenshot
 
