@@ -1,14 +1,15 @@
 {
   "package": "hasee-z7-kp7gz-macos",
-  "build": "20190512",
+  "build": "20190514",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1557674942,
+  "timestamp": 1557816705,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-z7-kp7gz-macos",
   "supported_macos_version": [
     "10.14.2",
     "10.14.3",
-    "10.14.4"
+    "10.14.4",
+    "10.14.5"
   ],
   "hash": {
     "CLOVERX64.efi": "fd61f0fda3f07d5c7de47309b961d5ac",
@@ -398,7 +399,7 @@
       "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
       "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20"
     },
-    "config.plist": "eee23eb8b4a72cc943eacfcb99704132",
+    "config.plist": "c21cb230831cef932a78c6e98076fd70",
     "ACPI": {
       "patched": {
         "SSDT-TPAD.aml": "a6daa12a53b3a0c86771a95799738490",
@@ -409,7 +410,8 @@
         "SSDT-GPRW.aml": "4d68d941799431476a2c4c3f91ac262f",
         "SSDT-PNLFCFL.aml": "524b50ef64dc660a75bd5ae68c8c8283",
         "SSDT-ALS0.aml": "8615f5e7a42a4ab3b345d288a0686ebe",
-        "SSDT-BATT.aml": "af4e41a641cbbd88e5e55be0c743fdba"
+        "SSDT-BATT.aml": "af4e41a641cbbd88e5e55be0c743fdba",
+        "SSDT-USTP.aml": "ce75fa29a551d6619dfb6d95ac2f1f67"
       }
     }
   }
