@@ -2,9 +2,9 @@
 
 <img src="https://ws2.sinaimg.cn/large/9f1137b1gy1g1hg3epia2j20n505jt9q.jpg" width="300px" alt="logo">
 
-<p>
+<h1 align="center">神舟战神 8th/9th 同方机型 macOS</h1>
 
-<h1 align="center">神舟战神 Z7(m)-KP7/5(G)Z macOS</h1>
+<p align="center">支持 Z7(m)-KP7/5(G)Z, Z7(m)-KP7/5GC/E, Z7(m)-KP7/5EC, Z7-CT7VK</p>
 
 <p align="center">
 <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/EFI-%E6%9B%BF%E6%8D%A2%E6%95%99%E7%A8%8B">EFI 替换教程</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting)">问题排查指导</a> | <a href="#group">企鹅互助交流群</a>
@@ -16,7 +16,7 @@
 
 ![screenshot](https://i.loli.net/2019/05/14/5cda65189a08439627.jpg)
 
-用于在神舟战神 Z7-KP7GZ 系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，适用于 **神舟战神Z7\*-KP\*GZ / 神舟战神Z7\*-KP\*Z**（**请注意，并不是适用于所有以 Z7 开头的战神笔记本！**）；理论适用于[炫龙耀7000](https://github.com/jinmu333/Shinalon_YAO_7000_efi) / 机械革命Z2 Air. 
+用于在神舟战神 8 代 / 9 代同方系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，可以[点这里查看适配的机型](#compatibility)。
 
 **现寻找机型为 G7-CT7VK, Z7-CT7GK 的用户测试本 EFI 的兼容性。如果您有上述机型并且有意向安装黑苹果，请联系我们。**
 
@@ -59,17 +59,22 @@
 
 # Compatibility
 
- - 本仓库 EFI 配置文件适用于采用了 **同方模具** 并以 **Z/GZ** 结尾的神舟战神系列笔记本，包括：**Z7-KP7GZ, Z7m-KP7GZ, Z7m-KP5GZ, Z7-KP7Z, Z7m-KP7Z, Z7m-KP5Z.** 该系列笔记本的外观如下图所示，在替换 EFI 前请确认您的机型与下图一致：
+本仓库 EFI 配置文件适用于采用了 **同方模具** 的神舟战神系列 **8 代/9 代 CPU 平台**笔记本，包括：
+ 
+- 8 代窄边框笔记本，型号后缀为 Z 或 GZ，如：**Z7-KP7GZ, Z7m-KP7GZ, Z7m-KP5GZ, Z7-KP7Z, Z7m-KP7Z, Z7m-KP5Z.** 
+- 8 代其它同方模具笔记本，如 **Z7(m)-KP7/5GC, Z7(m)-KP7/5GE, Z7(m)-KP7/5EC**，需要选择对应的 config
+- 9 代同方模具窄边框笔记本，如 **Z7-CT7GK**（试验性）
+- 其它未测试的 8 代以上同方模具神舟战神笔记本（实验性）
 
-<center>
+<img src="https://camo.githubusercontent.com/066151785d81559120d76410f607d906e5b258ec/68747470733a2f2f7773332e73696e61696d672e636e2f6c617267652f3966313133376231677931673168676c71727377356a323068333062627467312e6a7067" width="200px">
 
-![kp7gz](https://ws3.sinaimg.cn/large/9f1137b1gy1g1hglqrsw5j20h30bbtg1.jpg)
+<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558636166866&di=64511ab5ebc754464264e1abde9ad2d0&imgtype=0&src=http%3A%2F%2F2f.zol-img.com.cn%2Fproduct%2F190%2F595%2Fce9Y0Q4QlY09Y.jpg" width="200px">
 
-</center>
+因为本人只拥有 Z7-KP7GZ，其他型号通过群内的朋友测试通过。有关于在 GC/EC/GE/CT7GK 等机型上使用该配置文件，请参照[各机型配置文件使用指南](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E5%90%84%E6%9C%BA%E5%9E%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97).
 
- - 因为 [Shinelon Yao-7000 (炫龙耀 7000)](https://github.com/jinmu333/Shinalon_YAO_7000_efi) 和 Mechrevo Z2 Air (机械革命 Z2 Air) 与神舟战神 KP7GZ 属于同款模具且配置相近，因此理论可以在上述设备中使用本 EFI 配置文件。
+[Shinelon Yao-7000 (炫龙耀 7000)](https://github.com/jinmu333/Shinalon_YAO_7000_efi) 和 Mechrevo Z2 Air (机械革命 Z2 Air) 与神舟战神 KP7GZ 属于同款模具且配置相近，因此理论可以在上述设备中使用本 EFI 配置文件。
 
- - **神舟 Z7-KP7GC, Z7-KP7EC, Z7-KP7SC, Z7-KP7S1, Z7-KP7GE, Z7-KP7GT, Z7-KP7D2 等不属于该系列**，即便其中的某些机型也采用同方其它模具，但并不保证能完全兼容，这些机型也不是本仓库配置文件的目标机型，因此**针对此类设备的兼容性问题，请您自行解决**。
+注意，**蓝天模具的神舟 Z7-KP7SC, Z7-KP7S1、同方模具的七代平台机型 Z7-KP7GT, Z7-KP7D2 等不属于该系列**，并不保证能完全兼容，这些机型也不是本仓库配置文件的目标机型，因此**针对此类设备的兼容性问题，请您自行解决**。
 
 # Info
 
@@ -101,6 +106,8 @@
 - USB （使用 USBInjectAll + SSDT 驱动，3.0 5G/s 速度正常，Type-C 可用）
 - 睡眠（使用 Clover Hotpatch 修复）
 - etc.
+
+注：以上情况基于 KP7GZ 系列机型；对于使用其它机型的用户，可能会有一些功能不正常，请用户测试后反馈。
 
 # What's partial working
 
@@ -162,6 +169,9 @@ A: 请更新最新版本的 Clover, Lilu.kext 和 WhateverGreen.kext. 您可以�
 
 Q: 为什么执行完优化脚本（或开启了 HiDPI 之后）出现了花屏、睡眠唤醒四分之一屏？  
 A: 出现此原因可能是因为您启用了 HiDPI。目前因为开启 HiDPI 引起的卡条、花屏、四分之一屏问题暂时没有很好的解决方案，一般重启就可以正常。如果您无法忍受的话，请不要开启 HiDPI. 虽然这些问题部分可以解决，但是并不能从 Clover 配置文件的层面解决，因此请您自寻解决方案。
+
+Q: 为什么更新到新版本 (10.14.5) 之后，触摸板失效了？  
+A: 说出来你可能不信，这是一个玄学问题。你可以无意间地多重启几次，看看是否有效。如果无效、并且排错程序反馈正常，您可以进群求助。
 
 Q: 为什么应用 DSDT 补丁后，DSDT 编译出错？  
 A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补丁是在我的电脑上测试的，我可以保证在我的电脑上是正常的，在大部分的电脑上也是，该现象发生的几率应该是很小的，但仍然无法保证因您更换过硬件、BIOS 设置不同等原因导致 DSDT 的变更。这种情况下需要您对 DSDT 有一些了解并手动排错。通常情况下，一般是部分补丁没有成功应用，或者 DSDT 语法错误（通常是多或少了一个花括号），可以尝试重新应用补丁或自己补上括号。实在无法自己解决的，请提 issues 并附上你的 DSDT 文件。    
@@ -234,9 +244,11 @@ A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补
 
 19-5-2 尝试修复声卡重启后找不到输出设备的问题，<s>目前效果仍然处于观察阶段</s> 经过长期测试确认已修复。
 
-19-5-12 添加 SSDT RTC 重命名，更新 VoodooPS2Controller 驱动（可能需要重新设置按键映射）；<s>尝试适配同方模具神舟战神 G7-CT7VK</s>.
+19-5-12 添加 SSDT RTC 重命名，<s>更新 VoodooPS2Controller 驱动（可能需要重新设置按键映射）；尝试适配同方模具神舟战神 G7-CT7VK</s>.
 
-19-5-14 添加 I2C 触摸板 SSDT；更新 10.14.5 新版本支持。
+<s>19-5-14 添加 I2C 触摸板 SSDT；更新 10.14.5 新版本支持。</s>
+
+19-5-23 正式支持同方八代全系机型和九代部分机型，添加 GC/EC 的 USB 注入，回滚 VoodooPS2Controller 驱动和触摸板。
 
 # Detail screenshot
 
