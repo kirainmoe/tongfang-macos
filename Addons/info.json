@@ -1,9 +1,9 @@
 {
   "package": "hasee-z7-kp7gz-macos",
-  "build": "20190514",
+  "build": "20190523",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1557816705,
+  "timestamp": 1558627117,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-z7-kp7gz-macos",
   "supported_macos_version": [
     "10.14.2",
@@ -140,32 +140,32 @@
             "PlugIns": {
               "VoodooPS2Keyboard.kext": {
                 "Contents": {
-                  "Info.plist": "28f0d2377a9367dcea7bd6269951ac5c",
+                  "Info.plist": "5f595577f4966d78db9883c3034c763c",
                   "MacOS": {
-                    "VoodooPS2Keyboard": "febbbd96062f0836ea9e652f7ddcd49e"
+                    "VoodooPS2Keyboard": "b619147e8cfd5cbdb23f136380fb5d35"
                   }
                 }
               },
               "VoodooPS2Trackpad.kext": {
                 "Contents": {
-                  "Info.plist": "32da85bfefdbeba8e6bf30649cd4a9f0",
+                  "Info.plist": "047e8bd57798ac4c8a525d840dfbdd09",
                   "MacOS": {
-                    "VoodooPS2Trackpad": "fe4a14280e8bebd7383f699a486b4187"
+                    "VoodooPS2Trackpad": "53a269891a72ba1c75fd508603b225ff"
                   }
                 }
               },
               "VoodooPS2Mouse.kext": {
                 "Contents": {
-                  "Info.plist": "ba0666bdd3d00dd1e2873074513be47d",
+                  "Info.plist": "8638bf984ed2406fdfc8a8e637bace40",
                   "MacOS": {
-                    "VoodooPS2Mouse": "89d30ec09bff182ea1743f1514c76c61"
+                    "VoodooPS2Mouse": "17d32a4f6f4892f27f00ef89df7d4b06"
                   }
                 }
               }
             },
-            "Info.plist": "123bdc8035fd671f0f31685a5e7cd602",
+            "Info.plist": "55c91d3ff04eb42d879f5687701586b8",
             "MacOS": {
-              "VoodooPS2Controller": "f3b1c82458a53645398e72ecc3de7b50"
+              "VoodooPS2Controller": "7b72f60e4451821af7babd3aa353250e"
             }
           }
         },
@@ -384,6 +384,7 @@
         }
       }
     },
+    "config-kp7ec-kp7gc.plist": "6ed09c865fa7285ec96847e9d123bab2",
     "Addons": {
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
       "optimize.sh": "a8b4423def76ded307a15cb6d62124f7"
@@ -399,10 +400,24 @@
       "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
       "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20"
     },
-    "config.plist": "c21cb230831cef932a78c6e98076fd70",
+    "config.plist": "777339abd184c09a61d4c8b5c70001ec",
     "ACPI": {
+      "source": {
+        "SSDT-DDGPU.dsl": "394fb77d72533aa4b3713fa8da08e1b3",
+        "SSDT-TPAD.dsl": "7a2618b93821ff3902e862de58f8118a",
+        "SSDT-USTP.dsl": "cffa73066f17a7601be5d45596298dfb",
+        "SSDT-ALS0.dsl": "8e5ca00166f028e9ac37a812dd294d91",
+        "SSDT-BATT.dsl": "ab1bad23829982e5fe20c9c9af7002b2",
+        "SSDT-PNLFCFL.dsl": "7c91bb40ac0b8d9f09055ccdf6a9d50b",
+        "SSDT-GPRW.dsl": "06074de66cc3b809968892e9751f310e",
+        "SSDT-UIAC.dsl": "aff15dbcb56fb82e9062f63e3911f007",
+        "SSDT-XOSI.dsl": "0e80d86cedd699162ca72eb2d64db714",
+        "SSDT-FN.dsl": "74b79d993acfe3e25429708e6926e54c"
+      },
       "patched": {
         "SSDT-TPAD.aml": "a6daa12a53b3a0c86771a95799738490",
+        "SSDT-RTC.aml": "caf143b0e46effeb44f644edffe852cf",
+        "SSDT-UIAC-GC-EC.aml": "e07f499303116b199ad45a37aecf3113",
         "SSDT-DDGPU.aml": "4c67fb04f2cc0b9ce3a9eb9447ee18e8",
         "SSDT-FN.aml": "a7233d40ef577307f4ebadc80cf7360b",
         "SSDT-XOSI.aml": "6deb62d7de51ea03f88e3c0faf100339",
