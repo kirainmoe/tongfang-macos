@@ -4,7 +4,7 @@
 
 <h1 align="center">神舟战神 8th/9th 同方机型 macOS</h1>
 
-<p align="center">支持 Z7(m)-KP7/5(G)Z, Z7(m)-KP7/5GC/E, Z7(m)-KP7/5EC, Z7-CT7VK</p>
+<p align="center">支持 Z7(m)-KP7/5(G)Z, Z7(m)-KP7/5GC/E, Z7(m)-KP7/5EC, Z7-CT7GK</p>
 
 <p align="center">
 <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/EFI-%E6%9B%BF%E6%8D%A2%E6%95%99%E7%A8%8B">EFI 替换教程</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting)">问题排查指导</a> | <a href="#group">企鹅互助交流群</a>
@@ -41,21 +41,15 @@
 
 1. 使用本仓库配置文件的方法：挂载 EFI 分区，备份并删除原先 /EFI/CLOVER 文件夹中的所有文件，将本仓库下的所有文件全部放到 /EFI/CLOVER 当中。详细教程见[这里](https://note.youdao.com/ynoteshare1/index.html?id=0ebe9470eeaee01e137b9504ceca78db&type=note)。
 
-2. **请先用镜像自带的 Clover EFI 配置安装完系统，确保能够进入桌面后再替换本文件夹**。否则您可能会连 macOS 安装界面都看不到。关于安装镜像，我们建议采用[黑果小兵集成 Clover 的最新版本](https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/).
+2. **请先用镜像自带的 Clover EFI 配置安装完系统（CT7GK 例外），确保能够进入桌面后再替换本文件夹**。否则您可能会连 macOS 安装界面都看不到。关于安装镜像，我们建议采用[黑果小兵集成 Clover 的最新版本](https://blog.daliansky.net/categories/%E4%B8%8B%E8%BD%BD/).
 
-3. 建议在本替换 EFI 前，**提前备份好您能够正常启动的 EFI，以便在遇到问题时回滚**。
+3. 建议在替换本 EFI 前，**提前备份好您能够正常启动的 EFI，以便在遇到问题时回滚**。 **在替换 EFI 前请先阅读[注意事项和常见问题](#FAQ)，以了解一些常见问题的解决方案**。
 
-4. 此外，当您发现替换 EFI 后某设备无法被驱动时，建议您将 /EFI/CLOVER/Kexts/Other 下的 Kext 安装到 /Library/Extensions 中。 
+4. 如果你不知道如何在一台 Windows 设备上全新安装 macOS Mojave，请参考[该教程](http://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)（注意，格盘不要按照这篇文章里的教程做，而是事先在 Windows 中分好区并抹掉对应分区；**确保你的安装硬盘有 200M 以上的 ESP 分区**）。如果你在安装系统的过程中遇到了问题，请在[macOS Mojave 10.14安装中常见的问题及解决方法](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Mojave-10.14-installation.html)这篇文章中看看有没有你的问题。
 
-5. **在替换 EFI 前请先阅读[注意事项和常见问题](#FAQ)，以了解一些常见问题的解决方案**。
+5. 其他情况下，如果您遇到了 README 中没有提到的问题（请确认你什么多余的事情都没做，例如安装其他驱动，自行打 DSDT 补丁等），请不要犹豫直接提 issue. 有关于提问的细则，请看 [提问相关事项](#question) 部分。
 
-6. 如果你不知道如何在一台 Windows 设备上全新安装 macOS Mojave，请参考[该教程](http://blog.daliansky.net/Lenovo-Xiaoxin-Air-13-macOS-Mojave-installation-tutorial.html)（注意，格盘不要按照这篇文章里的教程做，而是事先在 Windows 中分好区并抹掉对应分区；**确保你的安装硬盘有 200M 以上的 ESP 分区**）。如果你在安装系统的过程中遇到了问题，请在[macOS Mojave 10.14安装中常见的问题及解决方法](https://blog.daliansky.net/Common-problems-and-solutions-in-macOS-Mojave-10.14-installation.html)这篇文章中看看有没有你的问题。
-
-7. 如果你已经在 Z7(m)-KP7(5)GZ 上安装好 macOS Mojave 但仍有部分设备无法驱动，请参考[神舟战神 Z7-KP7GZ 黑苹果 macOS Mojave 安装指北](https://kirainmoe.com/blog/post/guide-on-hasee-z7-kp7gz-hackintosh-macos-mojave/).
-
-8. 其他情况下，如果您遇到了 README 中没有提到的问题（请确认你什么多余的事情都没做，例如安装其他驱动，自行打 DSDT 补丁等），请不要犹豫直接提 issue. 有关于提问的细则，请看 [提问相关事项](#question) 部分。
-
-9. 当您使用本仓库的配置文件时，默认您已经阅读并知悉了上文及链接中的内容。**因您未详细阅读上文内容、不当操作导致的包括但不限于：安装失败、部分设备不工作、系统无法启动甚至是设备损坏等问题，一切后果请您自行承担。**
+6. 当您使用本仓库的配置文件时，默认您已经阅读并知悉了上文及链接中的内容。**因您未详细阅读上文内容、不当操作导致的包括但不限于：安装失败、部分设备不工作、系统无法启动甚至是设备损坏等问题，一切后果请您自行承担。**
 
 # Compatibility
 
