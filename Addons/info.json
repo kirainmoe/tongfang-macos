@@ -1,18 +1,19 @@
 {
   "package": "hasee-z7-kp7gz-macos",
-  "build": "20190523",
+  "build": "20190604",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1558627117,
+  "timestamp": 1559638261,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-z7-kp7gz-macos",
   "supported_macos_version": [
     "10.14.2",
     "10.14.3",
     "10.14.4",
-    "10.14.5"
+    "10.14.5",
+    "10.15"
   ],
   "hash": {
-    "CLOVERX64.efi": "fd61f0fda3f07d5c7de47309b961d5ac",
+    "CLOVERX64.efi": "e0f84885d293929252adfe61c0a4cb03",
     "tools": {
       "Shell32.efi": "7fa0023638de5dcb2dbf5d2fb684073a",
       "Shell.inf": "6e47bee7d43c81355b4848f043f3aa0b",
@@ -140,32 +141,16 @@
             "PlugIns": {
               "VoodooPS2Keyboard.kext": {
                 "Contents": {
-                  "Info.plist": "5f595577f4966d78db9883c3034c763c",
+                  "Info.plist": "cb2c16a2839a05b1b1bd2b48e881751c",
                   "MacOS": {
-                    "VoodooPS2Keyboard": "b619147e8cfd5cbdb23f136380fb5d35"
-                  }
-                }
-              },
-              "VoodooPS2Trackpad.kext": {
-                "Contents": {
-                  "Info.plist": "047e8bd57798ac4c8a525d840dfbdd09",
-                  "MacOS": {
-                    "VoodooPS2Trackpad": "53a269891a72ba1c75fd508603b225ff"
-                  }
-                }
-              },
-              "VoodooPS2Mouse.kext": {
-                "Contents": {
-                  "Info.plist": "8638bf984ed2406fdfc8a8e637bace40",
-                  "MacOS": {
-                    "VoodooPS2Mouse": "17d32a4f6f4892f27f00ef89df7d4b06"
+                    "VoodooPS2Keyboard": "f688d5aa2aede6acdff3b4dd4fbeebac"
                   }
                 }
               }
             },
-            "Info.plist": "55c91d3ff04eb42d879f5687701586b8",
+            "Info.plist": "2d760abecbb7bb80d8db97d3f58e885b",
             "MacOS": {
-              "VoodooPS2Controller": "7b72f60e4451821af7babd3aa353250e"
+              "VoodooPS2Controller": "d29dc61bffcd5d89682cc3b40ea25668"
             }
           }
         },
@@ -230,9 +215,9 @@
         },
         "WhateverGreen.kext": {
           "Contents": {
-            "Info.plist": "6e88ddee81e24b1863d54d4d1cfe9c9e",
+            "Info.plist": "f34341a59bdc8a3f914036c9e94991dc",
             "MacOS": {
-              "WhateverGreen": "626f015907495c85cd568d4f98de4858"
+              "WhateverGreen": "32661ffd82a33d9439b2129b41c57fef"
             }
           }
         },
@@ -246,9 +231,9 @@
         },
         "Lilu.kext": {
           "Contents": {
-            "Info.plist": "e8b788f4acc863e388ad49f60a350da7",
+            "Info.plist": "7467396ce38c82da5dbb91bedcb43494",
             "MacOS": {
-              "Lilu": "a096e90d4661909a527758d2beabecbe"
+              "Lilu": "60baca9dc15ab0fad4c80f17901c76a6"
             }
           }
         },
@@ -285,6 +270,68 @@
             "Info.plist": "5eab36c77775a7e9edaae92cf5440a63",
             "MacOS": {
               "AirportBrcmFixup": "f43a2a3147a82d50e03b6b6c8143e1ce"
+            }
+          }
+        },
+        "ApplePS2Controller.kext": {
+          "Contents": {
+            "Plugins": {
+              "ApplePS2Keyboard.kext": {
+                "Contents": {
+                  "Info.plist": "a39eb7cbcaf6f2ccfd597339097f750b",
+                  "Resources": {
+                    "English.lproj": {
+                      "InfoPlist.strings": "80a5b481e64479d9874e8661f3a3f3c2"
+                    }
+                  },
+                  "MacOS": {
+                    "ApplePS2Keyboard": "01ecb4da0bc00e3cd4cb460d4889bdda"
+                  }
+                }
+              },
+              "ApplePS2Trackpad.kext": {
+                "Contents": {
+                  "Info.plist": "e78290a86e6435639cfe286ccc3538ab",
+                  "Resources": {
+                    "English.lproj": {
+                      "InfoPlist.strings": "3744e9a36f04615cfe6c99f1c4ddf1bf"
+                    }
+                  },
+                  "MacOS": {
+                    "ApplePS2Trackpad": "7bf6d1c413eb20d8bf54c3b6d77b14a7"
+                  }
+                }
+              },
+              "ApplePS2Mouse.kext": {
+                "Contents": {
+                  "Info.plist": "afed59c8c8c31dc6298f64af499411a6",
+                  "Resources": {
+                    "English.lproj": {
+                      "InfoPlist.strings": "299d1d2297fbcff209bad0cacad91c84"
+                    }
+                  },
+                  "MacOS": {
+                    "ApplePS2Mouse": "4d7691b30377818c68e7d7aa6c689c31"
+                  }
+                }
+              }
+            },
+            "Info.plist": "a8d23e8d43d6d671370582266a525772",
+            "Resources": {
+              "English.lproj": {
+                "InfoPlist.strings": "55177081f47513d3181146728b3b6f40"
+              }
+            },
+            "MacOS": {
+              "ApplePS2Controller": "3783fae7eb6bb287fb6e48e1f951ca09"
+            }
+          }
+        },
+        "AppleACPIPS2Nub.kext": {
+          "Contents": {
+            "Info.plist": "0c0b70fbd9506acc3b8b838c24b7c31b",
+            "MacOS": {
+              "AppleACPIPS2Nub": "78515ecdf3db0e48c9277a07591b9c83"
             }
           }
         },
@@ -381,10 +428,212 @@
               "BrcmFirmwareRepo": "968e237aab7ab09f62022fc91be19f92"
             }
           }
+        },
+        "ApplePS2SmartTouchPad.kext": {
+          "Contents": {
+            "PlugIns": {
+              "ApplePS2Controller.kext": {
+                "Contents": {
+                  "Info.plist": "e3cbbe7822419825f201d21c36aee83d",
+                  "MacOS": {
+                    "ApplePS2Controller": "0f478fc25f9e3c6fcb9f3342317baea9"
+                  }
+                }
+              },
+              "ApplePS2Keyboard.kext": {
+                "Contents": {
+                  "Info.plist": "db8b3a5887687b96948c352bb992c355",
+                  "MacOS": {
+                    "ApplePS2Keyboard": "779c489eb7930ded3b3a68ea354ad209"
+                  }
+                }
+              }
+            },
+            "Info.plist": "43dff573cede51e7fc21627a3e69c85d",
+            "Resources": {
+              "Synaptics documentation.rtfd": {
+                "page42image78240.png": "b0034691c49742572da17d68fe0e0f78",
+                "page42image105384.png": "cd9544c231c824a522e8d19e3570c6b8",
+                "page43image48560.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image68112.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image45080.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page30image42512.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page43image25376.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page42image77600.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page42image78848.png": "daf7f131074ff13249327a15b0e6ae85",
+                "page30image64064.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image48000.png": "c9a257022e3b5c1b2e5d743e9c65a090",
+                "page42image97536.png": "b0034691c49742572da17d68fe0e0f78",
+                "page30image67632.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image39000.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page30image21840.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image28496.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image66064.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page43image34240.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page30image35992.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image36720.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page30image65424.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image29984.png": "f24f26a37724c89988aeb03802544df5",
+                "page30image64672.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image26496.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image38680.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page30image45872.png": "b11aa0576bec29c266b5e3e0ad62b855",
+                "page30image65744.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image33264.png": "c9a257022e3b5c1b2e5d743e9c65a090",
+                "page43image35968.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image31936.png": "2bbc861372aaf267726971da3d7702a2",
+                "page43image30408.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image68856.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image75600.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image99496.png": "64df26ac94fa75e6c591dc250100944d",
+                "page30image16608.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image76080.png": "5c5d938d20a193a566bf34388b61c4ba",
+                "page30image62200.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page42image95864.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image75760.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image37272.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image32256.png": "2bbc861372aaf267726971da3d7702a2",
+                "page30image34168.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image31776.png": "2bbc861372aaf267726971da3d7702a2",
+                "page30image18496.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image86936.png": "cd9544c231c824a522e8d19e3570c6b8",
+                "page30image32096.png": "2bbc861372aaf267726971da3d7702a2",
+                "page43image35648.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image35672.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image32696.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image65904.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image57008.png": "2bbc861372aaf267726971da3d7702a2",
+                "page42image88112.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page30image31616.png": "2bbc861372aaf267726971da3d7702a2",
+                "page30image64832.png": "122cbf1dac31e61f3d7f8841f48c0992",
+                "page43image31160.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image24784.png": "852d56bb82ae6da034aea2793b01423d",
+                "page43image26144.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page42image93040.png": "5938b9f58d6910e24e48a13850a293c6",
+                "page42image88272.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page30image37112.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image47224.png": "b11aa0576bec29c266b5e3e0ad62b855",
+                "page30image60112.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image25248.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image59368.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image63744.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image36792.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image25088.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image40360.png": "c9a257022e3b5c1b2e5d743e9c65a090",
+                "page43image30736.png": "b7d8826bef3bf322abb32d750b84d367",
+                "page30image44072.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image53736.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image29088.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page43image26624.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image63424.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image79272.png": "a49ee49a9590a2ff3a8ce0739f795772",
+                "page42image77920.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image60272.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image15160.png": "c9a257022e3b5c1b2e5d743e9c65a090",
+                "page30image42992.png": "c9a257022e3b5c1b2e5d743e9c65a090",
+                "page30image24168.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image28152.png": "daf7f131074ff13249327a15b0e6ae85",
+                "page30image58464.png": "c9a257022e3b5c1b2e5d743e9c65a090",
+                "page30image36632.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image56688.png": "2bbc861372aaf267726971da3d7702a2",
+                "page43image33392.png": "724d40534d8b3fa565b90d115653fa51",
+                "page42image87360.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image88912.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page43image46136.png": "64df26ac94fa75e6c591dc250100944d",
+                "page42image77440.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page30image56848.png": "2bbc861372aaf267726971da3d7702a2",
+                "page43image54056.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image50744.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image33232.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image26944.png": "f24f26a37724c89988aeb03802544df5",
+                "page30image35080.png": "122cbf1dac31e61f3d7f8841f48c0992",
+                "page30image13912.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "TXT.rtf": "c290efa054051b821c2db54094128ce5",
+                "page30image20328.png": "c9a257022e3b5c1b2e5d743e9c65a090",
+                "page30image54640.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page30image36952.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image41264.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page42image76832.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page42image84520.png": "daf7f131074ff13249327a15b0e6ae85",
+                "page42image82192.png": "daf7f131074ff13249327a15b0e6ae85",
+                "page30image67472.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image53728.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image66224.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page43image52024.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image81272.png": "64df26ac94fa75e6c591dc250100944d",
+                "page30image26984.png": "5938b9f58d6910e24e48a13850a293c6",
+                "page30image49832.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image68432.png": "fb0ea5fa726cfad76bb5f9cb9e9ae915",
+                "page30image54320.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page43image37520.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page42image86456.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page43image25536.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page43image51704.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image16448.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image33816.png": "5938b9f58d6910e24e48a13850a293c6",
+                "page30image62040.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image14840.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page43image48136.png": "f24f26a37724c89988aeb03802544df5",
+                "page30image45400.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image67312.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image49992.png": "c9a257022e3b5c1b2e5d743e9c65a090",
+                "page30image52480.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image83992.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image60432.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page43image54544.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image50440.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image61880.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page43image24464.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image103272.png": "f24f26a37724c89988aeb03802544df5",
+                "page42image85528.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page30image57328.png": "2bbc861372aaf267726971da3d7702a2",
+                "page30image34328.png": "c0a7490ab7e8accf94267684456a0b92",
+                "page42image85104.png": "5938b9f58d6910e24e48a13850a293c6",
+                "page30image31456.png": "2bbc861372aaf267726971da3d7702a2",
+                "page43image27568.png": "daf7f131074ff13249327a15b0e6ae85",
+                "page30image63104.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image26304.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page43image55936.png": "5938b9f58d6910e24e48a13850a293c6",
+                "page30image33848.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image36312.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page42image96184.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image36880.png": "abe87a25e60dd5b49babc4afe77937a0",
+                "page30image34920.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image59528.png": "c9a257022e3b5c1b2e5d743e9c65a090",
+                "page30image59048.png": "19b4b8784387513771ca5427e07f7862",
+                "page42image76672.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page30image51992.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image24304.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image22000.png": "63772896a52c2e2bb21e863313daff67",
+                "page30image47840.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image18808.png": "0d41c3011e6e9d6ac5188ede396e50a8",
+                "page30image13008.png": "bf717261c282979ba3ed7e49613a5813",
+                "page30image13432.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image49048.png": "19b4b8784387513771ca5427e07f7862",
+                "page43image35168.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page30image57648.png": "2bbc861372aaf267726971da3d7702a2",
+                "page42image105808.png": "19b4b8784387513771ca5427e07f7862",
+                "page30image44392.png": "6dcbd26f461d9afeecf0d04069f51912",
+                "page30image57488.png": "2bbc861372aaf267726971da3d7702a2",
+                "page30image24328.png": "c9a257022e3b5c1b2e5d743e9c65a090",
+                "page30image69176.png": "5938b9f58d6910e24e48a13850a293c6",
+                "page30image36472.png": "c0ca4aef2e4ce9a409c7f68c6589d418",
+                "page30image32416.png": "2bbc861372aaf267726971da3d7702a2"
+              },
+              "Features Documentation.rtfd": {
+                "9718452526_b6414cd8e7_n.jpg": "d166aab691c85685f1c2d9735815d3b3",
+                "11493706554_130fa58d5f_n.jpg": "156ac03d2ba110af96283f1d641750ca",
+                "TXT.rtf": "5d41870ec9dd36cba8d1b030af5c3fa7",
+                "8524384148_7da070dae6_c.jpg": "7eb2677940ce9cf6e026f2574e9a2eed"
+              }
+            },
+            "MacOS": {
+              "ApplePS2SmartTouchPad": "ad590ba3f11bc2278281a7c69366b52e"
+            }
+          }
         }
       }
     },
-    "config-kp7ec-kp7gc.plist": "6ed09c865fa7285ec96847e9d123bab2",
     "Addons": {
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
       "optimize.sh": "a8b4423def76ded307a15cb6d62124f7"
@@ -417,7 +666,6 @@
       "patched": {
         "SSDT-TPAD.aml": "a6daa12a53b3a0c86771a95799738490",
         "SSDT-RTC.aml": "caf143b0e46effeb44f644edffe852cf",
-        "SSDT-UIAC-GC-EC.aml": "e07f499303116b199ad45a37aecf3113",
         "SSDT-DDGPU.aml": "4c67fb04f2cc0b9ce3a9eb9447ee18e8",
         "SSDT-FN.aml": "a7233d40ef577307f4ebadc80cf7360b",
         "SSDT-XOSI.aml": "6deb62d7de51ea03f88e3c0faf100339",

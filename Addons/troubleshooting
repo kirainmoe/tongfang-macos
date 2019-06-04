@@ -61,14 +61,14 @@ disp("-----------------------------------------------------------");
         ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
                                         
 <?php 
-disp("       Hasee Z7-KP7GZ EFI troubleshooting script    ", 'green', 0, 2);
-disp("            KP7GZ EFI 文件故障自助排查工具            ", 'green', 0, 2);
+disp("       Hasee Tongfang EFI troubleshooting script    ", 'green', 0, 2);
+disp("            同方机型 EFI 文件故障自助排查工具            ", 'green', 0, 2);
 disp("    @Copyright 2019 Yume Maruyama<kirainmoe@gmail.com>", "blue", 0, 2);
 disp("     https://github.com/kirainmoe/hasee-z7-kp7gz-macos ");
 disp("-----------------------------------------------------------");
 
 /* Read info.json from current EFI... */
-disp("[info] 正在初始化问题诊断工具...", "cyan");
+disp("[info] 当前机型是 KP7GZ 系列。正在初始化问题诊断工具...", "cyan");
 $jsonPath = dirname(__FILE__) . DS . "info.json";
 if (!file_exists($jsonPath)) {
     disp("[error] 找不到 info.json，排错程序无法运行！请尝试重新下载或替换配置文件.", "red", 0);
@@ -80,7 +80,7 @@ usleep(500000);
 /* Check current system version */
 disp("[info] 正在检测系统版本...", "cyan", 0);
 exec("sw_vers 2>&1", $res);
-preg_match("/(10\.14\.[0-9])/", $res[1], $match);
+preg_match("/(10\.1.*)/", $res[1], $match);
 
 if (!in_array($match[1], $info['supported_macos_version'])) {
     disp("[error] 当前 macOS 版本为 ${match[1]}，配置文件支持的版本为：", "red", 0);
