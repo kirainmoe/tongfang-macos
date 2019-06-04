@@ -14,9 +14,7 @@
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15_Beta-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-<img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="45%">
-
-<img src="https://i.loli.net/2019/06/04/5cf65b47185f330147.jpg" width="45%">
+<img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="45%"><img src="https://i.loli.net/2019/06/04/5cf65b47185f330147.jpg" width="45%">
 
 用于在神舟战神 8 代 / 9 代同方系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，可以[点这里查看适配的机型](#compatibility)，并下载对应分支的配置文件（默认 master 分支是 KP7GZ 系列的配置文件）。
 
