@@ -4,7 +4,7 @@
 
 <h1 align="center">神舟战神 8th/9th 同方机型 macOS</h1>
 
-<p align="center">支持 Z7(m)-KP7/5(G)Z, Z7(m)-KP7/5GC/E, Z7(m)-KP7/5EC, Z7-CT7GK</p>
+<h2 align="center">该分支用于 Z7(m)-KP7/5GE，其它机型请切换其他分支。</h2>
 
 <p align="center">
 <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/EFI-%E6%9B%BF%E6%8D%A2%E6%95%99%E7%A8%8B">EFI 替换教程</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting)">问题排查指导</a> | <a href="#group">企鹅互助交流群</a>
@@ -53,22 +53,9 @@
 
 # Compatibility
 
-本仓库 EFI 配置文件适用于采用了 **同方模具** 的神舟战神系列 **8 代/9 代 CPU 平台**笔记本，包括：
- 
-- 8 代窄边框笔记本，型号后缀为 Z 或 GZ，如：**Z7-KP7GZ, Z7m-KP7GZ, Z7m-KP5GZ, Z7-KP7Z, Z7m-KP7Z, Z7m-KP5Z.** 
-- 8 代其它同方模具笔记本，如 **Z7(m)-KP7/5GC, Z7(m)-KP7/5GE, Z7(m)-KP7/5EC**，需要选择对应的 config
-- 9 代同方模具窄边框笔记本，如 **Z7-CT7GK**（试验性）
-- 其它未测试的 8 代以上同方模具神舟战神笔记本（实验性）
-
-<img src="https://camo.githubusercontent.com/066151785d81559120d76410f607d906e5b258ec/68747470733a2f2f7773332e73696e61696d672e636e2f6c617267652f3966313133376231677931673168676c71727377356a323068333062627467312e6a7067" width="200px">
-
-<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558636166866&di=64511ab5ebc754464264e1abde9ad2d0&imgtype=0&src=http%3A%2F%2F2f.zol-img.com.cn%2Fproduct%2F190%2F595%2Fce9Y0Q4QlY09Y.jpg" width="200px">
+该分支支持同方神舟战神机型 Z7(m)-KP7/5GE。欢迎大家测试并反馈，感谢群友 @浅笔向阳、@上个世纪的风 参与测试。
 
 因为本人只拥有 Z7-KP7GZ，其他型号通过群内的朋友测试通过。有关于在 GC/EC/GE/CT7GK 等机型上使用该配置文件，请参照[各机型配置文件使用指南](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E5%90%84%E6%9C%BA%E5%9E%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97).
-
-[Shinelon Yao-7000 (炫龙耀 7000)](https://github.com/jinmu333/Shinalon_YAO_7000_efi) 和 Mechrevo Z2 Air (机械革命 Z2 Air) 与神舟战神 KP7GZ 属于同款模具且配置相近，因此理论可以在上述设备中使用本 EFI 配置文件。
-
-注意，**蓝天模具的神舟 Z7-KP7SC, Z7-KP7S1、同方模具的七代平台机型 Z7-KP7GT, Z7-KP7D2 等不属于该系列**，并不保证能完全兼容，这些机型也不是本仓库配置文件的目标机型，因此**针对此类设备的兼容性问题，请您自行解决**。
 
 # Info
 
