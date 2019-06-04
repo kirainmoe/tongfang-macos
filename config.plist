@@ -257,25 +257,21 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>RTC: change _STA to XSTA</string>
+					<string>RTC: fix _STA method bug for 9th gen Tongfang models</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					X1NUQQ==
+					oAqTU1RBUwE=
 					</data>
 					<key>Replace</key>
 					<data>
-					WFNUQQ==
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					UlRDTw==
+					oAqRCv8L//8=
 					</data>
 				</dict>
 			</array>
 			<key>Rtc8Allowed</key>
-			<true/>
+			<false/>
 			<key>SuspendOverride</key>
 			<true/>
 		</dict>
@@ -352,7 +348,7 @@
 		<array>
 			<string>SSDT-PNLFCFL.aml</string>
 			<string>SSDT-DDGPU.aml</string>
-			<string>SSDT-UIAC.aml</string>
+			<string>SSDT-UIAC-CT7GK.aml</string>
 			<string>SSDT-BATT.aml</string>
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-ALS0.aml</string>
