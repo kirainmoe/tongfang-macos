@@ -195,7 +195,7 @@
 					<key>Comment</key>
 					<string>I2C: change SBFI to SBFS</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					i1NCRkk=
@@ -213,7 +213,7 @@
 					<key>Comment</key>
 					<string>I2C: change return value to SBFS</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					hFNCRkJTQkZJAA==
@@ -259,7 +259,7 @@
 					<key>Comment</key>
 					<string>RTC: change _STA to XSTA</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					X1NUQQ==
@@ -352,13 +352,12 @@
 		<array>
 			<string>SSDT-PNLFCFL.aml</string>
 			<string>SSDT-DDGPU.aml</string>
-			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-BATT.aml</string>
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-ALS0.aml</string>
 			<string>SSDT-XOSI.aml</string>
-			<string>SSDT-TPAD.aml</string>
 			<string>SSDT-FN.aml</string>
+			<string>SSDT-UIAC.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -1056,7 +1055,7 @@
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02829701J9JP4FUE</string>
+		<string>C02817700CDJP4F1F</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -1068,7 +1067,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>220.240.2.0.0</string>
+		<string>220.250.320.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
@@ -1086,9 +1085,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro15,1</string>
 		<key>SerialNumber</key>
-		<string>C02X3088KGYG</string>
+		<string>C02WM0Q0KGYG</string>
 		<key>SmUUID</key>
-		<string>79F6AACD-FD54-42EE-B8D3-B78AC3E660A3</string>
+		<string>10D7B543-06BA-49FD-978A-D909F6F30EFD</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>

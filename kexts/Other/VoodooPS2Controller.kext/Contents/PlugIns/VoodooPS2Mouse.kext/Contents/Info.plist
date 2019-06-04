@@ -5,15 +5,15 @@
 	<key>BuildMachineOSBuild</key>
 	<string>18A391</string>
 	<key>CFBundleExecutable</key>
-	<string>VoodooPS2Controller</string>
+	<string>VoodooPS2Mouse</string>
 	<key>CFBundleGetInfoString</key>
-	<string>1.9.2, Copyright Apple Computer, Inc. 2000-2003, David Elliot 2007, RehabMan 2012-2013</string>
+	<string>1.9.2, Copyright Apple Computer, Inc. 2000-2004, Slice 2010, RehabMan 2012-2013</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.rehabman.voodoo.driver.PS2Controller</string>
+	<string>org.rehabman.voodoo.driver.PS2Mouse</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Voodoo PS/2 Controller</string>
+	<string>Voodoo PS/2 Mouse</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
@@ -42,48 +42,81 @@
 	<string>9F2000</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>ACPI PS/2 Nub</key>
+		<key>ApplePS2Mouse</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.voodoo.driver.PS2Controller</string>
-			<key>FindMouseDelay</key>
-			<integer>100</integer>
+			<string>org.rehabman.voodoo.driver.PS2Mouse</string>
+			<key>HIDPointerAccelerationType</key>
+			<string>HIDTrackpadAcceleration</string>
+			<key>HIDScrollAccelerationType</key>
+			<string>HIDTrackpadScrollAcceleration</string>
 			<key>IOClass</key>
-			<string>AppleACPIPS2Nub</string>
-			<key>IONameMatch</key>
-			<array>
-				<string>PNP0303</string>
-				<string>PNP030B</string>
-				<string>PNP0320</string>
-			</array>
+			<string>ApplePS2Mouse</string>
 			<key>IOProviderClass</key>
-			<string>IOACPIPlatformDevice</string>
-			<key>MouseNameMatch</key>
-			<array>
-				<string>PNP0F03</string>
-				<string>PNP0F0B</string>
-				<string>PNP0F0E</string>
-				<string>PNP0F13</string>
-			</array>
-		</dict>
-		<key>ApplePS2Controller</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>org.rehabman.voodoo.driver.PS2Controller</string>
-			<key>IOClass</key>
-			<string>ApplePS2Controller</string>
-			<key>IONameMatch</key>
-			<string>ps2controller</string>
-			<key>IOProviderClass</key>
-			<string>IOPlatformDevice</string>
+			<string>ApplePS2MouseDevice</string>
 			<key>Platform Profile</key>
 			<dict>
 				<key>Default</key>
 				<dict>
-					<key>MouseWakeFirst</key>
+					<key>ActLikeTrackpad</key>
 					<false/>
+					<key>ButtonCount</key>
+					<integer>3</integer>
+					<key>Darwin 16+</key>
+					<dict>
+						<key>ApplePreferenceCapability</key>
+						<true/>
+						<key>ApplePreferenceIdentifier</key>
+						<string>com.apple.AppleMultitouchTrackpad</string>
+						<key>MT Built-in</key>
+						<true/>
+						<key>MTHIDDevice</key>
+						<true/>
+						<key>SupportsGestureScrolling</key>
+						<true/>
+						<key>TrackpadEmbedded</key>
+						<true/>
+						<key>TrackpadFourFingerGestures</key>
+						<false/>
+						<key>TrackpadSecondaryClickCorners</key>
+						<true/>
+						<key>TrackpadThreeFingerDrag</key>
+						<false/>
+					</dict>
+					<key>DefaultResolution</key>
+					<integer>240</integer>
+					<key>DisableDevice</key>
+					<false/>
+					<key>DisableLEDUpdating</key>
+					<false/>
+					<key>FakeMiddleButton</key>
+					<false/>
+					<key>ForceDefaultResolution</key>
+					<true/>
+					<key>ForceSetResolution</key>
+					<false/>
+					<key>MiddleClickTime</key>
+					<integer>100000000</integer>
+					<key>MouseCount</key>
+					<integer>0</integer>
+					<key>MouseYInverter</key>
+					<integer>1</integer>
+					<key>ProcessBluetoothMouseStopsTrackpad</key>
+					<true/>
+					<key>ProcessUSBMouseStopsTrackpad</key>
+					<true/>
+					<key>QuietTimeAfterTyping</key>
+					<integer>500000000</integer>
+					<key>ResolutionMode</key>
+					<integer>3</integer>
+					<key>ScrollResolution</key>
+					<integer>5</integer>
+					<key>ScrollYInverter</key>
+					<integer>1</integer>
+					<key>TrackpadScroll</key>
+					<true/>
 					<key>WakeDelay</key>
-					<integer>10</integer>
+					<integer>1000</integer>
 				</dict>
 				<key>HPQOEM</key>
 				<dict>
@@ -121,8 +154,10 @@
 					<string>ProBook</string>
 					<key>ProBook</key>
 					<dict>
-						<key>WakeDelay</key>
-						<integer>0</integer>
+						<key>ActLikeTrackpad</key>
+						<true/>
+						<key>DisableDevice</key>
+						<true/>
 					</dict>
 					<key>ProBook-102</key>
 					<string>ProBook</string>
@@ -130,26 +165,28 @@
 					<string>ProBook</string>
 				</dict>
 			</dict>
+			<key>ProductID</key>
+			<integer>547</integer>
 			<key>RM,deliverNotifications</key>
 			<true/>
+			<key>USBMouseStopsTrackpad</key>
+			<integer>0</integer>
+			<key>VendorID</key>
+			<integer>1452</integer>
 		</dict>
 	</dict>
-	<key>OSBundleCompatibleVersion</key>
-	<string>1.9.2</string>
 	<key>OSBundleLibraries</key>
 	<dict>
-		<key>com.apple.iokit.IOACPIFamily</key>
-		<string>1.0.0d1</string>
-		<key>com.apple.kpi.bsd</key>
-		<string>8.0.0</string>
+		<key>com.apple.iokit.IOHIDFamily</key>
+		<string>1.0.0b1</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>8.0.0</string>
+		<string>9.0.0</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>8.0.0</string>
+		<string>9.0.0</string>
 		<key>com.apple.kpi.mach</key>
-		<string>8.0.0</string>
-		<key>com.apple.kpi.unsupported</key>
-		<string>8.0.0</string>
+		<string>9.0.0</string>
+		<key>org.rehabman.voodoo.driver.PS2Controller</key>
+		<string>1.9.2</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Console</string>
