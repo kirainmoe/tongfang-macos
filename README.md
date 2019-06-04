@@ -4,7 +4,7 @@
 
 <h1 align="center">神舟战神 8th/9th 同方机型 macOS</h1>
 
-<p align="center">支持 [Z7(m)-KP7/5(G)Z](https://github.com/kirainmoe/hasee-tongfang-macos/tree/master), [Z7(m)-KP7/5GC](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc), [Z7(m)-KP7/5EC](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec), [Z7-CT7GK/G7-CT7VK](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk)，请根据不同的机型选择分支。</p>
+支持 [Z7(m)-KP7/5(G)Z](https://github.com/kirainmoe/hasee-tongfang-macos/tree/master), [Z7(m)-KP7/5GC](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc), [Z7(m)-KP7/5EC](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec), [Z7-CT7GK/G7-CT7VK](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk)，请根据不同的机型选择分支。
 
 <p align="center">
 <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/EFI-%E6%9B%BF%E6%8D%A2%E6%95%99%E7%A8%8B">EFI 替换教程</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting)">问题排查指导</a> | <a href="#group">企鹅互助交流群</a>
