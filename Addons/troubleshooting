@@ -61,14 +61,14 @@ disp("-----------------------------------------------------------");
         ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
                                         
 <?php 
-disp("       Hasee Z7-KP7GZ EFI troubleshooting script    ", 'green', 0, 2);
-disp("            KP7GZ EFI 文件故障自助排查工具            ", 'green', 0, 2);
+disp("       Hasee tongfang EFI troubleshooting script    ", 'green', 0, 2);
+disp("            同方机型 EFI 文件故障自助排查工具            ", 'green', 0, 2);
 disp("    @Copyright 2019 Yume Maruyama<kirainmoe@gmail.com>", "blue", 0, 2);
 disp("     https://github.com/kirainmoe/hasee-z7-kp7gz-macos ");
 disp("-----------------------------------------------------------");
 
 /* Read info.json from current EFI... */
-disp("[info] 正在初始化问题诊断工具...", "cyan");
+disp("[info] 当前机型是 CT7VK/CT7GK，正在初始化问题诊断工具...", "cyan");
 $jsonPath = dirname(__FILE__) . DS . "info.json";
 if (!file_exists($jsonPath)) {
     disp("[error] 找不到 info.json，排错程序无法运行！请尝试重新下载或替换配置文件.", "red", 0);
@@ -80,7 +80,7 @@ usleep(500000);
 /* Check current system version */
 disp("[info] 正在检测系统版本...", "cyan", 0);
 exec("sw_vers 2>&1", $res);
-preg_match("/(10\.14\.[0-9])/", $res[1], $match);
+preg_match("/(10\..*)/", $res[1], $match);
 
 if (!in_array($match[1], $info['supported_macos_version'])) {
     disp("[error] 当前 macOS 版本为 ${match[1]}，配置文件支持的版本为：", "red", 0);
@@ -121,7 +121,7 @@ usleep(500000);
 
 disp("[info] 正在检测远程分支版本...", "cyan", 0);
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://raw.githubusercontent.com/kirainmoe/hasee-z7-kp7gz-macos/master/Addons/info.json');
+curl_setopt($ch, CURLOPT_URL, 'https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/ct7gk/Addons/info.json');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 $res = curl_exec($ch);
@@ -135,7 +135,7 @@ if (empty($res)) {
 
     if ($info['build'] < $remote['build'] || $info['timestamp'] < $remote['timestamp']) {
         disp("[tips] 您使用的配置文件版本不是最新。您当前的版本是：Build ${info['build']}, ${info['timestamp']}; 远程版本是：Build ${remote['build']}, ${remote['timestamp']}", 'magenta');
-        disp("[tips] 请考虑更新配置文件到最新版本，更新地址：https://github.com/kirainmoe/hasee-z7-kp7gz-macos", 'magenta');
+        disp("[tips] 请考虑更新配置文件到最新版本，更新地址：https://github.com/kirainmoe/hasee-tongfang-macos", 'magenta');
     } else {
         disp("[ok] 您使用的是最新的配置文件。您当前的版本是：Build ${info['build']}, ${info['timestamp']}.", 'green');
         usleep(500000);
@@ -143,7 +143,7 @@ if (empty($res)) {
         if ($info['build'] == $remote['build'] && $info['timestamp'] == $remote['timestamp']) {
             disp("[info] 正在与远程文件进行比较...", 'cyan');
 
-            $remoteFile = file_get_contents('https://raw.githubusercontent.com/kirainmoe/hasee-z7-kp7gz-macos/master/Addons/info.json');
+            $remoteFile = file_get_contents('https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/ct7gk/Addons/info.json');
             $remoteJson = json_decode($remoteFile, true);
     
             $flag = 1;
