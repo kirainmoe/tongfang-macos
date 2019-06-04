@@ -4,23 +4,21 @@
 
 <h1 align="center">神舟战神 8th/9th 同方机型 macOS</h1>
 
-<p align="center">支持 Z7(m)-KP7/5(G)Z, Z7(m)-KP7/5GC/E, Z7(m)-KP7/5EC, Z7-CT7GK</p>
+<p align="center">支持 [Z7(m)-KP7/5(G)Z](https://github.com/kirainmoe/hasee-tongfang-macos/tree/master), [Z7(m)-KP7/5GC](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc), [Z7(m)-KP7/5EC](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec), [Z7-CT7GK/G7-CT7VK](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk)，请根据不同的机型选择分支。</p>
 
 <p align="center">
 <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/EFI-%E6%9B%BF%E6%8D%A2%E6%95%99%E7%A8%8B">EFI 替换教程</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting)">问题排查指导</a> | <a href="#group">企鹅互助交流群</a>
 </p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.14.5-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
+<img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15_Beta-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
 ![screenshot](https://i.loli.net/2019/05/14/5cda65189a08439627.jpg)
 
-用于在神舟战神 8 代 / 9 代同方系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，可以[点这里查看适配的机型](#compatibility)。
+用于在神舟战神 8 代 / 9 代同方系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，可以[点这里查看适配的机型](#compatibility)，并下载对应分支的配置文件（默认 master 分支是 KP7GZ 系列的配置文件）。
 
-**现寻找机型为 G7-CT7VK, Z7-CT7GK 的用户测试本 EFI 的兼容性。如果您有上述机型并且有意向安装黑苹果，请联系我们。**
-
-该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4/10.14.5** 全部亲自测试安装成功（全新安装/系统内 OTA 更新）；使用 Clover Hotpatch 驱动。
+该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4/10.14.5** 全部亲自测试安装成功（全新安装/系统内 OTA 更新）；初步支持 10.15 Beta；使用 Clover Hotpatch 驱动。
 
 在开始之前，请务必确认您已经阅读了[使用须知](#tutorial)和[常见问题](#FAQ)。**如果您在使用的时候遇到问题，请先尝试[快速排错](#troubleshooting)**.
 
@@ -53,12 +51,14 @@
 
 # Compatibility
 
+### 你现在位于 master 分支，该分支的配置文件支持 Z7(m)-KP7/5(G)Z 系列。如果这不是你的机型，请从下面切换到对应机型的分支。
+
 本仓库 EFI 配置文件适用于采用了 **同方模具** 的神舟战神系列 **8 代/9 代 CPU 平台**笔记本，包括：
  
-- 8 代窄边框笔记本，型号后缀为 Z 或 GZ，如：**Z7-KP7GZ, Z7m-KP7GZ, Z7m-KP5GZ, Z7-KP7Z, Z7m-KP7Z, Z7m-KP5Z.** 
-- 8 代其它同方模具笔记本，如 **Z7(m)-KP7/5GC, Z7(m)-KP7/5GE, Z7(m)-KP7/5EC**，需要选择对应的 config
-- 9 代同方模具窄边框笔记本，如 **Z7-CT7GK**（试验性）
-- 其它未测试的 8 代以上同方模具神舟战神笔记本（实验性）
+- 8 代窄边框笔记本，型号后缀为 Z 或 GZ，如：**Z7-KP7GZ, Z7m-KP7GZ, Z7m-KP5GZ, Z7-KP7Z, Z7m-KP7Z, Z7m-KP5Z.** （本分支）
+- 8 代其它同方模具笔记本，如 **[Z7(m)-KP7/5GC](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc), [Z7(m)-KP7/5EC](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec)**。
+- 9 代同方模具窄边框笔记本，如 **[Z7-CT7GK / G7-CT7VK](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk)**（试验性）
+- 其它未测试的 8 代以上同方模具神舟战神笔记本（试验性）
 
 <img src="https://camo.githubusercontent.com/066151785d81559120d76410f607d906e5b258ec/68747470733a2f2f7773332e73696e61696d672e636e2f6c617267652f3966313133376231677931673168676c71727377356a323068333062627467312e6a7067" width="200px">
 
@@ -164,11 +164,12 @@ A: 请更新最新版本的 Clover, Lilu.kext 和 WhateverGreen.kext. 您可以�
 Q: 为什么执行完优化脚本（或开启了 HiDPI 之后）出现了花屏、睡眠唤醒四分之一屏？  
 A: 出现此原因可能是因为您启用了 HiDPI。目前因为开启 HiDPI 引起的卡条、花屏、四分之一屏问题暂时没有很好的解决方案，一般重启就可以正常。如果您无法忍受的话，请不要开启 HiDPI. 虽然这些问题部分可以解决，但是并不能从 Clover 配置文件的层面解决，因此请您自寻解决方案。
 
-Q: 为什么更新到新版本 (10.14.5) 之后，触摸板失效了？  
-A: 说出来你可能不信，这是一个玄学问题。你可以无意间地多重启几次，看看是否有效。如果无效、并且排错程序反馈正常，您可以进群求助。
+Q: 为什么更新到新版本之后，触摸板等功能失效了？  
+A: 请使用以下命令重建 kext 缓存并重启电脑：
 
-Q: 为什么应用 DSDT 补丁后，DSDT 编译出错？  
-A: 使用 Hotpatch 版 EFI 的用户不需要应用任何 DSDT 补丁；DSDT 补丁是在我的电脑上测试的，我可以保证在我的电脑上是正常的，在大部分的电脑上也是，该现象发生的几率应该是很小的，但仍然无法保证因您更换过硬件、BIOS 设置不同等原因导致 DSDT 的变更。这种情况下需要您对 DSDT 有一些了解并手动排错。通常情况下，一般是部分补丁没有成功应用，或者 DSDT 语法错误（通常是多或少了一个花括号），可以尝试重新应用补丁或自己补上括号。实在无法自己解决的，请提 issues 并附上你的 DSDT 文件。    
+```shell
+sudo kextcache -i /
+``` 
 
 # Troubleshooting
 
