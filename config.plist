@@ -181,7 +181,7 @@
 					<key>Comment</key>
 					<string>I2C: change USTP, 8 to XSTP, 8</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					VVNUUAg=
@@ -195,7 +195,7 @@
 					<key>Comment</key>
 					<string>I2C: change SBFI to SBFS</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					i1NCRkk=
@@ -213,7 +213,7 @@
 					<key>Comment</key>
 					<string>I2C: change return value to SBFS</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					hFNCRkJTQkZJAA==
@@ -357,8 +357,8 @@
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-ALS0.aml</string>
 			<string>SSDT-XOSI.aml</string>
-			<string>SSDT-TPAD.aml</string>
 			<string>SSDT-FN.aml</string>
+			<string>SSDT-USTP.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>

@@ -64,7 +64,9 @@
 
 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558636166866&di=64511ab5ebc754464264e1abde9ad2d0&imgtype=0&src=http%3A%2F%2F2f.zol-img.com.cn%2Fproduct%2F190%2F595%2Fce9Y0Q4QlY09Y.jpg" width="200px">
 
-因为本人只拥有 Z7-KP7GZ，其他型号通过群内的朋友测试通过。有关于在 GC/EC/GE/CT7GK 等机型上使用该配置文件，请参照[各机型配置文件使用指南](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E5%90%84%E6%9C%BA%E5%9E%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97).
+因为本人只拥有 Z7-KP7GZ，其他型号通过群内的朋友测试通过。后续所有的功能更新，会先在 KP7GZ 系列机型上测试稳定后才会下放。
+
+有关于在 GC/EC/CT7GK 等机型上使用该配置文件，请参照[各机型配置文件使用指南](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E5%90%84%E6%9C%BA%E5%9E%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97).
 
 [Shinelon Yao-7000 (炫龙耀 7000)](https://github.com/jinmu333/Shinalon_YAO_7000_efi) 和 Mechrevo Z2 Air (机械革命 Z2 Air) 与神舟战神 KP7GZ 属于同款模具且配置相近，因此理论可以在上述设备中使用本 EFI 配置文件。
 
@@ -85,8 +87,7 @@
 | Ethernet | Realtek RTL8168H |
 | Audio | Realtek ALC269vc |
 
-如果想获得更好的 Hackintosh 体验，请考虑更换部分硬件。有关详情，参见[《硬件更换指南和兼容性报告
-》](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E7%A1%AC%E4%BB%B6%E6%9B%B4%E6%8D%A2%E6%8C%87%E5%8D%97%E5%92%8C%E5%85%BC%E5%AE%B9%E6%80%A7%E6%8A%A5%E5%91%8A)。
+如果想获得更好的 Hackintosh 体验，请考虑更换部分硬件。有关详情，参见[《硬件更换指南和兼容性报告》](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E7%A1%AC%E4%BB%B6%E6%9B%B4%E6%8D%A2%E6%8C%87%E5%8D%97%E5%92%8C%E5%85%BC%E5%AE%B9%E6%80%A7%E6%8A%A5%E5%91%8A)。
 
 # What's working
 
@@ -130,9 +131,7 @@ A: 如果最新版在您的笔记本上不正常工作，请尝试[最后一个�
 Q: post-install 优化脚本是什么？为什么需要执行它？  
 A: 指本仓库下的 Addons/optimize.sh, 用途是设置休眠参数、模拟 NVRAM、开启 HiDPI 等。如果您想手动执行这些操作，则不需要执行该脚本。否则我们建议其他普通用户在替换完 EFI 后执行一次该脚本。执行方式如下：
 ```shell
-cd Addons
-chmod +x ./optimize.sh
-sudo ./optimize.sh
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/master/Addons/optimize.sh)"
 ```
 
 Q: 怎样驱动电池？  
@@ -241,9 +240,15 @@ sudo kextcache -i /
 
 19-5-12 添加 SSDT RTC 重命名，<s>更新 VoodooPS2Controller 驱动（可能需要重新设置按键映射）；尝试适配同方模具神舟战神 G7-CT7VK</s>.
 
-<s>19-5-14 添加 I2C 触摸板 SSDT；更新 10.14.5 新版本支持。</s>
+<s>19-5-14 添加 I2C 触摸板 SSDT；更新 10.14.5 新版本支持。</s> 10.14.5 现仍然支持。
 
 19-5-23 正式支持同方八代全系机型和九代部分机型，添加 GC/EC 的 USB 注入，回滚 VoodooPS2Controller 驱动和触摸板。
+
+19-6-4 更新 10.15 DP1 支持（但请您自行解决测试中的问题并承担测试的后果，数据丢失、系统不稳定等！）
+
+19-6-7 更新 VoodooI2C 到 2.2 版本，现采用 GPIO 中断模式驱动触摸板，单指问题仍未解决。
+
+
 
 # Detail screenshot
 
