@@ -1,12 +1,12 @@
 #! /usr/bin/php
 <?php
 $info = array(
-    "package" =>  "hasee-z7-kp7gz-macos",
+    "package" =>  "hasee-tongfang-macos",
     "build" => date('Ymd'),
     "author" => "Yume Maruyama",
     "mail" => "kirainmoe@gmail.com",
     "timestamp" => mktime(),
-    "repository" => "https://github.com/kirainmoe/hasee-z7-kp7gz-macos",
+    "repository" => "https://github.com/kirainmoe/hasee-tongfang-macos",
     "supported_macos_version"=> [
         "10.14.2",
         "10.14.3",
@@ -16,7 +16,7 @@ $info = array(
     ]
 );
 $res = [];
-$filter = array("themes", "LICENSE", "README.md", "README-en.md", "statement.pdf", "troubleshooting", "info.json", "generate_info");
+$filter = array("themes", "LICENSE", "README.md", "README-en.md", "statement.pdf", "troubleshooting", "info.json", "generate_info", "archived");
 
 function showdir($path, &$ref) {
     global $filter;

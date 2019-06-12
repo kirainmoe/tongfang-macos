@@ -248,7 +248,7 @@ sudo kextcache -i /
 
 19-6-7 更新 VoodooI2C 到 2.2 版本，现采用 GPIO 中断模式驱动触摸板，单指问题仍未解决。
 
-
+19-6-12 更新自编译版 AirportBrcmFixup.kext（支持 10.15），更新 Brcm 蓝牙相关驱动；添加描述文件。
 
 # Detail screenshot
 
