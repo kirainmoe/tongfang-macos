@@ -31,7 +31,7 @@
 # What's not working
 
 - 独立显卡（GTX1660Ti， 目前没有适用于 Mojave 的 Nvidia WebDriver）
-- 无线网卡（Intel AC9560 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代） **注意同方九代机型不支持更换无线网卡！**
+- 无线网卡（Intel AC9560 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代） **注意同方九代机型可能为 CNVI 协议，不支持更换无线网卡**
 - **HDMI/MiniDP（该模具 HDMI/MiniDP 直接由独显输出, 独显无法驱动，所以 HDMI/MiniDP 也无法使用）**
 - 读卡器（读卡器走的 USB 2.0 外置，无法使用）
 
@@ -46,6 +46,28 @@ Comment: 	RTC: fix 9th tongfang model RTC bug
 Find: 		A00A9353 54415301
 Replace: 	A00A910A FF0BFFFF
 ```
+
+也就是在 config.plist 的 ACPI  patch 下添加以下内容：
+
+```xml
+<dict>
+    <key>Comment</key>
+    <string>RTC: fix _STA method bug for 9th gen Tongfang models</string>
+    <key>Disabled</key>
+    <false/>
+    <key>Find</key>
+    <data>
+    oAqTU1RBUwE=
+    </data>
+    <key>Replace</key>
+    <data>
+    oAqRCv8L//8=
+    </data>
+</dict>
+```
+
+![QQ20190612-193827.png](https://i.loli.net/2019/06/12/5d00e5020976b79013.png)
+![QQ20190612-194052.png](https://i.loli.net/2019/06/12/5d00e5027d26763392.png)
 
 或者，无视警告，直接替换本 EFI 后再进入安装程序。
 

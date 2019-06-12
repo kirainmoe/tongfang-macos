@@ -348,7 +348,7 @@
 		<array>
 			<string>SSDT-PNLFCFL.aml</string>
 			<string>SSDT-DDGPU.aml</string>
-			<string>SSDT-UIAC-CT7GK.aml</string>
+			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-BATT.aml</string>
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-ALS0.aml</string>
