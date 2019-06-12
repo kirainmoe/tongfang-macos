@@ -1,10 +1,11 @@
 {
-  "package": "hasee-z7-kp7gz-macos",
-  "build": "20190604",
+  "package": "hasee-tongfang-macos",
+  "build": "20190612",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1559638762,
-  "repository": "https:\/\/github.com\/kirainmoe\/hasee-z7-kp7gz-macos",
+  "timestamp": 1560339951,
+  "model": "CT7GK\/CT7VK",
+  "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "supported_macos_version": [
     "10.14.2",
     "10.14.3",
@@ -698,7 +699,7 @@
       "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
       "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20"
     },
-    "config.plist": "f0fabf7a4a5e1903add1c9b3b628c244",
+    "config.plist": "08bc0159a16e2486ed6b8859d28f1c5a",
     "ACPI": {
       "source": {
         "SSDT-DDGPU.dsl": "394fb77d72533aa4b3713fa8da08e1b3",
@@ -714,10 +715,7 @@
       },
       "patched": {
         "SSDT-TPAD.aml": "a6daa12a53b3a0c86771a95799738490",
-        "SSDT-RTC.aml": "caf143b0e46effeb44f644edffe852cf",
-        "SSDT-UIAC-GC-EC.aml": "e07f499303116b199ad45a37aecf3113",
         "SSDT-DDGPU.aml": "4c67fb04f2cc0b9ce3a9eb9447ee18e8",
-        "SSDT-UIAC-CT7GK.aml": "d46f7bdb3a8e5c4a609c573c208f692a",
         "SSDT-FN.aml": "a7233d40ef577307f4ebadc80cf7360b",
         "SSDT-XOSI.aml": "6deb62d7de51ea03f88e3c0faf100339",
         "SSDT-UIAC.aml": "fbc812951f0928f8e8759c36bd42cae7",
