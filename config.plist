@@ -629,6 +629,24 @@
 					<key>Type</key>
 					<string>Windows</string>
 				</dict>
+				<dict>
+					<key>AddArguments</key>
+					<string>initrd=/initramfs-linux.img root=UUID=3A8008B9-DA62-4494-85E3-963EE2CD3707 rw add_efi_memmap</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Ignore</key>
+					<false/>
+					<key>Path</key>
+					<string>vmlinuz-linux</string>
+					<key>Title</key>
+					<string>Arch Linux</string>
+					<key>Type</key>
+					<string>Linux</string>
+					<key>Volume</key>
+					<string>3A8008B9-DA62-4494-85E3-963EE2CD3707</string>
+					<key>VolumeType</key>
+					<string>Internal</string>
+				</dict>
 			</array>
 		</dict>
 		<key>Hide</key>
