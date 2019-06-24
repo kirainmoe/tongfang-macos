@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190612",
+  "build": "20190624",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1560339951,
+  "timestamp": 1561351190,
   "model": "CT7GK\/CT7VK",
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "supported_macos_version": [
@@ -183,24 +183,6 @@
             "Info.plist": "0c0b70fbd9506acc3b8b838c24b7c31b",
             "MacOS": {
               "AppleACPIPS2Nub": "78515ecdf3db0e48c9277a07591b9c83"
-            }
-          }
-        },
-        "VoodooPS2Controller.kext": {
-          "Contents": {
-            "PlugIns": {
-              "VoodooPS2Keyboard.kext": {
-                "Contents": {
-                  "Info.plist": "cb2c16a2839a05b1b1bd2b48e881751c",
-                  "MacOS": {
-                    "VoodooPS2Keyboard": "f688d5aa2aede6acdff3b4dd4fbeebac"
-                  }
-                }
-              }
-            },
-            "Info.plist": "2d760abecbb7bb80d8db97d3f58e885b",
-            "MacOS": {
-              "VoodooPS2Controller": "d29dc61bffcd5d89682cc3b40ea25668"
             }
           }
         },
