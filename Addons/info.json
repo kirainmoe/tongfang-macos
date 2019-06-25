@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190612",
+  "build": "20190625",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1560340015,
+  "timestamp": 1561438663,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "KP7\/5(G)Z",
   "supported_macos_version": [
@@ -404,7 +404,7 @@
       "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
       "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20"
     },
-    "config.plist": "1178eeb5698ec857d3a8cac8d107a1c8",
+    "config.plist": "cfa3a664e26aa631e1539a0abf4370a8",
     "ACPI": {
       "source": {
         "SSDT-DDGPU.dsl": "394fb77d72533aa4b3713fa8da08e1b3",

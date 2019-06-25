@@ -16,9 +16,9 @@
 
 <img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/06/18/5d08683637e9899236.jpg" width="50%">
 
-用于在神舟战神 8 代 / 9 代同方系列机型安装最新版 macOS Mojave （黑苹果）的 Clover 配置文件，可以[点这里查看适配的机型](#compatibility)，并下载对应分支的配置文件（默认 master 分支是 KP7GZ 系列的配置文件）。
+用于在神舟战神 8 代 / 9 代同方系列机型安装最新版 macOS Mojave/Catalina （黑苹果）的 Clover 配置文件，可以[点这里查看适配的机型](#compatibility)，并下载对应分支的配置文件（默认 master 分支是 KP7GZ 系列的配置文件）。
 
-该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4/10.14.5** 全部亲自测试安装成功（全新安装/系统内 OTA 更新）；初步支持 10.15 Beta (2) **(test it at your own risk!!)**；使用 Clover Hotpatch 驱动。
+该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4/10.14.5** 全部亲自测试安装成功（全新安装/系统内 OTA 更新）；初步支持 10.15 Beta 2；使用 Clover Hotpatch 驱动。
 
 在开始之前，请务必确认您已经阅读了[使用须知](#tutorial)和[常见问题](#FAQ)。**如果您在使用的时候遇到问题，请先尝试[快速排错](#troubleshooting)**.
 
