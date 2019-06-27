@@ -250,6 +250,8 @@ sudo kextcache -i /
 
 19-6-12 更新自编译版 AirportBrcmFixup.kext（支持 10.15），更新 Brcm 蓝牙相关驱动；添加描述文件。
 
+19-6-27 重新使用 VirtualSMC 代换 FakeSMC 以便在 Catalina 下获得更好的支持。如果新版在 10.14 上出现问题，请尝试在 Release 中找到 20190627 的版本替换。
+
 # Detail screenshot
 
 USB  
@@ -284,7 +286,7 @@ Wi-Fi （需要更换硬件）
 ![gesture](https://wx4.sinaimg.cn/large/9f1137b1gy1g0fitjrcoqj20f00bk75e.jpg)  
 
 终端截图  
-![screenfetch](https://wx1.sinaimg.cn/large/9f1137b1gy1g0fitwobg3j20d5087my0.jpg)
+![screenfetch](https://i.loli.net/2019/06/27/5d14a42cf20d792078.jpg)
 
 # Contribute
 
