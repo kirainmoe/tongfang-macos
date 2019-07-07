@@ -33,7 +33,7 @@
 - [提问相关事项](#question)
 - [更新日志](#update-log)
 - [详细截图](#detail-screenshot)
-- [贡献](#contribute)
+- [许可和贡献](#license-and-contribute)
 
 # Tutorial
 
@@ -252,6 +252,8 @@ sudo kextcache -i /
 
 19-6-27 重新使用 VirtualSMC 代换 FakeSMC 以便在 Catalina 下获得更好的支持。如果新版在 10.14 上出现问题，请尝试在 Release 中找到 20190627 的版本替换；更新项目许可协议。
 
+19-7-7 更新 VirtualSMC 的 1.0.6 版本以支持 Catalina，更新部分其他驱动。
+
 # Detail screenshot
 
 USB  
@@ -290,7 +292,7 @@ Wi-Fi （需要更换硬件）
 
 # License and Contribute
 
-### License
+### 许可协议
 
 该项目在 [Maruyama License](LICENSE) 许可下开源。
 
