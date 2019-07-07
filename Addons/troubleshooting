@@ -61,14 +61,14 @@ disp("-----------------------------------------------------------");
         ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
                                         
 <?php 
-disp("       Hasee Z7-KP7GZ EFI troubleshooting script    ", 'green', 0, 2);
-disp("            KP7GZ EFI 文件故障自助排查工具            ", 'green', 0, 2);
+disp("       Hasee Tongfang EFI troubleshooting script    ", 'green', 0, 2);
+disp("            同方机型 EFI 文件故障自助排查工具            ", 'green', 0, 2);
 disp("    @Copyright 2019 Yume Maruyama<kirainmoe@gmail.com>", "blue", 0, 2);
 disp("     https://github.com/kirainmoe/hasee-z7-kp7gz-macos ");
 disp("-----------------------------------------------------------");
 
 /* Read info.json from current EFI... */
-disp("[info] 正在初始化问题诊断工具...", "cyan");
+disp("[info] 当前机型是 KP7GZ 系列。正在初始化问题诊断工具...", "cyan");
 $jsonPath = dirname(__FILE__) . DS . "info.json";
 if (!file_exists($jsonPath)) {
     disp("[error] 找不到 info.json，排错程序无法运行！请尝试重新下载或替换配置文件.", "red", 0);
@@ -80,7 +80,7 @@ usleep(500000);
 /* Check current system version */
 disp("[info] 正在检测系统版本...", "cyan", 0);
 exec("sw_vers 2>&1", $res);
-preg_match("/(10\.14\.[0-9])/", $res[1], $match);
+preg_match("/(10\.1.*)/", $res[1], $match);
 
 if (!in_array($match[1], $info['supported_macos_version'])) {
     disp("[error] 当前 macOS 版本为 ${match[1]}，配置文件支持的版本为：", "red", 0);
@@ -94,16 +94,44 @@ usleep(500000);
 
 /* Check if system using kirainmoe's EFI */
 $res = array();
-disp('[info] 正在检测当前系统是否使用 kirainmoe\'s EFI 启动...', 'cyan');
+disp('[info] 正在检测当前系统是否使用 aya\'s EFI 启动...', 'cyan');
 exec("ioreg -l | grep YMR2 2>&1", $res);
 
 if (empty($res)) {
-    disp("[error] 检测到当前系统使用的配置文件是第三方配置文件。要确保系统各项功能正常工作必须使用指定的配置文件.", "red");
+    disp("[error] 检测到当前系统使用的配置文件是第三方配置文件。我们无法帮您诊断问题。", "red");
     disp("[error] 请检查您的 EFI 配置文件是否替换正确，修复后请重新启动系统。", "red");
     exit(0);
 } else {
-    disp("[ok] 当前系统正在使用 kirainmoe's EFI.", 'green');    
+    disp("[ok] 当前系统正在使用 aya's EFI.", 'green');    
 }
+
+disp('[info] 正在检测声卡是否正常……', 'cyan');
+exec("kextstat | grep AppleALC", $res);
+
+if (empty($res)) {
+    disp("[error] AppleALC 驱动没有正确加载。请检查 Lilu 和 AppleALC 是否存在。如果您运行较新版本的系统，需要使用 -alcbeta 参数启动。", "red");
+} else {
+    exec("ioreg -l | grep alc-layout-id", $res);
+    if (empty($res)) {
+        disp("[error] alc-layout-id 没有被正确注入，声音输入输出设备可能无法正常工作。", "red");
+    } else {
+        disp("[ok] 声卡驱动工作正常。", "green");
+    }
+}
+usleep(500000);
+
+
+disp('[info] 正在检测触摸板是否正常……', 'cyan');
+exec("kextstat | grep VoodooI2CHID", $res);
+
+if (empty($res)) {
+    disp("[error] I2C 触摸板驱动没有正确加载，将尝试自动修复...", "red");
+    usleep(500000);
+    disp("[info] 即将执行重建缓存操作，请在下面输入您的系统密码：", 'cyan');
+    exec("sudo kextcache -i /", $res);
+    disp("[info] 请尝试重新启动电脑。", "cyan");
+}
+usleep(500000);
 
 disp("[info] 开始比较文件，这可能需要一些时间...", "cyan");
 $basedir = dirname(dirname(__FILE__)) . '/';

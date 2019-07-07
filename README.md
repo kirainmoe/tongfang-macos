@@ -12,7 +12,9 @@
 
 该分支支持同方神舟战神机型 Z7(m)-KP7/5EC。欢迎大家测试并反馈，感谢群友 @浅笔向阳、@上个世纪的风 参与测试。
 
-因为本人只拥有 Z7-KP7GZ，其他型号通过群内的朋友测试通过。有关于在 GC/EC/GE/CT7GK 等机型上使用该配置文件，请参照[各机型配置文件使用指南](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E5%90%84%E6%9C%BA%E5%9E%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97).
+因为本人只拥有 Z7-KP7GZ，其他型号通过群内的朋友测试通过。后续所有的功能更新，会先在 KP7GZ 系列机型上测试稳定后才会下放。
+
+有关于在 GC/EC/CT7GK 等机型上使用该配置文件，请参照[各机型配置文件使用指南](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E5%90%84%E6%9C%BA%E5%9E%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97).
 
 # What's working
 
@@ -40,7 +42,11 @@
 - **HDMI/MiniDP（该模具 HDMI/MiniDP 直接由独显输出, 独显无法驱动，所以 HDMI/MiniDP 也无法使用）**
 - 读卡器（读卡器走的 USB 2.0 外置，无法使用）
 
-# Contribute
+# License and Contribute
+
+### 许可协议
+
+该项目在 [Maruyama License](LICENSE) 许可下开源。
 
 ### 关于贡献和完善
 

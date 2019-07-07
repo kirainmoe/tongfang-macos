@@ -181,7 +181,7 @@
 					<key>Comment</key>
 					<string>I2C: change USTP, 8 to XSTP, 8</string>
 					<key>Disabled</key>
-					<true/>
+					<false/>
 					<key>Find</key>
 					<data>
 					VVNUUAg=
@@ -195,7 +195,7 @@
 					<key>Comment</key>
 					<string>I2C: change SBFI to SBFS</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					i1NCRkk=
@@ -213,7 +213,7 @@
 					<key>Comment</key>
 					<string>I2C: change return value to SBFS</string>
 					<key>Disabled</key>
-					<false/>
+					<true/>
 					<key>Find</key>
 					<data>
 					hFNCRkJTQkZJAA==
@@ -357,8 +357,8 @@
 			<string>SSDT-GPRW.aml</string>
 			<string>SSDT-ALS0.aml</string>
 			<string>SSDT-XOSI.aml</string>
-			<string>SSDT-TPAD.aml</string>
 			<string>SSDT-FN.aml</string>
+			<string>SSDT-USTP.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -628,6 +628,24 @@
 					<string>Windows</string>
 					<key>Type</key>
 					<string>Windows</string>
+				</dict>
+				<dict>
+					<key>AddArguments</key>
+					<string>initrd=/initramfs-linux.img root=UUID=3A8008B9-DA62-4494-85E3-963EE2CD3707 rw add_efi_memmap</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Ignore</key>
+					<false/>
+					<key>Path</key>
+					<string>vmlinuz-linux</string>
+					<key>Title</key>
+					<string>Arch Linux</string>
+					<key>Type</key>
+					<string>Linux</string>
+					<key>Volume</key>
+					<string>3A8008B9-DA62-4494-85E3-963EE2CD3707</string>
+					<key>VolumeType</key>
+					<string>Internal</string>
 				</dict>
 			</array>
 		</dict>

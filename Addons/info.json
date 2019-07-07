@@ -1,18 +1,20 @@
 {
-  "package": "hasee-z7-kp7gz-macos",
-  "build": "20190523",
+  "package": "hasee-tongfang-macos",
+  "build": "20190625",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1558627117,
-  "repository": "https:\/\/github.com\/kirainmoe\/hasee-z7-kp7gz-macos",
+  "timestamp": 1561438663,
+  "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
+  "model": "KP7\/5(G)Z",
   "supported_macos_version": [
     "10.14.2",
     "10.14.3",
     "10.14.4",
-    "10.14.5"
+    "10.14.5",
+    "10.15"
   ],
   "hash": {
-    "CLOVERX64.efi": "fd61f0fda3f07d5c7de47309b961d5ac",
+    "CLOVERX64.efi": "e0f84885d293929252adfe61c0a4cb03",
     "tools": {
       "Shell32.efi": "7fa0023638de5dcb2dbf5d2fb684073a",
       "Shell.inf": "6e47bee7d43c81355b4848f043f3aa0b",
@@ -24,9 +26,9 @@
       "Other": {
         "CPUFriend.kext": {
           "Contents": {
-            "Info.plist": "9b8dfca09ab602dc0f54f07c0ac138b3",
+            "Info.plist": "24274c9053c99d78ea1319710b180920",
             "MacOS": {
-              "CPUFriend": "98feacc69c9c2fb90e6fb2d68441e6d2"
+              "CPUFriend": "cc3c950a2ed83b60df80fc9b5e435065"
             }
           }
         },
@@ -47,7 +49,7 @@
         },
         "CPUFriendDataProvider.kext": {
           "Contents": {
-            "Info.plist": "d53381da6b69e99dc8da6607cd6f42da"
+            "Info.plist": "670d9d7caf0cfe130ff82e154b3fdfaa"
           }
         },
         "NoTouchID.kext": {
@@ -131,7 +133,7 @@
             },
             "Info.plist": "d88c797e37eef05ad94379dc7b7da085",
             "MacOS": {
-              "VoodooI2CHID": "179cbd9862eee37870efdcd149a42304"
+              "VoodooI2CHID": "985d8463c65b8235351f5736eb27886f"
             }
           }
         },
@@ -140,32 +142,16 @@
             "PlugIns": {
               "VoodooPS2Keyboard.kext": {
                 "Contents": {
-                  "Info.plist": "5f595577f4966d78db9883c3034c763c",
+                  "Info.plist": "cb2c16a2839a05b1b1bd2b48e881751c",
                   "MacOS": {
-                    "VoodooPS2Keyboard": "b619147e8cfd5cbdb23f136380fb5d35"
-                  }
-                }
-              },
-              "VoodooPS2Trackpad.kext": {
-                "Contents": {
-                  "Info.plist": "047e8bd57798ac4c8a525d840dfbdd09",
-                  "MacOS": {
-                    "VoodooPS2Trackpad": "53a269891a72ba1c75fd508603b225ff"
-                  }
-                }
-              },
-              "VoodooPS2Mouse.kext": {
-                "Contents": {
-                  "Info.plist": "8638bf984ed2406fdfc8a8e637bace40",
-                  "MacOS": {
-                    "VoodooPS2Mouse": "17d32a4f6f4892f27f00ef89df7d4b06"
+                    "VoodooPS2Keyboard": "f688d5aa2aede6acdff3b4dd4fbeebac"
                   }
                 }
               }
             },
-            "Info.plist": "55c91d3ff04eb42d879f5687701586b8",
+            "Info.plist": "2d760abecbb7bb80d8db97d3f58e885b",
             "MacOS": {
-              "VoodooPS2Controller": "7b72f60e4451821af7babd3aa353250e"
+              "VoodooPS2Controller": "d29dc61bffcd5d89682cc3b40ea25668"
             }
           }
         },
@@ -195,7 +181,7 @@
                   },
                   "Info.plist": "657f311141ab4160f7ced4084c9da9b7",
                   "MacOS": {
-                    "VoodooGPIO": "d3b6adfcf64d69bff06bdff64c52aeca"
+                    "VoodooGPIO": "136ab614f302b83211f53659bc0f315e"
                   }
                 }
               },
@@ -206,17 +192,17 @@
                   },
                   "Info.plist": "5a5f39eff0b286b0fde4ae881098d1c0",
                   "MacOS": {
-                    "VoodooI2CServices": "53ff34f21a911575f60cdde95a5df6a3"
+                    "VoodooI2CServices": "b14d8f2e26ac686d26eee8f31df39eed"
                   }
                 }
               }
             },
             "_CodeSignature": {
-              "CodeResources": "df8cf46a4bcdd20926ef3430c9b7a039"
+              "CodeResources": "e1fb84fa3f4beb74dca1d14f7c891d03"
             },
-            "Info.plist": "870250b9ffe178df3b89cf8c05c20a50",
+            "Info.plist": "09ff3f8fb12eab2baf908d6854cab1a3",
             "MacOS": {
-              "VoodooI2C": "0450b7f35e2572bcb3d18e8c2438215f"
+              "VoodooI2C": "f6a35b547a1ef3e24d79a36493c07f76"
             }
           }
         },
@@ -230,9 +216,9 @@
         },
         "WhateverGreen.kext": {
           "Contents": {
-            "Info.plist": "6e88ddee81e24b1863d54d4d1cfe9c9e",
+            "Info.plist": "f34341a59bdc8a3f914036c9e94991dc",
             "MacOS": {
-              "WhateverGreen": "626f015907495c85cd568d4f98de4858"
+              "WhateverGreen": "32661ffd82a33d9439b2129b41c57fef"
             }
           }
         },
@@ -246,9 +232,9 @@
         },
         "Lilu.kext": {
           "Contents": {
-            "Info.plist": "e8b788f4acc863e388ad49f60a350da7",
+            "Info.plist": "7467396ce38c82da5dbb91bedcb43494",
             "MacOS": {
-              "Lilu": "a096e90d4661909a527758d2beabecbe"
+              "Lilu": "60baca9dc15ab0fad4c80f17901c76a6"
             }
           }
         },
@@ -261,9 +247,9 @@
       "Alternative Kexts": {
         "BrcmPatchRAM2.kext": {
           "Contents": {
-            "Info.plist": "df0c2350bb604e670c7d6df6fe330602",
+            "Info.plist": "99578546844f753f9ea2402a6c52585a",
             "MacOS": {
-              "BrcmPatchRAM2": "dc40256e478c2fc1f7496094e00d54fc"
+              "BrcmPatchRAM2": "e61d2533478a2e328f3b238704d6b270"
             }
           }
         },
@@ -275,6 +261,14 @@
             }
           }
         },
+        "BrcmFirmwareData.kext": {
+          "Contents": {
+            "Info.plist": "1ff1746ad0e46158251ce656a5c33fab",
+            "MacOS": {
+              "BrcmFirmwareData": "8482d5468315dedc312c383e96ce6c32"
+            }
+          }
+        },
         "CPUFriendDataProvider.kext": {
           "Contents": {
             "Info.plist": "6ad949a9a07574f6c830451613618eed"
@@ -282,15 +276,26 @@
         },
         "AirportBrcmFixup.kext": {
           "Contents": {
-            "Info.plist": "5eab36c77775a7e9edaae92cf5440a63",
+            "_CodeSignature": {
+              "CodeResources": "c48c1d9c6cf982c32580a9c58b0cce51"
+            },
+            "Info.plist": "cd4564d7f1c672dfb7067c32ff68aba5",
             "MacOS": {
-              "AirportBrcmFixup": "f43a2a3147a82d50e03b6b6c8143e1ce"
+              "AirportBrcmFixup": "78593ce3deebb1a4044325207079db35"
+            }
+          }
+        },
+        "BrcmPatchRAM.kext": {
+          "Contents": {
+            "Info.plist": "626ff3bfd6bd012eeb38a9f2a2259085",
+            "MacOS": {
+              "BrcmPatchRAM": "024498e2fbe4109b4842b72f6f53fbc1"
             }
           }
         },
         "BrcmFirmwareRepo.kext": {
           "Contents": {
-            "Info.plist": "d4b656d83b92f44c0be2074df05a7562",
+            "Info.plist": "56a9d81cc4a56880dd92cb9f15e93afa",
             "Resources": {
               "BCM20702A1_001.002.014.1502.1770_v5866.zhx": "5780ea673ba26d7ab587241c64247c56",
               "BCM20702A1_001.002.014.1443.1462_v5558.zhx": "0d39b0cc839e95fb8a00a7b62d921665",
@@ -378,13 +383,12 @@
               "BCM43142A0_001.001.011.0311.0346_v4442.zhx": "b6586666cf42a1412b8b919595fc6a36"
             },
             "MacOS": {
-              "BrcmFirmwareRepo": "968e237aab7ab09f62022fc91be19f92"
+              "BrcmFirmwareRepo": "c843547fc1e71df60cdfc3971da3df04"
             }
           }
         }
       }
     },
-    "config-kp7ec-kp7gc.plist": "6ed09c865fa7285ec96847e9d123bab2",
     "Addons": {
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
       "optimize.sh": "a8b4423def76ded307a15cb6d62124f7"
@@ -400,7 +404,7 @@
       "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
       "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20"
     },
-    "config.plist": "777339abd184c09a61d4c8b5c70001ec",
+    "config.plist": "cfa3a664e26aa631e1539a0abf4370a8",
     "ACPI": {
       "source": {
         "SSDT-DDGPU.dsl": "394fb77d72533aa4b3713fa8da08e1b3",
@@ -415,9 +419,6 @@
         "SSDT-FN.dsl": "74b79d993acfe3e25429708e6926e54c"
       },
       "patched": {
-        "SSDT-TPAD.aml": "a6daa12a53b3a0c86771a95799738490",
-        "SSDT-RTC.aml": "caf143b0e46effeb44f644edffe852cf",
-        "SSDT-UIAC-GC-EC.aml": "e07f499303116b199ad45a37aecf3113",
         "SSDT-DDGPU.aml": "4c67fb04f2cc0b9ce3a9eb9447ee18e8",
         "SSDT-FN.aml": "a7233d40ef577307f4ebadc80cf7360b",
         "SSDT-XOSI.aml": "6deb62d7de51ea03f88e3c0faf100339",
