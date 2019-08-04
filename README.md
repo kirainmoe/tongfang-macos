@@ -18,7 +18,7 @@
 
 用于在神舟战神 8 代 / 9 代同方系列机型安装最新版 macOS Mojave/Catalina （黑苹果）的 Clover 配置文件，可以[点这里查看适配的机型](#compatibility)，并下载对应分支的配置文件（默认 master 分支是 KP7GZ 系列的配置文件）。
 
-该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4/10.14.5** 全部亲自测试安装成功（全新安装/系统内 OTA 更新）；初步支持 10.15 Beta 2；使用 Clover Hotpatch 驱动。
+该配置文件在 macOS 版本 **10.14.2/10.14.3/10.14.4/10.14.5** 全部亲自测试安装成功（全新安装/系统内 OTA 更新）；初步支持 10.15 Beta 5；使用 Clover Hotpatch 驱动。
 
 在开始之前，请务必确认您已经阅读了[使用须知](#tutorial)和[常见问题](#FAQ)。**如果您在使用的时候遇到问题，请先尝试[快速排错](#troubleshooting)**.
 
@@ -253,6 +253,8 @@ sudo kextcache -i /
 19-6-27 重新使用 VirtualSMC 代换 FakeSMC 以便在 Catalina 下获得更好的支持。如果新版在 10.14 上出现问题，请尝试在 Release 中找到 20190627 的版本替换；更新项目许可协议。
 
 19-7-7 更新 VirtualSMC 的 1.0.6 版本以支持 Catalina，更新部分其他驱动。
+
+19-8-4 添加 SSDT-ECUSBX.aml，兼容 10.15 Developer Beta 5.
 
 # Detail screenshot
 
