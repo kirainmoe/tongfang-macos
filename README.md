@@ -304,7 +304,7 @@ Wi-Fi （需要更换硬件）
 ![screenfetch](https://i.loli.net/2019/06/27/5d14a42cf20d792078.jpg)
 
 Clover  
-![clover](https://sm.ms/image/yv4Si8BNlnagmzQ)
+![clover](https://i.loli.net/2019/08/06/yv4Si8BNlnagmzQ.png)
 
 # License and Contribute
 
