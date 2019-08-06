@@ -4,7 +4,7 @@
 
 <h1 align="center">神舟战神 8th/9th 同方机型 macOS</h1>
 
-<p align="center">支持 <a href="https://github.com/kirainmoe/hasee-tongfang-macos/tree/master">Z7(m)-KP7/5(G)Z</a>, <a href="https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc">Z7(m)-KP7/5GC</a>, <a href="https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec">Z7(m)-KP7/5EC</a>, <a href="https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk">Z7-CT7GK/G7-CT7VK</a>，请根据不同的机型选择分支。</p>
+<p align="center">支持 <a href="https://github.com/kirainmoe/hasee-tongfang-macos/tree/master">Z7(m)-KP7/5(G)Z</a>, <a href="https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc">Z7(m)-KP7/5GC</a>, <a href="https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec">Z7(m)-KP7/5EC</a>, <a href="https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk">Z7(m)-CT7/5GK(GS)/G7-CT7VK</a>，请根据不同的机型选择分支。</p>
 
 <p align="center">
 <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/blob/master/README-en.md">English</a> | <a href="#tutorial">使用须知</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/EFI-%E6%9B%BF%E6%8D%A2%E6%95%99%E7%A8%8B">EFI 替换教程</a> | <a href="#question">提问</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> | <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting)">问题排查指导</a> | <a href="#group">企鹅互助交流群</a>
@@ -57,7 +57,7 @@
  
 - 8 代窄边框笔记本，型号后缀为 Z 或 GZ，如：**Z7-KP7GZ, Z7m-KP7GZ, Z7m-KP5GZ, Z7-KP7Z, Z7m-KP7Z, Z7m-KP5Z.** （本分支）
 - 8 代其它同方模具笔记本，如 **[Z7(m)-KP7/5GC](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc), [Z7(m)-KP7/5EC](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec)**。
-- 9 代同方模具窄边框笔记本，如 **[Z7-CT7GK / G7-CT7VK](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk)**（试验性）
+- 9 代同方模具笔记本，如 **[Z7(m)-CT7/5GK/GS / G7-CT7VK](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk)**（试验性）
 - 其它未测试的 8 代以上同方模具神舟战神笔记本（试验性）
 
 <img src="https://camo.githubusercontent.com/066151785d81559120d76410f607d906e5b258ec/68747470733a2f2f7773332e73696e61696d672e636e2f6c617267652f3966313133376231677931673168676c71727377356a323068333062627467312e6a7067" width="200px">
@@ -133,7 +133,7 @@ A: 以下列出一些常见问题的解决方案。请确保你阅读了正确�
 
 **对于本 EFI 支持的机型，除九代机型外，请使用镜像自带的配置文件安装系统，然后再替换本仓库下的配置文件。**
 
-另外请确认你的机器没有安装三星 PM981/970Evo Plus 固态硬盘。除 PM981 外，部分三星固态硬盘（常见 SM961, PM983, PMM961 等）、Intel 固态硬盘（常见 600p, 660p, 部分 760p）也可能在安装和使用的过程中出现问题。如果你的机器安装了上述固态硬盘并出现了奇怪的问题，请首先拔掉硬盘排除故障。**请尽可能使用 APFS 分区格式安装系统以避免部分兼容性问题。**
+另外请确认你的机器没有安装三星 PM981 固态硬盘。除 PM981 外，部分三星固态硬盘（常见 SM961, PM983, PM961 等）、Intel 固态硬盘（常见 600p, 660p, 部分 760p）也可能在安装和使用的过程中出现问题。如果你的机器安装了上述固态硬盘并出现了奇怪的问题，请首先拔掉硬盘排除故障。**请尽可能使用 APFS 分区格式安装系统以避免部分兼容性问题。**
 
 - BIOS 进入 Clover 引导时提示 "Invalid Signature"：你需要进入 BIOS -> Advanced 中，关闭 Secure Boot （设置该项为 disabled）.
 - 安装系统时无法使用 Clover 引导安装程序：请确认你使用了上文推荐的镜像。我们不推荐安装任何 10.13 的版本（除非有特殊需求）。如果你安装的是黑果小兵的 10.13 版本，请自行替换 Clover 版本并加入 USBInjectAll.kext；如果你安装的是 10.14 版本，请尝试在写入 U 盘后替换 U 盘 ESP 分区中的 CLOVERX64.efi。
@@ -155,7 +155,7 @@ sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/kirainmoe/hasee-tongf
 ```
 如果你安装完后没有执行此脚本，那么休眠功能可能会不正常。
 
-Q: 为什么触摸板不工作？
+Q: 为什么触摸板不工作？  
 A: 如果你是第一次替换完 EFI，或者你在系统内 OTA 更新了新版本的系统，那么请使用以下命令重建 kext 缓存，并重启电脑：
 
 ```shell
