@@ -173,6 +173,12 @@ A：如果你想问这个问题，我的建议是再看一遍 README.
 Q: 为什么执行完优化脚本（或开启了 HiDPI 之后）出现了花屏、睡眠唤醒四分之一屏？  
 A: 出现此原因可能是因为您启用了 HiDPI。目前因为开启 HiDPI 引起的卡条、花屏、四分之一屏问题暂时没有很好的解决方案，一般重启就可以正常。如果您无法忍受的话，请不要开启 HiDPI. 虽然这些问题部分可以解决，但是并不能从 Clover 配置文件的层面解决，因此请您自寻解决方案。
 
+Q: 我不喜欢新的 Clover 主题，我想回滚到旧版的 Clover 主题 (Mojave)？  
+A: 可以在[这里](https://www.lanzous.com/i5e807e)下载旧版的 Clover 主题。
+
+Q: 为什么更新新的配置文件之后，Recovery 分区不见了？  
+A: 在 Clover 界面按 F3 键即可显示 Recovery 分区。
+
 # Troubleshooting
 
 你必须使用 20190430 build.1556636386 及更高版本的 EFI 才可以使用快速排错脚本。使用教程参见：[问题排查指导](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting)#step-4-%E4%BD%BF%E7%94%A8%E8%87%AA%E5%8A%A9%E6%8E%92%E6%9F%A5%E7%A8%8B%E5%BA%8F%E6%8E%92%E6%9F%A5%E9%97%AE%E9%A2%98) 的第四步。
@@ -259,6 +265,8 @@ A: 出现此原因可能是因为您启用了 HiDPI。目前因为开启 HiDPI �
 
 19-8-4 添加 SSDT-ECUSBX.aml，兼容 10.15 Developer Beta 5.
 
+19-8-6 更新 Clover 版本和目录结构；使用新的 Clover 主题。
+
 # Detail screenshot
 
 USB  
@@ -294,6 +302,9 @@ Wi-Fi （需要更换硬件）
 
 终端截图  
 ![screenfetch](https://i.loli.net/2019/06/27/5d14a42cf20d792078.jpg)
+
+Clover  
+[!clover](https://sm.ms/image/yv4Si8BNlnagmzQ)
 
 # License and Contribute
 

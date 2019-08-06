@@ -653,6 +653,7 @@
 		<key>Hide</key>
 		<array>
 			<string>Preboot</string>
+			<string>Recovery</string>
 		</array>
 		<key>Language</key>
 		<string>en:0</string>
@@ -675,7 +676,7 @@
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>Mojave</string>
+		<string>Hasee</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
