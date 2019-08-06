@@ -31,7 +31,7 @@
 # What's not working
 
 - 独立显卡（GTX1660Ti， 目前没有适用于 Mojave 的 Nvidia WebDriver）
-- 无线网卡（Intel AC9560 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代） **注意同方九代机型可能为 CNVI 协议，不支持更换无线网卡**
+- 无线网卡（Intel AC9560 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
 - **HDMI/MiniDP（该模具 HDMI/MiniDP 直接由独显输出, 独显无法驱动，所以 HDMI/MiniDP 也无法使用）**
 - 读卡器（读卡器走的 USB 2.0 外置，无法使用）
 
