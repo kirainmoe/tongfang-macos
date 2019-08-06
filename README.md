@@ -74,15 +74,15 @@
 
 # Info
 
-配置详情:
+以下为维护者个人电脑的配置详情，以及对比原机的配置。
 
 | Component | Model |
 |--|--|
 | CPU | Intel Core(TM) i7-8750H (KP5(G)Z 为 i5-8300H) | 
 | GPU | Intel UHD630 / Nvidia GTX1060 (Z7m 为 1050Ti；两者皆无法驱动) |
-| RAM | Micron Crucial 8GB |
-| NVMe | Asgard NVMe SSD 256G |
-| SSD | Phison SATA SSD 128G (原装，macOS 系统盘) |
+| RAM | Micron Crucial 8GB+8GB |
+| NVMe | WD Black SN750 NVME SSD 500G |
+| SSD | Phison SATA SSD 128G |
 | Wireless | Intel AC9462（无法驱动，已更换 BCM94360CS2） |
 | Ethernet | Realtek RTL8168H |
 | Audio | Realtek ALC269vc |
