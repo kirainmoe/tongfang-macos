@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190808",
+  "build": "20190816",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1565271968,
+  "timestamp": 1565955725,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "KP7\/5(G)Z",
   "supported_macos_version": [
@@ -50,15 +50,14 @@
     },
     "drivers": {
       "UEFI": {
+        "OsxAptioFix2Drv-free2000.efi": "5b7cd5803d43fe3a246b7f083201ecb9",
         "HFSPlus.efi": "00b16648378521e1d63f606c6846cf1d",
         "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
         "apfs.efi": "771dc3ea35c8b7a959f84d525b3e6c3a",
         "FSInject-64.efi": "e2e78a084c0a19936350d30dd0fc08ad",
         "ApfsDriverLoader-64.efi": "77525964bda7a7e8d3d32fd68dedd0f1",
         "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20",
-        "EmuVariableUefi-64.efi": "d9f68b3ec616cc3ed5cd3ce25d3eff83",
-        "SMCHelper-64.efi": "da6d3a17406028386c32a769e53cdb2b",
-        "AptioMemoryFix-64.efi": "d3f8b8621e7d32a641ef32ad1baeae32"
+        "SMCHelper-64.efi": "da6d3a17406028386c32a769e53cdb2b"
       }
     },
     "kexts": {
@@ -414,7 +413,7 @@
     },
     "Addons": {
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
-      "optimize.sh": "a8b4423def76ded307a15cb6d62124f7"
+      "optimize.sh": "33b825b83121a397f375c4963cadb98e"
     },
     "config.plist": "4fc59bc42ff0ec844a8563f3aa08ae44",
     "CLOVERX64.efi": "d655eafd104981bb740b6cc511522b6b"

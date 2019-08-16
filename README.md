@@ -267,6 +267,8 @@ A: 在 Clover 界面按 F3 键即可显示 Recovery 分区。
 
 19-8-6 更新 Clover 版本和目录结构；使用新的 Clover 主题。
 
+19-8-16 去掉 EmuVariableUefi-64.efi，使用笔记本原生 NVRAM 功能，并修复引删除 NVRAM 引起的关机重启 panic 问题。
+
 # Detail screenshot
 
 USB  
