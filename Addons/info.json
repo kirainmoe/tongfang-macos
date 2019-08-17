@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190816",
+  "build": "20190817",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1565955725,
+  "timestamp": 1566048774,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "KP7\/5(G)Z",
   "supported_macos_version": [
@@ -57,6 +57,7 @@
         "FSInject-64.efi": "e2e78a084c0a19936350d30dd0fc08ad",
         "ApfsDriverLoader-64.efi": "77525964bda7a7e8d3d32fd68dedd0f1",
         "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20",
+        "EmuVariableUefi-64.efi": "d9f68b3ec616cc3ed5cd3ce25d3eff83",
         "SMCHelper-64.efi": "da6d3a17406028386c32a769e53cdb2b"
       }
     },
