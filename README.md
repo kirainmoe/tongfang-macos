@@ -179,6 +179,9 @@ A: 可以在[这里](https://www.lanzous.com/i5e807e)下载旧版的 Clover 主�
 Q: 为什么更新新的配置文件之后，Recovery 分区不见了？  
 A: 在 Clover 界面按 F3 键即可显示 Recovery 分区。
 
+Q: macOS 下是否有调节键盘灯的软件？  
+A: 请前往下载 [Project: STAR BEAT! - 为同方模具的神舟笔记本设计的 macOS 版控制中心](https://github.com/kirainmoe/project-starbeat/releases).
+
 # Troubleshooting
 
 你必须使用 20190430 build.1556636386 及更高版本的 EFI 才可以使用快速排错脚本。使用教程参见：[问题排查指导](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting)#step-4-%E4%BD%BF%E7%94%A8%E8%87%AA%E5%8A%A9%E6%8E%92%E6%9F%A5%E7%A8%8B%E5%BA%8F%E6%8E%92%E6%9F%A5%E9%97%AE%E9%A2%98) 的第四步。
