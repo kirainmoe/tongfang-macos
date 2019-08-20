@@ -15,7 +15,7 @@
 | FakePCIID.kext, FakePCIID_Intel_HDMI_Audio.kext | 仿冒部分硬件的 ID, 在这里用于解决开机声音随机丢失的问题 | |
 | Lilu.kext | 核心兼容层驱动 | yes |
 | NoTouchID.kext | 屏蔽系统内的指纹验证 | |
-| RealtekRTL8111.kext | 有线网卡驱动 | yes |
+| RealtekRTL8111.kext | 有线网卡驱动 |  |
 | SMCBatteryManager.kext | 电池管理驱动，是 VirtualSMC 系列组件的一部分 |  |
 | SMCLightSensor.kext | 传感器驱动，是 VirtualSMC 系列组件的一部分 | |
 | SMCProcessor.kext | 处理器信息驱动，是 VirtualSMC 系列组件的一部分 | |
