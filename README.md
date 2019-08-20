@@ -47,7 +47,9 @@
 
 5. 其他情况下，如果您遇到了 README 中没有提到的问题（请确认你什么多余的事情都没做，例如安装其他驱动，自行打 DSDT 补丁等），请不要犹豫直接提 issue. 有关于提问的细则，请看 [提问相关事项](#question) 部分。
 
-6. 当您使用本仓库的配置文件时，默认您已经阅读并知悉了上文及链接中的内容，并自愿遵守[许可协议](LICENSE)。**因您未详细阅读上文内容、不当操作导致的包括但不限于：安装失败、部分设备不工作、系统无法启动甚至是设备损坏等问题，一切后果请您自行承担。**
+6. 希望你在安装黑苹果、使用本仓库配置文件的时候，留意一下几个重要文件夹下的 README.md 文件，我在这些文件中写明了各个组件的详细作用。只有在了解这些东西的作用之后，你才能自主解决某些小问题，折腾 Hackintosh 的过程才算有收获。
+
+7. 当您使用本仓库的配置文件时，默认您已经阅读并知悉了上文及链接中的内容，并自愿遵守[许可协议](LICENSE)。**因您未详细阅读上文内容、不当操作导致的包括但不限于：安装失败、部分设备不工作、系统无法启动甚至是设备损坏等问题，一切后果请您自行承担。**
 
 # Compatibility
 
@@ -180,7 +182,9 @@ Q: 为什么更新新的配置文件之后，Recovery 分区不见了？
 A: 在 Clover 界面按 F3 键即可显示 Recovery 分区。
 
 Q: macOS 下是否有调节键盘灯的软件？  
-A: 请前往下载 [Project: STAR BEAT! - 为同方模具的神舟笔记本设计的 macOS 版控制中心](https://github.com/kirainmoe/project-starbeat/releases).
+A: 请前往下载 [Project: STAR BEAT! - 为同方模具的神舟笔记本设计的 macOS 版控制中心](https://github.com/kirainmoe/project-starbeat/releases). 该程序仅适用于同方设备。
+
+<img src="https://i.loli.net/2019/08/19/MKs26o4nXgIFraz.png" width="500px">
 
 # Troubleshooting
 
@@ -270,7 +274,7 @@ A: 请前往下载 [Project: STAR BEAT! - 为同方模具的神舟笔记本设�
 
 19-8-6 更新 Clover 版本和目录结构；使用新的 Clover 主题。
 
-19-8-16 <s>去掉 EmuVariableUefi-64.efi，使用笔记本原生 NVRAM 功能，并修复引删除 NVRAM 引起的关机重启 panic 问题。</s> 去掉 EmuVariableUefi-64.efi 会导致 iCloud 失效，已经还原。
+19-8-16 <s>去掉 EmuVariableUefi-64.efi，使用笔记本原生 NVRAM 功能，并修复因删除  EmuVariableUefi-64.efi 引起的关机重启 panic 问题。</s> 去掉 EmuVariableUefi-64.efi 会导致 iCloud 失效，已经还原。
 
 # Detail screenshot
 
@@ -309,7 +313,7 @@ Wi-Fi （需要更换硬件）
 ![screenfetch](https://i.loli.net/2019/06/27/5d14a42cf20d792078.jpg)
 
 Clover  
-![clover](https://i.loli.net/2019/08/06/yv4Si8BNlnagmzQ.png)
+<img src="https://i.loli.net/2019/08/06/yv4Si8BNlnagmzQ.png" width="600px">
 
 # License and Contribute
 
