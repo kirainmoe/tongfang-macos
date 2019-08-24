@@ -19,7 +19,6 @@
 | SMCBatteryManager.kext | 电池管理驱动，是 VirtualSMC 系列组件的一部分 |  |
 | SMCLightSensor.kext | 传感器驱动，是 VirtualSMC 系列组件的一部分 | |
 | SMCProcessor.kext | 处理器信息驱动，是 VirtualSMC 系列组件的一部分 | |
-| SMCSuperIO.kext | IO 信息驱动，是 VirtualSMC 组件的一部分 | |
 | USBInjectAll.kext | USB 驱动，用于修复 USB 端口不可用、正确注入 USB3.1/Type-C 端口信息的驱动 | |
 | VirtualSMC.kext | SMC 仿冒驱动，注入 SMC 信息；与 FakeSMC 的作用类似 | yes |
 | VoodooI2C.kext, VoodooI2CHID.kext | I2C HID 触摸板驱动，需要配合 SSDT 补丁使用 | |

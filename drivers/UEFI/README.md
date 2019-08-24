@@ -18,4 +18,4 @@ The following table describes the function of each file:
 | FSInject-64.efi | 对系统注入内核拓展必须的驱动 | yes |
 | HFSPlus.efi | HFS+ 格式分区（Mac OS 拓展）识别的驱动 | yes, if your part is HFS+ format |
 | AptioMemoryFix-64.efi, OsxAptioFix*.efi | 用于修复 Aptio 主板 (AMI) 的内存问题。通常情况下我们推荐大家使用 AptioMemoryFix-64.efi，但如果你无法安装系统或 Clover 卡加号，请尝试替换 OsxAptioFix3Drv-64.efi 等；如果你重启、关机会卡死 panic，请尝试替换 OsxAptioFix2Drv-free2000.efi. 这些驱动只能选一个使用。 | yes |
-| SMCHelper-64.efi | 仿冒 SMC 的协力驱动 | |
+| VirtualSmc-64.efi | VirtualSMC.kext 的协力驱动 | |
