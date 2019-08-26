@@ -14,7 +14,7 @@
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15_Beta_6-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-<img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/06/18/5d08683637e9899236.jpg" width="50%">
+<img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/08/26/rg9EXJLbzljcip5.jpg" width="50%">
 
 用于在神舟战神 8 代 / 9 代同方系列机型安装最新版 macOS Mojave/Catalina （黑苹果）的 Clover 配置文件，可以[点这里查看适配的机型](#compatibility)，并下载对应分支的配置文件（默认 master 分支是 KP7GZ 系列的配置文件）。
 
@@ -62,9 +62,7 @@
 - 9 代同方模具笔记本，如 **[Z7(m)-CT7/5GK/GS / G7-CT7VK](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk)**（试验性）
 - 其它未测试的 8 代以上同方模具神舟战神笔记本（试验性）
 
-<img src="https://camo.githubusercontent.com/066151785d81559120d76410f607d906e5b258ec/68747470733a2f2f7773332e73696e61696d672e636e2f6c617267652f3966313133376231677931673168676c71727377356a323068333062627467312e6a7067" width="200px">
-
-<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558636166866&di=64511ab5ebc754464264e1abde9ad2d0&imgtype=0&src=http%3A%2F%2F2f.zol-img.com.cn%2Fproduct%2F190%2F595%2Fce9Y0Q4QlY09Y.jpg" width="200px">
+<img src="https://camo.githubusercontent.com/066151785d81559120d76410f607d906e5b258ec/68747470733a2f2f7773332e73696e61696d672e636e2f6c617267652f3966313133376231677931673168676c71727377356a323068333062627467312e6a7067" width="227px"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558636166866&di=64511ab5ebc754464264e1abde9ad2d0&imgtype=0&src=http%3A%2F%2F2f.zol-img.com.cn%2Fproduct%2F190%2F595%2Fce9Y0Q4QlY09Y.jpg" width="200px">
 
 因为本人只拥有 Z7-KP7GZ，其他型号通过群内的朋友测试通过。后续所有的功能更新，会先在 KP7GZ 系列机型上测试稳定后才会下放。
 
@@ -275,6 +273,8 @@ A: 请前往下载 [Project: STAR BEAT! - 为同方模具的神舟笔记本设�
 19-8-6 更新 Clover 版本和目录结构；使用新的 Clover 主题。
 
 19-8-16 <s>去掉 EmuVariableUefi-64.efi，使用笔记本原生 NVRAM 功能，并修复因删除  EmuVariableUefi-64.efi 引起的关机重启 panic 问题。</s> 去掉 EmuVariableUefi-64.efi 会导致 iCloud 失效，已经还原。
+
+19-8-24 更新 VirtualSMC, Lilu, Clover 为最新版本。
 
 # Detail screenshot
 

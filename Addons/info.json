@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190817",
+  "build": "20190826",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1566048774,
+  "timestamp": 1566835238,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "KP7\/5(G)Z",
   "supported_macos_version": [
@@ -50,15 +50,20 @@
     },
     "drivers": {
       "UEFI": {
-        "OsxAptioFix2Drv-free2000.efi": "5b7cd5803d43fe3a246b7f083201ecb9",
         "HFSPlus.efi": "00b16648378521e1d63f606c6846cf1d",
         "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
-        "apfs.efi": "771dc3ea35c8b7a959f84d525b3e6c3a",
+        "VirtualSmc.efi": "eb2f5feb616250beb413d83dc08140ad",
         "FSInject-64.efi": "e2e78a084c0a19936350d30dd0fc08ad",
         "ApfsDriverLoader-64.efi": "77525964bda7a7e8d3d32fd68dedd0f1",
         "AppleImageLoader-64.efi": "bb7eab70839afd6469f5656db7127c20",
         "EmuVariableUefi-64.efi": "d9f68b3ec616cc3ed5cd3ce25d3eff83",
-        "SMCHelper-64.efi": "da6d3a17406028386c32a769e53cdb2b"
+        "AptioMemoryFix-64.efi": "d3f8b8621e7d32a641ef32ad1baeae32"
+      },
+      "Alternative UEFI Driver": {
+        "OsxAptioFix3Drv-64.efi": "c551dcee0600882be087f2624d5727a9",
+        "OsxAptioFix2Drv-free2000.efi": "5b7cd5803d43fe3a246b7f083201ecb9",
+        "OsxAptioFix2Drv-64.efi": "d88c1a6b5e4f0374d922d488fe93dc38",
+        "OsxAptioFixDrv-64.efi": "d47c094c578418e0c52ad182c9c72f73"
       }
     },
     "kexts": {
@@ -197,6 +202,22 @@
             "Info.plist": "56a9d81cc4a56880dd92cb9f15e93afa"
           }
         },
+        "HoRNDIS.kext": {
+          "Contents": {
+            "_CodeSignature": {
+              "CodeResources": "8d9f010a56c2f0a97d1b6deb08647a90"
+            },
+            "MacOS": {
+              "HoRNDIS": "b686b84636be0bab49e9ceaae44a1201"
+            },
+            "Resources": {
+              "en.lproj": {
+                "InfoPlist.strings": "51ef59b60e5b41b91519cc662a9fe886"
+              }
+            },
+            "Info.plist": "4b9aed94f54483944bab1e3a92d4d474"
+          }
+        },
         "BrcmPatchRAM2.kext": {
           "Contents": {
             "MacOS": {
@@ -210,9 +231,9 @@
         "Lilu.kext": {
           "Contents": {
             "MacOS": {
-              "Lilu": "60baca9dc15ab0fad4c80f17901c76a6"
+              "Lilu": "69f17837d5c5271e9aec064be1ae2ab5"
             },
-            "Info.plist": "7467396ce38c82da5dbb91bedcb43494"
+            "Info.plist": "e83369e71da7193303492b15a0c0bcad"
           }
         },
         "NoTouchID.kext": {
@@ -251,14 +272,6 @@
             "Info.plist": "51677e47f38132cfe86da7f309b9486f"
           }
         },
-        "SMCSuperIO.kext": {
-          "Contents": {
-            "MacOS": {
-              "SMCSuperIO": "2b57139d2309208f6abf8640134475f8"
-            },
-            "Info.plist": "e10918cfd9b2a265bd2ec1d06e80ffa6"
-          }
-        },
         "WhateverGreen.kext": {
           "Contents": {
             "MacOS": {
@@ -270,7 +283,7 @@
         "SMCBatteryManager.kext": {
           "Contents": {
             "MacOS": {
-              "SMCBatteryManager": "c8f43d82e7a3b832464faaa80dcc8105"
+              "SMCBatteryManager": "2ed2c72d201f9ad43cf39f3a94a57064"
             },
             "Info.plist": "8521c405b8a3d9c92f17f1122a8ebcc6"
           }
@@ -296,9 +309,9 @@
         "SMCProcessor.kext": {
           "Contents": {
             "MacOS": {
-              "SMCProcessor": "9d2218463db33a1f8ce79474cb4577a9"
+              "SMCProcessor": "bfe4cab8ef947c75059c9c1350fff360"
             },
-            "Info.plist": "b6c406dda6863c2ff3034fdc6d446e84"
+            "Info.plist": "93272f02a8783d985aa8454d7cc7193d"
           }
         },
         "USBInjectAll.kext": {
@@ -331,9 +344,9 @@
         "VirtualSMC.kext": {
           "Contents": {
             "MacOS": {
-              "VirtualSMC": "f60f9b89bef347dc586d614a2baa87fb"
+              "VirtualSMC": "28e51d9fb598e0d7a61dd73e14ec9442"
             },
-            "Info.plist": "099ea342f77e7fabf53dc2d0552d92df"
+            "Info.plist": "2c7f501febbaceeaa0045044126a8bb5"
           }
         },
         "FakePCIID.kext": {
@@ -365,7 +378,7 @@
         "SMCLightSensor.kext": {
           "Contents": {
             "MacOS": {
-              "SMCLightSensor": "b2eb1729a062e16ec20fbb3553ba1dce"
+              "SMCLightSensor": "b61ee6fd5dd65da28bba458cda1a2c59"
             },
             "Info.plist": "8aa4ec05d416baac6c5fba48ecb8e1eb"
           }
