@@ -1,23 +1,67 @@
-BSD 3-Clause License
+Maruyama 许可协议 (Maruyama License)
 
 Copyright (c) 2019, Yume Maruyama
-All rights reserved.
+Some rights reserved.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+对于本仓库提供的配置文件的修改、使用和重新分发，在满足以下条件的时候将被允许：
 
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
+** 您可以自由地使用、修改此配置文件，惟需自行承担使用、修改该配置文件造成的一切后果。
 
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
+** 以二进制形式或源代码形式的修改和重新分发，必须保留上述版权声明、依赖项目的版权声明(1)、
+   此许可证和以下免责声明。
 
-* Neither the name of the copyright holder nor the names of its
-  contributors may be used to endorse or promote products derived from
-  this software without specific prior written permission.
+** 在没有书面允许的情形下，不允许用户在重新分发时，使用版权所有者（或其它贡献者）的姓名
+   用于宣传。
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+** 不允许用于无附加服务的商业用途的重新分发。(2)
+
+注： 
+  （1）“依赖项目”是指：该仓库配置文件中，引用了其它项目（如 Lilu 等）的二进制文件或源代码。
+       修改和重新分发该仓库的内容时，需要保留这些项目原有的版权声明。
+  （2）任何人不允许在未提供附加服务的情况下，将该仓库下的任何内容用于商业用途（示例：用户不得
+      以任何价格出售该配置文件或此仓库下的任何内容，但用户可以引用此配置文件为他人提供有偿装
+      机服务）。
+
+
+免责声明：
+该仓库下配置文件由版权所有者及贡献者（未一一列举）“按原样”提供，不包含任何类型的保证
+(无论是明指的还是暗喻的)，包括但不限于为不侵权的适销性和特定目的的适用性的保证担保。
+在任何情况下，无论是否签订了合约、存在侵权行为还是在其他情况下，版权持有人或贡献者不
+对由本配置文件直接或间接产生的，或由使用本配置文件或处置本配置所产生的任何索赔、损坏
+或者其他责任负责。版权所有者及贡献者亦不对使用者的个人行为导致的直接、间接、偶然、特殊、
+惩戒性的后果，包括但不限于：软件损坏、数据丢失、硬件损坏等，承担任何形式的责任。
+
+============================================================================
+
+Redistribution and use of this product in source and binary forms, with or
+without modification, are permitted provided that the following conditions
+are met:
+
+** You may freely use and modify this product in case that you take the 
+   consequences cased by your use and modification.
+
+** Redistribution and modification in source and binary forms must retain
+   the above copyright notice, the copyright notice of dependencies (1),
+   this license and the following disclaimer.
+
+** Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+** Commercial use without accessorial service of the product is forbidden. (2)
+
+Notes: 
+    (1) "dependencies" indicates that this product has used the binary file
+       and source from other project. You should retain the original copyright
+       notice of those project when you modify and redistribute the product.
+    (2) No one is allowed to use any of the contents of this product for 
+        commercial purposes without providing additional services (example: you
+        may not sell any content under this repository at any price, but you may
+        use this product in a paid installation services for others).
+
+Disclaimer:
+
+THIS PRODUCT IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
 DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
