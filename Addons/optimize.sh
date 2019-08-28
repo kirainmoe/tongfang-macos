@@ -26,15 +26,6 @@ echo  "\033[36m>> disable proximity wake...\033[0m"
 pmset -a proximitywake 1
 echo ""
 
-echo "\033[34mCreating NVRAM emulation...\033[0m"
-echo "\033[36m>> writing /etc/save.nvram...\033[0m"
-rm -rf /etc/save.nvram
-echo "#!/bin/bash\nnvram -x -p > \"/nvram.plist\"\nif [[ -f \"/nvram.plist\" ]]; then\n    chflags hidden \"/nvram.plist\"\nfi" >> /etc/save.nvram
-chmod +x /etc/save.nvram
-echo "\033[36m>> setting boot hook for save.nvram...\033[0m"
-defaults write com.apple.loginwindow LogoutHook /etc/save.nvram
-
-echo ""
 
 while true; do
     read -p "Do you want to enable HiDPI? (y/n)?: " yn

@@ -6,13 +6,15 @@ $info = array(
     "author" => "Yume Maruyama",
     "mail" => "kirainmoe@gmail.com",
     "timestamp" => mktime(),
-    "model" => "CT7GK/CT7VK",
     "repository" => "https://github.com/kirainmoe/hasee-tongfang-macos",
+    "model" => "CT7(5)GK/GS/VK",
+    "branch" => "ct7gk",
     "supported_macos_version"=> [
         "10.14.2",
         "10.14.3",
         "10.14.4",
         "10.14.5",
+        "10.14.6",
         "10.15"
     ]
 );
