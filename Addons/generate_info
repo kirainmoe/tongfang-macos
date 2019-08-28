@@ -7,7 +7,8 @@ $info = array(
     "mail" => "kirainmoe@gmail.com",
     "timestamp" => mktime(),
     "repository" => "https://github.com/kirainmoe/hasee-tongfang-macos",
-    "model" => "KP7/5(G)Z",
+    "model" => "KP7/5EC",
+    "branch" => "kp7ec",
     "supported_macos_version"=> [
         "10.14.2",
         "10.14.3",

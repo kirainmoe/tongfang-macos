@@ -62,13 +62,12 @@ disp("-----------------------------------------------------------");
                                         
 <?php 
 disp("       Hasee Tongfang EFI troubleshooting script    ", 'green', 0, 2);
-disp("            同方机型 EFI 文件故障自助排查工具            ", 'green', 0, 2);
+disp("            神舟同方机型 EFI 文件故障自助排查工具        ", 'green', 0, 2);
 disp("    @Copyright 2019 Yume Maruyama<kirainmoe@gmail.com>", "blue", 0, 2);
-disp("     https://github.com/kirainmoe/hasee-z7-kp7gz-macos ");
+disp("     https://github.com/kirainmoe/hasee-tongfang-macos ");
 disp("-----------------------------------------------------------");
 
 /* Read info.json from current EFI... */
-disp("[info] 当前机型是 KP7GZ 系列。正在初始化问题诊断工具...", "cyan");
 $jsonPath = dirname(__FILE__) . DS . "info.json";
 if (!file_exists($jsonPath)) {
     disp("[error] 找不到 info.json，排错程序无法运行！请尝试重新下载或替换配置文件.", "red", 0);
@@ -76,6 +75,9 @@ if (!file_exists($jsonPath)) {
 }
 $info = json_decode(file_get_contents($jsonPath), true);
 usleep(500000);
+
+
+disp("[info] 当前机型是 " . $info['model'] .  " 系列。正在初始化问题诊断工具...", "cyan");
 
 /* Check current system version */
 disp("[info] 正在检测系统版本...", "cyan", 0);
@@ -121,15 +123,17 @@ if (empty($res)) {
 usleep(500000);
 
 
-disp('[info] 正在检测触摸板是否正常……', 'cyan');
-exec("kextstat | grep VoodooI2CHID", $res);
+if ($info['model'] != 'KP7/5GC') {
+    disp('[info] 正在检测触摸板是否正常……', 'cyan');
+    exec("kextstat | grep VoodooI2CHID", $res);
 
-if (empty($res)) {
-    disp("[error] I2C 触摸板驱动没有正确加载，将尝试自动修复...", "red");
-    usleep(500000);
-    disp("[info] 即将执行重建缓存操作，请在下面输入您的系统密码：", 'cyan');
-    exec("sudo kextcache -i /", $res);
-    disp("[info] 请尝试重新启动电脑。", "cyan");
+    if (empty($res)) {
+        disp("[error] I2C 触摸板驱动没有正确加载，将尝试自动修复...", "red");
+        usleep(500000);
+        disp("[info] 即将执行重建缓存操作，请在下面输入您的系统密码：", 'cyan');
+        exec("sudo kextcache -i /", $res);
+        disp("[info] 请尝试重新启动电脑。", "cyan");
+    }
 }
 usleep(500000);
 
@@ -149,7 +153,7 @@ usleep(500000);
 
 disp("[info] 正在检测远程分支版本...", "cyan", 0);
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://raw.githubusercontent.com/kirainmoe/hasee-z7-kp7gz-macos/master/Addons/info.json');
+curl_setopt($ch, CURLOPT_URL, 'https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/' . $info['branch'] .  '/Addons/info.json');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 $res = curl_exec($ch);
@@ -163,7 +167,7 @@ if (empty($res)) {
 
     if ($info['build'] < $remote['build'] || $info['timestamp'] < $remote['timestamp']) {
         disp("[tips] 您使用的配置文件版本不是最新。您当前的版本是：Build ${info['build']}, ${info['timestamp']}; 远程版本是：Build ${remote['build']}, ${remote['timestamp']}", 'magenta');
-        disp("[tips] 请考虑更新配置文件到最新版本，更新地址：https://github.com/kirainmoe/hasee-z7-kp7gz-macos", 'magenta');
+        disp("[tips] 请考虑更新配置文件到最新版本，更新地址：https://github.com/kirainmoe/hasee-tongfang-macos/releases", 'magenta');
     } else {
         disp("[ok] 您使用的是最新的配置文件。您当前的版本是：Build ${info['build']}, ${info['timestamp']}.", 'green');
         usleep(500000);
@@ -171,7 +175,7 @@ if (empty($res)) {
         if ($info['build'] == $remote['build'] && $info['timestamp'] == $remote['timestamp']) {
             disp("[info] 正在与远程文件进行比较...", 'cyan');
 
-            $remoteFile = file_get_contents('https://raw.githubusercontent.com/kirainmoe/hasee-z7-kp7gz-macos/master/Addons/info.json');
+            $remoteFile = file_get_contents('https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/' . $info['branch'] .  '/Addons/info.json');
             $remoteJson = json_decode($remoteFile, true);
     
             $flag = 1;
