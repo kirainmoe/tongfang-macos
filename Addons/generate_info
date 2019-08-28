@@ -8,6 +8,7 @@ $info = array(
     "timestamp" => mktime(),
     "repository" => "https://github.com/kirainmoe/hasee-tongfang-macos",
     "model" => "KP7/5(G)Z",
+    "branch" => "master",
     "supported_macos_version"=> [
         "10.14.2",
         "10.14.3",
