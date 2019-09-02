@@ -357,7 +357,6 @@
 			<string>SSDT-ALS0.aml</string>
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-FN.aml</string>
-			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-ECUSBX.aml</string>
 		</array>
 	</dict>

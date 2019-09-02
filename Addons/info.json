@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190828",
+  "build": "20190902",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1566990098,
+  "timestamp": 1567398037,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "KP7\/5GC",
   "branch": "kp7gc",
@@ -30,7 +30,6 @@
       },
       "patched": {
         "SSDT-ALS0.aml": "8615f5e7a42a4ab3b345d288a0686ebe",
-        "SSDT-UIAC.aml": "e07f499303116b199ad45a37aecf3113",
         "SSDT-GPRW.aml": "4d68d941799431476a2c4c3f91ac262f",
         "SSDT-XOSI.aml": "6deb62d7de51ea03f88e3c0faf100339",
         "SSDT-FN.aml": "a7233d40ef577307f4ebadc80cf7360b",
@@ -579,14 +578,6 @@
             "Info.plist": "93272f02a8783d985aa8454d7cc7193d"
           }
         },
-        "USBInjectAll.kext": {
-          "Contents": {
-            "MacOS": {
-              "USBInjectAll": "aee653f4f9e6253da87407847e48bd79"
-            },
-            "Info.plist": "b38cecaef70a04d7d969173f3a4bf7ac"
-          }
-        },
         "CPUFriend.kext": {
           "Contents": {
             "MacOS": {
@@ -653,6 +644,11 @@
             "Info.plist": "8aa4ec05d416baac6c5fba48ecb8e1eb"
           }
         },
+        "USBPorts.kext": {
+          "Contents": {
+            "Info.plist": "96d3a22c49967a8ffe33f71118f9f3f0"
+          }
+        },
         "AppleBacklightInjector.kext": {
           "Contents": {
             "Info.plist": "1bbb75ea774a32889d29996c0c1d165e"
@@ -664,7 +660,7 @@
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
       "optimize.sh": "33b825b83121a397f375c4963cadb98e"
     },
-    "config.plist": "e7bc485d81b1595ec8e1964a55cb7a3b",
+    "config.plist": "51916fd4094726762e5abd2b9f98102d",
     "CLOVERX64.efi": "d655eafd104981bb740b6cc511522b6b"
   }
 }

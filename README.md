@@ -8,7 +8,7 @@
 
 # Compatibility
 
-该分支适用于同方八代机型 Z7(m)-KP7/5GC.
+该分支适用于同方八代机型 Z7(m)-KP7/5GC. 感谢群友 @海豚 定制该机型的 USB.
 
 因为本人只拥有 Z7-KP7GZ，其他型号通过群内的朋友测试通过。有关于在 GC/EC/GE/CT7GK 等机型上使用该配置文件，请参照[各机型配置文件使用指南](https://github.com/kirainmoe/hasee-z7-kp7gz-macos/wiki/%E5%90%84%E6%9C%BA%E5%9E%8B%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97).
 
@@ -26,7 +26,7 @@
 - 有线网卡
 - 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 88，外放、耳机、麦克风全部正常）
 - 电池状态（现已使用 Clover Hotpatch 驱动）
-- USB （使用 USBInjectAll + SSDT 驱动，3.0 5G/s 速度正常，Type-C 可用）
+- USB （使用 USBPorts.kext 驱动，3.0 5G/s 速度正常，Type-C 可用）
 - 睡眠（使用 Clover Hotpatch 修复）
 - etc.
 
