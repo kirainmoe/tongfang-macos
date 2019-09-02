@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190828",
+  "build": "20190902",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1566990939,
+  "timestamp": 1567398864,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "CT7(5)GK\/GS\/VK",
   "branch": "ct7gk",
@@ -31,7 +31,7 @@
       },
       "patched": {
         "SSDT-ALS0.aml": "8615f5e7a42a4ab3b345d288a0686ebe",
-        "SSDT-UIAC.aml": "fbc812951f0928f8e8759c36bd42cae7",
+        "SSDT-UIAC.aml": "28a5103997fecf8bb5e38675bc2e777c",
         "SSDT-GPRW.aml": "4d68d941799431476a2c4c3f91ac262f",
         "SSDT-XOSI.aml": "6deb62d7de51ea03f88e3c0faf100339",
         "SSDT-FN.aml": "a7233d40ef577307f4ebadc80cf7360b",
@@ -461,7 +461,7 @@
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
       "optimize.sh": "33b825b83121a397f375c4963cadb98e"
     },
-    "config.plist": "ea144c96b9c96c05f1e54bc3347e9992",
+    "config.plist": "eb3d2777722357e86c7762c9941c9594",
     "CLOVERX64.efi": "d655eafd104981bb740b6cc511522b6b"
   }
 }
