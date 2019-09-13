@@ -276,6 +276,8 @@ A: 请前往下载 [Project: STAR BEAT! - 为同方模具的神舟笔记本设�
 
 19-8-24 更新 VirtualSMC, Lilu, Clover 为最新版本。
 
+19-9-13 修复 Catalina Beta 7 触摸板失效问题。
+
 # Detail screenshot
 
 USB  
