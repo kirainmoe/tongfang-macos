@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190828",
+  "build": "20190913",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1566990217,
+  "timestamp": 1568359763,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "KP7\/5EC",
   "branch": "kp7ec",
@@ -438,7 +438,7 @@
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
       "optimize.sh": "33b825b83121a397f375c4963cadb98e"
     },
-    "config.plist": "07b833fc69f29675d6a3332fa3e4ef8c",
+    "config.plist": "f57ee34770fdacf30fd502e1ee2712ed",
     "CLOVERX64.efi": "d655eafd104981bb740b6cc511522b6b"
   }
 }
