@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190913",
+  "build": "20190920",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1568359755,
+  "timestamp": 1568997462,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "KP7\/5(G)Z",
   "branch": "master",
@@ -35,6 +35,7 @@
         "SSDT-GPRW.aml": "4d68d941799431476a2c4c3f91ac262f",
         "SSDT-XOSI.aml": "6deb62d7de51ea03f88e3c0faf100339",
         "SSDT-FN.aml": "a7233d40ef577307f4ebadc80cf7360b",
+        "SSDT-PWBTN.aml": "cfaf4bac9e76951661e691a50fa6bb35",
         "SSDT-USTP.aml": "ce75fa29a551d6619dfb6d95ac2f1f67",
         "SSDT-BATT.aml": "af4e41a641cbbd88e5e55be0c743fdba",
         "SSDT-PNLFCFL.aml": "524b50ef64dc660a75bd5ae68c8c8283",
@@ -428,9 +429,9 @@
     },
     "Addons": {
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
-      "optimize.sh": "33b825b83121a397f375c4963cadb98e"
+      "optimize.sh": "619cfdc27cbd8ff3a8bfd0720a0bbc23"
     },
-    "config.plist": "4d3bc9dd1cdfd61d31d3aee0cfaed6c0",
+    "config.plist": "43f42baeed7ff4a5290b6389771905aa",
     "CLOVERX64.efi": "d655eafd104981bb740b6cc511522b6b"
   }
 }

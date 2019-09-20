@@ -1,10 +1,10 @@
 #!/bin/sh
 echo "---------------------------------------------------------"
-echo "\033[32mHasee Z7(m)-KP7(5)GZ Hackintosh Mojave Optimize Script\033[0m"
+echo "\033[32mHasee Tongfang Hackintosh Optimize Script\033[0m"
 echo ""
 echo "\033[34m@2019 Yume Maruyama <kirainmoe@gmail.com>, kirainmoe.com\033[0m"
 echo ""
-echo "https://github.com/kirainmoe/hasee-z7-kp7gz-macos"
+echo "https://github.com/kirainmoe/hasee-tongfang-macos"
 echo ""
 echo "\033[31mTips: Some operations need sudo privilege.\033[0m"
 echo "---------------------------------------------------------"
@@ -25,6 +25,9 @@ pmset -a standby 0
 echo  "\033[36m>> disable proximity wake...\033[0m"
 pmset -a proximitywake 1
 echo ""
+
+echo "\033[34mTriggering kext cache rebuilding...\033[0m"
+kextcache -i /
 
 
 while true; do

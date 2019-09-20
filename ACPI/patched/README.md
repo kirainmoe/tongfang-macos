@@ -18,5 +18,6 @@ This follwing table describes the function of each file:
 | SSDT-XOSI.aml | 注入 XOSI 方法 | - |
 | SSDT-UIAC.aml | USBInjectAll config, 用于注入 USB 端口信息，解决 USB3.0 识别、type-c 接口识别和睡眠秒醒问题 | UIAC |
 | SSDT-USTP.aml | 为触摸板加入 USTP 属性，使其支持 GPIO 中断模式 | TPAD |
+| SSDT-PWBTN.aml | 支持长按电源键弹出电源菜单功能 | PPMC |
 
 触摸板驱动部分参考炫龙耀 7000II 的 EFI 仓库，ALS0, GRPW, PNLFCFL 补丁来自网络，在此表示感谢。

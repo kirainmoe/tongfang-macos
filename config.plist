@@ -360,6 +360,7 @@
 			<string>SSDT-FN.aml</string>
 			<string>SSDT-USTP.aml</string>
 			<string>SSDT-ECUSBX.aml</string>
+			<string>SSDT-PWBTN.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
