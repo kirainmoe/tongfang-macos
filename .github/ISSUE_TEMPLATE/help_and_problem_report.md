@@ -35,6 +35,10 @@ Please describe your problem in detail. Make sure your problem is understandable
 
 如果你使用的不是最新版，请考虑先行更新到最新的配置文件，再看看问题是否解决。
 
+# 硬件更换情况 (Hardware Replacement)
+
+如果你曾经更换过任何硬盘（如 SSD, 无线网卡, 屏幕等），请填写具体型号；否则请填写无。
+
 # 截图 (Screenshot)
 
 可选。如果你的问题可以用截图或视频描述，请上传它们。
