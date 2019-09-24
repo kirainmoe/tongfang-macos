@@ -11,7 +11,7 @@
 <a href="https://github.com/kirainmoe/hasee-tongfang-macos/releases">
     <img src="https://img.shields.io/badge/download-release-blue.svg"/> 
 </a>
-<img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15_Beta_7-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
+<img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15_Beta_8-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
 <img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/08/26/rg9EXJLbzljcip5.jpg" width="50%">
@@ -74,7 +74,7 @@
 | 10.14.4 | 18E226 | ☑ yes | ☑ yes | ☑ yes |
 | 10.14.5 | 18F132 | ☑ yes | ☑ yes | ☑ yes |
 | 10.14.6 | 18G87 | ☑ yes | ❓untested | ☑ yes |
-| 10.15 Beta 7 | 19A558d | ☑ yes | ☑ yes | ❓untested |
+| 10.15 Public Beta 8 | 19A573a | ☑ yes | ☑ yes | ❓untested |
 
 ## 兼容的型号
 
@@ -94,7 +94,7 @@
 | CPU | Intel Core(TM) i7-8750H (KP5(G)Z 为 i5-8300H) | |
 | GPU | Intel UHD630 / Nvidia GTX1060 | Nvidia 独显无法驱动，原因详见[这里](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94#%E9%82%A3%E4%B8%BA%E4%BB%80%E4%B9%88%E7%8B%AC%E6%98%BE%E6%97%A0%E6%B3%95%E9%A9%B1%E5%8A%A8) |
 | RAM | Micron Crucial 8GB+8GB | |
-| NVMe | WD Black SN750 NVME SSD 500G | 请不要购买三星 PM981/970EvoPlus 等硬盘 | 
+| NVMe | WD Black SN750 NVME SSD 500G | 请不要购买三星 PM981/970EvoPlus 等 macOS 不支持的硬盘 | 
 | SATA SSD | Phison SATA SSD 128G | | 
 | Wireless | BCM94360CS2 | 原机自带的 Intel AC9462/AC9560 无法在 macOS 下驱动 |
 | Ethernet | Realtek RTL8168H | |
@@ -105,7 +105,7 @@
 - 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS，最低 800Mhz, 最高睿频 4.1GHz）
 - Intel UHD630（已应用显存补丁，2048 MB）
 - 亮度调节（可在设置中调节或使用 Fn+F11, Fn+F12 快捷键，后者在九代同方机型上不可用）
-- I2C HID 触控板
+- I2C HID 触摸板
 - 有线网卡
 - 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 29 或 88，外放、耳机、麦克风全部正常）
 - 电池状态（现已使用 Clover Hotpatch 驱动）
@@ -119,7 +119,7 @@
 ## What's partially working
 
 - 蓝牙 (需要热启动 macOS 才可用，即先进入 Winodws 后重启进入 macOS、或者在 macOS 下使用虚拟机模拟热启动过程。不支持 AirDrop.)
-- 触摸板（针对 GC 系列机型，因为该模具使用的触摸板为 PS2 触摸板，没有手势支持）
+- PS/2 触摸板（针对 GC 系列机型，因为该模具使用的触摸板为 PS2 触摸板，没有手势支持）
 
 ## What's not working
 

@@ -19,7 +19,7 @@ $info = array(
     ]
 );
 $res = [];
-$filter = array("themes", "LICENSE", "README.md", "README-en.md", "statement.pdf", "troubleshooting", "info.json", "generate_info", "archived", "Changelog.md");
+$filter = array("themes", ".github", ".git", "LICENSE", "README.md", "README-en.md", "statement.pdf", "troubleshooting", "info.json", "generate_info", "archived", "Changelog.md");
 
 function showdir($path, &$ref) {
     global $filter;
