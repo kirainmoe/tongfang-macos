@@ -18,8 +18,7 @@
 
 
 <h3 align="center">
-    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/releases">配置文件下载地址</a> /
-    <a href="https://gitee.com/kirainmoe/hasee-tongfang-macos">中国大陆镜像</a> / 
+    <a href="https://efi.kirainmoe.com/">配置文件下载地址</a> /
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/wiki">GitHub WiKi</a> /
     <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> /
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">更新日志</a>
@@ -37,7 +36,7 @@
 
 **[macOS 简明安装教程](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/macOS-%E5%AE%89%E8%A3%85%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B) ：如果你不知道如何全新安装 macOS，请仔细阅读此教程**
 
-[各机型配置文件下载地址](https://github.com/kirainmoe/hasee-tongfang-macos/releases)
+[各机型配置文件下载地址](https://efi.kirainmoe.com/)
 
 [EFI 替换教程](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/EFI-%E6%9B%BF%E6%8D%A2%E6%95%99%E7%A8%8B)
 
@@ -74,7 +73,7 @@
 | 10.14.4 | 18E226 | ☑ yes | ☑ yes | ☑ yes |
 | 10.14.5 | 18F132 | ☑ yes | ☑ yes | ☑ yes |
 | 10.14.6 | 18G87 | ☑ yes | ❓untested | ☑ yes |
-| 10.15 Public Beta 8 | 19A573a | ☑ yes | ☑ yes | ❓untested |
+| 10.15 Public Beta 8 | 19A573a | ☑ yes | ☑ yes | ☑ yes |
 
 ## 兼容的型号
 
@@ -89,7 +88,7 @@
 
 以下为维护者个人电脑的配置详情，以及对比原机的配置。
 
-| Component | Model | Others |
+| Component | Model | Comment |
 |--|--|---|
 | CPU | Intel Core(TM) i7-8750H (KP5(G)Z 为 i5-8300H) | |
 | GPU | Intel UHD630 / Nvidia GTX1060 | Nvidia 独显无法驱动，原因详见[这里](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94#%E9%82%A3%E4%B8%BA%E4%BB%80%E4%B9%88%E7%8B%AC%E6%98%BE%E6%97%A0%E6%B3%95%E9%A9%B1%E5%8A%A8) |
