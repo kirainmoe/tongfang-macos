@@ -8,7 +8,7 @@
 
 <p align="center">
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> 
-<a href="https://github.com/kirainmoe/hasee-tongfang-macos/releases">
+<a href="https://efi.kirainmoe.com">
     <img src="https://img.shields.io/badge/download-release-blue.svg"/> 
 </a>
 <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15_Beta_8-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
