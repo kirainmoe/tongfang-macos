@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190913",
+  "build": "20191004",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1568359763,
+  "timestamp": 1570177146,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "KP7\/5EC",
   "branch": "kp7ec",
@@ -53,6 +53,7 @@
       "UEFI": {
         "HFSPlus.efi": "00b16648378521e1d63f606c6846cf1d",
         "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
+        "AppleUiSupport.efi": "350205c719a0dcba5169c1347e9ad398",
         "VirtualSmc.efi": "eb2f5feb616250beb413d83dc08140ad",
         "FSInject-64.efi": "e2e78a084c0a19936350d30dd0fc08ad",
         "ApfsDriverLoader-64.efi": "77525964bda7a7e8d3d32fd68dedd0f1",
