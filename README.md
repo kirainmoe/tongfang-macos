@@ -14,8 +14,7 @@
 <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15_Beta_10-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-<img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/08/26/rg9EXJLbzljcip5.jpg" width="50%">
-
+<img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/10/04/AqOhE2oytpL6KVD.jpg" width="50%">
 
 <h3 align="center">
     <a href="https://efi.kirainmoe.com/">配置文件下载地址</a> /
