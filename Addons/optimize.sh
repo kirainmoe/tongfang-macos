@@ -33,7 +33,7 @@ kextcache -i /
 while true; do
     read -p "Do you want to enable HiDPI? (y/n)?: " yn
     case $yn in
-        [Yy]* ) sh -c "$(curl -fsSL https://raw.githubusercontent.com/xzhih/one-key-hidpi/master/hidpi.sh)"; break;;
+        [Yy]* ) sh -c "$(curl -fsSL https://raw.githubusercontent.com/daliansky/XiaoMi-Pro-Hackintosh/master/one-key-hidpi/one-key-hidpi.sh)"; break;;
         [Nn]* ) break;;
         * ) echo "Please answer y or n.";;
     esac

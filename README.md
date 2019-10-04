@@ -17,42 +17,44 @@
 <img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/10/04/AqOhE2oytpL6KVD.jpg" width="50%">
 
 <h3 align="center">
-    <a href="https://efi.kirainmoe.com/">配置文件下载地址</a> /
-    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/wiki">GitHub WiKi</a> /
+    <a href="https://aya-buildbot.kirainmoe.com/">配置文件下载地址</a> /
+    <a href="https://hackintosh.kirainmoe.com">你想知道的一切</a> /
     <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> /
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">更新日志</a>
 </h3>
 
 # 使用说明
 
-> Tips: 完整的使用说明请参照[GitHub Wiki](https://github.com/kirainmoe/hasee-tongfang-macos/wiki)页面。如果这个 wiki 页面对你来说打开太缓慢，你也可以访问[国内镜像](https://gitee.com/kirainmoe/hasee-tongfang-macos/wikis)。
+> Tips: 完整的使用说明请参照 [神舟黑苹果百科](hhttps://hackintosh.kirainmoe.com) 页面。如果你遇到了任何问题，请先在上面的链接右上角的搜索框中搜索关键词。
 
 ## 安装系统前
 
-[安装前须知](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/%E5%AE%89%E8%A3%85%E5%89%8D%E9%A1%BB%E7%9F%A5) ： 了解兼容性情况和安装的注意事项
+[安装前须知](https://hackintosh.kirainmoe.com/before-install/an-zhuang-qian-xu-zhi) ： 了解兼容性情况和安装的注意事项
 
 ## 系统安装资源和教程
 
-**[macOS 简明安装教程](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/macOS-%E5%AE%89%E8%A3%85%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B) ：如果你不知道如何全新安装 macOS，请仔细阅读此教程**
+**[macOS 简明安装教程](https://hackintosh.kirainmoe.com/an-zhuang-zhong/macos-an-zhuang-jian-ming-jiao-cheng) ：如果你不知道如何全新安装 macOS，请仔细阅读此教程**
 
-[各机型配置文件下载地址](https://efi.kirainmoe.com/)
+[各机型配置文件下载地址](https://aya-buildbot.kirainmoe.com/)
 
-[EFI 替换教程](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/EFI-%E6%9B%BF%E6%8D%A2%E6%95%99%E7%A8%8B)
+[EFI 替换教程](https://hackintosh.kirainmoe.com/an-zhuang-zhong/efi-ti-huan-jiao-cheng)
 
 
 ## 遇到问题？
 
-[安装过程中的疑难解答](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%96%91%E9%9A%BE%E8%A7%A3%E7%AD%94)
+[安装过程中的疑难解答](https://hackintosh.kirainmoe.com/an-zhuang-zhong/an-zhuang-guo-cheng-zhong-de-yi-nan-jie-da)
 
-[安装后的常见问题解答](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94)
+[安装后的常见问题解答](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da)
 
-[问题排查指导 (Troubleshooting)](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5%E6%8C%87%E5%AF%BC-(Troubleshooting))
+[问题排查指导 (Troubleshooting)](https://hackintosh.kirainmoe.com/an-zhuang-hou/wen-ti-pai-cha-zhi-dao-troubleshooting)
 
 ## 获取更好的体验
 
-[优化脚本](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94#post-install-%E4%BC%98%E5%8C%96%E8%84%9A%E6%9C%AC%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%89%A7%E8%A1%8C%E5%AE%83)：解决睡眠等功能的不正常问题；一键开启 HiDPI 等
+[优化脚本](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da#postinstall-you-hua-jiao-ben-shi-shen-me-wei-shen-me-xu-yao-zhi-hang-ta)：解决睡眠等功能的不正常问题；一键开启 HiDPI 等
 
-[硬件更换指南和兼容性报告](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/%E7%A1%AC%E4%BB%B6%E6%9B%B4%E6%8D%A2%E6%8C%87%E5%8D%97%E5%92%8C%E5%85%BC%E5%AE%B9%E6%80%A7%E6%8A%A5%E5%91%8A)：更换硬件的一些建议和提醒
+[硬件更换指南和兼容性报告](https://hackintosh.kirainmoe.com/an-zhuang-hou/ying-jian-geng-huan-zhi-nan-he-jian-rong-xing-bao-gao)：更换硬件的一些建议和提醒
+
+[常用命令和优化](https://hackintosh.kirainmoe.com/an-zhuang-hou/chang-yong-ming-ling-he-you-hua)
 
 [Project: STAR BEAT! - 为同方模具的神舟笔记本设计的 macOS 版控制中心](https://github.com/kirainmoe/project-starbeat/releases)
 
