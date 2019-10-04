@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20190920",
+  "build": "20191004",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1568997462,
+  "timestamp": 1570177141,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "KP7\/5(G)Z",
   "branch": "master",
@@ -25,6 +25,7 @@
         "SSDT-GPRW.dsl": "06074de66cc3b809968892e9751f310e",
         "SSDT-UIAC.dsl": "aff15dbcb56fb82e9062f63e3911f007",
         "SSDT-ALS0.dsl": "8e5ca00166f028e9ac37a812dd294d91",
+        "SSDT-DNVME.dsl": "e0b3ac813a9e612150466ef83bca683f",
         "SSDT-PNLFCFL.dsl": "7c91bb40ac0b8d9f09055ccdf6a9d50b",
         "SSDT-DDGPU.dsl": "394fb77d72533aa4b3713fa8da08e1b3",
         "SSDT-TPAD.dsl": "7a2618b93821ff3902e862de58f8118a"
@@ -54,6 +55,7 @@
       "UEFI": {
         "HFSPlus.efi": "00b16648378521e1d63f606c6846cf1d",
         "DataHubDxe-64.efi": "2dab7e0238a04b7a9a63a1f54cc49b2f",
+        "AppleUiSupport.efi": "350205c719a0dcba5169c1347e9ad398",
         "VirtualSmc.efi": "eb2f5feb616250beb413d83dc08140ad",
         "FSInject-64.efi": "e2e78a084c0a19936350d30dd0fc08ad",
         "ApfsDriverLoader-64.efi": "77525964bda7a7e8d3d32fd68dedd0f1",
@@ -429,9 +431,10 @@
     },
     "Addons": {
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
-      "optimize.sh": "619cfdc27cbd8ff3a8bfd0720a0bbc23"
+      "optimize.sh": "619cfdc27cbd8ff3a8bfd0720a0bbc23",
+      "SSDT-DNVME.aml": "60e701b7e1dd7179311468e9e59eb4cd"
     },
-    "config.plist": "43f42baeed7ff4a5290b6389771905aa",
+    "config.plist": "47524b06deb89b5e82dfc6112b1ddf78",
     "CLOVERX64.efi": "d655eafd104981bb740b6cc511522b6b"
   }
 }

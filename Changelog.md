@@ -106,3 +106,7 @@
 # 19-9-21
 
 更新项目的文件结构，重写 README 文件，分离 CHANGELOG.
+
+# 19-10-4
+
+添加 AppleUiSupport Clover 驱动，用于在开启加密时进入系统恢复。
