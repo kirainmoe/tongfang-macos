@@ -12,7 +12,7 @@ The following table describes the function of each file:
 
 | 文件名 (filename) | 作用 (function) | 必须 (require) |
 |------------------|----------------|----------------|
-| ApfsDriverLoader-64.efi, AppleImageLoader-64.efi | 苹果文件系统 APFS 的驱动，用于引导系统必备 | yes |
+| ApfsDriverLoader-64.efi, AppleImageLoader-64.efi, AppleUiSupport.efi | 苹果文件系统 APFS 的驱动，用于引导系统必备 | yes |
 | DataHubDxe-64.efi | macOS 要求强制启动的 DataHub 协议 | yes |
 | EmuVariableUefi-64.efi | 模拟 NVRAM，删除后将使用原生 NVRAM， Clover 可以记住上次引导的系统，但 iCloud 等功能可能会异常 | |
 | FSInject-64.efi | 对系统注入内核拓展必须的驱动 | yes |
