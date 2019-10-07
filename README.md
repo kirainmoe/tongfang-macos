@@ -20,7 +20,7 @@
     <a href="https://aya-buildbot.kirainmoe.com/">配置文件下载地址</a> /
     <a href="https://hackintosh.kirainmoe.com">你想知道的一切</a> /
     <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> /
-    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">更新日志</a>
+    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">更新日志</a> / <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/README-en.md">English</a>
 </h3>
 
 # 使用说明
