@@ -30,7 +30,7 @@
 安装完系统后，在 macOS 的终端执行以下命令：
 
 ```bash
-sudo php -c "$(curl -fsSL https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/master/Addons/installer)"
+curl -fsSL https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/master/Addons/installer > installer && chmod +x ./installer && sudo ./installer
 ```
 
 ## 手动下载和替换
