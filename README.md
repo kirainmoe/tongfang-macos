@@ -23,7 +23,21 @@
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">更新日志</a> / <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/README-en.md">English</a>
 </h3>
 
-# 使用说明
+# 如何使用？
+
+## 自动安装、更新程序（推荐）
+
+安装完系统后，在 macOS 的终端执行以下命令：
+
+```bash
+sudo php -c "$(curl -fsSL https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/master/Addons/installer)"
+```
+
+## 手动下载和替换
+
+你可以到 [Aya Buildbot](https://aya-buildbot.kirainmoe.com) 下载对应机型的最新版本配置文件，然后按照[《EFI 替换教程》](https://hackintosh.kirainmoe.com/an-zhuang-zhong/efi-ti-huan-jiao-cheng) 替换。
+
+# 说明
 
 > Tips: 完整的使用说明请参照 [神舟黑苹果百科](https://hackintosh.kirainmoe.com) 页面。如果你遇到了任何问题，请先在上面的链接右上角的搜索框中搜索关键词。
 

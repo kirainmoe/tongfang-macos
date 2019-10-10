@@ -1,0 +1,409 @@
+#!/usr/bin/php
+<?php
+class HaseeEFIInstaller
+{
+    private $binaries = [
+        "bdmesg" => "https://gitee.com/kirainmoe/static-files/raw/master/bdmesg",
+        "macserial" => "https://gitee.com/kirainmoe/static-files/raw/master/macserial"
+    ];
+
+    private $supported_models = [
+        "Z7(m)-KP7/5(G)Z",
+        "Z7(m)-KP7/5EC",
+        "Z7(m)-KP7/5GC",
+        "Z7-CT7GK",
+        "Z7m-CT7GS",
+        "G7-CT7VK"
+    ];
+
+    public function cout($text, $color = false, $indentSize = 0, $newline = 1)
+    {
+        $colors = array(
+          'black' => 30,
+          'red' => 31,
+          'green' => 32,
+          'yellow' => 33,
+          'blue' => 34,
+          'magenta' => 35,
+          'cyan' => 36,
+          'gray' => 37
+        );
+        if ($indentSize > 0)
+          echo str_repeat(" ", $indentSize);
+        echo "\033[" . $colors[$color] . "m" . $text . "\033[0m";
+        if ($newline > 0)
+          echo str_repeat("\n", $newline);
+    }
+
+    public function cerr($errno, $errinfo)
+    {
+        $this->cout("$errinfo ($errno).", "red");
+        exit($errno);
+    }
+
+    public function welcomeInfo()
+    {
+        echo "--------------------------------------------------\n";
+        echo "  Hasee Tongfang macOS EFI Installer / Updater\n\n";
+        echo " https://github.com/kirainmoe/hasee-tongfang-macos\n\n";
+        echo "         Copyright(c) 2019 Yume Maruyama\n";
+        echo "--------------------------------------------------\n";
+
+        $this->cout("欢迎。此程序将引导你安装或更新最新版的 EFI.", "blue", 0, 2);
+        $this->cout("安装程序当前支持的机型：", "blue");
+
+        foreach ($this->supported_models as $model)
+            $this->cout("- $model", "black", 2);
+        
+        $this->cout("\n当你准备好安装后，请按回车键继续：", "blue", 0, 0);
+        $tmp = fgets(STDIN);
+        sleep(1);
+    }
+
+    public function checkUserPermission()
+    {
+        $currentUser = exec("whoami");
+
+        if ($currentUser != 'root')
+            $this->cerr(-1, "你需要以 root 权限运行本程序以正常更新和安装 EFI，请使用 `sudo` 前缀运行本程序再试一次");
+    }
+
+    public function download($url, $filename, $permission = 755)
+    {
+        $this->cout("- 下载 $filename...", "cyan", 2, 0);
+        $tgt = file_get_contents($url);
+        
+        if (empty($tgt))
+            $this->cerr(-2, "无法从 $url 下载必须文件，请检查您的网络连接是否正常");
+
+        $file = fopen($filename, "w+");
+        $fw = fwrite($file, $tgt);
+        if (!$fw) 
+            $this->cerr(-3, "无法写入必须文件：$filename");
+        fclose($file);
+
+        exec("chmod -R $permission $filename");
+        $this->cout("成功", "green");
+    }
+
+    public function changeCwd()
+    {
+        exec('rm -rf /tmp/hasee-efi-installer');
+        exec('mkdir /tmp/hasee-efi-installer');
+        chdir('/tmp/hasee-efi-installer');
+    }
+
+    public function clean()
+    {
+        exec('rm -rf /tmp/hasee-efi-installer');
+    }
+
+    public function downloadRequiredFile()
+    {
+        $this->cout("正在下载必要文件...", "magenta");
+        // downlaod binaries
+        foreach ($this->binaries as $name => $url) {
+            $this->download($url, $name);
+        }
+        echo "\n";
+    }
+
+    public function checkModel()
+    {
+        exec("./bdmesg", $output);
+        $output = join($output, "\n");
+
+        preg_match('/Running\son:\s\'(.*?)\'/', $output, $res);
+        $model = $res[1];
+        $branch = '';
+        
+        if (strpos($output, "GK5CN6X") || strpos($output, "GK5CN5X")) {
+            $branch = "kp7gz";             // kp7gz
+        }
+        else if (strpos($output, "EC") && (strpos($output, "GI5CN54") || strpos($output, "GJ5CN64"))) {
+            $brach = "kp7ec";
+        }
+        else if (strpos($output, "GI5CN54") || strpos($output, "GJ5CN64")) {
+            $branch = "kp7gc";
+        }
+        else if (strpos($output, "GK7CP6R") || strpos($output, "CT7GK") || strpos($output, "CT7GS")) {
+            $branch = "ct7gk";              // 9th gen tongfang models
+        }
+        else {
+            $this->cerr(-4, "您的电脑型号是 $model ，很抱歉，此配置文件不支持该型号的机型。");
+        }
+
+        return [
+            "model" => $model,
+            "branch" => $branch
+        ];
+    }
+
+    public function downloadLatestEFI($model, $branch)
+    {
+        $this->cout("您的机型是 $model ，正在为您下载最新版本的配置文件，请稍等...", "magenta");
+        
+        $latestVersion = file_get_contents("https://aya-buildbot.kirainmoe.com/versionInfo");
+        if (empty($latestVersion)) {
+            $this->cerr(-5, "发生网络错误，或服务器端暂时没有响应。");
+        }
+
+        $res = json_decode($latestVersion, true);
+        $latest = $res[$branch][count($res[$branch]) - 1];
+        $this->cout("服务器端报告当前适用于 $model 的最新版本为：" . $latest['version'] . "，即将开始下载...", "cyan");
+
+        $this->download('https://efi.kirainmoe.com/release/' .  $latest['fileName'], $latest['fileName']);
+        echo "\n";
+
+        return $latest['fileName'];
+    }
+
+    public function findESP()
+    {
+        $this->cout("正在准备挂载 ESP 分区并更新启动文件...", "magenta");
+        $this->cout("即将为你挂载 ESP 分区。如果你当前正在使用硬盘引导，请首先移除所有的 U 盘，然后按回车继续：", 'black', 0, 0);
+        $ch = fgets(STDIN);
+
+        exec("diskutil list | grep EFI", $res);
+        $parts = array();
+
+        foreach ($res as $item) {
+            preg_match("/EFI\s(.*?)\s*[0-9]*?.[0-9]\sMB\s*(disk.*)/", $item, $r);
+            if (empty($r) || !isset($r[1]) || !isset($r[2]))
+                continue;
+            
+            // check have clover or windows
+            exec("diskutil mount /dev/" . $r[2] . ' 2>&1', $err);
+
+            $hasClover = 0;
+            $hasWindows = 0;
+            $title = trim($r[1]);
+            if (empty($title))
+                $title = 'Untitled';
+
+            $outs = array();
+            exec("ls /Volumes/$title | grep EFI", $outs);
+            if (!empty($outs)) {
+                $outs = array();
+                exec("ls /Volumes/$title/EFI | grep CLOVER", $outs);
+                if (!empty($outs))
+                    $hasClover = 1;
+                $outs = array();
+                exec("ls /Volumes/$title/EFI | grep Microsoft", $outs);
+                if (!empty($outs))
+                    $hasWindows = 1;                
+            }
+
+            exec("diskutil unmount /dev/$r[2]", $out);
+            array_push($parts, [
+                "path" => $r[2],
+                "title" => empty($r[1]) ? 'Untitled' : $r[1],
+                "hasClover" => $hasClover,
+                "hasWindows" => $hasWindows
+            ]);
+        }
+
+        $ret = [];
+        if (count($parts) == 1)
+            $ret = $parts[0];
+        else {
+            $this->cout("在您的电脑中检测到 " .count($parts) . " 个 ESP 分区：", "blue");
+            foreach ($parts as $key => $part) {
+                echo "  - [" . ($key) . "] ";
+                echo $part['title'];
+
+                if ($part['hasClover'])
+                    $this->cout("检测到 Clover", 'green', 2, 0);
+                else
+                    $this->cout("未安装 Clover", "gray", 2, 0);
+                
+                if ($part['hasWindows'])
+                    $this->cout("检测到 Windows", 'cyan', 2, 0);
+                else
+                    $this->cout("未安装 Windows", 'gray', 2, 0);
+                echo "\n";
+            }
+            $this->cout("请您选择操作分区的序号 [0-9]：", "blue", 0, 0);
+
+            $tgt = 0;
+            while (($tgt = fgets(STDIN))) {
+                if (is_numeric(trim($tgt))) {
+                    if (!($tgt < 0 || $tgt > count($parts) - 1))
+                        break;
+                }
+                $this->cout("输入不合法，请重试：", "red", 0, 0);
+            }
+            $ret = $parts[trim($tgt)];
+        }
+        echo "\n";
+        return $ret;
+    }
+
+    public function mountESP($part)
+    {
+        $this->cout("正在挂载 ESP 分区 `" . $part['title'] . "`...", "magenta");
+        exec("diskutil mount /dev/" . $part['path']);
+        echo "\n";
+    }
+
+    public function backUpClover($part)
+    {
+        $path = "/Volumes/" . $part['title'];
+        exec("ls $path | grep EFI", $out);
+        if (empty($out))
+            return;
+
+        $out = array();
+        exec("ls $path/EFI | grep CLOVER", $out);
+        if (empty($out))
+            return;
+        
+        $this->cout("正在备份当前系统的 Clover 配置...", "magenta");
+        $out = array();
+        exec("ls ~/Desktop | grep EFI_Backup", $out);
+        if (empty($out))
+            exec("mkdir ~/Desktop/EFI_Backup");
+
+        $resdir = "CLOVER_" . date('YmdHis');
+        exec("cp -r $path/EFI/CLOVER ~/Desktop/EFI_Backup/" . $resdir);
+        echo "\n";
+        $this->cout("当前系统的 Clover 配置已备份到：" , 'green', 0, 0);
+        $this->cout("桌面/EFI_Backup/" . $resdir, 'black');
+
+        return '~/Desktop/EFI_Backup/' . $resdir;
+    }
+
+    public function checkSMBIOSValid($smb)
+    {
+        if ($smb['serialNumber'] == 'C02X3088KGYG' || $smb['serialNumber'] == 'C02WM0Q0KGYG')
+            return false;
+        if ($smb['systemID'] == '79F6AACD-FD54-42EE-B8D3-B78AC3E660A3' || $smb['systemID'] == '10D7B543-06BA-49FD-978A-D909F6F30EFD')
+            return false;
+        return true;
+    }
+
+    public function getCurrentSMBIOS()
+    {
+        exec("./macserial", $raw);
+        $raw = join($raw, "\n");
+        preg_match("/Serial\sNumber:\s(.*)/", $raw, $serialNumber);
+        preg_match("/System\sID:\s(.*)/", $raw, $systemId);
+        preg_match("/MLB:\s(.*)/", $raw, $mlb);
+
+        if (!isset($serialNumber[1]) || !isset($systemId[1]) || !isset($mlb[1]))
+            return [];
+        $res = [
+            "serialNumber" => $serialNumber[1],
+            "systemID" => $systemId[1],
+            "MLB" => $mlb[1]
+        ];
+        $res['valid'] = $this->checkSMBIOSValid($res);
+        return $res;
+    }
+
+    public function replaceEFI($efipart, $filename, $model)
+    {
+        $this->cout("正在安装或更新指定分区的 EFI 文件……", "magenta");
+
+        $this->cout("即将在 ESP 分区 `" . $efipart['title'] . "` 上执行安装/更新 EFI 操作，请按回车键确认：", "yellow", 0, 0);
+        $tmp = fgets(STDIN);
+
+        $efipath = "/Volumes/" . $efipart['title'] . "/EFI/CLOVER";
+
+        $this->cout("正在删除已有的 Clover EFI...");
+        exec("rm -rf $efipath");
+
+        $this->cout("正在解压并拷贝新版 EFI...");
+        exec("unzip /tmp/hasee-efi-installer/$filename -d extract");
+        exec("cp -r extract/config-" . $model['branch'] . "/CLOVER $efipath");
+
+        $this->cout("您安装/替换的目标分区是否为 U 盘上的 ESP 分区？(y/N)", 'black', 0, 0);
+        $isUsb = strtolower(trim(fgets(STDIN)));
+        if ($isUsb == 'y') {
+            exec("mv /Volumes/" . $efipart['title'] . '/EFI/Boot/bootx64.efi bootx64-backup.efi');
+            exec("cp extract/config-" . $model['branch'] . "/BOOT/BOOTX64.efi /Volumes/" . $efipart['title'] . "/EFI/Boot/bootx64.efi");
+        }
+
+        $this->cout("正在恢复当前的 SMBIOS 信息...");
+        $smb = $this->getCurrentSMBIOS();
+        $gen = true;
+        if (!empty($smb)) {
+            if ($smb['valid'] == 1) {
+                $gen = false;
+            } else {
+                $this->cout("检测到您当前系统的 SMBIOS 信息不是有效值，程序强烈建议重新生成有效的 SMBIOS.", "red");
+                $this->cout("重新生成 SMBIOS 可能会导致 iCloud 与某些应用的授权失效，请自行重新授权。", "red");
+                $this->cout("若要阻止程序自动生成 SMBIOS, 请输入 n，否则请按回车继续：", "red", 0, 0);
+                $tmp = fgets(STDIN);
+                if (strtolower(trim($tmp)) == 'n')
+                    $gen = false;
+            }
+        }
+        
+        if ($gen) {
+            $this->cout("正在生成新的 SMBIOS 信息……", "blue");
+            exec("./macserial --model 41 --generate --num 1", $genOutput);
+            exec("uuidgen", $smuuid);
+            $tmp = explode("|", join($genOutput, '\n'));
+            $smb = [
+                "serialNumber" => trim($tmp[0]),
+                "MLB" => trim($tmp[1]),
+                "systemID" => $smuuid[0]
+            ];
+        }
+
+        $this->cout("将把以下信息恢复到您的新 EFI 中：", "blue");
+        $this->cout("- Serial Number: " . $smb['serialNumber'], 'black', 2);
+        $this->cout("- MLB Number: " . $smb['MLB'], 'black', 2);
+        $this->cout("- System UUID: " . $smb['systemID'], 'black', 2);
+
+        $configPath = $efipath . '/config.plist';
+        $content = file_get_contents($configPath);
+        if (empty($content))
+            $this->cerr(-7, "无法替换 SMBIOS 信息，检测到无效的 config 文件");
+        $res = preg_replace("/<key>BoardSerialNumber<\/key>\n\s*<string>(.*)<\/string>/", "<key>BoardSerialNumber</key>\n\t\t<string>" . $smb['MLB'] . "</string>", $content);
+        $res = preg_replace("/<key>SerialNumber<\/key>\n\s*<string>(.*)<\/string>/", "<key>SerialNumber</key>\n\t\t<string>" . $smb['serialNumber'] . "</string>", $res);
+        $res = preg_replace("/<key>SmUUID<\/key>\n\s*<string>(.*)<\/string>/", "<key>SmUUID</key>\n\t\t<string>" . $smb['systemID'] . "</string>", $res);
+        $file = fopen($configPath, "w+");
+        fwrite($file, $res);
+        fclose($file);
+        $this->cout("成功地替换了 EFI.", "green");
+
+        sleep(1);
+        echo "\n";
+    }
+
+    public function optimize()
+    {
+        $this->cout("正在执行安装后的优化脚本...", "magenta");
+        system('sh -c "$(curl -fsSL https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/master/Addons/optimize.sh)"');
+        echo "\n";
+    }
+
+    public function endOfScript()
+    {
+        $this->cout("正在清理安装临时文件...", "magenta");
+        $this->clean();
+        sleep(1);
+
+        $this->cout("安装程序成功完成，请重启你的电脑并检查功能是否正常。", "green");
+        $this->cout("若发现任何问题，可到 https://hackintosh.kirainmoe.com 查找相关解决方案。", 'black', 0, 2);
+        $this->cout("GitHub：https://github.com/kirainmoe/hasee-tongfang-macos");
+        $this->cout("Copyright(c) 2019 Yume Maruyama");
+    }
+}
+
+$installer = new HaseeEFIInstaller();
+
+$installer->checkUserPermission();
+$installer->welcomeInfo();
+$installer->changeCwd();
+$installer->downloadRequiredFile();
+$model = $installer->checkModel();
+$filename = $installer->downloadLatestEFI($model['model'], $model['branch']);
+$efipart = $installer->findESP();
+$installer->mountESP($efipart);
+$installer->backUpClover($efipart);
+$installer->replaceEFI($efipart, $filename, $model);
+$installer->optimize();
+$installer->endOfScript();
