@@ -117,13 +117,13 @@ class HaseeEFIInstaller
         $model = $res[1];
         $branch = '';
         
-        if (strpos($output, "GK5CN6X") || strpos($output, "GK5CN5X")) {
+        if (strpos($output, "GK5CN6X") || strpos($output, "GK5CN5X") || strpos($output, "KP5(7)GZ")) {
             $branch = "kp7gz";             // kp7gz
         }
-        else if (strpos($output, "EC") && (strpos($output, "GI5CN54") || strpos($output, "GJ5CN64"))) {
+        else if (strpos($output, "KP5(7)EC") || (strpos($output, "EC") && (strpos($output, "GI5CN54") || strpos($output, "GJ5CN64")))) {
             $brach = "kp7ec";
         }
-        else if (strpos($output, "GI5CN54") || strpos($output, "GJ5CN64")) {
+        else if (strpos($output, "GI5CN54") || strpos($output, "GJ5CN64") || strpos($output, "KP5(7)GC")) {
             $branch = "kp7gc";
         }
         else if (strpos($output, "GK7CP6R") || strpos($output, "CT7GK") || strpos($output, "CT7GS")) {
@@ -275,6 +275,8 @@ class HaseeEFIInstaller
 
     public function checkSMBIOSValid($smb)
     {
+        if (!strpos($smb['serialNumber'], 'KGYG'))
+            return false;
         if ($smb['serialNumber'] == 'C02X3088KGYG' || $smb['serialNumber'] == 'C02WM0Q0KGYG')
             return false;
         if ($smb['systemID'] == '79F6AACD-FD54-42EE-B8D3-B78AC3E660A3' || $smb['systemID'] == '10D7B543-06BA-49FD-978A-D909F6F30EFD')
