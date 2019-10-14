@@ -30,7 +30,7 @@
 安装完系统后，在 macOS 的终端执行以下命令：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/master/Addons/installer > installer && chmod +x ./installer && sudo ./installer
+curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo ./inst
 ```
 
 ## 手动下载和替换
