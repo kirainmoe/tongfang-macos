@@ -143,7 +143,7 @@ class HaseeEFIInstaller
     {
         $this->cout("您的机型是 $model ，正在为您下载最新版本的配置文件，请稍等...", "magenta");
         
-        $latestVersion = file_get_contents("https://aya-buildbot.kirainmoe.com/versionInfo");
+        $latestVersion = file_get_contents("https://efi.kirainmoe.com/versionInfo");
         if (empty($latestVersion)) {
             $this->cerr(-5, "发生网络错误，或服务器端暂时没有响应。");
         }
@@ -152,7 +152,13 @@ class HaseeEFIInstaller
         $latest = $res[$branch][count($res[$branch]) - 1];
         $this->cout("服务器端报告当前适用于 $model 的最新版本为：" . $latest['version'] . "，即将开始下载...", "cyan");
 
-        $this->download('https://efi.kirainmoe.com/release/' .  $latest['fileName'], $latest['fileName']);
+        global $argv;
+        
+        if (in_array('--debug', $argv)) {
+            $this->cout("您当前正在调试模式下运行，下载服务器将改变为 aya-buildbot.kirainmoe.com", "red");
+            $this->download('https://aya-buildbot.kirainmoe.com/release/' .  $latest['fileName'], $latest['fileName']);
+        } else
+            $this->download('https://efi.kirainmoe.com/release/' .  $latest['fileName'], $latest['fileName']);
         echo "\n";
 
         return $latest['fileName'];
@@ -251,7 +257,7 @@ class HaseeEFIInstaller
         $path = "/Volumes/" . $part['title'];
         exec("ls $path | grep EFI", $out);
         if (empty($out))
-            return;
+            return '';
 
         $out = array();
         exec("ls $path/EFI | grep CLOVER", $out);
@@ -303,8 +309,23 @@ class HaseeEFIInstaller
         return $res;
     }
 
-    public function replaceEFI($efipart, $filename, $model)
+    public function replaceValue($key, $type, $value, $content)
     {
+        return preg_replace("/<key>$key<\/key>\n\s*<$type>(.*)<\/$type>/", "<key>$key</key>\n\t\t<$type>" . $value . "</$type>", $content);
+    }
+
+    public function readValue($key, $type, $content)
+    {
+        preg_match("/<key>$key<\/key>\n\s*<$type>(.*?)<\/$type>/", $content, $res);
+
+        if (!empty($res))
+            return $res[1];
+    }
+
+    public function replaceEFI($efipart, $filename, $model, $oldPath)
+    {
+        global $argv;
+
         $this->cout("正在安装或更新指定分区的 EFI 文件……", "magenta");
 
         $this->cout("即将在 ESP 分区 `" . $efipart['title'] . "` 上执行安装/更新 EFI 操作，请按回车键确认：", "yellow", 0, 0);
@@ -319,7 +340,7 @@ class HaseeEFIInstaller
         exec("unzip /tmp/hasee-efi-installer/$filename -d extract");
         exec("cp -r extract/config-" . $model['branch'] . "/CLOVER $efipath");
 
-        $this->cout("您安装/替换的目标分区是否为 U 盘上的 ESP 分区？(y/N)", 'black', 0, 0);
+        $this->cout("您安装/替换的目标分区是否为 U 盘上的 ESP 分区？(y/N): ", 'black', 0, 0);
         $isUsb = strtolower(trim(fgets(STDIN)));
         if ($isUsb == 'y') {
             exec("mv /Volumes/" . $efipart['title'] . '/EFI/Boot/bootx64.efi bootx64-backup.efi');
@@ -363,9 +384,48 @@ class HaseeEFIInstaller
         $content = file_get_contents($configPath);
         if (empty($content))
             $this->cerr(-7, "无法替换 SMBIOS 信息，检测到无效的 config 文件");
-        $res = preg_replace("/<key>BoardSerialNumber<\/key>\n\s*<string>(.*)<\/string>/", "<key>BoardSerialNumber</key>\n\t\t<string>" . $smb['MLB'] . "</string>", $content);
-        $res = preg_replace("/<key>SerialNumber<\/key>\n\s*<string>(.*)<\/string>/", "<key>SerialNumber</key>\n\t\t<string>" . $smb['serialNumber'] . "</string>", $res);
-        $res = preg_replace("/<key>SmUUID<\/key>\n\s*<string>(.*)<\/string>/", "<key>SmUUID</key>\n\t\t<string>" . $smb['systemID'] . "</string>", $res);
+        $res = $this->replaceValue('BoardSerialNumber', 'string', $smb['MLB'], $content);
+        $res = $this->replaceValue('SerialNumber', 'string', $smb['serialNumber'], $res);
+        $res = $this->replaceValue('SmUUID', 'string', $smb['systemID'], $res);
+
+        exec("cat $oldPath/config.plist", $oldConfig);
+        $oldConfig = join($oldConfig, "\n");
+        sleep(1);
+        
+        exec("ls $oldPath/ACPI/patched | grep SSDT-DNVME.aml", $hasDNVMe);
+        $hasDNVMe = !empty($hasDNVMe);
+
+        if (!empty($oldPath)) {
+            if ($hasDNVMe) {
+                $this->cout("在备份的 EFI 中检测到三星 PM981 屏蔽补丁，正在合并到新 EFI 中。", "red");
+                exec("cp $efipath/Addons/SSDT-DNVME.aml $efipart/ACPI/patched/SSDT-DNVME.aml");
+                $res = preg_replace("/(<key>SortedOrder<\/key>\n\s*<array>)/", "$1\n\t\t\t<string>SSDT-DNVME.aml</string>", $res);
+                sleep(1);
+            }
+
+            if (in_array("--preserve-theme", $argv)) {
+                $this->cout("您选择了保留先前 EFI 的 Clover 引导主题，正在迁移...", "blue");
+                exec("rm -rf $efipath/themes && cp -r $oldPath/themes $efipath/themes");
+                $oldTheme = $this->readValue('Theme', 'string', $oldConfig);
+                $res = $this->replaceValue('Theme', 'string', $oldTheme, $res);
+                sleep(1);
+            }
+
+            $lastBoot = $this->readValue("DefaultVolume", "string", $oldConfig);
+            if ($lastBoot != 'LastBootedVolume') {
+                $this->cout("检测到您设置了默认启动项 ($lastBoot)，正在同步到新的配置文件中...", "blue");
+
+                $res = $this->replaceValue('DefaultVolume', 'string', $lastBoot, $res);
+                $defaultLoader = $this->readValue('DefaultLoader', 'string', $oldConfig);
+                if (!empty($defaultLoader)) {
+                    $this->cout("已将默认引导文件设置为：$defaultLoader", "blue");
+                    $res = $this->replaceValue('DefaultLoader', 'string', $defaultLoader, $oldConfig);
+                }
+                sleep(1);
+            }
+        }
+
+
         $file = fopen($configPath, "w+");
         fwrite($file, $res);
         fclose($file);
@@ -405,7 +465,7 @@ $model = $installer->checkModel();
 $filename = $installer->downloadLatestEFI($model['model'], $model['branch']);
 $efipart = $installer->findESP();
 $installer->mountESP($efipart);
-$installer->backUpClover($efipart);
-$installer->replaceEFI($efipart, $filename, $model);
+$oldPath = $installer->backUpClover($efipart);
+$installer->replaceEFI($efipart, $filename, $model, $oldPath);
 $installer->optimize();
 $installer->endOfScript();
