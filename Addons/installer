@@ -16,6 +16,13 @@ class HaseeEFIInstaller
         "G7-CT7VK"
     ];
 
+    private $branches = [
+        "kp7gz",
+        "kp7ec",
+        "kp7gc",
+        "ct7gk"
+    ];
+
     public function cout($text, $color = false, $indentSize = 0, $newline = 1)
     {
         $colors = array(
@@ -116,6 +123,17 @@ class HaseeEFIInstaller
         preg_match('/Running\son:\s\'(.*?)\'/', $output, $res);
         $model = $res[1];
         $branch = '';
+
+        global $argv;
+        if (in_array("--set-model", $argv)) {
+            $idx = array_search("--set-model", $argv);
+            if (isset($argv[$idx + 1]) && in_array(trim($argv[$idx + 1]), $this->branches)) {
+                return [
+                    "model" => $model,
+                    "branch" => trim($argv[$idx + 1])
+                ];
+            }
+        }
         
         if (strpos($output, "GK5CN6X") || strpos($output, "GK5CN5X") || strpos($output, "KP5(7)GZ")) {
             $branch = "kp7gz";             // kp7gz
