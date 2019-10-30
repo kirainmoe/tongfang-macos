@@ -11,7 +11,7 @@
 <a href="https://aya-buildbot.kirainmoe.com">
     <img src="https://img.shields.io/badge/download-release-blue.svg"/> 
 </a>
-<img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
+<img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15.1-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
 <img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/10/08/6QyT1SV3vAjLJYI.jpg" width="50%">
@@ -88,7 +88,8 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 | 10.14.4 | 18E226 | ☑ yes | ☑ yes | ☑ yes |
 | 10.14.5 | 18F132 | ☑ yes | ☑ yes | ☑ yes |
 | 10.14.6 | 18G87 | ☑ yes | ❓untested | ☑ yes |
-| 10.15   | 19A583 | ☑ yes | ☑ yes | ☑ yes |
+| 10.15   | 19A603 | ☑ yes | ☑ yes | ☑ yes |
+| 10.15.1 | 19B88 | ☑ yes | ☑ yes | ☑ yes |
 
 ## 兼容的型号
 
