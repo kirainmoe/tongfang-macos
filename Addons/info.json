@@ -1,9 +1,9 @@
 {
   "package": "hasee-tongfang-macos",
-  "build": "20191007",
+  "build": "20191110",
   "author": "Yume Maruyama",
   "mail": "kirainmoe@gmail.com",
-  "timestamp": 1570430762,
+  "timestamp": 1573386962,
   "repository": "https:\/\/github.com\/kirainmoe\/hasee-tongfang-macos",
   "model": "KP7\/5(G)Z",
   "branch": "master",
@@ -256,9 +256,9 @@
         "Lilu.kext": {
           "Contents": {
             "MacOS": {
-              "Lilu": "69f17837d5c5271e9aec064be1ae2ab5"
+              "Lilu": "ddf24db1161f498ffbd6d8ab95e7880a"
             },
-            "Info.plist": "e83369e71da7193303492b15a0c0bcad"
+            "Info.plist": "ab511aba59773317cce06d019c781500"
           }
         },
         "NoTouchID.kext": {
@@ -272,24 +272,9 @@
         "AppleALC.kext": {
           "Contents": {
             "MacOS": {
-              "AppleALC": "f1a4f3c511c0d31cd336b82c1eaf8799"
+              "AppleALC": "2bfdbfaac85a514171fec08ecaa4661e"
             },
-            "Info.plist": "55660557b6646f1e75e873df19972faf"
-          }
-        },
-        "CodecCommander.kext": {
-          "Contents": {
-            "MacOS": {
-              "CodecCommander": "32f54b2fc466fe542e54d7ec7e22b35c"
-            },
-            "Resources": {
-              "SSDT-ALC256-insanelydeepak.dsl": "d4b2a935e2786451e7cab602485a204d",
-              "SSDT-ALC1220.dsl": "03539444d414e58932e19dd9e914d01b",
-              "SSDT-CX20752.dsl": "3b8de2a9e4f247d6515a435896504b8c",
-              "SSDT-ALC256-vbourachot.dsl": "1092a0d35756b915270a1779fa3f9fdd",
-              "SSDT-AppleALC.dsl": "6feeb7fb5232f159ab0ab01e20fcab26"
-            },
-            "Info.plist": "136e2f55e4695f47c9421afd360957b1"
+            "Info.plist": "f532904b41c6cc000538c3c9911e12d9"
           }
         },
         "FakePCIID_Intel_HDMI_Audio.kext": {
@@ -300,9 +285,9 @@
         "WhateverGreen.kext": {
           "Contents": {
             "MacOS": {
-              "WhateverGreen": "32661ffd82a33d9439b2129b41c57fef"
+              "WhateverGreen": "74695210fdc8c9c10a016038a821671e"
             },
-            "Info.plist": "f34341a59bdc8a3f914036c9e94991dc"
+            "Info.plist": "7ace3cc52770b04511123b908d3e2f5e"
           }
         },
         "SMCBatteryManager.kext": {
@@ -408,11 +393,6 @@
             "Info.plist": "8aa4ec05d416baac6c5fba48ecb8e1eb"
           }
         },
-        "AppleBacklightInjector.kext": {
-          "Contents": {
-            "Info.plist": "1bbb75ea774a32889d29996c0c1d165e"
-          }
-        },
         "VoodooI2C.kext": {
           "Contents": {
             "_CodeSignature": {
@@ -453,9 +433,10 @@
     "Addons": {
       "dsdt-patch.txt": "c38412e686643ccf4de055ef43ac428b",
       "optimize.sh": "7bf4d01deca8764f422aa4883ae4c31c",
+      "installer": "989a965e670d7e453b382e583115dee3",
       "SSDT-DNVME.aml": "60e701b7e1dd7179311468e9e59eb4cd"
     },
-    "config.plist": "47524b06deb89b5e82dfc6112b1ddf78",
+    "config.plist": "1a1e2ff5ddf636c59217238d45499796",
     "CLOVERX64.efi": "d655eafd104981bb740b6cc511522b6b"
   }
 }

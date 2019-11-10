@@ -51,10 +51,11 @@
 | 10.14.5 | 18F132 | ☑ yes | ☑ yes | ☑ yes |
 | 10.14.6 | 18G87 | ☑ yes | ❓untested | ☑ yes |
 | 10.15   | 19A583 | ☑ yes | ☑ yes | ☑ yes |
+| 10.15.1 | 19B88 | ☑ yes | ☑ yes | ☑ yes |
 
 ## Models
 
-> Notes: I was not sure that some models can work perfectly. The models listed in the following table were those woule be theoretically supported gussing by their barebone model.
+> Notes: I was not sure that some models can work perfectly with this config. The models listed in the following table are those would be theoretically supported gussing by their barebone model.
 
 | Barebone | Models Theoretically Supported | Branch |
 |-----|------|-----|
@@ -62,6 +63,7 @@
 | GI5CN54 <br> GJ5CN64 | Hasee Z7(m)-KP7/5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec) |
 | GI5CN54 <br> GJ5CN64 | Hasee Z7(m)-KP7/5GC<br>Avell A52-5 BS<br>CyberPower NB-408-109<br>Machenike T90 | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) |
 | GK7CP6R | Hasee Z7-CT7GK / Z7m-CT7GS / Z7-CT7VH / G7-CT7VK<br>Illegear Rogue Laptop<br>XMG Core 17<br>Mechrevo X3<br>CyberPowerPC Tracer-III-17<br>  | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) |
+| GK7CN6S<br>GK7CN5S | Monster Abra A7 v10.1 | [master](https://github.com/kirainmoe/hasee-tongfang-macos) |
 
 # Devices
 

@@ -106,7 +106,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 | Component | Model | Comment |
 |--|--|---|
-| CPU | Intel Core(TM) i7-8750H (KP5(G)Z 为 i5-8300H) | |
+| CPU | Intel Core(TM) i7-8750H | i5 版本与 i7 版本的型号可兼容同一套配置文件 |
 | GPU | Intel UHD630 / Nvidia GTX1060 | Nvidia 独显无法驱动，原因详见[这里](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94#%E9%82%A3%E4%B8%BA%E4%BB%80%E4%B9%88%E7%8B%AC%E6%98%BE%E6%97%A0%E6%B3%95%E9%A9%B1%E5%8A%A8) |
 | RAM | Micron Crucial 8GB+8GB | |
 | NVMe | WD Black SN750 NVME SSD 500G | 请不要购买三星 PM981(a) 等 macOS 不支持的硬盘 | 
