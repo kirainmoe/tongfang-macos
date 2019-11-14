@@ -261,7 +261,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>-igfxnohdmi debug=0x100 -alcbeta keepsyms=1 abm_firstpolldelay=16000 darkwake=0 nv_disable=1</string>
+		<string>-igfxnohdmi debug=0x100 -alcbeta keepsyms=1 darkwake=0 nv_disable=1 -wegbeta</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>

@@ -60,7 +60,7 @@ class HaseeEFIInstaller
         $this->cout("安装程序当前支持的机型：", "blue");
 
         foreach ($this->supported_models as $model)
-            $this->cout("- $model", "black", 2);
+            echo "- " . $model . "\n";
         
         $this->cout("\n当你准备好安装后，请按回车键继续：", "blue", 0, 0);
         $tmp = fgets(STDIN);
@@ -185,7 +185,7 @@ class HaseeEFIInstaller
     public function findESP()
     {
         $this->cout("正在准备挂载 ESP 分区并更新启动文件...", "magenta");
-        $this->cout("即将为你挂载 ESP 分区。如果你当前正在使用硬盘引导，请首先移除所有的 U 盘，然后按回车继续：", 'black', 0, 0);
+        echo "即将为你挂载 ESP 分区。如果你当前正在使用硬盘引导，请首先移除所有的 U 盘，然后按回车继续：";
         $ch = fgets(STDIN);
 
         exec("diskutil list | grep EFI", $res);
