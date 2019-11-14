@@ -11,11 +11,7 @@
 该分支适用于同方八代机型 Z7(m)-KP7/5GC. 感谢群友 @海豚 定制该机型的 USB，并参与兼容性测试。
 
 
-注意，限制于硬件，KP7GC 系列机型的触摸板可能无法完美使用。如果你发现替换后触摸板不正常工作，请尝试以下组合：
-
-1. 删除 Other 中的 VoodooPS2Controller.kext，并复制 Alternative Kexts 中的 ApplePS2Controller.kext, AppleACPIPS2Nub.kext 到  Other 中。
-
-2. 删除 Other 中的 VoodooPS2Controller.kext，并复制 Alternative Kexts 中的 ApplePS2SmartTouchpad.kext 到 Other 中。
+注意，限制于硬件，KP7GC 系列机型的触摸板可能无法完美使用。
 
 # What's working
 
