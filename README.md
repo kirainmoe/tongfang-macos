@@ -149,7 +149,8 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 - 神舟战神黑苹果2群：https://jq.qq.com/?_wv=1027&k=5b7ZJWl ，群号 815359928 （500 人群）
 
-> 由于一群人数爆满，因此不得不采取付费入群的措施限制入群人数。不必担心，用户仍然可以加入 2 群，也推荐所有新用户加入 2 群。
+> 由于一群人数爆满，因此不得不采取付费入群的措施限制入群人数。不必担心，用户仍然可以加入 2 群，也推荐所有新用户加入 2 群。  
+二群**仅限清华同方模具的 8/9 代机型用户加入**。
 
 ![image.png](https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png)
 
