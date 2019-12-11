@@ -11,10 +11,10 @@
 <a href="https://aya-buildbot.kirainmoe.com">
     <img src="https://img.shields.io/badge/download-release-blue.svg"/> 
 </a>
-<img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15.1-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
+<img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15.2-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-<img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/11/14/KjDoatnA9Y37QHV.jpg" width="50%">
+<img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/12/11/pAcWzrySRZV7gMb.jpg" width="50%">
 
 <h3 align="center">
     <a href="https://aya-buildbot.kirainmoe.com/">配置文件下载地址</a> /
