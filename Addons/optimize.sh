@@ -23,7 +23,7 @@ pmset -a hibernatemode 0
 echo "\033[36m>> setting standby mode...\033[0m"
 pmset -a standby 0
 echo  "\033[36m>> disable proximity wake...\033[0m"
-pmset -a proximitywake 1
+pmset -a proximitywake 0
 echo ""
 
 echo "\033[34mTriggering kext cache rebuilding...\033[0m"
