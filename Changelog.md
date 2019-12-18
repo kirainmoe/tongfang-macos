@@ -118,3 +118,7 @@
 # 19-11-10
 
 修改 layout-id 为 29，以获得更好的兼容性；去除不必要的引导参数、驱动和属性。
+
+# 19-12-18
+
+修改目录结构，去除不必要的 DSDT 重命名（HEI/IMEI/GFX0, handled by WhateverGreen）
