@@ -90,6 +90,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 | 10.14.6 | 18G87 | ☑ yes | ❓untested | ☑ yes |
 | 10.15   | 19A603 | ☑ yes | ☑ yes | ☑ yes |
 | 10.15.1 | 19B88 | ☑ yes | ☑ yes | ☑ yes |
+| 10.15.2 | 19C57 | ☑ yes | ☑ yes | ☑ yes |
 
 ## 兼容的型号
 
@@ -120,7 +121,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 - 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS，最低 800Mhz, 最高睿频 4.1GHz）
 - Intel UHD630（已应用显存补丁，2048 MB）
 - 亮度调节（可在设置中调节或使用 Fn+F11, Fn+F12 快捷键，后者在九代同方机型上不可用）
-- I2C HID 触摸板
+- I2C HID 触摸板（感谢 GitHub 用户 @Goshin 修复 VoodooI2C 驱动）
 - 有线网卡
 - 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 29 或 88，外放、耳机、麦克风全部正常）
 - 电池状态（现已使用 Clover Hotpatch 驱动）

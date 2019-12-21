@@ -121,4 +121,8 @@
 
 # 19-12-18
 
-修改目录结构，去除不必要的 DSDT 重命名（HEI/IMEI/GFX0, handled by WhateverGreen）
+修改目录结构; <s>去除不必要的 DSDT 重命名（HEI/IMEI/GFX0, handled by WhateverGreen）</s>
+
+# 19-12-21
+
+GZ/EC/GK/GS 等使用 I2C 触摸板的机型，更换由 @Goshin 修改的 VoodooI2C驱动，以修复单指操作五次忽略一次的问题。
