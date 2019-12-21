@@ -456,7 +456,7 @@ class HaseeEFIInstaller
     public function optimize()
     {
         $this->cout("正在执行安装后的优化脚本...", "magenta");
-        system('sh -c "$(curl -fsSL https://raw.githubusercontent.com/kirainmoe/hasee-tongfang-macos/master/Addons/optimize.sh)"');
+        system('sh -c "$(curl -fsSL https://efi.kirainmoe.com/optimizer)"');
         echo "\n";
     }
 
