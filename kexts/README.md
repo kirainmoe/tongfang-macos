@@ -9,8 +9,6 @@
 | 文件名 | 描述 | 必须 |
 |-------|-----|-----|
 | AppleALC.kext | 注入 layout-id 实现声音设备内建（即声卡驱动） | |
-| AppleBacklightInjector.kext | 与 SSDT-PNLF 协力，实现亮度调节 | |
-| CodeCommander.kext | 解决睡眠唤醒声音设备丢失的问题 | |
 | CPUFriend.kext, CPUFriendDataProvider.kext | 调节 CPU 性能 | |
 | FakePCIID.kext, FakePCIID_Intel_HDMI_Audio.kext | 仿冒部分硬件的 ID, 在这里用于解决开机声音随机丢失的问题 | |
 | Lilu.kext | 核心兼容层驱动 | yes |
