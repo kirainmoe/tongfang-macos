@@ -17,7 +17,7 @@
 <img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/12/11/pAcWzrySRZV7gMb.jpg" width="50%">
 
 <h3 align="center">
-    <a href="https://aya-buildbot.kirainmoe.com/">配置文件下载地址</a> /
+    <a href="https://aya-buildbot.kirainmoe.com/">下载地址</a> / <a href="https://www.bilibili.com/video/av81263778">系统安装视频教学</a> / 
     <a href="https://hackintosh.kirainmoe.com">你想知道的一切</a> /
     <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> /
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">更新日志</a> / <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/README-en.md">English</a>
@@ -47,7 +47,9 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 ## 系统安装资源和教程
 
-**[macOS 简明安装教程](https://hackintosh.kirainmoe.com/an-zhuang-zhong/macos-an-zhuang-jian-ming-jiao-cheng) ：如果你不知道如何全新安装 macOS，请仔细阅读此教程**
+**[安装教学视频](https://www.bilibili.com/video/av81263778)：如果你不知道如何全新安装 macOS，请看本视频**
+
+[macOS 简明安装教程](https://hackintosh.kirainmoe.com/an-zhuang-zhong/macos-an-zhuang-jian-ming-jiao-cheng)
 
 [各机型配置文件下载地址](https://aya-buildbot.kirainmoe.com/)
 
