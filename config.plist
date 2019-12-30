@@ -221,7 +221,7 @@
 				</dict>
 			</array>
 			<key>Rtc8Allowed</key>
-			<true/>
+			<false/>
 			<key>SuspendOverride</key>
 			<true/>
 		</dict>
