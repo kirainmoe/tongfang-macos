@@ -3,7 +3,7 @@
 <img src="https://ws2.sinaimg.cn/large/9f1137b1gy1g1hg3epia2j20n505jt9q.jpg" width="300px" alt="logo">
 
 
-<h2>该分支用于同方九代机型 Z7-CT7GK / G7-CT7VK，其它机型请切换其他分支。对此机型的支持仍然是实验性的。</h2>
+<h2>该分支用于同方九代机型 Z7-CT7GK / G7-CT7VK，其它机型请切换其他分支。</h2>
 
 # Compatibility
 
@@ -15,7 +15,7 @@
 
 - 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS，最低 800Mhz, 最高睿频 4.1GHz）
 - Intel UHD630（已应用显存补丁，2048 MB）
-- 亮度调节（可在设置中调节）
+- 亮度调节（可在设置中调节或使用 Fn 快捷键调节）
 - I2C HID 触控板（需要正确驱动电池后才可以设置手势）
 - 有线网卡
 - 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 88，外放、耳机、麦克风全部正常）

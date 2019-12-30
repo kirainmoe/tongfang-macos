@@ -9,8 +9,6 @@
 | 文件名 | 描述 | 必须 |
 |-------|-----|-----|
 | AppleALC.kext | 注入 layout-id 实现声音设备内建（即声卡驱动） | |
-| AppleBacklightInjector.kext | 与 SSDT-PNLF 协力，实现亮度调节 | |
-| CodeCommander.kext | 解决睡眠唤醒声音设备丢失的问题 | |
 | CPUFriend.kext, CPUFriendDataProvider.kext | 调节 CPU 性能 | |
 | FakePCIID.kext, FakePCIID_Intel_HDMI_Audio.kext | 仿冒部分硬件的 ID, 在这里用于解决开机声音随机丢失的问题 | |
 | Lilu.kext | 核心兼容层驱动 | yes |
@@ -22,7 +20,7 @@
 | USBInjectAll.kext | USB 驱动，用于修复 USB 端口不可用、正确注入 USB3.1/Type-C 端口信息的驱动 | |
 | VirtualSMC.kext | SMC 仿冒驱动，注入 SMC 信息；与 FakeSMC 的作用类似 | yes |
 | VoodooI2C.kext, VoodooI2CHID.kext | I2C HID 触摸板驱动，需要配合 SSDT 补丁使用 | |
-| VoodooPS2Controller.kext | PS2 键盘驱动。部分同方 9 代机型无法使用此驱动，可以用 ApplePS2Controller + ApplePS2ACPINub 代替 | |
+| VoodooPS2Controller.kext | PS2 键盘驱动，九代同方机型的 VoodooPS2Controller 驱动由 GitHub 用户 @Goshin 修改，特此感谢 | |
 | WhateverGreen.kext | I/N/A 显卡驱动，当然在这里只用于驱动 Intel 核心显卡 | yes |
 
 # Alternative Kexts 中的 Kext
