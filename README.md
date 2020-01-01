@@ -13,11 +13,11 @@
 
 - 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS，最低 800Mhz, 最高睿频 4.1GHz）
 - Intel UHD630（已应用显存补丁，2048 MB）
-- 亮度调节（可在设置中调节或使用 Fn 快捷键调节）
-- I2C HID 触控板（需要正确驱动电池后才可以设置手势）
+- 亮度调节（可在设置中调节或使用 Fn+F11, Fn+F12 快捷键，感谢 GitHub 用户 @Goshin 修复 VoodooPS2Contoller 驱动）
+- I2C HID 触控板（感谢 GitHub 用户 @Goshin 修复 VoodooI2C 驱动）
 - 有线网卡
-- USB 3.0
-- 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 88，外放、耳机、麦克风全部正常）
+- USB （使用 USBInjectAll + SSDT 驱动，3.0 5G/s 速度正常，Type-C 可用；感谢 CT7GK 用户 @Chris 解决 USB 定制与蓝牙冲突问题)
+- 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 29，外放、耳机、麦克风全部正常）
 - 电池状态（现已使用 Clover Hotpatch 驱动）
 - 睡眠（使用 Clover Hotpatch 修复）
 - etc.
