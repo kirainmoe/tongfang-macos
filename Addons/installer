@@ -12,7 +12,7 @@ class HaseeEFIInstaller
         "Z7(m)-KP7/5EC",
         "Z7(m)-KP7/5GC",
         "Z7-CT7GK",
-        "Z7m-CT7GS",
+        "Z7(m)-CT7GS",
         "G7-CT7VK"
     ];
 
@@ -20,7 +20,8 @@ class HaseeEFIInstaller
         "kp7gz",
         "kp7ec",
         "kp7gc",
-        "ct7gk"
+        "ct7gk",
+        "ct7gs"
     ];
 
     public function cout($text, $color = false, $indentSize = 0, $newline = 1)
@@ -144,7 +145,10 @@ class HaseeEFIInstaller
         else if (strpos($output, "GI5CN54") || strpos($output, "GJ5CN64") || strpos($output, "KP5(7)GC")) {
             $branch = "kp7gc";
         }
-        else if (strpos($output, "GK7CP6R") || strpos($output, "CT7GK") || strpos($output, "CT7GS")) {
+        else if (strpos($output, "CT7GS")) {
+            $branch = "ct7gs";
+        }
+        else if (strpos($output, "GK7CP6R") || strpos($output, "CT7GK") || strpos($output, "CT7VK")) {
             $branch = "ct7gk";              // 9th gen tongfang models
         }
         else {

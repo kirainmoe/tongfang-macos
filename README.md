@@ -101,7 +101,8 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 | GK5CN5X <br> GK5CN6X | Z7-KP7GZ<br> Z7m-KP7GZ<br> Z7m-KP5GZ<br> Z7-KP7Z<br> Z7m-KP7Z<br> Z7m-KP5Z | [master](https://github.com/kirainmoe/hasee-tongfang-macos) | 
 | GI5CN54 <br> GJ5CN64 | Z7-KP7EC<br> Z7m-KP7EC<br> Z7m-KP5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec) |
 | GI5CN54 <br> GJ5CN64 | Z7-KP7GC<br> Z7m-KP7GC<br> Z7m-KP5GC | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) |
-| GK7CP6R | Z7-CT7GK <br> Z7m-CT7GS <br> Z7-CT7VH <br> G7-CT7VK | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) |
+| GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) |
+| GK5CP6X | Z7m-CT7GS | [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs) |
 
 # 设备驱动情况
 
