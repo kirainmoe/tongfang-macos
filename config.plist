@@ -293,6 +293,8 @@
 		<true/>
 		<key>C6</key>
 		<true/>
+		<key>Type</key>
+		<string>0x0705</string>
 	</dict>
 	<key>Comment</key>
 	<string>This file is for 10.14.x with native CoffeeLake support</string>
