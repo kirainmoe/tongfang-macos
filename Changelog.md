@@ -130,3 +130,7 @@ GZ/EC/GK/GS 等使用 I2C 触摸板的机型，更换由 @Goshin 修改的 Voodo
 # 20-1-1
 
 新年快乐！本次更新修复了同方九代机型的 USB 定制和蓝牙历史遗留问题，并将 CT7GS 作为单独的分支以便后续维护。
+
+# 20-1-3
+
+本次更新为 GZ/EC/GK/GS 型号重新编译了 @Goshin 修改的 VoodooI2C 和 VoodooPS2 驱动以便解决在 10.14 下的兼容性问题；加入了由 @zxystd 开发的 Intel 蓝牙驱动；修复了 CT7GK/CT7GS CPU 识别为 i9 的问题。

@@ -4,7 +4,7 @@
 
 <h1 align="center">macOS on Hasee Tongfang Laptops</h1>
 
-<p align="center">用于神舟战神 8 / 9 代同方机型安装最新版 macOS Mojave/Catalina （黑苹果）的 Clover 配置文件</p>
+<p align="center">用于神舟战神 8 / 9 代同方机型安装最新版 macOS （黑苹果）的 Clover 配置文件</p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> 
@@ -62,8 +62,6 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 [安装后的常见问题解答](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da)
 
-[问题排查指导 (Troubleshooting)](https://hackintosh.kirainmoe.com/an-zhuang-hou/wen-ti-pai-cha-zhi-dao-troubleshooting)
-
 ## 获取更好的体验
 
 [优化脚本](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da#postinstall-you-hua-jiao-ben-shi-shen-me-wei-shen-me-xu-yao-zhi-hang-ta)：解决睡眠等功能的不正常问题；一键开启 HiDPI 等
@@ -79,20 +77,29 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 ## 兼容的 macOS 版本
 
+**注意：从 2020.1.3 开始，macOS 10.13 (High Sierra) 将不再被本配置文件支持；并且可能随时停止对 macOS 10.14 (Mojave) 版本系统的支持。**
+
+当前版本配置文件的系统支持表如下：
+
 | 版本号 | 版本代号 | 是否兼容 | 维护者实机测试正常 | 用户实机测试正常 |
 |-------|---------|--------|------------|----------|
-| 10.13.6 | 17G65 | ✖ no | ✖ no | - |
-| 10.13.6 | 17G2112+ | ☑ yes | ❓untested | ☑ yes |
-| 10.14 | 18A389 | ☑ yes | ❓untested | ❓untested |
-| 10.14.1 | 18B75 | ☑ yes | ❓untested | ❓untested |
-| 10.14.2 | 18C54 | ☑ yes | ☑ yes | ☑ yes |
-| 10.14.3 | 18D42 | ☑ yes | ☑ yes | ☑ yes |
-| 10.14.4 | 18E226 | ☑ yes | ☑ yes | ☑ yes |
-| 10.14.5 | 18F132 | ☑ yes | ☑ yes | ☑ yes |
-| 10.14.6 | 18G87 | ☑ yes | ❓untested | ☑ yes |
-| 10.15   | 19A603 | ☑ yes | ☑ yes | ☑ yes |
-| 10.15.1 | 19B88 | ☑ yes | ☑ yes | ☑ yes |
-| 10.15.2 | 19C57 | ☑ yes | ☑ yes | ☑ yes |
+| 10.13.6 | 17G65 | ❌ no | ❌ no | - |
+| 10.13.6 | 17G2112+ | 🔒 old | ❓untested | ✅ yes |
+| 10.14 | 18A389 | 🔒old | ❓untested | ❓untested |
+| 10.14.1 | 18B75 | 🔒old | ❓untested | ❓untested |
+| 10.14.2 | 18C54 | 🔒old | ✅ yes | ✅ yes |
+| 10.14.3 | 18D42 | 🔒old | ✅ yes | ✅ yes |
+| 10.14.4 | 18E226 | 🔒old | ✅ yes | ✅ yes |
+| 10.14.5 | 18F132 | 🔒old | ✅ yes | ✅ yes |
+| 10.14.6 | 18G87 | ✅ yes | ✅ yes | ✅ yes |
+| 10.15   | 19A603 | ✅ yes | ✅ yes | ✅ yes |
+| 10.15.1 | 19B88 | ✅ yes | ✅ yes | ✅ yes |
+| 10.15.2 | 19C57 | ✅ yes | ✅ yes | ✅ yes |
+
+> ✅ yes：当前版本的配置文件在该系统版本下测试通过，各种功能符合预期  
+🔒 old: 配置文件（曾经）兼容此版本系统，但现阶段无人测试；且未来可能不再兼容该版本  
+❓untested：没有用户或开发者在此设备上测试  
+❌no：配置文件不兼容此版本
 
 ## 兼容的型号
 
@@ -100,7 +107,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 |-----|------|-----|
 | GK5CN5X <br> GK5CN6X | Z7-KP7GZ<br> Z7m-KP7GZ<br> Z7m-KP5GZ<br> Z7-KP7Z<br> Z7m-KP7Z<br> Z7m-KP5Z | [master](https://github.com/kirainmoe/hasee-tongfang-macos) | 
 | GI5CN54 <br> GJ5CN64 | Z7-KP7EC<br> Z7m-KP7EC<br> Z7m-KP5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec) |
-| GI5CN54 <br> GJ5CN64 | Z7-KP7GC<br> Z7m-KP7GC<br> Z7m-KP5GC | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) |
+| GI5CN54 <br> GJ5CN64 | Z7-KP7GC<br> Z7m-KP7GC<br> Z7m-KP5GC <br> Z7(m)-KP7/5GA | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) |
 | GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) |
 | GK5CP6X | Z7m-CT7GS | [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs) |
 
@@ -129,6 +136,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 - 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 29 或 88，外放、耳机、麦克风全部正常）
 - 电池状态（现已使用 Clover Hotpatch 驱动）
 - USB （使用 USBInjectAll + SSDT 驱动，3.0 5G/s 速度正常，Type-C 可用）
+- Intel 蓝牙（使用 @zxystd 的固件上传驱动，现在不需要热启动）
 - 睡眠（使用 Clover Hotpatch 修复）
 - 摄像头
 - etc.
@@ -137,13 +145,12 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 ## What's partially working
 
-- 蓝牙 (需要热启动 macOS 才可用，即先进入 Winodws 后重启进入 macOS、或者在 macOS 下使用虚拟机模拟热启动过程。不支持 AirDrop.)
 - PS/2 触摸板（针对 GC 系列机型，因为该模具使用的触摸板为 PS2 触摸板，没有手势支持）
 
 ## What's not working
 
 - 独立显卡（目前已知没有任何解决方案）
-- 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代，或更换无线网卡）
+- 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代，或更换无线网卡；因为无线网络无解所以 Airdrop, Handoff 不可用）
 - HDMI/MiniDP（该模具 HDMI/MiniDP 直接由独显输出, 独显无法驱动，所以 HDMI/MiniDP 也无法使用）
 - 读卡器（读卡器走的 USB 2.0 外置，无法使用）
 

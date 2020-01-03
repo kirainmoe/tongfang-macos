@@ -39,17 +39,11 @@
 
 ## macOS version
 
+**Tips: We no longer support macOS 10.13 (High Sierra) and macOS 10.14(Mojave) since 2020.1.3.**
+
 | macOS version | Build version | Compatible | Tested by Author | Tested by Users |
 |-------|---------|--------|------------|----------|
-| 10.13.6 | 17G65 | ✖ no | ✖ no | - |
-| 10.13.6 | 17G2112+ | ☑ yes | ❓untested | ☑ yes |
-| 10.14 | 18A389 | ☑ yes | ❓untested | ❓untested |
-| 10.14.1 | 18B75 | ☑ yes | ❓untested | ❓untested |
-| 10.14.2 | 18C54 | ☑ yes | ☑ yes | ☑ yes |
-| 10.14.3 | 18D42 | ☑ yes | ☑ yes | ☑ yes |
-| 10.14.4 | 18E226 | ☑ yes | ☑ yes | ☑ yes |
-| 10.14.5 | 18F132 | ☑ yes | ☑ yes | ☑ yes |
-| 10.14.6 | 18G87 | ☑ yes | ❓untested | ☑ yes |
+| 10.14.6 | 18G87 | ☑ yes | ☑untested | ☑ yes |
 | 10.15   | 19A583 | ☑ yes | ☑ yes | ☑ yes |
 | 10.15.1 | 19B88 | ☑ yes | ☑ yes | ☑ yes |
 
@@ -86,6 +80,7 @@
 - Brightness control and Fn keys (Fn keys controlling is not available for Tongfang GK7CP6R devices)
 - I2C HID Touchpad
 - Realtek Ethernet
+- Bluetooth (No Airdop if you are using Intel Bluetooth)
 - Audio (Realtek ALC268vc, using AppleALC + layout-id 29/88)
 - Battery status (using Clover hotpatch)
 - USB 3.0 and Type-C
@@ -95,7 +90,6 @@
 
 ## What's partially working
 
-- Bluetooth (No Airdop if you are using Intel Bluetooth, and you may need to boot into Windows then reboot into macOS to make Bluetooth work).
 - PS/2 Touchpad (Tongfang GI5CN54/GJ5CN64)
 
 ## What's not working
