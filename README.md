@@ -83,22 +83,22 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 | 版本号 | 版本代号 | 是否兼容 | 维护者实机测试正常 | 用户实机测试正常 |
 |-------|---------|--------|------------|----------|
-| 10.13.6 | 17G65 | ❌ no | ❌ no | - |
-| 10.13.6 | 17G2112+ | 🔒 old | ❓untested | ✅ yes |
-| 10.14 | 18A389 | 🔒old | ❓untested | ❓untested |
-| 10.14.1 | 18B75 | 🔒old | ❓untested | ❓untested |
-| 10.14.2 | 18C54 | 🔒old | ✅ yes | ✅ yes |
-| 10.14.3 | 18D42 | 🔒old | ✅ yes | ✅ yes |
-| 10.14.4 | 18E226 | 🔒old | ✅ yes | ✅ yes |
-| 10.14.5 | 18F132 | 🔒old | ✅ yes | ✅ yes |
+| 10.13.6 | 17G65 | ❌ no | - | - |
+| 10.13.6 | 17G2112+ | 🔒 deprecated | - | - |
+| 10.14 | 18A389 | 🔒 deprecated | - | - |
+| 10.14.1 | 18B75 | 🔒 deprecated | - | - |
+| 10.14.2 | 18C54 | 🔒 deprecated | - | - |
+| 10.14.3 | 18D42 | 🔒 deprecated | - | - |
+| 10.14.4 | 18E226 | 🔒 deprecated | - | - |
+| 10.14.5 | 18F132 | 🔒 deprecated | - |- |
 | 10.14.6 | 18G87 | ✅ yes | ✅ yes | ✅ yes |
 | 10.15   | 19A603 | ✅ yes | ✅ yes | ✅ yes |
 | 10.15.1 | 19B88 | ✅ yes | ✅ yes | ✅ yes |
 | 10.15.2 | 19C57 | ✅ yes | ✅ yes | ✅ yes |
 
 > ✅ yes：当前版本的配置文件在该系统版本下测试通过，各种功能符合预期  
-🔒 old: 配置文件（曾经）兼容此版本系统，但现阶段无人测试；且未来可能不再兼容该版本  
-❓untested：没有用户或开发者在此设备上测试  
+🔒 deprecated: 配置文件（曾经）兼容此版本系统，但现阶段无人测试；且未来可能不再兼容该版本  
+❓untest：没有用户或开发者在此设备上测试  
 ❌no：配置文件不兼容此版本
 
 ## 兼容的型号
