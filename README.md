@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://camo.githubusercontent.com/fdf99521fc1a9feba39e2cb7926926f75754f7b0/68747470733a2f2f7773322e73696e61696d672e636e2f6c617267652f3966313133376231677931673168673365706961326a32306e3530356a7439712e6a7067" width="300px" alt="logo">
+<img src="https://i.loli.net/2020/01/05/QilbpRdq4awGfSX.png" width="250px" alt="logo">
 </p>
 
 <h1 align="center">macOS on Hasee Tongfang Laptops</h1>
@@ -14,18 +14,21 @@
 <img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15.2-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-<img src="https://i.loli.net/2019/05/14/5cda65189a08439627.jpg" width="50%"><img src="https://i.loli.net/2019/12/11/pAcWzrySRZV7gMb.jpg" width="50%">
+<img src="https://i.loli.net/2019/12/11/pAcWzrySRZV7gMb.jpg">
 
 <h3 align="center">
     <a href="https://aya-buildbot.kirainmoe.com/">下载地址</a> / <a href="https://www.bilibili.com/video/av81263778">系统安装视频教学</a> / 
     <a href="https://hackintosh.kirainmoe.com">你想知道的一切</a> /
-    <a href="https://github.com/kirainmoe/hasee-z7-kp7gz-macos/issues?q=is%3Aissue+is%3Aclosed">已知问题</a> /
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">更新日志</a> / <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/README-en.md">English</a>
 </h3>
 
-# 如何使用？
+# 如何使用
 
-## 自动安装、更新程序（推荐）
+## 还没装好系统？
+
+请按照 [安装教学视频](https://www.bilibili.com/video/av81263778) 里的指引安装好系统，并替换配置文件即可。
+
+## macOS 下安装/更新最新配置文件
 
 安装完系统后，在 macOS 的终端执行以下命令：
 
@@ -37,7 +40,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 你可以到 [Aya Buildbot](https://aya-buildbot.kirainmoe.com) 下载对应机型的最新版本配置文件，然后按照[《EFI 替换教程》](https://hackintosh.kirainmoe.com/an-zhuang-zhong/efi-ti-huan-jiao-cheng) 替换。
 
-# 说明
+# 导航
 
 > Tips: 完整的使用说明请参照 [神舟黑苹果百科](https://hackintosh.kirainmoe.com) 页面。如果你遇到了任何问题，请先在上面的链接右上角的搜索框中搜索关键词。
 
@@ -128,7 +131,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 ## What's working
 
-- 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS，最低 800Mhz, 最高睿频 4.1GHz）
+- 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS）
 - Intel UHD630（已应用显存补丁，2048 MB）
 - 亮度调节（可在设置中调节或使用 Fn+F11, Fn+F12 快捷键）
 - I2C HID 触摸板（感谢 GitHub 用户 @Goshin 修复 VoodooI2C 驱动）
@@ -156,6 +159,10 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 # 获取社区帮助
 
+## 请确保你在群里问问题之前，已经使用了搜索功能查找并仔细阅读了[此链接](https://hackintosh.kirainmoe.com)内的相关内容！
+
+我们要求你具有基本的知识，如修复引导、重装系统、分区等。你可能会在里面遇到热心的朋友指导你一步步安装 macOS，但多数情况我们只能帮你点睛。如果没有上述基技能，建议先前往远景论坛或国外黑苹果论坛爬帖。
+
 - 神舟战神黑苹果1群：https://jq.qq.com/?_wv=1027&k=5G82zlQ ，群号 833022235 （500 人群，因为人数将满，现需要付费入群）
 
 - 神舟战神黑苹果2群：https://jq.qq.com/?_wv=1027&k=5b7ZJWl ，群号 815359928 （500 人群）
@@ -163,19 +170,18 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 > 由于一群人数爆满，因此不得不采取付费入群的措施限制入群人数。不必担心，用户仍然可以加入 2 群，也推荐所有新用户加入 2 群。  
 二群**仅限清华同方模具的 8/9 代机型用户加入**。
 
-![image.png](https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png)
-
-## 请确保你在群里问问题之前，已经使用了搜索功能查找并仔细阅读了[此链接](https://hackintosh.kirainmoe.com)内的相关内容！
-
-我们要求你具有基本的知识，如修复引导、重装系统、分区等。你可能会在里面遇到热心的朋友指导你一步步安装 macOS，但多数情况我们只能帮你点睛。如果没有上述基技能，建议先前往远景论坛或国外黑苹果论坛爬帖。
+<img src="https://i.loli.net/2020/01/05/sKh875UC14LFejv.png" width="48%">
+<img src="https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png" width="48%">
 
 # 贡献本项目
 
 欢迎大家一起完善该机型的 EFI. 如果你认为这份配置文件有可以改进的地方，请注册一个 Github 账号，fork 本仓库自行修改后提交 Pull Request.
 
+机型的测试者、贡献者名单将被写在各机型的 README 中。如果你想做一个低调的人，请联系我撤下。
+
 # 许可协议 & 捐赠
 
-在 [Maruyama License 协议](https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/LICENSE)的许可下，使用本仓库下的所有配置文件都是免费的。如果有人向你售卖配置文件，请立刻要求他退款。
+在 **[Maruyama License 协议](https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/LICENSE)** 的许可下，使用本仓库下的所有配置文件都是**免费**的。如果有人向你售卖配置文件，请立刻要求他退款。
 
 希望你们也能够发扬开源和分享精神，积极提出建议和想法、Pull Request，由大家共同打造完美的黑果体验。
 
