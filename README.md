@@ -22,63 +22,48 @@
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">更新日志</a> / <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/README-en.md">English</a>
 </h3>
 
-# 如何使用
+## 如何使用
 
-## 还没装好系统？
+### 还没装好系统？
 
 请按照 [安装教学视频](https://www.bilibili.com/video/av81263778) 里的指引安装好系统，并替换配置文件即可。
 
-## macOS 下安装/更新最新配置文件
+替换配置文件后，请自行执行优化脚本，并使用 Clover Configurator 或更新脚本生成新的 SMBIOS 序列号、UUID.
 
-安装完系统后，在 macOS 的终端执行以下命令：
+### macOS 下安装/更新最新配置文件
+
+使用更新脚本可以安装/更新最新配置文件。安装完系统后，在 macOS 的终端执行以下命令：
 
 ```bash
 curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo ./inst
 ```
 
-## 手动下载和替换
+### 手动下载和替换
 
 你可以到 [Aya Buildbot](https://aya-buildbot.kirainmoe.com) 下载对应机型的最新版本配置文件，然后按照[《EFI 替换教程》](https://hackintosh.kirainmoe.com/an-zhuang-zhong/efi-ti-huan-jiao-cheng) 替换。
 
-# 导航
+## 导航
 
 > Tips: 完整的使用说明请参照 [神舟黑苹果百科](https://hackintosh.kirainmoe.com) 页面。如果你遇到了任何问题，请先在上面的链接右上角的搜索框中搜索关键词。
 
-## 安装系统前
-
-[安装前须知](https://hackintosh.kirainmoe.com/before-install/an-zhuang-qian-xu-zhi) ： 了解兼容性情况和安装的注意事项
-
-## 系统安装资源和教程
-
-**[安装教学视频](https://www.bilibili.com/video/av81263778)：如果你不知道如何全新安装 macOS，请看本视频**
-
-[macOS 简明安装教程](https://hackintosh.kirainmoe.com/an-zhuang-zhong/macos-an-zhuang-jian-ming-jiao-cheng)
-
-[各机型配置文件下载地址](https://aya-buildbot.kirainmoe.com/)
-
-[EFI 替换教程](https://hackintosh.kirainmoe.com/an-zhuang-zhong/efi-ti-huan-jiao-cheng)
+| 安装系统前 | 系统安装资源和教程 | 遇到问题？ | 获取更好的体验 |
+|----------|-----------------|-----------|-------------|
+| [安装前须知](https://hackintosh.kirainmoe.com/before-install/an-zhuang-qian-xu-zhi) <br> 了解兼容性情况和安装的注意事项 | **[安装教学视频](https://www.bilibili.com/video/av81263778)**<br>**如果你不知道如何全新安装 macOS，请看本视频** <br><br> [macOS 简明安装教程](https://hackintosh.kirainmoe.com/an-zhuang-zhong/macos-an-zhuang-jian-ming-jiao-cheng)  <br> <br>[各机型配置文件下载地址](https://aya-buildbot.kirainmoe.com/) <br><br> [EFI 替换教程](https://hackintosh.kirainmoe.com/an-zhuang-zhong/efi-ti-huan-jiao-cheng) |  [安装过程中的疑难解答](https://hackintosh.kirainmoe.com/an-zhuang-zhong/an-zhuang-guo-cheng-zhong-de-yi-nan-jie-da) <br><br> [安装后的常见问题解答](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da) |  [优化脚本](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da#postinstall-you-hua-jiao-ben-shi-shen-me-wei-shen-me-xu-yao-zhi-hang-ta)<br>解决睡眠等功能的不正常问题；一键开启 HiDPI 等 <br><br>[硬件更换指南和兼容性报告](https://hackintosh.kirainmoe.com/an-zhuang-hou/ying-jian-geng-huan-zhi-nan-he-jian-rong-xing-bao-gao)<br>更换硬件的一些建议和提醒<br><br>[常用命令和优化](https://hackintosh.kirainmoe.com/an-zhuang-hou/chang-yong-ming-ling-he-you-hua)<br><br>[Project: STAR BEAT!](https://github.com/kirainmoe/project-starbeat/releases)<br>为同方模具的神舟笔记本设计的 macOS 版控制中心 |
 
 
-## 遇到问题？
+## 兼容情况
 
-[安装过程中的疑难解答](https://hackintosh.kirainmoe.com/an-zhuang-zhong/an-zhuang-guo-cheng-zhong-de-yi-nan-jie-da)
+### 兼容的型号
 
-[安装后的常见问题解答](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da)
+| 模具代号 | 型号 | 分支 |
+|-----|------|-----|
+| GK5CN5X <br> GK5CN6X | Z7-KP7GZ<br> Z7m-KP7GZ<br> Z7m-KP5GZ<br> Z7-KP7Z<br> Z7m-KP7Z<br> Z7m-KP5Z | [master](https://github.com/kirainmoe/hasee-tongfang-macos) | 
+| GI5CN54 <br> GJ5CN64 | Z7-KP7EC<br> Z7m-KP7EC<br> Z7m-KP5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec) |
+| GI5CN54 <br> GJ5CN64 | Z7-KP7GC<br> Z7m-KP7GC<br> Z7m-KP5GC <br> Z7(m)-KP7/5GA | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) |
+| GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) |
+| GK5CP6X | Z7m-CT7GS | [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs) |
 
-## 获取更好的体验
-
-[优化脚本](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da#postinstall-you-hua-jiao-ben-shi-shen-me-wei-shen-me-xu-yao-zhi-hang-ta)：解决睡眠等功能的不正常问题；一键开启 HiDPI 等
-
-[硬件更换指南和兼容性报告](https://hackintosh.kirainmoe.com/an-zhuang-hou/ying-jian-geng-huan-zhi-nan-he-jian-rong-xing-bao-gao)：更换硬件的一些建议和提醒
-
-[常用命令和优化](https://hackintosh.kirainmoe.com/an-zhuang-hou/chang-yong-ming-ling-he-you-hua)
-
-[Project: STAR BEAT! - 为同方模具的神舟笔记本设计的 macOS 版控制中心](https://github.com/kirainmoe/project-starbeat/releases)
-
-
-# 兼容情况
-
-## 兼容的 macOS 版本
+### 兼容的 macOS 版本
 
 **注意：从 2020.1.3 开始，macOS 10.13 (High Sierra) 将不再被本配置文件支持；并且可能随时停止对 macOS 10.14 (Mojave) 版本系统的支持。**
 
@@ -104,17 +89,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 ❓untest：没有用户或开发者在此设备上测试  
 ❌no：配置文件不兼容此版本
 
-## 兼容的型号
-
-| 模具代号 | 型号 | 分支 |
-|-----|------|-----|
-| GK5CN5X <br> GK5CN6X | Z7-KP7GZ<br> Z7m-KP7GZ<br> Z7m-KP5GZ<br> Z7-KP7Z<br> Z7m-KP7Z<br> Z7m-KP5Z | [master](https://github.com/kirainmoe/hasee-tongfang-macos) | 
-| GI5CN54 <br> GJ5CN64 | Z7-KP7EC<br> Z7m-KP7EC<br> Z7m-KP5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec) |
-| GI5CN54 <br> GJ5CN64 | Z7-KP7GC<br> Z7m-KP7GC<br> Z7m-KP5GC <br> Z7(m)-KP7/5GA | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) |
-| GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) |
-| GK5CP6X | Z7m-CT7GS | [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs) |
-
-# 设备驱动情况
+## 设备驱动情况
 
 以下为维护者个人电脑的配置详情，以及对比原机的配置。
 
@@ -129,12 +104,12 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 | Ethernet | Realtek RTL8168H | |
 | Audio | Realtek ALC269vc | |
 
-## What's working
+### 正常工作的功能
 
 - 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS）
-- Intel UHD630（已应用显存补丁，2048 MB）
+- Intel 核显 UHD630（已应用显存补丁，2048 MB）
 - 亮度调节（可在设置中调节或使用 Fn+F11, Fn+F12 快捷键）
-- I2C HID 触摸板（感谢 GitHub 用户 @Goshin 修复 VoodooI2C 驱动）
+- 触摸板（I2C HID 触摸板可完美使用；GC 系列机型的 PS2 触摸板没有手势支持；感谢 @Goshin 修复 I2C 驱动）
 - 有线网卡
 - 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 29 或 88，外放、耳机、麦克风全部正常）
 - 电池状态（现已使用 Clover Hotpatch 驱动）
@@ -142,24 +117,17 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 - Intel 蓝牙（使用 @zxystd 的固件上传驱动，现在不需要热启动）
 - 睡眠（使用 Clover Hotpatch 修复）
 - 摄像头
-- etc.
 
-> Tips：以上情况基于 KP7GZ 系列机型；对于使用其它机型的用户，可能会有一些功能不正常，请用户测试后反馈。
-
-## What's partially working
-
-- PS/2 触摸板（针对 GC 系列机型，因为该模具使用的触摸板为 PS2 触摸板，没有手势支持）
-
-## What's not working
+### 无法使用
 
 - 独立显卡（目前已知没有任何解决方案）
 - 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代，或更换无线网卡；因为无线网络无解所以 Airdrop, Handoff 不可用）
-- HDMI/MiniDP（该模具 HDMI/MiniDP 直接由独显输出, 独显无法驱动，所以 HDMI/MiniDP 也无法使用）
+- HDMI / miniDP（该模具 HDMI / miniDP 直接由独显输出, 独显无法驱动，所以 HDMI / miniDP 也无法使用）
 - 读卡器（读卡器走的 USB 2.0 外置，无法使用）
 
-# 获取社区帮助
+## 获取社区帮助
 
-## 请确保你在群里问问题之前，已经使用了搜索功能查找并仔细阅读了[此链接](https://hackintosh.kirainmoe.com)内的相关内容！
+### 请确保你在群里问问题之前，已经使用了搜索功能查找并仔细阅读了[此链接](https://hackintosh.kirainmoe.com)内的相关内容！
 
 我们要求你具有基本的知识，如修复引导、重装系统、分区等。你可能会在里面遇到热心的朋友指导你一步步安装 macOS，但多数情况我们只能帮你点睛。如果没有上述基技能，建议先前往远景论坛或国外黑苹果论坛爬帖。
 
@@ -173,13 +141,13 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 <img src="https://i.loli.net/2020/01/05/sKh875UC14LFejv.png" width="48%">
 <img src="https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png" width="48%">
 
-# 贡献本项目
+## 贡献本项目
 
 欢迎大家一起完善该机型的 EFI. 如果你认为这份配置文件有可以改进的地方，请注册一个 Github 账号，fork 本仓库自行修改后提交 Pull Request.
 
 机型的测试者、贡献者名单将被写在各机型的 README 中。如果你想做一个低调的人，请联系我撤下。
 
-# 许可协议 & 捐赠
+## 许可协议 & 捐赠
 
 在 **[Maruyama License 协议](https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/LICENSE)** 的许可下，使用本仓库下的所有配置文件都是**免费**的。如果有人向你售卖配置文件，请立刻要求他退款。
 
