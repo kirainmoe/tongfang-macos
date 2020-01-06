@@ -254,7 +254,7 @@
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-FN.aml</string>
 			<string>SSDT-USTP.aml</string>
-			<string>SSDT-ECUSBX.aml</string>
+			<string>SSDT-EC.aml</string>
 			<string>SSDT-PWBTN.aml</string>
 		</array>
 	</dict>
