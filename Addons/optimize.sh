@@ -16,24 +16,32 @@ fi
 
 echo "\033[34mOptimizing sleep & hibernation...\033[0m"
 echo "\033[36m>> disable hibernate to disk...\033[0m"
+sleep 0.5
 rm -rf /var/vm/sleepimage
 mkdir /var/vm/sleepimage
+
 echo "\033[36m>> setting hibernatemode...\033[0m"
+sleep 0.5
 pmset -a hibernatemode 0
+
 echo "\033[36m>> setting standby mode...\033[0m"
+sleep 0.5
 pmset -a standby 0
+
 echo  "\033[36m>> disable proximity wake...\033[0m"
+sleep 0.5
 pmset -a proximitywake 0
 echo ""
 
 echo "\033[34mTriggering kext cache rebuilding...\033[0m"
+sleep 0.5
 kextcache -i /
 
 
 while true; do
     read -p "Do you want to enable HiDPI? (y/n)?: " yn
     case $yn in
-        [Yy]* ) sh -c "$(curl -fsSL https://raw.githubusercontent.com/daliansky/XiaoMi-Pro-Hackintosh/master/one-key-hidpi/one-key-hidpi.sh)"; break;;
+        [Yy]* ) bash -c "$(curl -fsSL https://gitee.com/kirainmoe/static-files/raw/master/hidpi.sh)"; break;;
         [Nn]* ) break;;
         * ) echo "Please answer y or n.";;
     esac
