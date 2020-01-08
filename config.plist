@@ -465,7 +465,7 @@
 				AAAAgA==
 				</data>
 				<key>model</key>
-				<string>Intel Iris Plus Graphics 655</string>
+				<string>Intel UHD Graphics 630</string>
 			</dict>
 		</dict>
 		<key>USB</key>
@@ -575,7 +575,7 @@
 			<string>\System\Library\Extensions\IOGraphicsFamily.kext</string>
 		</array>
 		<key>KernelLapic</key>
-		<true/>
+		<false/>
 		<key>KernelPm</key>
 		<true/>
 		<key>KernelToPatch</key>
@@ -922,6 +922,8 @@
 				</data>
 			</dict>
 		</array>
+		<key>PanicNoKextDump</key>
+		<true/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>

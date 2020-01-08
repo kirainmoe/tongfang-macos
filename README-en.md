@@ -92,7 +92,7 @@ This repo contains the Clover config for installing latest macOS on Tongfang (Ts
 
 - Turbo boost and CPU frequency stage.
 - Intel UHD630
-- Brightness control and Fn keys (Fn keys controlling is not available for Tongfang GK7CP6R devices)
+- Brightness control and Fn keys
 - I2C HID Touchpad
 - Realtek Ethernet
 - Bluetooth (No Airdop if you are using Intel Bluetooth)
