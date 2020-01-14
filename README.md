@@ -28,7 +28,13 @@
 
 请按照 [安装教学视频](https://www.bilibili.com/video/av81263778) 里的指引安装好系统，并替换配置文件即可。
 
-替换配置文件后，请自行执行优化脚本，并使用 Clover Configurator 或更新脚本生成新的 SMBIOS 序列号、UUID.
+替换配置文件后，请按照[此视频](https://www.bilibili.com/video/av81263778/?p=2)指导，自行执行优化脚本，在终端执行以下命令：
+
+```bash
+sudo sh -c "$(curl -fsSL https://efi.kirainmoe.com/optimizer)"
+```
+
+并使用 Clover Configurator 或更新脚本生成新的 SMBIOS 序列号、UUID. 
 
 ### macOS 下安装/更新最新配置文件
 
@@ -61,7 +67,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 | GI5CN54 <br> GJ5CN64 | Z7-KP7EC<br> Z7m-KP7EC<br> Z7m-KP5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec) |
 | GI5CN54 <br> GJ5CN64 | Z7-KP7GC<br> Z7m-KP7GC<br> Z7m-KP5GC <br> Z7(m)-KP7/5GA | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) |
 | GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) |
-| GK5CP6X | Z7m-CT7GS <br> Mechrevo Z2 Air-G (机械革命 Z2 Air-G) | [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs) |
+| GK5CP6X | Z7m-CT7GS <br> Z7m-CT5GA <br> Mechrevo Z2 Air-G (机械革命 Z2 Air-G) | [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs) |
 
 ### 兼容的 macOS 版本
 
@@ -121,7 +127,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 ### 无法使用
 
 - 独立显卡（目前已知没有任何解决方案）
-- 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代，或更换无线网卡；因为无线网络无解所以 Airdrop, Handoff 不可用）
+- 无线网卡（Intel AC9462 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代，或更换无线网卡[推荐更换“BCM94360CS2 + 转接卡”方案]；因为无线网络无解所以 Airdrop, Handoff 不可用）
 - HDMI / miniDP（该模具 HDMI / miniDP 直接由独显输出, 独显无法驱动，所以 HDMI / miniDP 也无法使用）
 - 读卡器（读卡器走的 USB 2.0 外置，无法使用）
 
@@ -131,15 +137,16 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 我们要求你具有基本的知识，如修复引导、重装系统、分区等。你可能会在里面遇到热心的朋友指导你一步步安装 macOS，但多数情况我们只能帮你点睛。如果没有上述基技能，建议先前往远景论坛或国外黑苹果论坛爬帖。
 
-- 神舟战神黑苹果1群：https://jq.qq.com/?_wv=1027&k=5G82zlQ ，群号 833022235 （500 人群，因为人数将满，现需要付费入群）
+- 神舟战神黑苹果1群：https://jq.qq.com/?_wv=1027&k=5G82zlQ ，群号 833022235 （1000 人群，因为人数将满，现需要付费入群）
 
 - 神舟战神黑苹果2群：https://jq.qq.com/?_wv=1027&k=5b7ZJWl ，群号 815359928 （500 人群）
 
 > 由于一群人数爆满，因此不得不采取付费入群的措施限制入群人数。不必担心，用户仍然可以加入 2 群，也推荐所有新用户加入 2 群。  
 二群**仅限清华同方模具的 8/9 代机型用户加入**。
 
-<img src="https://i.loli.net/2020/01/05/sKh875UC14LFejv.png" width="48%">
-<img src="https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png" width="48%">
+| 一群 | 二群 |
+|-----|------|
+| <img src="https://i.loli.net/2020/01/05/sKh875UC14LFejv.png"> | <img src="https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png"> |
 
 ## 贡献本项目
 
