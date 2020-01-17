@@ -69,6 +69,15 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 | GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) |
 | GK5CP6X | Z7m-CT7GS <br> Z7m-CT5GA <br> Mechrevo Z2 Air-G (机械革命 Z2 Air-G) | [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs) |
 
+### 不兼容的型号
+
+**请注意，以下机型并不能正常使用此配置文件，包括：**
+
+- 使用蓝天模具的战神笔记本：`Z7(m)-CT7/5N*, Z7(m)-KP7/5SC, Z7(m)-KP7/5DC, ZX7*, GX7*, Z7(m)-KP7/5S1, Z7(m)-KP7/5D1, Z7(m)-SL*...`
+- 使用七代及以下平台的同方模具战神笔记本：`Z7(m)-KP7/5GT, Z7(m)-KP7/5D2, Z7(m)-KP7/5GS`
+- 其它蓝天/广达模具：`K6x0d-xxxx, U45S1, U47T1...`
+- 其它非同方模具的同配置机型
+
 ### 兼容的 macOS 版本
 
 **注意：从 2020.1.3 开始，macOS 10.13 (High Sierra) 将不再被本配置文件支持；并且可能随时停止对 macOS 10.14 (Mojave) 版本系统的支持。**
