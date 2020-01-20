@@ -54,7 +54,7 @@
 			<key>Revision</key>
 			<true/>
 			<key>Tools</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Font</key>
 		<dict>
