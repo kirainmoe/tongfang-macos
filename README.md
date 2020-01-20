@@ -1,6 +1,7 @@
 <p align="center">
+<img src="https://i.loli.net/2020/01/05/QilbpRdq4awGfSX.png" width="250px" alt="logo">
+</p>
 
-<img src="https://ws2.sinaimg.cn/large/9f1137b1gy1g1hg3epia2j20n505jt9q.jpg" width="300px" alt="logo">
 
 
 <h2>该分支用于同方九代机型 Z7-CT7GK / G7-CT7VK，其它机型请切换其他分支。</h2>
