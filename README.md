@@ -121,16 +121,17 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 ### 正常工作的功能
 
-- 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS）
+- 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS: MacbookPro15,1）
 - Intel 核显 UHD630（已应用显存补丁，2048 MB）
 - 亮度调节（可在设置中调节或使用 Fn+F11, Fn+F12 快捷键）
 - 触摸板（I2C HID 触摸板可完美使用；GC 系列机型的 PS2 触摸板没有手势支持；感谢 @Goshin 修复 I2C 驱动）
-- 有线网卡
+- 有线网卡 (Realtek RTL8168H)
 - 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 29 或 88，外放、耳机、麦克风全部正常）
 - 电池状态（现已使用 Clover Hotpatch 驱动）
 - USB （使用 USBInjectAll + SSDT 驱动，3.0 5G/s 速度正常，Type-C 可用）
 - Intel 蓝牙（使用 @zxystd 的固件上传驱动，现在不需要热启动）
 - 睡眠（使用 Clover Hotpatch 修复）
+- Fn 快捷键（由 @Goshin 修改 VoodooPS2Controller.kext 和守护程序实现）
 - 摄像头
 
 ### 无法使用
