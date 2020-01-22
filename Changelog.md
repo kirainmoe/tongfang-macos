@@ -1,5 +1,9 @@
 # 更新日志
 
+# 2020.1.22
+
+本次更新由 @Goshin 完善了 Fn 快捷键的功能，现在 Fn+F1, Fn+F3, Fn+F4, Fn+F5 可以正常使用了。你可以通过执行优化脚本，或者根据 https://github.com/Goshin/VoodooPS2 的指引安装 TongfangFnDaemon 守护程序即可正常使用。
+
 # 2020.1.20
 
 本次更新为所有机型替换了经过修改后的 SSDT-DDGPU.aml 及新的 ACPI 重命名补丁，以修复睡眠唤醒时被屏蔽的独显重新工作的问题。请尽量使用 Apple->睡眠 或合盖来进行睡眠。

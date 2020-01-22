@@ -37,6 +37,20 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NDGP", 0x00000000)
     External (_SB_.PCI0.RP05.PEGP._ON_, MethodObj)    // 0 Arguments (from opcode)
     External (_SB_.PCI0.RP05.PXSX._OFF, MethodObj)    // 0 Arguments (from opcode)
     External (_SB_.PCI0.RP05.PXSX._ON_, MethodObj)    // 0 Arguments (from opcode)
+    
+    External(ZWAK, MethodObj)
+    
+    Method(_WAK, 1)
+    {
+
+        // call into original _WAK method
+        Store (ZWAK(Arg0), Local0)
+
+        \DGPU._OFF ()
+
+        // return value from original _WAK
+        Return (Local0)
+    }
 
     Device (DGPU)
     {
