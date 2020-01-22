@@ -5,7 +5,7 @@
 		<key>CFBundleDevelopmentRegion</key>
 		<string>English</string>
 		<key>CFBundleIdentifier</key>
-		<string>com.apple.xcode.dsym.as.acidanthera.voodoo.driver.PS2Mouse</string>
+		<string>com.apple.xcode.dsym.as.acidanthera.voodoo.driver.PS2Trackpad</string>
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
 		<key>CFBundlePackageType</key>
