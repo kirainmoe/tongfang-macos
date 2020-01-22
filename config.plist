@@ -147,26 +147,54 @@
 					<key>Replace</key>
 					<data>WFNUUAg=</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Fn: change _Q14 to XQ14</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1ExNA==</data>
-					<key>Replace</key>
-					<data>WFExNA==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Fn: change _Q15 to XQ15</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1ExNQ==</data>
-					<key>Replace</key>
-					<data>WFExNQ==</data>
-				</dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>Fn: change _Q0A to XQ0A</string>
+                    <key>Find</key>
+                    <data>X1EwQQ==</data>
+                    <key>Replace</key>
+                    <data>WFEwQQ==</data>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>Fn: change _Q77 to XQ77</string>
+                    <key>Find</key>
+                    <data>X1E3Nw==</data>
+                    <key>Replace</key>
+                    <data>WFE3Nw==</data>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>Fn: change _Q78 to XQ78</string>
+                    <key>Find</key>
+                    <data>X1E3OA==</data>
+                    <key>Replace</key>
+                    <data>WFE3OA==</data>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>Fn: change _Q14 to XQ14</string>
+                    <key>Find</key>
+                    <data>X1ExNA==</data>
+                    <key>Replace</key>
+                    <data>WFExNA==</data>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>Fn: change _Q15 to XQ15</string>
+                    <key>Find</key>
+                    <data>X1ExNQ==</data>
+                    <key>Replace</key>
+                    <data>WFExNQ==</data>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>Fn: change _Q53 to XQ53</string>
+                    <key>Find</key>
+                    <data>X1E1Mw==</data>
+                    <key>Replace</key>
+                    <data>WFE1Mw==</data>
+                </dict>
 				<dict>
 					<key>Comment</key>
 					<string>RTC: fix _STA method bug for 9th gen Tongfang models</string>
