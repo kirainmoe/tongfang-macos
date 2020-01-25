@@ -1,5 +1,9 @@
 # 更新日志
 
+# 2020.1.25
+
+更新 VoodooPS2Controller 系列驱动，修复大小写指示灯不正常的问题。特别注意： macOS 新版本对大小写指示灯存在一些软件性的问题，因此可能会导致指示灯无法按预期行为工作。
+
 # 2020.1.22
 
 本次更新由 @Goshin 完善了 Fn 快捷键的功能，现在 Fn+F1, Fn+F3, Fn+F4, Fn+F5 可以正常使用了。你可以通过执行优化脚本，或者根据 https://github.com/Goshin/VoodooPS2 的指引安装 TongfangFnDaemon 守护程序即可正常使用。
