@@ -1,5 +1,9 @@
 # 更新日志
 
+# 2020.1.26
+
+更新关键驱动 (Lilu, WhateverGreen, VirtualSMC)，更新 Clover 到 5103；更新 VoodooPS2Controller 为 https://github.com/kirainmoe/hasee-tongfang-macos/issues/54#issuecomment-578491767 提供的版本。
+
 # 2020.1.25
 
 更新 VoodooPS2Controller 系列驱动，修复大小写指示灯不正常的问题。特别注意： macOS 新版本对大小写指示灯存在一些软件性的问题，因此可能会导致指示灯无法按预期行为工作。
