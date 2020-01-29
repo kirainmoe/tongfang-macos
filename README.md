@@ -11,10 +11,10 @@
 <a href="https://aya-buildbot.kirainmoe.com">
     <img src="https://img.shields.io/badge/download-release-blue.svg"/> 
 </a>
-<img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15.2-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
+<img src="https://img.shields.io/badge/coverage-98%25-brightgreen.svg"/> <img src="https://img.shields.io/badge/macOS_version-10.15.3-9cf.svg"/> <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-<img src="https://i.loli.net/2019/12/11/pAcWzrySRZV7gMb.jpg">
+<img src="https://i.loli.net/2020/01/30/hwl7U9PgNRX8dQG.jpg">
 
 <h3 align="center">
     <a href="https://aya-buildbot.kirainmoe.com/">下载地址</a> / <a href="https://www.bilibili.com/video/av81263778">系统安装视频教学</a> / 
@@ -73,9 +73,9 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 
 **请注意，以下机型并不能正常使用此配置文件，包括：**
 
-- 使用蓝天模具的战神笔记本：`Z7(m)-CT7/5N*, Z7(m)-KP7/5SC, Z7(m)-KP7/5DC, ZX7*, GX7*, Z7(m)-KP7/5S1, Z7(m)-KP7/5D1, Z7(m)-SL*...`
+- 使用蓝天模具的战神笔记本：`Z7(m)-CT7/5N*, Z7(m)-KP7/5SC, Z7(m)-KP7/5DC, ZX7*, GX7*, Z7(m)-KP7/5S1, Z7(m)-KP7/5D1, Z7(m)-SL*`
 - 使用七代及以下平台的同方模具战神笔记本：`Z7(m)-KP7/5GT, Z7(m)-KP7/5D2, Z7(m)-KP7/5GS`
-- 其它蓝天/广达模具：`K6x0d-xxxx, U45S1, U47T1...`
+- 其它蓝天/广达模具：`K6x0d-xxxx, U45S1, U47T1`
 - 其它非同方模具的同配置机型
 
 ### 兼容的 macOS 版本
@@ -98,6 +98,7 @@ curl -fsSL https://efi.kirainmoe.com/installer > inst && chmod +x ./inst && sudo
 | 10.15   | 19A603 | ✅ yes | ✅ yes | ✅ yes |
 | 10.15.1 | 19B88 | ✅ yes | ✅ yes | ✅ yes |
 | 10.15.2 | 19C57 | ✅ yes | ✅ yes | ✅ yes |
+| 10.15.3 | 19D76 | ✅ yes | ✅ yes | ✅ yes |
 
 > ✅ yes：当前版本的配置文件在该系统版本下测试通过，各种功能符合预期  
 🔒 deprecated: 配置文件（曾经）兼容此版本系统，但现阶段无人测试；且未来可能不再兼容该版本  
