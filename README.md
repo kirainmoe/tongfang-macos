@@ -15,14 +15,12 @@
 </p>
 
 <h3 align="center">
-    <a href="https://aya-buildbot.kirainmoe.com/">下载地址</a> | <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
+    <a href="https://aya-buildbot.kirainmoe.com/">配置文件下载地址</a> | <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
     <a href="https://hackintosh.kirainmoe.com">帮助文档</a> |
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/README-en.md">English</a>
 </h3>
 
 <img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg">
-
----
 
 <h2 align="center">✽ 如何使用 ✽</h2>
 
@@ -92,7 +90,7 @@ curl -fsSL https://aya-buildbot.kirainmoe.com/installer > inst && chmod +x ./ins
 | 版本号 | 版本代号 | 是否理论兼容 | 维护者实机测试正常 | 用户实机测试正常 |
 |-------|---------|--------|------------|----------|
 | 10.13.6 | 17G65 | ❌ no | - | - |
-| 10.13.6<br>~<br>10.14.5 | 17G2112+ <br> ~ <br> 18F132 | 🔒 deprecated | ❓untest | ❓untest |
+| 10.13.6 ~ 10.14.5 | 17G2112 ~ 18F132 | 🔒 deprecated | ❓untest | ❓untest |
 | 10.14.6 | 18G87 | ✅ yes | ✅ yes | ✅ yes |
 | 10.15   | 19A603 | ✅ yes | ✅ yes | ✅ yes |
 | 10.15.1 | 19B88 | ✅ yes | ✅ yes | ✅ yes |
@@ -104,7 +102,7 @@ curl -fsSL https://aya-buildbot.kirainmoe.com/installer > inst && chmod +x ./ins
 ❓untest：没有用户或开发者在此设备上测试  
 ❌no：配置文件不兼容此版本
 
-## 设备驱动情况
+<h2 align="center">✽ 设备驱动情况 ✽</h2>
 
 以下为维护者个人电脑的配置详情，以及对比原机的配置。
 
