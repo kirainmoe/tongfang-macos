@@ -2,39 +2,53 @@
 <img src="https://i.loli.net/2020/01/05/QilbpRdq4awGfSX.png" width="250px" alt="logo">
 </p>
 
-
-
 <h2>该分支用于同方九代机型 Z7(m)-CT7GS，其它机型请切换其他分支。</h2>
 
-# Compatibility
+### 兼容性
 
 该分支支持同方九代神舟战神机型 Z7(m)-CT7GS. 感谢 GitHub 用户 [@Goshin](https://github.com/Goshin) 参与测试。
 
-# What's working
+### 正常工作的功能
 
-- 睿频、变频正常（使用 18 款 MacBook Pro SMBIOS，最低 800Mhz, 最高睿频 4.1GHz）
-- Intel UHD630（已应用显存补丁，2048 MB）
-- 亮度调节（可在设置中调节或使用 Fn+F11, Fn+F12 快捷键，感谢 GitHub 用户 @Goshin 修复 VoodooPS2Contoller 驱动）
-- I2C HID 触控板（感谢 GitHub 用户 @Goshin 修复 VoodooI2C 驱动）
+- CPU 睿频、变频
+- 核芯显卡 Intel UHD Graphics 630
+- 亮度调节
+- 触摸板
 - 有线网卡
-- USB （使用 USBInjectAll + SSDT 驱动，3.0 5G/s 速度正常，Type-C 可用；感谢 CT7GK 用户 @Chris 解决 USB 定制与蓝牙冲突问题)
-- 声音（ALC269vc, 使用 AppleALC 仿冒，注入 layout-id 为 29，外放、耳机、麦克风全部正常）
-- 电池状态（现已使用 Clover Hotpatch 驱动）
-- 睡眠（使用 Clover Hotpatch 修复）
-- etc.
+- 声卡 (扬声器、耳机、麦克风)
+- 原生电源管理、电池状态
+- USB 3.0, Type-C
+- Intel 蓝牙
+- 睡眠
+- Fn 快捷键
+- 摄像头
 
-# What's partial working
 
-- 蓝牙 (需要热启动 macOS 才可用，即先进入 Winodws 后重启进入 macOS、或者在 macOS 下使用虚拟机模拟热启动过程，不支持 AirDrop.)
-# What's not working
+### 无法使用
 
-- 独立显卡（GTX1660Ti， 目前没有适用于 Mojave 的 Nvidia WebDriver）
-- 无线网卡（Intel AC9560 无解，使用蓝牙共享网络、USB共享网络或者USB网卡替代）
-- **HDMI/MiniDP（该模具 HDMI/MiniDP 直接由独显输出, 独显无法驱动，所以 HDMI/MiniDP 也无法使用）**
-- 读卡器（读卡器走的 USB 2.0 外置，无法使用）
+- 独立显卡（目前已知没有任何解决方案）
 
-# Contribute
+> 已使用 `SSDT-DDGPU.aml` 屏蔽了独显
+>
+> 由于同方八代以上模具的 HDMI / miniDP 直接由无法驱动的独显输出，所以 HDMI / miniDP 也无法使用。
 
-### 关于贡献和完善
+- 无线网卡（Intel AC9462/9560 无解）
+
+> 无线网卡无法使用的替代方案：
+> - 蓝牙共享网络
+> - USB共享网络 (HoRNDIS) 
+> - USB网卡
+> - 更换无线网卡[推荐更换“BCM94360CS2 + 转接卡”方案]
+> 
+> 由于 “**隔空投送 AirDrop**” 和 “**接力 Handoff**” 依赖于无线网络和蓝牙，所以此两项功能不可用。
+
+- 读卡器（读卡器为 USB 2.0 外置通道，没有兼容驱动）
+
+
+### 许可协议
+
+该项目在 [Maruyama License](LICENSE) 许可下开源。
+
+### 贡献本项目
 
 欢迎大家一起完善该机型的 EFI. 如果你认为这份配置文件有可以改进的地方，请注册一个 Github 账号，fork 本仓库自行修改后提交 Pull Request.
