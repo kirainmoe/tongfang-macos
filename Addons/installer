@@ -148,7 +148,7 @@ class HaseeEFIInstaller
         else if (strpos($output, "CT7GS")) {
             $branch = "ct7gs";
         }
-        else if (strpos($output, "GK7CP6R") || strpos($output, "CT7GK") || strpos($output, "CT7VK")) {
+        else if (strpos($output, "GK5S") || strpos($output, "GK7CP6R") || strpos($output, "CT7GK") || strpos($output, "CT7VK")) {
             $branch = "ct7gk";              // 9th gen tongfang models
         }
         else {
