@@ -52,7 +52,7 @@ curl -fsSL https://aya-buildbot.kirainmoe.com/installer > inst && chmod +x ./ins
 - [安装后的常见问题解答](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da) 
 - [硬件更换指南和兼容性报告](https://hackintosh.kirainmoe.com/an-zhuang-hou/ying-jian-geng-huan-zhi-nan-he-jian-rong-xing-bao-gao)
 - [常用命令和优化](https://hackintosh.kirainmoe.com/an-zhuang-hou/chang-yong-ming-ling-he-you-hua)
-- [Project: STAR BEAT!](https://github.com/kirainmoe/project-starbeat/releases)
+- [Project: STAR BEAT! - 神舟同方机型键盘灯控制](https://github.com/kirainmoe/project-starbeat/releases)
 
 
 <h2 align="center">✽ 兼容情况 ✽</h2>
