@@ -4,7 +4,7 @@
 
 <h2 align="center">macOS on Hasee Tongfang Laptops</h2>
 
-<p align="center">用于神舟战神 8 / 9 代同方机型安装最新版 macOS （黑苹果）的 Clover 配置文件</p>
+<p align="center">用于神舟战神 8 / 9 代同方机型安装最新版 macOS （黑苹果）的 Clover/OpenCore 配置文件</p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> 
@@ -61,7 +61,7 @@ curl -fsSL https://aya-buildbot.kirainmoe.com/installer > inst && chmod +x ./ins
 
 | 模具代号 | 型号 | 分支 |
 |-----|------|-----|
-| GK5CN5X <br> GK5CN6X | Z7-KP7GZ<br> Z7m-KP7GZ<br> Z7m-KP5GZ<br> Z7-KP7Z<br> Z7m-KP7Z<br> Z7m-KP5Z<br> Shinelon Yao 7000 (炫龙 耀7000)<br> Mechrevo Z2 Air (机械革命 Z2 Air) | [master](https://github.com/kirainmoe/hasee-tongfang-macos) | 
+| GK5CN5X <br> GK5CN6X | Z7-KP7GZ<br> Z7m-KP7GZ<br> Z7m-KP5GZ<br> Z7-KP7Z<br> Z7m-KP7Z<br> Z7m-KP5Z<br> Shinelon Yao 7000 (炫龙 耀7000)<br> Mechrevo Z2 Air (机械革命 Z2 Air) | [master](https://github.com/kirainmoe/hasee-tongfang-macos) (Clover) <br> [kp7gz-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gz-opencore) (OpenCore) | 
 | GI5CN54 <br> GJ5CN64 | Z7-KP7EC<br> Z7m-KP7EC<br> Z7m-KP5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec) |
 | GI5CN54 <br> GJ5CN64 | Z7-KP7GC<br> Z7m-KP7GC<br> Z7m-KP5GC <br> Z7(m)-KP7/5GA | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) |
 | GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) |
@@ -167,7 +167,7 @@ curl -fsSL https://aya-buildbot.kirainmoe.com/installer > inst && chmod +x ./ins
 #### 请确保你在群里问问题之前，已经看过了[教学视频](https://www.bilibili.com/video/av81263778)、并使用了搜索功能查找并仔细阅读了[项目文档](https://hackintosh.kirainmoe.com)内的相关内容！
 
 
-| 群名称 | 神舟战神黑苹果 1 群 | 神舟战神黑苹果二群 |
+| 群名称 | 神舟战神黑苹果 1 群 | 神舟战神黑苹果 2 群 |
 |-----|------|---------|
 | 群号 | 833022235 | 815359928 |
 | 加群二维码 | <img src="https://i.loli.net/2020/01/05/sKh875UC14LFejv.png"> | <img src="https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png"> |
