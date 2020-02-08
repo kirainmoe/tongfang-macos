@@ -3499,7 +3499,7 @@
 			<key>model</key>
 			<string>MacBookPro14,3</string>
 		</dict>
-		<key>MacBookPro15,1-ABPC</key>
+		<key>MacBookPro15,3-ABPC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.rehabman.driver.USBInjectAll</string>
@@ -3510,9 +3510,9 @@
 			<key>kName</key>
 			<string>AppleBusPowerController</string>
 			<key>model</key>
-			<string>MacBookPro15,1</string>
+			<string>MacBookPro15,3</string>
 		</dict>
-		<key>MacBookPro15,1-XHC</key>
+		<key>MacBookPro15,3-XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.rehabman.driver.USBInjectAll</string>
@@ -3526,7 +3526,7 @@
 			<key>IOProviderClass</key>
 			<string>AppleUSBXHCIPCI</string>
 			<key>model</key>
-			<string>MacBookPro15,1</string>
+			<string>MacBookPro15,3</string>
 		</dict>
 		<key>MacBookPro15,2-ABPC</key>
 		<dict>
