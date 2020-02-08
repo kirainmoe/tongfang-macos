@@ -1,5 +1,12 @@
 # 更新日志
 
+# 2020.2.8
+
+元宵节快乐！本次更新为所有机型更新了 OpenCore 引导。根据用户尝鲜新功能或追求稳定性的不同需求，请自行斟酌是否从 Clover 迁移到 OpenCore.  **在使用 OC 引导前，请注意以下两点：**
+
+- 全系机型的 OpenCore 引导使用了 `MacBookPro15,3` (MacBook Pro 15-inch, 2019) 的 SMBIOS，不同于 Clover 引导使用的 `MacBookPro15,1` (MacBook Pro 15-inch, 2018)，在替换三码时，请自行选择还原旧三码和旧机型，或生成新机型的三码。
+- 使用 OpenCore 引导 Windows 之前， **必须保证配置文件的 UUID 与主板 UUID 一致** ，以免破坏 Windows 激活环境。请参照 [此文章](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1830968) 中的第三部分获取主板 UUID 并覆盖到配置文件中。
+
 # 2020.1.26
 
 更新关键驱动 (Lilu, WhateverGreen, VirtualSMC)，更新 Clover 到 5103；更新 VoodooPS2Controller 为 https://github.com/kirainmoe/hasee-tongfang-macos/issues/54#issuecomment-578491767 提供的版本。
