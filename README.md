@@ -66,10 +66,10 @@ curl -fsSL https://aya-buildbot.kirainmoe.com/installer > inst && chmod +x ./ins
 | 模具代号 | 型号 | 分支 |
 |-----|------|-----|
 | GK5CN5X <br> GK5CN6X | Z7-KP7GZ<br> Z7m-KP7GZ<br> Z7m-KP5GZ<br> Z7-KP7Z<br> Z7m-KP7Z<br> Z7m-KP5Z<br> Shinelon Yao 7000 (炫龙 耀7000)<br> Mechrevo Z2 Air (机械革命 Z2 Air) | [master](https://github.com/kirainmoe/hasee-tongfang-macos) (Clover) <br> [kp7gz-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gz-opencore) (OpenCore) | 
-| GI5CN54 <br> GJ5CN64 | Z7-KP7EC<br> Z7m-KP7EC<br> Z7m-KP5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec)<br> [kp7ec-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec-opencore) (OpenCore)  |
-| GI5CN54 <br> GJ5CN64 | Z7-KP7GC<br> Z7m-KP7GC<br> Z7m-KP5GC <br> Z7(m)-KP7/5GA | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc)<br> [kp7gc-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc-opencore) (OpenCore)  |
-| GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK <br> Z7-CT7VA | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk)<br> [ct7gk-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk-opencore) (OpenCore)  |
-| GK5CP6X | Z7m-CT7GS <br> Z7m-CT5GA <br> Mechrevo Z2 Air-G (机械革命 Z2 Air-G) | [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs)<br> [ct7gs-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs-opencore) (OpenCore)  |
+| GI5CN54 <br> GJ5CN64 | Z7-KP7EC<br> Z7m-KP7EC<br> Z7m-KP5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec) (Clover)<br> [kp7ec-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec-opencore) (OpenCore)  |
+| GI5CN54 <br> GJ5CN64 | Z7-KP7GC<br> Z7m-KP7GC<br> Z7m-KP5GC <br> Z7(m)-KP7/5GA | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) (Clover)<br> [kp7gc-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc-opencore) (OpenCore)  |
+| GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK <br> Z7-CT7VA | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) (Clover)<br> [ct7gk-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk-opencore) (OpenCore)  |
+| GK5CP6X | Z7m-CT7GS <br> Z7m-CT5GA <br> Mechrevo Z2 Air-G (机械革命 Z2 Air-G) | [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs) (Clover)<br> [ct7gs-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs-opencore) (OpenCore)  |
 
 ### 不兼容的型号
 
