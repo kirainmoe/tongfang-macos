@@ -6,7 +6,7 @@ Z7(m)-KP7/5(G)Z (GK5CN6X) - OpenCore 引导配置文件.
 
 ## 注意事项
 
-- 因为 OpenCore 引导系统的方法与 Clover 不同，**若要使用 OpenCore 引导 Windows，必须先修改配置文件中的 UUID 与主板 UUID 一致！**
+- 因为 OpenCore 引导系统的方法与 Clover 不同，**若要使用 OpenCore 引导 Windows，必须先修改配置文件中的 UUID 与主板 UUID 一致，否则可能会导致 Windows 激活环境被破坏！**请参考[此文章](http://bbs.pcbeta.com/forum.php?mod=viewthread&tid=1830968)，修改好配置文件的三码 UUID 后，再使用 OC 引导 Windows.
 - 鉴于 OpenCore 的更新较为频繁，稳定性有待观察，且相比较于 Clover 仍有较多不完善的方面，因此**不建议新手和追求稳定的用户**使用。
 - 此配置文件仅用于尝鲜用途，建议**有自行解决问题能力的用户**使用。**作者不对任何因此导致的硬件损坏 & 数据丢失负责。**
 - 此配置文件可用于其它同方机型配置 OpenCore 时的参考。
@@ -15,8 +15,6 @@ Z7(m)-KP7/5(G)Z (GK5CN6X) - OpenCore 引导配置文件.
 
 > 当前版本基于 OpenCore 0.5.5；  
 配置文件仅适用于 Z7(m)-KP7/5(G)Z 机型或 GK5CN6X-* 模具。
-
-![QQ20200205-182558@2x.png](https://i.loli.net/2020/02/05/tnl3gH8ZeQfyxc7.png)
 
 ## 与 Clover 版本的区别
 
@@ -30,4 +28,4 @@ Z7(m)-KP7/5(G)Z (GK5CN6X) - OpenCore 引导配置文件.
 
 ## 贡献
 
-欢迎提出针对此 OpenCore 配置文件的修改意见，或在此配置的基础上移植其它同方机型。
+欢迎反馈问题、提出针对此 OpenCore 配置文件的修改意见，或在此配置的基础上移植其它同方机型。
