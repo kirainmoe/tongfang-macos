@@ -2,21 +2,21 @@
 <img src="https://i.loli.net/2020/01/05/QilbpRdq4awGfSX.png" width="250px" alt="logo">
 </p>
 
-<h2 align="center">该分支用于 Z7(m)-KP7/5EC，其它机型请切换其他分支。</h2>
+<h2 align="center">该分支用于 GJ5CN64 模具，对应型号为 Z7-KP7EC & Z7-KP7GC & Z7-KP7GA & Z7-KP7GE & Z7-KP7GH，其它机型请切换其他分支。</h2>
 
 安装注意事项和常见问题请查看 master 分支的说明文件。
 
 
 ### 兼容性
 
-该分支支持同方神舟战神机型 Z7(m)-KP7/5EC。欢迎大家测试并反馈，感谢群友 @浅笔向阳、@上个世纪的风 参与测试。
+该分支用于 GJ5CN64 模具，对应型号为 Z7-KP7EC & Z7-KP7GC & Z7-KP7GA & Z7-KP7GE & Z7-KP7GH
 
 ### 正常工作的功能
 
 - CPU 睿频、变频
 - 核芯显卡 Intel UHD Graphics 630
 - 亮度调节
-- 触摸板
+- 触摸板（手势可能不太完善）
 - 有线网卡
 - 声卡 (扬声器、耳机、麦克风)
 - 原生电源管理、电池状态
