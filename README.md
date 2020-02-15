@@ -17,7 +17,7 @@
 <h3 align="center">
     <a href="https://aya-buildbot.kirainmoe.com/">Clover 配置文件下载地址</a> | <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
     <a href="https://hackintosh.kirainmoe.com">帮助文档</a> |
-    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/README-en.md">English</a>
+    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/gk5cn6/5x-clover/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/gk5cn6/5x-clover/README-en.md">English</a>
 </h3>
 
 <img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg">
@@ -205,7 +205,7 @@ curl -fsSL https://aya-buildbot.kirainmoe.com/installer > inst && chmod +x ./ins
 
 ### 许可
 
-在 **[Maruyama License 协议](https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/LICENSE)** 的许可下，使用本仓库下的所有配置文件都是**免费**的。如果有人向你售卖配置文件，请立刻要求他退款。
+在 **[Maruyama License 协议](https://github.com/kirainmoe/hasee-tongfang-macos/blob/gk5cn6/5x-clover/LICENSE)** 的许可下，使用本仓库下的所有配置文件都是**免费**的。如果有人向你售卖配置文件，请立刻要求他退款。
 
 希望你们也能够发扬开源和分享精神，积极提出建议和想法、Pull Request，由大家共同打造完美的黑果体验。
 

@@ -18,7 +18,7 @@
 
 <h3 align="center">
     <a href="https://efi.kirainmoe.com/">Download EFI</a> /
-    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/Changelog.md">Changelog</a> / <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/README.md">简体中文</a>
+    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/gk5cn6/5x-clover/Changelog.md">Changelog</a> / <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/gk5cn6/5x-clover/README.md">简体中文</a>
 </h3>
 
 This repo contains the Clover config for installing latest macOS on Tongfang (Tsinghua Tongfang) barebones-based 8th/9th generation platform laptops, like some Hasee, Mechrevo, OverPowered, Monster, Avell devices.
@@ -126,4 +126,4 @@ Issues & Pull request are welcomed.
 
 ## License
 
-`hasee-tongfang-macos` is [MARUYAMA](https://github.com/kirainmoe/hasee-tongfang-macos/blob/master/LICENSE) Licensed. You can use the config for free under the Maruyama License.
+`hasee-tongfang-macos` is [MARUYAMA](https://github.com/kirainmoe/hasee-tongfang-macos/blob/gk5cn6/5x-clover/LICENSE) Licensed. You can use the config for free under the Maruyama License.
