@@ -65,11 +65,11 @@ curl -fsSL https://aya-buildbot.kirainmoe.com/installer > inst && chmod +x ./ins
 
 | 模具代号 | 型号 | 分支 |
 |-----|------|-----|
-| GK5CN5X <br> GK5CN6X | Z7-KP7GZ<br> Z7m-KP7GZ<br> Z7m-KP5GZ<br> Z7-KP7Z<br> Z7m-KP7Z<br> Z7m-KP5Z<br> Shinelon Yao 7000 (炫龙 耀7000)<br> Mechrevo Z2 Air (机械革命 Z2 Air) | [master](https://github.com/kirainmoe/hasee-tongfang-macos) (Clover) <br> [kp7gz-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gz-opencore) (OpenCore) | 
-| GI5CN54 <br> GJ5CN64 | Z7-KP7EC<br> Z7m-KP7EC<br> Z7m-KP5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec) (Clover)<br> [kp7ec-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec-opencore) (OpenCore)  |
-| GI5CN54 <br> GJ5CN64 | Z7-KP7GC<br> Z7m-KP7GC<br> Z7m-KP5GC <br> Z7(m)-KP7/5GA | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) (Clover)<br> [kp7gc-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc-opencore) (OpenCore)  |
-| GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK <br> Z7-CT7VA | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) (Clover)<br> [ct7gk-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk-opencore) (OpenCore)  |
-| GK5CP6X | Z7m-CT7GS <br> Z7m-CT5GA <br> Mechrevo Z2 Air-G (机械革命 Z2 Air-G) | [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs) (Clover)<br> [ct7gs-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs-opencore) (OpenCore)  |
+| GK5CN5X <br> GK5CN6X | Z7-KP7GZ<br> Z7M-KP7GZ<br> Z7M-KP5GZ<br> Z7-KP7Z<br> Z7M-KP7Z<br> Z7M-KP5Z<br> Shinelon Yao 7000 (炫龙 耀7000)<br> Mechrevo Z2 Air (机械革命 Z2 Air) | [gk5cn6/5x-clover](https://github.com/kirainmoe/hasee-tongfang-macos) (Clover) <br> [gk5cn6/5x-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gk5cn6/5x-opencore) (OpenCore) | 
+| GJ5CN64 | Z7-KP7EC<br> Z7-KP7GC<br> Z7-KP7GA <br> Z7-KP7GE <br> Z7-KP7GH | [gj5cn64-clover](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gj5cn64-clover) (Clover)<br> [gj5cn64-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gj5cn64-opencore) (OpenCore)  |
+| GI5CN54 | Z7M-KP7GC<br> Z7M-KP5GC <br> Z7M-KP7GA<br> Z7M-KP5GA <br> Z7M-KP7GE <br> Z7M-KP5GE <br> Z7M-KP7GH<br> Z7M-KP5GH | [gi5cn54-clover](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gi5cn54-clover) (Clover)<br> [gi5cn54-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gi5cn54-opencore) (OpenCore)  |
+| GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK <br> Z7-CT7VA | [gk7cp6r-clover](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gk7cp6r-clover) (Clover)<br> [gk7cp6r-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gk7cp6r-opencore) (OpenCore)  |
+| GK5CP6X | Z7M-CT7GS <br> Z7M-CT5GA <br> Mechrevo Z2 Air-G (机械革命 Z2 Air-G) | [gk5cp6x-clover](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gk5cp6x-clover) (Clover)<br> [gk5cp6x-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gk5cp6x-opencore) (OpenCore)  |
 
 ### 不兼容的型号
 
@@ -126,7 +126,7 @@ curl -fsSL https://aya-buildbot.kirainmoe.com/installer > inst && chmod +x ./ins
 - CPU 睿频、变频
 - 核芯显卡 Intel UHD Graphics 630
 - 亮度调节
-- 触摸板 (I2C, PS2) [1]
+- 触摸板 (I2C, PS/2) [1]
 - 有线网卡
 - 声卡 (扬声器、耳机、麦克风) [2]
 - 原生电源管理、电池状态
@@ -138,7 +138,7 @@ curl -fsSL https://aya-buildbot.kirainmoe.com/installer > inst && chmod +x ./ins
 
 > 注：
 > 
-> [1] GC/GA 系列机型的 PS2 触摸板不支持 macOS 原生手势; I2C HID 触摸板可完美使用。  
+> [1] GJ5CN64 / GI5CN54 系列模具的 PS2 触摸板不支持 macOS 原生手势; I2C HID 触摸板可完美使用。  
 [2] 声卡使用 AppleALC 仿冒内建，通过设备属性的方式，注入 `layout-id` 为 29.  
 [3] 因特尔 AC9462/AC9560/AX200 无线网卡的蓝牙无需热启动即可加载固件。  
 [4] 睡眠需要在安装系统后人为执行优化脚本调节参数，执行方式参见上文。  

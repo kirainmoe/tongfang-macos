@@ -71,16 +71,15 @@ sudo sh -c "$(curl -fsSL https://efi.kirainmoe.com/optimizer)"
 
 #### Tips
 
-- If you have 8th gen platform laptops, try one of { *master, kp7ec, kp7gc* }.
--  If you have 9th gen platform laptops, try one of { *ct7gk, ct7gs* }.
+- If you have 8th gen platform laptops, try one of { *gk5cn6/5x, gj5cn6x, gi5cn5x* }.
+-  If you have 9th gen platform laptops, try one of { *gk7cp6r, gk5cp6x* }.
 
-| Barebone | Models Theoretically Supported | Branch |
-|-----|------|-----|
-| GK5CN5X <br> GK5CN6X <br> GK5CN6Z <br> GK5CN5Z | Hasee Z7(m)-KP7/5(G)Z <br> Shinelon Yao 7000 II <br> Mechrevo Z2 Air <br>XMG Neo 15<br>OverPowered Gaming Laptop 15<br>MACHENIKE F117-B1/2 | [master](https://github.com/kirainmoe/hasee-tongfang-macos) | 
-| GI5CN54 <br> GJ5CN64 | Hasee Z7(m)-KP7/5EC | [kp7ec](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7ec) |
-| GI5CN54 <br> GJ5CN64 | Hasee Z7(m)-KP7/5GC/A<br>Avell A52-5 BS<br>CyberPower NB-408-109<br>Machenike T90 | [kp7gc](https://github.com/kirainmoe/hasee-tongfang-macos/tree/kp7gc) |
-| GK7CP6R | Hasee Z7-CT7GK / Z7m-CT7GS / Z7-CT7VH / G7-CT7VK<br>Illegear Rogue Laptop<br>XMG Core 17<br>Mechrevo X3<br>CyberPowerPC Tracer-III-17<br>Monster Tulpar T7 v19.3  | [ct7gk](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gk) <br> [ct7gs](https://github.com/kirainmoe/hasee-tongfang-macos/tree/ct7gs) |
-| GK7CN6S<br>GK7CN5S | Monster Abra A7 v10.1 <br>Overpowered 17+ laptop  | [master](https://github.com/kirainmoe/hasee-tongfang-macos) |
+| Barebone | Models Theoretically Supported | Branch | Generation
+|-----|------|-----|------|
+| GK5CN5X <br> GK5CN6X <br> GK5CN6Z <br> GK5CN5Z <br>GK7CN6S<br>GK7CN5S | Hasee Z7(m)-KP7/5(G)Z <br> Shinelon Yao 7000 II <br> Mechrevo Z2 Air <br>XMG Neo 15<br>OverPowered Gaming Laptop 15<br>MACHENIKE F117-B1/2 <br> Monster Abra A7 v10.1 <br>Overpowered 17+ laptop | [gk5cn6/5x-clover](https://github.com/kirainmoe/hasee-tongfang-macos) (Clover) <br> [gk5cn6/5x-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gk5cn6/5x-opencore) (OpenCore) | 8th Generation |
+| GJ5CN64 <br> GI5CN54 | Hasee Z7(m)-KP7/5GC/A<br>Avell A52-5 BS<br>CyberPower NB-408-109<br>Machenike T90 | [gj5cn64-clover](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gj5cn64-clover) (Clover)<br> [gj5cn64-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gj5cn64-opencore) (OpenCore)<br>[gi5cn54-clover](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gi5cn54-clover) (Clover)<br> [gi5cn54-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gi5cn54-opencore) (OpenCore) | 8th Generation |
+| GK7CP6R | Hasee Z7-CT7GK / Z7-CT7VA / Z7-CT7VH / G7-CT7VK<br>Illegear Rogue Laptop<br>XMG Core 17<br>Mechrevo X3<br>CyberPowerPC Tracer-III-17<br>Monster Tulpar T7 v19.3  | [gk7cp6r-clover](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gk7cp6r-clover) (Clover)<br> [gk7cp6r-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gk7cp6r-opencore) (OpenCore) | 9th Generation |
+| GK5CP6X | Hasee Z7M-CT7GS <br> Mechrevo Z2 Air-G | [gk5cp6x-clover](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gk5cp6x-clover) (Clover)<br> [gk5cp6x-opencore](https://github.com/kirainmoe/hasee-tongfang-macos/tree/gk5cp6x-opencore) (OpenCore)  | 9th Generation | 
 
 ## Device Specifications
 
@@ -98,12 +97,12 @@ sudo sh -c "$(curl -fsSL https://efi.kirainmoe.com/optimizer)"
 ### What's working
 
 - Turbo boost and CPU frequency stage.
-- Intel UHD630
+- Intel UHD Graphics 630
 - Brightness control and Fn keys
 - I2C HID Touchpad
 - Realtek Ethernet
 - Bluetooth (No Airdop if you are using Intel Bluetooth)
-- Audio (Realtek ALC268vc, using AppleALC + layout-id 29/88)
+- Audio (Realtek ALC269vc, using AppleALC + layout-id 29/88)
 - Battery status (using Clover hotpatch)
 - USB 3.0 and Type-C
 - Sleep

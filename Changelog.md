@@ -1,5 +1,18 @@
 # 更新日志
 
+# 2020.2.15
+
+调整了配置文件仓库的分支。具体关系如下：
+
+| 原分支 | 操作 | 结果 |
+|-------|-----|------|
+| master (kp7gz) <br> kp7gz-opencore | 更名 | master→gk5cn6/5x-clover <br> kp7gz-opencore→gk5cn6/5x-opencore |
+| kp7ec <br> kp7ec-opencore | 删除 | KP7EC 机型不再单独维护，将与 KP7GC 等机型合并到新分支 |
+| kp7gc <br> kp7gc-opencore | 删除 | 合并到新分支 |
+| gj5cn64-clover <br> gj5cn64-opencore | 创建 | EC/GA/GC/GE/GH 等机型，1060 显卡模具 |
+| gi5cn54-clover<br>gi5cn54-opencore | 创建 | EC/GA/GC/GE/GH 等机型，1050Ti 显卡模具 |
+| ct7gk <br> ct7gk-opencore | 更名 | ct7gk → gk7cp6r-clover<br>ct7gk-opencore → gk7cp6r-opencore |
+| ct7gs <br> ct7gs-opencore | 更名 | ct7gs → gk5cp6x-clover<br>ct7gs-opencore → gk5cp6x-opencore |
 # 2020.2.8
 
 元宵节快乐！本次更新为所有机型更新了 OpenCore 引导。根据用户尝鲜新功能或追求稳定性的不同需求，请自行斟酌是否从 Clover 迁移到 OpenCore.  **在使用 OC 引导前，请注意以下两点：**
