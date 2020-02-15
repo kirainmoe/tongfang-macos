@@ -2,15 +2,15 @@
 <img src="https://i.loli.net/2020/01/05/QilbpRdq4awGfSX.png" width="250px" alt="logo">
 </p>
 
-<h2>该分支用于 Z7(m)-KP7/5GC，其它机型请切换其他分支。</h2>
+<h2>该分支用于 GI5CN64 模具，对应型号为 Z7M-KP7/5GC & Z7M-KP7/5GA & Z7M-KP7/5GE & Z7M-KP7/5GH，其它机型请切换其他分支。</h2>
 
 安装注意事项和常见问题请查看 master 分支的说明文件。
 
 ### 兼容性
 
-该分支适用于同方八代机型 Z7(m)-KP7/5GC / Z7(m)-KP7/5GA. 感谢群友 @海豚 定制该机型的 USB，并参与兼容性测试。
+该分支适用于同方八代机型 Z7M-KP7/5GC & Z7M-KP7/5GA & Z7M-KP7/5GE & Z7M-KP7/5GH. 感谢群友 @海豚 定制该机型的 USB，并参与兼容性测试。
 
-注意，限制于硬件，KP7GC 系列机型的触摸板无法完美使用。
+注意，限制于硬件，GI5CN64 系列机型的触摸板无法完美使用。
 
 
 ### 正常工作的功能
@@ -31,7 +31,7 @@
 
 - PS/2 触摸板
 
-> GC/GA 机型使用的 Synaptics 触摸板为 PS/2 协议，无法完美支持原生手势；你可以使用 Alternative Kexts 中的 ApplePS2SmartTouchpad.kext 替换 VoodooPS2Controller.kext 来获得部分手势支持，但会使得 Fn 快捷键不可用。请自行斟酌选择。
+> GC/GA 机型使用的 Synaptics 触摸板为 PS/2 协议，无法完美支持原生手势；你可以使用 ApplePS2SmartTouchpad.kext 替换 VoodooPS2Controller.kext 来获得部分手势支持，但会使得 Fn 快捷键不可用。请自行斟酌选择。
 
 ### 无法使用
 
