@@ -2,16 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>#WARNING - 1</key>
-	<string>This is just a sample. Do NOT try loading it.</string>
-	<key>#WARNING - 2</key>
-	<string>Ensure you understand EVERY field before booting.</string>
-	<key>#WARNING - 3</key>
-	<string>In most cases recommended to use Sample.plist</string>
-	<key>#WARNING - 4</key>
-	<string>Use SampleFull.plist for end of life models: 2011 and older.</string>
-	<key>#WARNING - 5</key>
-	<string>https://docs.google.com/spreadsheets/d/1kGFz3_kp5xCDRRQpfnIUOvbiHXTmxEgyx97u73ImXXE/edit#gid=0</string>
 	<key>ACPI</key>
 	<dict>
 		<key>Add</key>
