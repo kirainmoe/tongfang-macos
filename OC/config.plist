@@ -1334,6 +1334,7 @@
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>AppleUsbKbDxe.efi</string>
+			<string>NdkBootPicker.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
