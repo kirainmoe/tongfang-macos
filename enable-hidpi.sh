@@ -1,0 +1,156 @@
+#!/bin/bash
+#set -x # for DEBUGGING
+
+# Script modified from xiaomi-pro's repo: https://github.com/daliansky/XiaoMi-Pro-Hackintosh/tree/master/one-key-hidpi
+
+DISPLAYPATH="/System/Library/Displays/Contents/Resources/Overrides"
+
+# Choose option
+function choice() {
+    choose=0
+    echo '(1) Enable HiDPI'
+    echo '(2) Disable HiDPI'
+    echo '(3) Exit'
+    read -p "Enter your choice [1~3]: " choose
+}
+
+function networkWarn(){
+    echo "ERROR: Fail to download, please check the network state."
+    clean
+    exit 1
+}
+
+function download(){
+    echo 'Downloading display files...'
+    mkdir -p one-key-hidpi
+    cd one-key-hidpi
+    curl -fsSL https://gitee.com/kirainmoe/static-files/raw/master/Icons.plist -O || networkWarn
+    curl -fsSL https://gitee.com/kirainmoe/static-files/raw/master/DisplayVendorID-9e5/DisplayProductID-747 -O || networkWarn
+    curl -fsSL https://gitee.com/kirainmoe/static-files/raw/master/DisplayVendorID-9e5/DisplayProductID-747.icns -O || networkWarn
+    curl -fsSL https://gitee.com/kirainmoe/static-files/raw/master/DisplayVendorID-9e5/DisplayProductID-747.tiff -O || networkWarn
+    echo 'Download complete'
+    echo
+}
+
+function removeold() {
+    # Uninstall HiScale (Added in commit https://github.com/daliansky/XiaoMi-Pro-Hackintosh/commit/fa35968b5acf851e274932ca52e67c43fe747877)
+    echo 'Removing previous version...'
+    sudo launchctl remove /Library/LaunchAgents/org.zysuper.riceCracker.plist
+    sudo pkill riceCrackerDaemon
+    sudo rm -f /Library/LaunchAgents/org.zysuper.ricecracker.daemon.plist
+    sudo rm -f /usr/bin/riceCrackerDaemon
+
+    # Remove previous one-key-hidpi (Added in commit https://github.com/daliansky/XiaoMi-Pro-Hackintosh/commit/a3b7f136209a91455944b4afece7e14a931e62ba)
+    sudo rm -rf $DISPLAYPATH/DisplayVendorID-9e5
+    echo 'Remove complete'
+    echo
+}
+
+# Remount system partition if macOS version >= 10.15
+function remountSystem() {
+    swver=$(sw_vers -productVersion | sed 's/\.//g' | colrm 5)
+    if [[ $swver -ge 1015 ]]; then
+        echo 'Remounting system partition to get write permission...'
+        sudo mount -uw /
+        echo 'Remount complete'
+        echo 'Please reboot device immediately after this script ends to lock system partition!'
+        echo
+    fi
+}
+
+# Create backup for Icons.plist
+function backup() {
+    echo 'Backing up...'
+    sudo mkdir -p $DISPLAYPATH/backup
+    sudo cp $DISPLAYPATH/Icons.plist $DISPLAYPATH/backup/
+    echo 'Back up complete'
+    echo
+}
+
+# Copy the display folder
+function copy() {
+    echo 'Copying file to target address...'
+    sudo mkdir -p $DISPLAYPATH/DisplayVendorID-9e5
+    sudo cp ./Icons.plist $DISPLAYPATH/
+    sudo cp ./DisplayProductID-747 $DISPLAYPATH/DisplayVendorID-9e5/
+    sudo cp ./DisplayProductID-747.icns $DISPLAYPATH/DisplayVendorID-9e5/
+    sudo cp ./DisplayProductID-747.tiff $DISPLAYPATH/DisplayVendorID-9e5/
+    echo 'Copy complete'
+    echo
+}
+
+# Fix permission
+function fixpermission() {
+    echo 'Fixing permission...'
+    sudo chown root:wheel $DISPLAYPATH/Icons.plist
+    sudo chown root:wheel $DISPLAYPATH/DisplayVendorID-9e5
+    sudo chown root:wheel $DISPLAYPATH/DisplayVendorID-9e5/DisplayProductID-747
+    sudo chown root:wheel $DISPLAYPATH/DisplayVendorID-9e5/DisplayProductID-747.icns
+    sudo chown root:wheel $DISPLAYPATH/DisplayVendorID-9e5/DisplayProductID-747.tiff
+    echo 'Fix complete'
+    echo
+}
+
+# Clean
+function clean() {
+    echo 'Cleaning temporary files...'
+    sudo rm -rf ../one-key-hidpi
+    echo 'Clean complete'
+    echo
+}
+
+# Install
+function install() {
+    download
+    remountSystem
+    removeold
+    backup
+    copy
+    fixpermission
+    clean
+    echo 'Wonderful! This is the end of the installation, please reboot and choose 1424x802 in SysPref! '
+    exit 0
+}
+
+# Uninstall
+function uninstall() {
+    echo 'Uninstalling one-key-hidpi...'
+    remountSystem
+    sudo rm -rf $DISPLAYPATH/DisplayVendorID-9e5
+
+    # Restore Icon.plist in backup folder if presents
+    if [ -f "$DISPLAYPATH/backup/Icons.plist" ];then
+        sudo cp $DISPLAYPATH/backup/Icons.plist $DISPLAYPATH/
+        sudo chown root:wheel $DISPLAYPATH/Icons.plist
+    fi
+
+    # Remove backup folder
+    sudo rm -rf $DISPLAYPATH/backup
+    echo 'Uninstall complete'
+    exit 0
+}
+
+# Main function
+function main() {
+    choice
+    case $choose in
+        1)
+        install
+        ;;
+
+        2)
+        uninstall
+        ;;
+
+        3)
+        exit 0
+        ;;
+
+        *)
+        echo "ERROR: Invalid input, the script will exit";
+        exit 1
+        ;;
+    esac
+}
+
+main
