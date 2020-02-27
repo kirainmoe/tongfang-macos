@@ -3151,7 +3151,7 @@
 			<key>kName</key>
 			<string>AppleBusPowerController</string>
 			<key>model</key>
-			<string>MacBookPro15,2</string>
+			<string>MacBookPro15,1</string>
 		</dict>
 		<key>MacBookPro15,1-XHC</key>
 		<dict>
@@ -3167,7 +3167,7 @@
 			<key>IOProviderClass</key>
 			<string>AppleUSBXHCIPCI</string>
 			<key>model</key>
-			<string>MacBookPro15,2</string>
+			<string>MacBookPro15,1</string>
 		</dict>
 		<key>MacBookPro6,1-ABPC</key>
 		<dict>
