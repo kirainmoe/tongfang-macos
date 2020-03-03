@@ -16,6 +16,10 @@
 <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
+<p align="center">
+<img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg" alt="screenshot" width="600px">
+</p>
+
 <h4 align="center">
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
     <a href="https://hackintosh.kirainmoe.com">帮助文档</a> |
@@ -70,7 +74,7 @@
 
 ## 适用的机型
 
-理论上所有使用清华同方模具的 8/9 代机型均可使用对应的配置文件。详细的兼容型号表格如下：
+理论上所有使用清华同方模具的 8/9 代机型均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型**。详细的兼容型号表格如下：
 
 ### 神舟战神系列
 
@@ -91,29 +95,14 @@
 | GK5CN5X | 炫龙 耀7000 <br> 机械革命 Z2 Air |
 | GK5CP6X | 机械革命 Z2 Air-G
 
-### 不适用的机型
-
-请注意，本仓库只适配使用**因特尔第 8 代和第 9 代**标压酷睿处理器、使用**清华同方模具**的笔记本，故以下机型**不能**正常使用此配置文件，包括但不限于以下机型：
-
-| 型号 | 原因 |
-|-----|------|
-| Z7(m)-KP7/5GT <br> Z7(m)-KP7D2 <br> Z7(m)-KP7/5GS | 使用同方七代以下模具 |
-| Z7(m)-CT7/5N* <br> Z7-C7TPro <br> Z7(m)-KP7/5S* <br> Z7(m)-KP7/5D1 <br> Z7(m)-SL* | 使用蓝天笔记本模具 |
-| ZX7* <br> GX7* | 使用蓝天桌面模具 |
-| K6\*0\*-**** <br> Z7-i7* | 使用蓝天模具或为四代以下平台 |
-| 精盾 U45S1<br> 精盾 U47T1 <br> ... | 使用广达模具 |
-
-对于上述机型，可以到百度、远景或[此仓库](https://github.com/daliansky/hackintosh)尝试找到对应模具/机型的 EFI.
 
 # 设备驱动情况
 
-## 设备配置概览
-
-以下是维护者电脑的参考配置。
+配置概览：
 
 | Component | Model | Comments |
 |--|--|---|
-| CPU | Intel Core(TM) i7-8750H | 除 GJ5CN64/GI5CN54 模具外，其余模具的 i5 型号和 i7 型号可使用同一套配置文件 |
+| CPU | Intel Core(TM) i7-8750H |  |
 | IGPU | Intel UHD Graphics 630 | |
 | DGPU | Nvidia Geforce GTX 1060 | 8 代以上同方机型的 Nvidia 独显在任何 macOS 版本下无法驱动 <br>关于具体的原因猜测，请参见[此文章](http://www.bswaterb.club/?p=285) |
 | RAM | Micron Crucial 8GB+8GB | |
@@ -123,62 +112,32 @@
 | Ethernet | Realtek RTL8168H | |
 | Audio | Realtek ALC269vc | |
 
-## 正常工作的功能
+## 功能列表
 
-- CPU 睿频、变频
-- 核芯显卡 Intel UHD Graphics 630
-- 亮度调节
-- 触摸板 (I2C, PS/2) [1]
-- 有线网卡
-- 声卡 (扬声器、耳机、麦克风) [2]
-- 原生电源管理、电池状态
-- USB 3.0, Type-C
-- Intel 蓝牙 [3]
-- 睡眠 [4]
-- Fn 快捷键 [5]
-- 摄像头
+| 功能 | 正常 | 细节 |
+|----------|---------|---------|
+| CPU 睿频、变频 | √ | 除 GJ5CN64/GI5CN54 模具外，其余模具的 i5 型号和 i7 型号可使用同一套配置文件<br>已定制 CPUFriends.kext 以调节 CPU 性能 |
+| 核芯显卡 | √ |移动版 Intel UHD Graphics 630，使用 `platform-id`: `0x3e9b0000` |
+| 亮度调节 | √ | 可在设置中调节或使用快捷键调节 |
+| 有线网卡 | √ | OpenCore 引导版本可能有更好的稳定性和更小的掉线概率 |
+| 声卡 | √ | 注入 layout-id: 29<br>扬声器、麦克风、耳机、Siri 均正常使用 |
+| 原生电源管理<br>电池状态 | √ | SMBIOS: `MacBookPro15,3` (MacBook Pro 15inch, 2019) |
+| Intel 蓝牙 | √ | 因特尔 AC9462 / AC9560 / AX200 无线网卡的蓝牙无需热启动即可加载固件   |
+| 触摸板 | √ | GJ5CN64 / GI5CN54 系列模具的 PS2 触摸板不完全支持 macOS 原生手势<br>其它模具的 I2C HID 触摸板可完美使用 |
+| 睡眠 | √ | 需要在安装系统后手动使用 Tongfang Hackintosh Utility 工具箱中的功能调节睡眠参数 |
+| Fn 快捷键 | √ | Fn 快捷键需要使用 Tongfang Hackintosh Utility 安装守护程序<br>GJ5CN64 / GI5CN54 模具由于默认使用 ApplePS2SmartTouchpad 作为键盘驱动，Fn 快捷键将不可用 |
+| 随航 (Sidecar) | √ | 若未更换无线网卡，仅可使用有线方式连接<br>若已更换无线网卡，则可以通过有线或无线连接 |
+| 摄像头 | √ | |
+| USB3.0 <br> Type-C | √ |  |
+| 独立显卡 | × | 没有任何解决方案，已使用 `SSDT-DDGPU.aml` 屏蔽了独显<br><br>由于同方八代以上模具的 HDMI / miniDP 由无法驱动的独显直接输出，所以 HDMI / miniDP 也无法使用<br><br>同方模具的 Type-C 口没有视频输出功能 |
+| 无线网卡 | × | Intel AC9462 / AC9560 无解，以下给出参考替代方案：<br> - 蓝牙共享网络 <br> - USB共享网络 (HoRNDIS) <br> - USB无线网卡 <br> - 更换内置无线网卡 [推荐更换“BCM94360CS2 + 转接卡”方案] <br><br> 由于 “**隔空投送 AirDrop**” 和 “**接力 Handoff**” 依赖于无线网络和蓝牙，所以此两项功能不可用<br><br> 请注意：**DW1820A 网卡在同方模具上有已知的兼容性问题，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡**|
+| 读卡器 | × | 读卡器走的是 USB 2.0 通道，没有兼容驱动 |
 
-> 注：  
-> 
-> [1] GJ5CN64 / GI5CN54 系列模具的 PS2 触摸板不完全支持 macOS 原生手势; 其它模具的 I2C HID 触摸板可完美使用。  
-[2] 声卡使用 AppleALC 仿冒内建，通过设备属性的方式，注入 layout-id 为 29.  
-[3] 因特尔 AC9462 / AC9560 / AX200 无线网卡的蓝牙无需热启动即可加载固件。  
-[4] 睡眠需要在安装系统后使用 Tongfang Hackintosh Utility 调节睡眠参数。  
-[5] Fn 快捷键需要使用 Tongfang Hackintosh Utility 安装守护程序。GJ5CN64 / GI5CN54 模具由于默认使用 ApplePS2SmartTouchpad 作为键盘驱动，Fn 快捷键将不可用。
-
-## 无法使用
-
-- 独立显卡（目前已知没有任何解决方案）
-
-> 已使用 `SSDT-DDGPU.aml` 屏蔽了独显
->
-> 由于同方八代以上模具的 HDMI / miniDP 直接由无法驱动的独显输出，所以 HDMI / miniDP 也无法使用。
-
-- 无线网卡（Intel AC9462 / AC9560 无解）
-
-> 无线网卡无法使用的替代方案：
-> - 蓝牙共享网络
-> - USB共享网络 (HoRNDIS) 
-> - USB无线网卡
-> - 更换内置无线网卡 [推荐更换“BCM94360CS2 + 转接卡”方案]
-> 
-> 由于 “**隔空投送 AirDrop**” 和 “**接力 Handoff**” 依赖于无线网络和蓝牙，所以此两项功能不可用。
-> 
-> 请注意：**DW1820A 网卡在同方模具上有已知的兼容性问题，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡。**
-
-- 读卡器（读卡器为 USB 2.0 外置通道，没有兼容驱动）
-
-## 截图
-
-<img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg" alt="screenshot">
-
-# 问题反馈 & 社区交流
-
-## 问题反馈
+# 问题反馈
 
 你可以通过在 GitHub 上提 issue 的方式反馈问题，或者向 kirainmoe@gmail.com 发送问题报告邮件。
 
-## QQ 群
+# QQ 交流群
 
 **请确保你在群里问问题之前，已经看过了[教学视频](https://www.bilibili.com/video/av81263778)、并使用了搜索功能查找并仔细阅读了[项目文档](https://hackintosh.kirainmoe.com)内的相关内容！**
 
@@ -192,11 +151,7 @@
 | 特殊限制 | 因人数爆满，暂需付费 1 元入群 | **仅限清华同方模具的 8/9 代机型用户加入** |
 | 备注 | - | 新群人数较少，推荐新用户加入 2 群 |
 
-# 贡献与鸣谢
-
-欢迎大家一起完善该系列机型的 EFI. 如果你认为这份配置文件有可以改进的地方，请注册一个 Github 账号，fork 本仓库自行修改后提交 Pull Request.
-
-### 特别鸣谢
+# 鸣谢
 
 - 感谢 [@Goshin](https://github.com/goshin) 修复了 VoodooI2C 触摸板驱动的遗留问题、修复了九代同方机型无法使用 VoodooPS2Controller 驱动的问题、补充了 Fn 快捷键的功能。
 - 感谢 [@zxystd](https://github.com/zxystd) 提供了因特尔蓝牙驱动 IntelBluetoothFirmware.kext.
@@ -204,9 +159,7 @@
 
 # 许可协议 & 捐赠
 
-在 **[Maruyama License 协议](https://github.com/kirainmoe/hasee-tongfang-macos/blob/gk5cn6/5x-clover/LICENSE)** 的许可下，使用本仓库下的所有配置文件都是**免费**的。
-
-为了保护你的权益，建议你不要通过 **任何渠道** 以 **任何价格** 购买上述机型的配置文件。
+在 **[Maruyama License 协议](https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/LICENSE)** 的许可下，使用本仓库下的所有配置文件都是**免费**的。为了保护你的权益，建议你不要通过 **任何渠道** 以 **任何价格** 购买上述机型的配置文件。
 
 当然，如果您认可我的工作，也可以通过捐赠支持我。所有的捐赠将会成为我更新的动力。
 
