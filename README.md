@@ -17,14 +17,14 @@
 </p>
 
 <p align="center">
-<img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg" alt="screenshot" width="600px">
+<img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg" alt="screenshot">
 </p>
 
-<h4 align="center">
+<h2 align="center">
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
     <a href="https://hackintosh.kirainmoe.com">帮助文档</a> |
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README-en.md">English</a>
-</h4>
+</h2>
 
 # 如何使用
 
