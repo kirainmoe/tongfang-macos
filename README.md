@@ -20,11 +20,11 @@
 <img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg" alt="screenshot">
 </p>
 
-<h2 align="center">
+<p align="center" style="font-size: 20px">
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
     <a href="https://hackintosh.kirainmoe.com">帮助文档</a> |
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README-en.md">English</a>
-</h2>
+</p>
 
 # 如何使用
 
@@ -74,7 +74,7 @@
 
 ## 适用的机型
 
-理论上所有使用清华同方模具的 8/9 代机型均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型**。详细的兼容型号表格如下：
+理论上所有使用清华同方模具的**标压** 8/9 代机型均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型**。详细的兼容型号表格如下：
 
 ### 神舟战神系列
 
@@ -106,7 +106,7 @@
 | IGPU | Intel UHD Graphics 630 | |
 | DGPU | Nvidia Geforce GTX 1060 | 8 代以上同方机型的 Nvidia 独显在任何 macOS 版本下无法驱动 <br>关于具体的原因猜测，请参见[此文章](http://www.bswaterb.club/?p=285) |
 | RAM | Micron Crucial 8GB+8GB | |
-| NVMe SSD | WD Black SN750 NVME SSD 500G | 请确保你的机器未装有：三星 PM981(a)、镁光 2200s、Intel Optane 加速内存等 macOS 不支持的硬盘 | 
+| NVMe SSD | WD Black SN750 NVME SSD 500G | 请确保你的机器未装有：三星 PM981(a)、镁光 2200s、Intel Optane 加速内存、HP EX920 等 macOS 不支持的硬盘 | 
 | SATA SSD | Phison SATA SSD 128G | | 
 | Wireless | BCM94360CS2 | 原机自带的 Intel AC9462/AC9560 无法在 macOS 下驱动 |
 | Ethernet | Realtek RTL8168H | |
@@ -116,21 +116,21 @@
 
 | 功能 | 正常 | 细节 |
 |----------|---------|---------|
-| CPU 睿频、变频 | √ | 除 GJ5CN64/GI5CN54 模具外，其余模具的 i5 型号和 i7 型号可使用同一套配置文件<br>已定制 CPUFriends.kext 以调节 CPU 性能 |
-| 核芯显卡 | √ |移动版 Intel UHD Graphics 630，使用 `platform-id`: `0x3e9b0000` |
-| 亮度调节 | √ | 可在设置中调节或使用快捷键调节 |
-| 有线网卡 | √ | OpenCore 引导版本可能有更好的稳定性和更小的掉线概率 |
-| 声卡 | √ | 注入 layout-id: 29<br>扬声器、麦克风、耳机、Siri 均正常使用 |
+| CPU 睿频、变频 | √ | |
+| 核芯显卡 | √ | `platform-id`: `0x3e9b0000` |
+| 亮度调节 | √ |  |
+| 有线网卡 | √ |  |
+| 声卡 | √ | layout-id: 29 |
 | 原生电源管理<br>电池状态 | √ | SMBIOS: `MacBookPro15,3` (MacBook Pro 15inch, 2019) |
-| Intel 蓝牙 | √ | 因特尔 AC9462 / AC9560 / AX200 无线网卡的蓝牙无需热启动即可加载固件   |
-| 触摸板 | √ | GJ5CN64 / GI5CN54 系列模具的 PS2 触摸板不完全支持 macOS 原生手势<br>其它模具的 I2C HID 触摸板可完美使用 |
-| 睡眠 | √ | 需要在安装系统后手动使用 Tongfang Hackintosh Utility 工具箱中的功能调节睡眠参数 |
+| Intel 蓝牙 | √ | 仅支持 Intel AC9462 / AC9560 / AX200   |
+| 触摸板 | √ | **GJ5CN64 / GI5CN54 系列模具的 PS2 触摸板不完全支持 macOS 原生手势** <br>其它模具的 I2C HID 触摸板可完美使用 |
+| 睡眠 | √ | 需要在安装系统后手动使用 Tongfang Hackintosh Utility 工具箱中的功能修复睡眠 |
 | Fn 快捷键 | √ | Fn 快捷键需要使用 Tongfang Hackintosh Utility 安装守护程序<br>GJ5CN64 / GI5CN54 模具由于默认使用 ApplePS2SmartTouchpad 作为键盘驱动，Fn 快捷键将不可用 |
-| 随航 (Sidecar) | √ | 若未更换无线网卡，仅可使用有线方式连接<br>若已更换无线网卡，则可以通过有线或无线连接 |
+| 随航 (Sidecar) | √ | 可能需要更换无线网卡 |
 | 摄像头 | √ | |
 | USB3.0 <br> Type-C | √ |  |
-| 独立显卡 | × | 没有任何解决方案，已使用 `SSDT-DDGPU.aml` 屏蔽了独显<br><br>由于同方八代以上模具的 HDMI / miniDP 由无法驱动的独显直接输出，所以 HDMI / miniDP 也无法使用<br><br>同方模具的 Type-C 口没有视频输出功能 |
-| 无线网卡 | × | Intel AC9462 / AC9560 无解，以下给出参考替代方案：<br> - 蓝牙共享网络 <br> - USB共享网络 (HoRNDIS) <br> - USB无线网卡 <br> - 更换内置无线网卡 [推荐更换“BCM94360CS2 + 转接卡”方案] <br><br> 由于 “**隔空投送 AirDrop**” 和 “**接力 Handoff**” 依赖于无线网络和蓝牙，所以此两项功能不可用<br><br> 请注意：**DW1820A 网卡在同方模具上有已知的兼容性问题，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡**|
+| 独立显卡 | × | 已使用 `SSDT-DDGPU.aml` 屏蔽了独显<br><br>由于同方八代以上模具的 HDMI / miniDP 由无法驱动的独显直接输出，所以 HDMI / miniDP 也无法使用<br><br>**同方模具的 Type-C 口没有视频输出功能** |
+| 无线网卡 | × | Intel AC9462 / AC9560 无解，以下给出参考替代方案：<br> - 蓝牙共享网络 <br> - USB共享网络 (HoRNDIS) <br> - USB无线网卡 <br> - 更换内置无线网卡 [推荐更换“BCM94360CS2 + 转接卡”方案] <br><br> 由于 “**隔空投送 AirDrop**” 和 “**接力 Handoff**” 依赖于无线网络和蓝牙，所以此两项功能不可用<br><br> 请注意：**DW1820A 无线网卡在同方模具上有已知的兼容性问题，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡**|
 | 读卡器 | × | 读卡器走的是 USB 2.0 通道，没有兼容驱动 |
 
 # 问题反馈

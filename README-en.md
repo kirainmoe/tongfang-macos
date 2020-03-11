@@ -27,7 +27,10 @@ This repo contains the OpenCore config for installing latest macOS on Tongfang (
 
 ## Tutorial
 
-- Download [Tongfang Hackintosh Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility/releases) and customize the OpenCore config for your model
+- Download [Tongfang Hackintosh Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility/releases) and customize the OpenCore config for your model. 
+
+> **Do not download the full repository using "Download Zip" button.**<details><summary>Example</summary><img src="https://i.loli.net/2020/03/11/uV8n9Cmj7cT5vLB.png" alt="download from github" ><img src="https://i.loli.net/2020/03/11/tBXgf7lGFZbW2UQ.png" alt="tongfang hackintosh utility" height="300px"></details>
+
 - Download a latest version of macOS from somewhere
 - Use BalenaEtcher / Unibeast / etc. to make a installer flash
 - Part your disk that you are going to install macOS (You should have a GUID partition table and a 200M+ ESP part)
@@ -65,21 +68,21 @@ Please use [Tongfang Hackintosh Utility](https://github.com/kirainmoe/project-st
 
 | Barebone | Models Theoretically Supported | Which model you should choose in Tongfang Hackintosh Utility | Generation
 |-----|------|-----|------|
-| GK5CN5X <br> GK5CN6X <br> GK5CN6Z <br> GK5CN5Z <br>GK7CN6S<br>GK7CN5S | Hasee Z7(m)-KP7/5(G)Z <br> Shinelon Yao 7000 II <br> Mechrevo Z2 Air <br>XMG Neo 15<br>OverPowered Gaming Laptop 15<br>MACHENIKE F117-B1/2 <br> Monster Abra A7 v10.1 <br>Overpowered 17+ laptop <br> EVOO 15.6" model laptops (LP4 / LP5) | GK5CN6X / GK5CN5X | 8th Generation |
+| GK5CN5X <br> GK5CN6X <br> GK5CN6Z <br> GK5CN5Z <br>GK7CN6S<br>GK7CN5S | Hasee Z7(m)-KP7/5(G)Z <br> Shinelon Yao 7000 II <br> Mechrevo Z2 Air <br>XMG Neo 15<br>OverPowered Gaming Laptop 15<br>MACHENIKE F117-B1/2 <br> Monster Abra A7 v10.1 <br>Overpowered 17+ laptop | GK5CN6X / GK5CN5X | 8th Generation |
 | GJ5CN64 <br> GI5CN54 | Hasee Z7(m)-KP7/5GC/GA/EC<br>Avell A52-5 BS<br>CyberPower NB-408-109<br>Machenike T90 | GJ5CN64 <br> GI5CN54 | 8th Generation |
 | GK7CP6R | Hasee Z7-CT7GK / Z7-CT7VA / Z7-CT7VH / G7-CT7VK<br>Illegear Rogue Laptop<br>XMG Core 17<br>Mechrevo X3<br>CyberPowerPC Tracer-III-17<br>Monster Tulpar T7 v19.3  | GK7CP6R | 9th Generation |
-| GK5CP6X | Hasee Z7M-CT7GS <br> Mechrevo Z2 Air-G | GK5CP6X / GK5CP5X  | 9th Generation | 
+| GK5CP6X<br>GK5CP5X | Hasee Z7M-CT7GS <br> Mechrevo Z2 Air-G <br> EVOO 15.6" model laptops (LP4 / LP5) | GK5CP6X / GK5CP5X  | 9th Generation | 
 
 ## Device Specifications
 
 | Component | Model | Comment |
 |--|--|---|
 | CPU | Intel Core(TM) i7-8750H (9750H)  | i5-8300H and i5-9300H are compatible |
-| GPU | Intel UHD630 / Nvidia GTX 1050(Ti),1060, 1650, 1660Ti; RTX2060 | Nvidia GPU has no solution currently (and permanently). For more reason, please refer to [this.](https://github.com/kirainmoe/hasee-tongfang-macos/wiki/%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94#%E9%82%A3%E4%B8%BA%E4%BB%80%E4%B9%88%E7%8B%AC%E6%98%BE%E6%97%A0%E6%B3%95%E9%A9%B1%E5%8A%A8) |
+| GPU | Intel UHD630 / Nvidia GTX 1050(Ti),1060, 1650, 1660Ti; RTX2060 | Nvidia GPU has no solution currently (and permanently) |
 | RAM | Micron Crucial 8GB+8GB | |
-| NVMe | WD Black SN750 NVME SSD 500G | Samsung PM981/970EvoPlus were not supported by macOS | 
+| NVMe | WD Black SN750 NVME SSD 500G | Samsung PM981(a), Micron 2200s and some other NVMe SSD are not compatible with macOS | 
 | SATA SSD | Phison SATA SSD 128G | | 
-| Wireless | BCM94360CS2 | Intel wireless cards have no driver. |
+| Wireless | BCM94360CS2 | Intel wireless cards have no driver |
 | Ethernet | Realtek RTL8168H | |
 | Audio | Realtek ALC269vc | |
 
@@ -115,4 +118,6 @@ Issues & Pull request are welcomed.
 
 ## License
 
-`hasee-tongfang-macos` is [MARUYAMA](https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/LICENSE) Licensed. You can use the config for free under the Maruyama License.
+`hasee-tongfang-macos` is [MARUYAMA](https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/LICENSE) Licensed. 
+
+You can use the config for free under this license, but we are **NOT** guaranteed for any damage of your device.
