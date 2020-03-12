@@ -20,11 +20,11 @@
 <img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg" alt="screenshot">
 </p>
 
-<p align="center" style="font-size: 20px">
+<h3 align="center">
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
     <a href="https://hackintosh.kirainmoe.com">帮助文档</a> |
-    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README-en.md">English</a>
-</p>
+    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README-en.md">English</a>
+</h3>
 
 # 如何使用
 
@@ -96,9 +96,9 @@
 | GK5CP6X | 机械革命 Z2 Air-G
 
 
-# 设备驱动情况
+# 配置概览
 
-配置概览：
+## 参考配置
 
 | Component | Model | Comments |
 |--|--|---|
@@ -112,26 +112,49 @@
 | Ethernet | Realtek RTL8168H | |
 | Audio | Realtek ALC269vc | |
 
-## 功能列表
+## 配置文件
 
-| 功能 | 正常 | 细节 |
-|----------|---------|---------|
-| CPU 睿频、变频 | √ | |
-| 核芯显卡 | √ | `platform-id`: `0x3e9b0000` |
-| 亮度调节 | √ |  |
-| 有线网卡 | √ |  |
-| 声卡 | √ | layout-id: 29 |
-| 原生电源管理<br>电池状态 | √ | SMBIOS: `MacBookPro15,3` (MacBook Pro 15inch, 2019) |
-| Intel 蓝牙 | √ | 仅支持 Intel AC9462 / AC9560 / AX200   |
-| 触摸板 | √ | **GJ5CN64 / GI5CN54 系列模具的 PS2 触摸板不完全支持 macOS 原生手势** <br>其它模具的 I2C HID 触摸板可完美使用 |
-| 睡眠 | √ | 需要在安装系统后手动使用 Tongfang Hackintosh Utility 工具箱中的功能修复睡眠 |
-| Fn 快捷键 | 部分 | 需要使用 Tongfang Hackintosh Utility 安装守护程序<br>GJ5CN64 / GI5CN54 模具默认使用 ApplePS2SmartTouchpad 驱动，Fn 快捷键将不可用 |
-| 随航 (Sidecar) | 部分 | 可能需要更换无线网卡 |
-| 摄像头 | √ | |
-| USB3.0 <br> Type-C | √ |  |
-| 独立显卡 | × | 已使用 `SSDT-DDGPU.aml` 屏蔽了独显<br><br>同方八代以上模具的 HDMI / miniDP 由独显直接输出，所以 HDMI / miniDP 无法使用<br><br>**同方模具的 Type-C 口没有视频输出功能** |
-| 无线网卡 | × | Intel AC9462 / AC9560 无解，以下给出参考替代方案：<br> - 蓝牙共享网络 <br> - USB共享网络 (HoRNDIS) <br> - USB无线网卡 <br> - 更换内置无线网卡 [推荐更换“BCM94360CS2 + 转接卡”方案] <br><br> 由于 “**隔空投送 AirDrop**” 和 “**接力 Handoff**” 依赖于无线网络和蓝牙，所以此两项功能不可用<br><br> 请注意：**DW1820A 无线网卡在同方模具上有已知的兼容性问题，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡**|
-| 读卡器 | × | 读卡器走的是 USB 2.0 通道，没有兼容驱动 |
+### 发行说明
+
+- OpenCore Bootloader 使用官方 0.5.6 版本。
+- 配置文件的 SMBIOS 采用 `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
+- 默认支持 Windows 和 macOS 双引导，若需要引导其他操作系统需自行添加。
+- OpenCore 集成了 NdkBootPicker GUI 和定制的神舟引导主题。
+- 此版本对更换了 4K 屏幕的笔记本做了兼容；对于 GI5CN54 / GJ5CN64 模具改 4K 屏的用户，**需要先解锁 BIOS 或使用 UEFI Shell** 修改 `DVMT Pre-allocated` 为 `64MB` 以上。
+
+### Working
+
+- [x] CPU 睿频、变频
+- [x] 核芯显卡 Intel UHD Graphics 630 (platform-id: `3E9B0000`)
+- [x] 声卡 Realtek ALC269vc (layout-id: `29`)
+- [x] 有线网卡 Realtek RTL8168H
+- [x] Intel 蓝牙 (AC9462, AC9560, AX200)
+- [x] USB 3.0, Type-C 
+- [x] 亮度调节
+- [x] 原生电源管理
+- [x] 电池状态显示
+- [x] 摄像头
+- [ ] 触摸板 (I2C HID 触摸板手势完美，PS/2 触摸板支持有限)
+- [ ] 随航（无线随航可能需要更换无线网卡）
+
+> 备注：
+> - 标 * 的功能表示需要在安装系统后使用 [Tongfang Hackintosh Utility](https://gitee.com/kirainmoe/project-starbeat/releases) 程序修复。  
+> - 未打钩的项目表示该功能的驱动情况可能因机型而异，如 GI5CN54/GJ5CN64 的 PS/2 触摸板仅有有限的手势支持。
+
+### Not Working
+
+- [ ] 独立显卡 （已使用 `SSDT-DDGPU.aml` 屏蔽）
+- [ ] Intel 无线网卡
+- [ ] 读卡器
+
+> 备注：
+> - 同方 8 代以上模具的 HDMI / miniDP 接口直连独显，因此**无法在 macOS 下使用 HDMI/miniDP 接口外接显示器**。如有需要外接，请参考 [此页面](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da#na-wo-zen-yang-wai-jie-xian-shi-qi) 中提供的解决方案。
+> - **本仓库支持的同方模具的 Type-C 接口没有视频输出功能。**
+> - 由于原装的 Intel AC9462（AC9560） 暂时没有可用驱动，因此 Wi-Fi 功能将不可用，这是常识。
+> - 若要使用网络，可以使用以太网、USB 共享网络、蓝牙共享网络、外接 USB 无线网卡，或更换内置无线网卡。
+> - 由于**隔空投送 (Airdrop) 和接力 (Handoff)** 功能依赖于 WiFi 和低功耗蓝牙，因此默认情况下此两项功能将不可用。
+> - 请注意：**DW1820A 无线网卡在同方模具上有已知的兼容性问题**，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡。
+> - 若有更换无线网卡的需求，推荐更换 [BCM94360CS2 + NGFF 转接卡] 方案。
 
 # 问题反馈
 

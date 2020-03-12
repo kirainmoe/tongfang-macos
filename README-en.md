@@ -20,7 +20,7 @@
 ![QQ20200106-200142@2x.jpg](https://i.loli.net/2020/01/06/jHEMaG3wPbiKWc2.jpg)
 
 <h3 align="center">
-    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
+    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
 </h3>
 
 This repo contains the OpenCore config for installing latest macOS on Tongfang (Tsinghua Tongfang) barebones-based 8th/9th generation platform laptops, like some Hasee, Mechrevo, OverPowered, Monster, Avell devices.
