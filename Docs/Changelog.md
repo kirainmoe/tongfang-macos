@@ -8,9 +8,14 @@
 
 ## 2020.3.11
 
-- 删除可能不需要的显卡 Framebuffer 参数。(Delete some unused IGPU framebuffer properties)
+- <s>删除可能不需要的显卡 Framebuffer 参数。(Delete some unused IGPU framebuffer properties)</s>
 
 ## 2020.3.12
 
 - 更新 Lilu, WhateverGreen 为官方最新版以完善对 4K 屏幕的支持。 (Update Lilu & WhateverGreen kext)
 - 定制 OpenCore GUI 主题。 (Modify OC GUI theme)
+
+## 2020.3.13
+
+- 还原 `framebuffer-stolenmem` 和 `framebuffer-fbmem`，若去掉此两参数会使 GJ5CN64 / GI5CN54 模具发生内核崩溃；驱动 4K 屏幕需要删除这两个参数，将交由 Tongfang Hackintosh Utility 处理。
+- Restore `framebuffer-stolenmem` and `framebuffer-fbmem`, for deleting those properties will cause a kernel panic on GJ5CN64 / GI5CN54 laptops.
