@@ -37,9 +37,9 @@
 <details>
 <summary>获取配置文件正确示例</summary>
 
-<img src="https://i.loli.net/2020/03/02/SfQYGwM9kjOpu14.jpg" alt="download from github" height="300px">
+<img src="https://i.loli.net/2020/03/02/SfQYGwM9kjOpu14.jpg" alt="download from github">
 
-<img src="https://i.loli.net/2020/03/02/chKQqZ4UvASrwVL.png" alt="tongfang hackintosh utility" height="300px">
+<img src="https://i.loli.net/2020/03/02/chKQqZ4UvASrwVL.png" alt="tongfang hackintosh utility">
 </details>
 
 ## 安装 macOS
@@ -93,8 +93,7 @@
 | 模具代号 | 具体型号 |
 |---------|--------|
 | GK5CN5X | 炫龙 耀7000 <br> 机械革命 Z2 Air |
-| GK5CP6X | 机械革命 Z2 Air-G
-
+| GK5CP6X | 机械革命 Z2 Air-G |
 
 # 配置概览
 
@@ -104,7 +103,7 @@
 |--|--|---|
 | CPU | Intel Core(TM) i7-8750H |  |
 | IGPU | Intel UHD Graphics 630 | |
-| DGPU | Nvidia Geforce GTX 1060 | 8 代以上同方机型的 Nvidia 独显在任何 macOS 版本下无法驱动 <br>关于具体的原因猜测，请参见[此文章](http://www.bswaterb.club/?p=285) |
+| DGPU | Nvidia Geforce GTX 1060 | 8 代以上同方机型的 Nvidia 独显无法在任何版本的 macOS 下被驱动 <br>关于具体的原因猜测，请参见[此文章](http://www.bswaterb.club/?p=285) |
 | RAM | Micron Crucial 8GB+8GB | |
 | NVMe SSD | WD Black SN750 NVME SSD 500G | 请确保你的机器未装有：三星 PM981(a)、镁光 2200s、Intel Optane 加速内存、HP EX920 等 macOS 不支持的硬盘 | 
 | SATA SSD | Phison SATA SSD 128G | | 
@@ -134,6 +133,8 @@
 - [x] 原生电源管理
 - [x] 电池状态显示
 - [x] 摄像头
+- [x] 睡眠 *
+- [x] Fn 快捷键 *
 - [ ] 触摸板 (I2C HID 触摸板手势完美，PS/2 触摸板支持有限)
 - [ ] 随航（无线随航可能需要更换无线网卡）
 
