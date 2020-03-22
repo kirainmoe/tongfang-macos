@@ -24,3 +24,7 @@
 
 - 从 [Goshin/VoodooI2C:impv-mt](https://github.com/Goshin/VoodooI2C/tree/impv-mt) 重新编译 `VoodooI2C`，改善 I2C 触摸板的多指手势支持。
 - Recompile VoodooI2C from [Goshin/VoodooI2C:impv-mt](https://github.com/Goshin/VoodooI2C/tree/impv-mt) to improve multi-touch gesture support.
+
+## 2020.3.22
+
+- 还原 GC 系列机型的 USB 定制拓展为 USBPorts.kext
