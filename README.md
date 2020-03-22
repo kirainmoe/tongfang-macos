@@ -30,7 +30,7 @@
 
 ## 获取 & 更新配置文件
 
-请下载对应平台的 [Tongfang Hackintosh Utility](https://www.lanzous.com/b0ephfc4d) 程序 (访问密码：1919810)，根据你的型号与实际硬件配置，定制 OpenCore 配置文件。
+请下载对应平台的 [Tongfang Hackintosh Utility](https://starbeat.kirainmoe.com) 程序，根据你的型号与实际硬件配置，定制 OpenCore 配置文件。
 
 请不要使用 GitHub 上的 "Download Zip" 功能，如下图所示：
 
