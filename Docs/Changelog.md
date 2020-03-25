@@ -27,4 +27,9 @@
 
 ## 2020.3.22
 
-- 还原 GC 系列机型的 USB 定制拓展为 USBPorts.kext
+- <s>还原 GC 系列机型的 USB 定制拓展为 USBPorts.kext</s>
+
+## 2020.3.23
+
+- USB: 取消 3.22 的更改
+- config: `NVRAM/WriteFlash = True`
