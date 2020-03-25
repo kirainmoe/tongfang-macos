@@ -16,9 +16,7 @@
 <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-<p align="center">
-<img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg" alt="screenshot">
-</p>
+![QQ20200325-143522@2x.jpg](https://i.loli.net/2020/03/25/LoQyVpiABHuwmW9.jpg)
 
 <h3 align="center">
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
@@ -46,7 +44,7 @@
 
 请参照 [安装教学视频](https://www.bilibili.com/video/av81263778) 里的指引，使用上一步得到的配置文件安装好 macOS。
 
-替换配置文件后，请在 macOS 下使用 [Tongfang Hackintosh Utility](https://gitee.com/kirainmoe/project-starbeat/releases) 程序的工具箱，执行修复睡眠等优化操作。
+替换配置文件后，请在 macOS 下使用 [Tongfang Hackintosh Utility](https://starbeat.kirainmoe.com) 程序的工具箱，执行修复睡眠等优化操作。
 
 ## 手动定制配置文件
 
@@ -68,9 +66,7 @@
 
 ## 兼容的系统
 
-最新配置文件仅兼容 **macOS Catalina 10.15** 及以上版本，目前已测试的最新兼容版本是 **10.15.3 (19D76)**.
-
-如果你正在使用 macOS Mojave 10.14 或 macOS High Sierra 10.13.6 (17G2112) 以上版本，请前往 [GitHub Release](https://github.com/kirainmoe/hasee-tongfang-macos/releases) 下载已停止维护的基于 Clover 的引导配置。
+最新配置文件仅兼容 **macOS Catalina 10.15** 及以上版本，目前已测试的最新兼容版本是 **10.15.4 (19E266)**.
 
 ## 适用的机型
 
@@ -78,22 +74,47 @@
 
 ### 神舟战神系列
 
-| 模具代号 | 具体型号 |
-|---------|--------|
-| GK5CN6X | Z7-KP7GZ <br> Z7-KP7Z | 
-| GK5CN5X | Z7M-KP7GZ <br> Z7M-KP7Z <br> Z7M-KP5GZ <br> Z7M-KP5Z |
-| GJ5CN64 | Z7-KP7EC<br> Z7-KP7GC<br> Z7-KP7GA <br> Z7-KP7GE <br> Z7-KP7GH |
-| GI5CN54 | Z7M-KP7GC<br> Z7M-KP5GC <br> Z7M-KP7GA<br> Z7M-KP5GA <br> Z7M-KP7GE <br> Z7M-KP5GE <br> Z7M-KP7GH<br> Z7M-KP5GH |
-| GK7CP6R | Z7-CT7GK <br> Z7-CT7VH <br> G7-CT7VK <br> Z7-CT7VA <br> Z7-CT5GA |
-| GK5CP6X | Z7M-CT7GS |
-| GK5CP5X | Z7M-CT5GA |
-
-### 其它品牌兼容机型
+已测试：
 
 | 模具代号 | 具体型号 |
 |---------|--------|
-| GK5CN5X | 炫龙 耀7000 <br> 机械革命 Z2 Air |
-| GK5CP6X | 机械革命 Z2 Air-G |
+| GK5CN6X | Z7-KP7GZ、Z7-KP7Z | 
+| GK5CN5X | Z7M-KP7GZ、Z7M-KP7Z、 Z7M-KP5GZ、 Z7M-KP5Z |
+| GJ5CN64 | Z7-KP7EC、Z7-KP7GC、 Z7-KP7GA、 Z7-KP7GE、 Z7-KP7GH |
+| GI5CN54 | Z7M-KP7GC、Z7M-KP5GC、Z7M-KP7GA、Z7M-KP5GA<br> Z7M-KP7GE、Z7M-KP5GE、Z7M-KP7GH、Z7M-KP5GH |
+| GK5CP6X | Z7-CT7GK、Z7-CT5GA、Z7-CT7GA |
+| GK5CP5X | Z7M-CT7GS、Z7M-CT5GA |
+| GK7CP6R | G7-CT7VK、G7-CT7RA |
+| GK5CP6V | Z7-CT7VH、Z7-CT7VA、Z7-CT5VH |
+| GK5CP5V | Z7M-CT5VH、Z7M-CT7VH |
+
+未测试：
+
+| 模具代号 | 具体型号 |
+|---------|--------|
+| GK5CR0V | Z8-CT7VK |
+| GK5CP6V | Z7-CT5N1 |
+| GK5CP5V | Z7M-CT5N1 |
+| GJ5CN64 | Z7-KP7S |
+
+### 如何确定我的笔记本是否兼容 ？
+
+**并不是配置相近就可以使用此仓库的 EFI**。如果你的模具型号没有出现在上述列表中，可以到 http://kfgl.hasee.com/lookup/book/bblist.asp 页面，查询你的笔记本型号所对应的准系统名称。
+
+若准系统名称中带有 **“（同方）”** 字样，则你的笔记本可以兼容此仓库的配置文件。
+
+### 其它品牌理论兼容机型
+
+> 请注意，以下机型仅为 **理论兼容**，仅在用户 **找不到与你使用的机型匹配的 EFI** 时可以选择作为替代，保证基本功能（核显、声音、亮度、电源等）能正常驱动。实际上根据不同厂商的 BIOS 不同、USB 端口定义不同等原因，**不一定能完美兼容**，请周知。
+
+| 模具代号 | 具体型号 |
+|---------|--------|
+| GK5CN5X | 炫龙 耀9000 II、炫龙 耀7000 <br> 机械革命 Z2 Air |
+| GK5CP6X <br> GK5CP5X | 机械革命 Z2 Air-G |
+| GK7CP6R | 炫龙 炎魔T3Ti <br> 机械革命 X3 |
+| GI5CN54 | 炫龙 炎魔T2Ti |
+
+建议以上机型用户参照 [此教程](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html) 自行定制 USB。
 
 # 配置概览
 
@@ -139,7 +160,7 @@
 - [ ] 随航（无线随航可能需要更换无线网卡）
 
 > 备注：
-> - 标 * 的功能表示需要在安装系统后使用 [Tongfang Hackintosh Utility](https://gitee.com/kirainmoe/project-starbeat/releases) 程序修复。  
+> - 标 * 的功能表示需要在安装系统后使用 [Tongfang Hackintosh Utility](https://starbeat.kirainmoe.com) 程序修复。  
 > - 未打钩的项目表示该功能的驱动情况可能因机型而异，如 GI5CN54/GJ5CN64 的 PS/2 触摸板仅有有限的手势支持。
 
 ### Not Working
