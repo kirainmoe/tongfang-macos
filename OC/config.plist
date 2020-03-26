@@ -32,7 +32,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>DGPU: Disable Nvidia discrete GPU</string>
+				<string>DGPU: Disable Nvidia discrete GPU (credit @Goshin)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -263,6 +263,32 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>DGPU: change _PTS to XPTS</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>FEMEX1BUUwE=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>FEMEWFBUUwE=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Fn: change _Q0A to XQ0A</string>
 				<key>Count</key>
 				<integer>0</integer>
@@ -423,7 +449,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>SEVDSQ==</data>
 				<key>Limit</key>
@@ -1248,7 +1274,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 -wegnoegpu alcid=29 -alcbeta darkwake=0</string>
+				<string>keepsyms=1 debug=0x100 -wegnoegpu alcid=29 -alcbeta darkwake=0 igfxfw=2</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
