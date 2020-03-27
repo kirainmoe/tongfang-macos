@@ -20,7 +20,9 @@
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/gk5cn6/5x-clover/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/gk5cn6/5x-clover/README-en.md">English</a>
 </h3>
 
-<img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg">
+<p align="center">
+<img src="https://i.loli.net/2020/02/03/O7evUCzWSdwEZY9.jpg" width="500px">
+</p>
 
 <h2 align="center">✽ 如何使用 ✽</h2>
 
