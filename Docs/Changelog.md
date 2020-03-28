@@ -38,5 +38,6 @@
 
 - 更新 WhateverGreen.kext 为 1.3.8
 - 添加 `igfxfw=2` 引导参数，以解决部分九代机型睡眠唤醒后核显频率问题。有关具体缘由，移步 https://github.com/acidanthera/bugtracker/issues/748
-- 更新 `SSDT-DDGPU.aml`，并添加 `_PTS => XPTS` 重命名
+- 更新 `SSDT-DDGPU.aml`，并添加 `_PTS => XPTS` 重命名，可能解决部分九代机型睡眠死机问题
 - 去除 `HECI -> IMEI` (这次真的交给 WhateverGreen 处理了)
+- 修复 GI5CN54 模具的 USB 定制问题（未测试，需要观察）
