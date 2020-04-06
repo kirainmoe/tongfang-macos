@@ -40,4 +40,9 @@
 - 添加 `igfxfw=2` 引导参数，以解决部分九代机型睡眠唤醒后核显频率问题。有关具体缘由，移步 https://github.com/acidanthera/bugtracker/issues/748
 - 更新 `SSDT-DDGPU.aml`，并添加 `_PTS => XPTS` 重命名，可能解决部分九代机型睡眠死机问题
 - 去除 `HECI -> IMEI` (这次真的交给 WhateverGreen 处理了)
-- 修复 GI5CN54 模具的 USB 定制问题（未测试，需要观察）
+
+## 2020.4.6
+
+- 众口难调，GJ5CN64 / GI5CN54 不再默认使用 ApplePS2SmartTouchpad.kext，日后将一直采用 Rehabman 的 VoodooPS2Controller.kext
+- 尝试修复 GI5CN54 模具的 USB 定制问题（未测试，需要观察）
+- 更新 BrcmPatchRAM3 驱动
