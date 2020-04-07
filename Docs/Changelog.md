@@ -46,3 +46,10 @@
 - 众口难调，GJ5CN64 / GI5CN54 不再默认使用 ApplePS2SmartTouchpad.kext，日后将一直采用 Rehabman 的 VoodooPS2Controller.kext
 - 尝试修复 GI5CN54 模具的 USB 定制问题（未测试，需要观察）
 - 更新 BrcmPatchRAM3 驱动
+
+## 2020.4.7
+
+- 更新 OpenCore 到官方 0.5.7 版本，同步更新 OpenRuntime.efi 和 OpenUsbKbDxe.efi
+- 更新 NdkBootPicker 为自编译修改版以适配 0.5.7
+- 新的 OC 引导主题
+- config.plist 适配 0.5.7 格式
