@@ -56,4 +56,4 @@
 
 ## 2020.4.8
 
-- 修复 Windows 蓝屏问题 (`RebuildAppleMemoryMap->True, SyncRuntimePermissions->True`)
+- 修复 Windows 蓝屏 0xc000000d 问题 (`RebuildAppleMemoryMap->True, SyncRuntimePermissions->True`)

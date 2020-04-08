@@ -126,7 +126,7 @@
 | IGPU | Intel UHD Graphics 630 | |
 | DGPU | Nvidia Geforce GTX 1060 | 8 代以上同方机型的 Nvidia 独显无法在任何版本的 macOS 下被驱动 <br>关于具体的原因猜测，请参见[此文章](http://www.bswaterb.club/?p=285) |
 | RAM | Micron Crucial 8GB+8GB | |
-| NVMe SSD | WD Black SN750 NVME SSD 500G | 请确保你的机器未装有：三星 PM981(a)、镁光 2200s、Intel Optane 加速内存、HP EX920 等 macOS 不支持的硬盘 | 
+| NVMe SSD | WD Black SN750 NVME SSD 500G | 请确保你的机器未装有：三星 PM981(a)、镁光 2200s、<br>傲腾、HP EX920 等 macOS 不支持的硬盘 | 
 | SATA SSD | Phison SATA SSD 128G | | 
 | Wireless | BCM94360CS2 | 原机自带的 Intel AC9462/AC9560 无法在 macOS 下驱动 |
 | Ethernet | Realtek RTL8168H | |
@@ -170,7 +170,7 @@
 - [ ] 读卡器
 
 > 备注：
-> - 同方 8 代以上模具的 HDMI / miniDP 接口直连独显，因此**无法在 macOS 下使用 HDMI/miniDP 接口外接显示器**。如有需要外接，请参考 [此页面](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da#na-wo-zen-yang-wai-jie-xian-shi-qi) 中提供的解决方案。
+> - 同方 8 代以上模具的 HDMI / miniDP 接口直连独显，因此**无法在 macOS 下使用 HDMI/miniDP 接口外接显示器**。如有需要外接需购买 USB 转 HDMI 转换器（请注意不是普通的拓展坞），请参考 [此页面](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da#na-wo-zen-yang-wai-jie-xian-shi-qi) 中提供的解决方案。
 > - **本仓库支持的同方模具的 Type-C 接口没有视频输出功能。**
 > - 由于原装的 Intel AC9462（AC9560） 暂时没有可用驱动，因此 Wi-Fi 功能将不可用，这是常识。
 > - 若要使用网络，可以使用以太网、USB 共享网络、蓝牙共享网络、外接 USB 无线网卡，或更换内置无线网卡。
@@ -178,11 +178,11 @@
 > - 请注意：**DW1820A 无线网卡在同方模具上有已知的兼容性问题**，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡。
 > - 若有更换无线网卡的需求，推荐更换 [BCM94360CS2 + NGFF 转接卡] 方案。
 
-# 问题反馈
+# 问题反馈 & 交流
 
 你可以通过在 GitHub 上提 issue 的方式反馈问题，或者向 kirainmoe@gmail.com 发送问题报告邮件。
 
-# QQ 交流群
+## QQ 交流群
 
 **请确保你在群里问问题之前，已经看过了[教学视频](https://www.bilibili.com/video/av81263778)、并使用了搜索功能查找并仔细阅读了[项目文档](https://hackintosh.kirainmoe.com)内的相关内容！**
 
@@ -206,8 +206,18 @@
 
 在 **[Maruyama License 协议](https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/LICENSE)** 的许可下，使用本仓库下的所有配置文件都是**免费**的。为了保护你的权益，建议你不要通过 **任何渠道** 以 **任何价格** 购买上述机型的配置文件。
 
+**若你在此配置文件的基础上适配其它机型的配置文件，则需要保留许可协议中的版权信息和上述鸣谢信息。**
+
 当然，如果您认可我的工作，也可以通过捐赠支持我。所有的捐赠将会成为我更新的动力。
 
 | 支付宝 | 微信 |
 |-------|------|
 | <img src="https://i.loli.net/2019/09/19/j8doaIVYWtMXlNJ.png" width="200px"> | <img src="https://i.loli.net/2019/09/19/xkoHIsuZLvtzDSP.png" width="200px"> |
+
+# 拓展阅读
+
+提示：涉及硬件层面的修改请谨慎操作。
+
+- [GJ5CN64 / GI5CN54 模具 PS/2 触摸板优化方案 (by @anhor)](https://ts.ryanhor.com/2020/03/12/how-to-hack-perfect/)
+- [Aptio V BIOS 解锁全功能教程 (by @bswaterb)](http://www.bswaterb.club/?p=218)
+- [不刷新 BIOS 的前提下修改 DVMT Pre-allocated](https://www.misonsky.cn/115.html)
