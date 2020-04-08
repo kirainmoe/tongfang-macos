@@ -53,3 +53,7 @@
 - 更新 NdkBootPicker 为自编译修改版以适配 0.5.7
 - 新的 OC 引导主题
 - config.plist 适配 0.5.7 格式
+
+## 2020.4.8
+
+- 修复 Windows 蓝屏问题 (`RebuildAppleMemoryMap->True, SyncRuntimePermissions->True`)
