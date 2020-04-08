@@ -58,5 +58,5 @@
 
 - 修复 Windows 蓝屏 0xc000000d 问题 (`RebuildAppleMemoryMap->True, SyncRuntimePermissions->True`)
 - 更新 VoodooI2CHID.kext，现在可以在 Recovery 模式下使用触摸板，并且不再需要加载 IOGraphicsFamily.kext
-- 添加 NVMeFix.kext，优化第三方 NVMe 硬盘的电源管理；同时可能会修复三星 PM981 的问题
+- 添加 NVMeFix.kext，优化第三方 NVMe 硬盘的电源管理；<s>同时可能会修复三星 PM981 的问题</s>
 - 添加 HibernationFixup.kext，若无法正常睡眠请尝试勾选此项
