@@ -196,11 +196,9 @@
 | 特殊限制 | 因人数爆满，暂需付费 1 元入群 | **仅限清华同方模具的 8/9 代机型用户加入** |
 | 备注 | - | 新群人数较少，推荐新用户加入 2 群 |
 
-# 鸣谢
+# 贡献者 & 鸣谢
 
-- 感谢 [@Goshin](https://github.com/goshin) 修复了 VoodooI2C 触摸板驱动的遗留问题、修复了九代同方机型无法使用 VoodooPS2Controller 驱动的问题、补充了 Fn 快捷键的功能。
-- 感谢 [@zxystd](https://github.com/zxystd) 提供了因特尔蓝牙驱动 IntelBluetoothFirmware.kext.
-- 其它内核拓展和 SSDT 的作者，可在本仓库的其它 README 文档或对应的 Info.plist 中找到。
+请转到 [《贡献者与鸣谢名单》](Docs/Credits.md) 查看所有的贡献者及版权声明。
 
 # 许可协议 & 捐赠
 
