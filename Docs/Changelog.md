@@ -65,3 +65,4 @@
 
 - 更新 VoodooI2C 为官方 2.4 版本
 - 默认添加 AppleRTC KextPatch
+- `SSDT-HPET, SSDT-AWAC` => `SSDT-HPET-RTC-TIMR`
