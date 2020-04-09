@@ -80,7 +80,15 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Motherboard: Fix HPET, IRIQ, RTC and TIMR</string>
+				<string>Motherboard: Fix RTC</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-AWAC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Motherboard: Fix HPET, IRIQ</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
