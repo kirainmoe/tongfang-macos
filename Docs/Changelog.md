@@ -66,3 +66,7 @@
 - 更新 VoodooI2C 为官方 2.4 版本
 - 默认添加 AppleRTC KextPatch
 - `SSDT-HPET, SSDT-AWAC` => `SSDT-HPET-RTC-TIMR`
+
+## 2020.4.12
+
+- 更新 DGPU, UIAC 仿冒设备的 _STA 方法，防止在 Windows 下出现未知设备
