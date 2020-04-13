@@ -21,7 +21,7 @@
 <h3 align="center">
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
     <a href="https://hackintosh.kirainmoe.com">帮助文档</a> |
-    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README-en.md">English</a>
+    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Adapting-Guidance-zh-CN.md">同方机型适配指南</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README-en.md">English</a>
 </h3>
 
 # 如何使用
