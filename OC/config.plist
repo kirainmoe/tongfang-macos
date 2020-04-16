@@ -1362,6 +1362,8 @@
 		<true/>
 		<key>Generic</key>
 		<dict>
+			<key>AdviseWindows</key>
+			<true/>
 			<key>MLB</key>
 			<string>C029399024N00001H</string>
 			<key>ROM</key>

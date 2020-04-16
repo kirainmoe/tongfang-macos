@@ -70,3 +70,7 @@
 ## 2020.4.12
 
 - 更新 DGPU, UIAC 仿冒设备的 _STA 方法，防止在 Windows 下出现未知设备
+
+## 2020.4.16
+
+- `PlatformInfo -> Generic -> AdviseWindows = True` 以修复因为 ESP 分区非磁盘第一分区导致的无法使用启动磁盘设置的错误。

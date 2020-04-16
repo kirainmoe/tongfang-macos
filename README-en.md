@@ -108,6 +108,7 @@ It is recommended to create a USB map for your machine after installation.
 - USB 3.0 and Type-C
 - Sleep
 - Camera
+- FileVault
 - etc.
 
 ### What's partially working
