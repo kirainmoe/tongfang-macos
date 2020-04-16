@@ -11,3 +11,6 @@ mkdir /var/vm/sleepimage
 pmset -a hibernatemode 0
 pmset -a standby 0
 pmset -a proximitywake 0
+pmset -a disksleep 0
+pmset -a displaysleep 5
+pmset -a sleep 5
