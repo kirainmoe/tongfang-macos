@@ -52,16 +52,17 @@ This repo contains the OpenCore config for installing latest macOS on Tongfang (
 
 ### macOS version
 
-The latest EFI config only supports **macOS Catalina 10.15.x**. Currently tested version is **10.15.4 (19E266)**.
+The latest EFI config only supports **macOS Catalina 10.15.x**. Currently tested version is **10.15.4 (19E287)**.
 
 ### Models
 
-> Notes: I was not sure that some models can work perfectly with this config. The models listed in the following table are those would be theoretically supported gussing by their barebone model.
+> Notes: I was not sure that some models can work perfectly with this config. The models listed in the following table are those would be theoretically supported gussing by their barebone model.  
+If you have any Tongfang laptop and successfully installed with one of the following configs, please open an issue and tell me.
 
 #### Tips
 
 - If you have 8th gen platform laptops, try one of { *GK5CN6X, GK5CN5X, GJ5CN6X, GI5CN5X*... }.
--  If you have 9th gen platform laptops, try one of { *GK7CP6R, GK5CP6X*... }.
+- If you have 9th gen platform laptops, try one of { *GK7CP6R, GK5CP6X*... }.
 
 Please use [Tongfang Hackintosh Utility](https://github.com/kirainmoe/project-starbeat/releases) to download / customize the OC config.
 
@@ -69,7 +70,7 @@ It is recommended to create a USB map for your machine after installation.
 
 | Barebone | Models Theoretically Supported | Which model you should choose in Tongfang Hackintosh Utility | Generation
 |-----|------|-----|------|
-| GK5CN5X <br> GK5CN6X <br> GK5CN6Z <br> GK5CN5Z <br>GK7CN6S<br>GK7CN5S | Hasee Z7(m)-KP7/5(G)Z <br> Shinelon Yao 7000 II <br> Mechrevo Z2 Air <br>XMG Neo 15<br>OverPowered Gaming Laptop 15<br>MACHENIKE F117-B1/2 <br> Monster Abra A7 v10.1 <br> Monster Abra A5 v13.4 <br>Overpowered 17+ laptop | GK5CN6X / GK5CN5X | 8th Generation |
+| GK5CN5X <br> GK5CN6X <br> GK5CN6Z <br> GK5CN5Z <br>GK7CN6S<br>GK7CN5S | Hasee Z7(m)-KP7/5(G)Z <br> Shinelon Yao 7000 II <br> Mechrevo Z2 Air <br>XMG Neo 15<br>OverPowered Gaming Laptop 15<br>MACHENIKE F117-B1/2 <br> Monster Abra A7 v10.1 <br> Monster Abra A5 v13.4 <br>Overpowered 17+ laptop | GK5CN6X / GK5CN5X <br> GK5CN6Z / GK5CN5Z | 8th Generation |
 | GJ5CN64 <br> GI5CN54 | Hasee Z7(m)-KP7/5GC/GA/EC<br>Avell A52-5 BS<br>CyberPower NB-408-109<br>Machenike T90 | GJ5CN64 <br> GI5CN54 | 8th Generation |
 | GK7CP6R | Hasee Z7-CT7GK / Z7-CT7VA / Z7-CT7VH / G7-CT7VK<br>Illegear Rogue Laptop<br>XMG Core 17<br>Mechrevo X3<br>CyberPowerPC Tracer-III-17<br>Monster Tulpar T7 v19.3  | GK7CP6R | 9th Generation |
 | GK5CP6X<br>GK5CP5X | Hasee Z7M-CT7GS <br> Mechrevo Z2 Air-G <br> EVOO 15.6" model laptops (LP4 / LP5) | GK5CP6X / GK5CP5X  | 9th Generation | 
