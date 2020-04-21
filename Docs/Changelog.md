@@ -74,3 +74,7 @@
 ## 2020.4.16
 
 - `PlatformInfo -> Generic -> AdviseWindows = True` 以修复因为 ESP 分区非磁盘第一分区导致的无法使用启动磁盘设置的错误。
+
+## 2020.4.21
+
+- 更新 GK5CN5Z / GK5CN6Z 模具的 USB 定制文件；适配 GK5CN6Z 模具的 Z2/X8Ti.
