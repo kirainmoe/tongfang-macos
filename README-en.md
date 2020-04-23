@@ -110,6 +110,7 @@ It is recommended to create a USB map for your machine after installation.
 - Sleep
 - Camera
 - FileVault
+- Fan Speed (only with FakeSMC)
 - etc.
 
 ### What's partially working
