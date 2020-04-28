@@ -82,3 +82,10 @@
 ## 2020.4.23
 
 - 添加 `SSDT-SMCD.aml` 和 FakeSMC 系列驱动，可自行选择使用传统 SMC 驱动以获得风扇转速显示，或使用下一代 SMC 驱动。
+
+## 2020.4.28
+
+- 删除 `SSDT-ALS0`, 因为 NVRAM 保存亮度已经正常工作。
+>  `SSDT-ALS0` is deprecated for native NVRAM is now fully working
+- 删除 `FakePCIID.kext, FakePCIID_Intel_HDMIAudio.kext`，使用最新 `AppleALC` 和 `alc-delay` 参数修复声卡概率性丢失问题，感谢 [@bavelee](https://github.com/bavelee) 于 [#67](https://github.com/kirainmoe/hasee-tongfang-macos/issues/67) 的提议。
+>  `FakePCIID.kext, FakePCIID_Intel_HDMIAudio.kext` is deprecated and replaced by `AppleALC` with `alc-delay` device properties, see [#67](https://github.com/kirainmoe/hasee-tongfang-macos/issues/67)

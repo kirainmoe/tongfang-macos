@@ -47,7 +47,6 @@ This statement has no effect for bootloader, you can delete it safely when you u
 [RehabMan](https://github.com/RehabMan) for:
 
 - [USBInjectAll](https://github.com/RehabMan/USBInjectAll)
-- [FakePCIID](https://github.com/RehabMan/OS-X-Fake-PCI-ID)
 - [VoodooPS2](https://github.com/RehabMan/VoodooPS2)
 
 
