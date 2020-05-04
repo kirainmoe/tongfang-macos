@@ -1164,6 +1164,22 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>TongfangKeyboardUtility.kext</string>
+				<key>Comment</key>
+				<string>Full Fn hotkey support extension, requires TongfangFnDaemon to be installed (credit @Goshin)</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/TongfangKeyboardUtility</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>				
 		</array>
 		<key>Block</key>
 		<array>
@@ -1260,6 +1276,8 @@
 			<false/>
 			<key>DisableIoMapper</key>
 			<true/>
+			<key>DisableRtcChecksum</key>
+			<false/>			
 			<key>DummyPowerManagement</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
@@ -1356,7 +1374,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 -wegnoegpu alcid=29 -alcbeta darkwake=0 igfxfw=2</string>
+				<string>keepsyms=1 debug=0x100 -wegnoegpu alcid=29 -alcbeta darkwake=0 igfxfw=2 ps2rst=0</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1438,6 +1456,19 @@
 	</dict>
 	<key>UEFI</key>
 	<dict>
+		<key>APFS</key>
+		<dict>
+			<key>EnableJumpstart</key>
+			<true/>
+			<key>HideVerbose</key>
+			<true/>
+			<key>JumpstartHotPlug</key>
+			<false/>
+			<key>MinDate</key>
+			<integer>0</integer>
+			<key>MinVersion</key>
+			<integer>0</integer>
+		</dict>		
 		<key>Audio</key>
 		<dict>
 			<key>AudioCodec</key>
@@ -1460,7 +1491,6 @@
 		<key>Drivers</key>
 		<array>
 			<string>HFSPlus.efi</string>
-			<string>ApfsDriverLoader.efi</string>
 			<string>OpenRuntime.efi</string>
 			<string>OpenUsbKbDxe.efi</string>
 			<string>NdkBootPicker.efi</string>
@@ -1511,7 +1541,7 @@
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
 		</dict>
-		<key>Protocols</key>
+		<key>ProtocolOverrides</key>
 		<dict>
 			<key>AppleAudio</key>
 			<false/>
@@ -1529,6 +1559,8 @@
 			<false/>
 			<key>AppleUserInterfaceTheme</key>
 			<false/>
+			<key>AppleRtcRam</key>
+			<false/>			
 			<key>DataHub</key>
 			<false/>
 			<key>DeviceProperties</key>

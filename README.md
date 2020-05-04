@@ -135,7 +135,7 @@
 
 ### 发行说明
 
-- OpenCore Bootloader 使用官方 0.5.7 版本。
+- OpenCore Bootloader 使用官方 0.5.8 版本。
 - 配置文件的 SMBIOS 采用 `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
 - 默认支持 Windows 和 macOS 双引导，若需要引导其他操作系统需自行添加。
 - OpenCore 集成了 NdkBootPicker GUI 和定制的神舟引导主题。

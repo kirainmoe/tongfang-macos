@@ -25,7 +25,7 @@ This statement has no effect for bootloader, you can delete it safely when you u
 - macOS
 
 [acidanthera](https://github.com/acidanthera) for:
--  [AppleALC](https://github.com/acidanthera/AppleALC)
+- [AppleALC](https://github.com/acidanthera/AppleALC)
 - [AppleSupportPkg](https://github.com/acidanthera/AppleSupportPkg)
 - [HibernationFixup](https://github.com/acidanthera/HibernationFixup)
 - [Lilu](https://github.com/acidanthera/Lilu)
@@ -43,12 +43,14 @@ This statement has no effect for bootloader, you can delete it safely when you u
 
 - [VoodooI2C](https://github.com/alexandred/VoodooI2C)
 
+[Goshin](https://github.com/Goshin) for:
+
+- [TongfangKeyboardUtility](https://github.com/Goshin/TongfangKeyboardUtility)
 
 [RehabMan](https://github.com/RehabMan) for:
 
 - [USBInjectAll](https://github.com/RehabMan/USBInjectAll)
 - [VoodooPS2](https://github.com/RehabMan/VoodooPS2)
-
 
 [zxystd](https://github.com/zxystd) for:
 

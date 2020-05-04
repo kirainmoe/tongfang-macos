@@ -1,124 +1,110 @@
-/*
- * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20190215 (64-bit version)
- * Copyright (c) 2000 - 2019 Intel Corporation
- * 
- * Disassembling to symbolic ASL+ operators
- *
- * Disassembly of SSDT-FN.aml, Sat Feb  8 21:13:31 2020
- *
- * Original Table Header:
- *     Signature        "SSDT"
- *     Length           0x00000212 (530)
- *     Revision         0x02
- *     Checksum         0x45
- *     OEM ID           "hack"
- *     OEM Table ID     "fnkey"
- *     OEM Revision     0x00000000 (0)
- *     Compiler ID      "INTL"
- *     Compiler Version 0x20190215 (538509845)
- */
 DefinitionBlock ("", "SSDT", 2, "hack", "fnkey", 0x00000000)
 {
+    External (_SB_.PCI0, DeviceObj)
+    External (_SB_.PCI0.LPCB, DeviceObj)
     External (_SB_.PCI0.LPCB.EC0_, DeviceObj)
-    External (_SB_.PCI0.LPCB.EC0_.XQ0A, MethodObj)    // 0 Arguments
-    External (_SB_.PCI0.LPCB.EC0_.XQ14, MethodObj)    // 0 Arguments
-    External (_SB_.PCI0.LPCB.EC0_.XQ15, MethodObj)    // 0 Arguments
-    External (OSDF, UnknownObj)
-    External (PS2K, UnknownObj)
-    External (XQ53, MethodObj)    // 0 Arguments
-    External (XQ77, MethodObj)    // 0 Arguments
-    External (XQ78, MethodObj)    // 0 Arguments
+    External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
+    External (ATKP, IntObj)
+
+    External (SLPB, DeviceObj)
+
+    Device (TFKU)
+    {
+        Name(_HID, "TFU0007")
+    }
 
     Scope (_SB.PCI0.LPCB.EC0)
     {
-        Method (_Q0A, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        Method (_Q0A, 0, NotSerialized)  // F1: sleep
+        {
+            Notify (SLPB, 0x80)  // same with original _Q0A
+        }
+
+        Method (FNF4, 1, NotSerialized)  // F4: toggle WiFi
+        {
+            Notify (TFKU, 0x40)
+        }
+
+        External (XQ77, MethodObj)
+        Method (_Q77, 0, NotSerialized)  // F6: decrease keyboard backlight
         {
             If (_OSI ("Darwin"))
             {
-                Notify (PS2K, 0x045F)
+                Notify (TFKU, 0x60)
+            }
+
+            // call into original _Q77 method
+            XQ77()
+        }
+
+        External (XQ78, MethodObj)
+        Method (_Q78, 0, NotSerialized)  // F7: increase keyboard backlight
+        {
+            If (_OSI ("Darwin"))
+            {
+                Notify (TFKU, 0x70)
+            }
+
+            // call into original _Q78 method
+            XQ78()
+        }
+
+        External (XQ14, MethodObj)
+        Method (_Q14, 0, NotSerialized)  // F11: decrease screen backlight
+        {
+            If (_OSI ("Darwin"))
+            {
+                Notify (TFKU, 0xB0)
             }
             Else
             {
-                \_SB.PCI0.LPCB.EC0.XQ0A ()
+                XQ14 ()
             }
         }
 
-        Method (FNF4, 1, NotSerialized)
-        {
-            If ((OSDF == 0x1A))
-            {
-                Notify (PS2K, 0x0460)
-                Return (Zero)
-            }
-
-            If ((OSDF == 0x1B))
-            {
-                Notify (PS2K, 0x0461)
-                Return (Zero)
-            }
-
-            Return (Zero)
-        }
-
-        Method (_Q77, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        External (XQ15, MethodObj)
+        Method (_Q15, 0, NotSerialized)  // F12: increase screen backlight
         {
             If (_OSI ("Darwin"))
             {
-                Notify (PS2K, 0x0462)
-            }
-
-            XQ77 ()
-        }
-
-        Method (_Q78, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (_OSI ("Darwin"))
-            {
-                Notify (PS2K, 0x0463)
-            }
-
-            XQ78 ()
-        }
-
-        Method (_Q14, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (_OSI ("Darwin"))
-            {
-                Notify (PS2K, 0x0405)
+                Notify (TFKU, 0xC0)
             }
             Else
             {
-                \_SB.PCI0.LPCB.EC0.XQ14 ()
+                XQ15 ()
             }
         }
 
-        Method (_Q15, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        External (XQ53, MethodObj)
+        External (OSDF, IntObj)
+        Method (_Q53, 0, NotSerialized)  // Fn F2, F4, F8-10 dispatch here
         {
             If (_OSI ("Darwin"))
             {
-                Notify (PS2K, 0x0406)
-            }
-            Else
-            {
-                \_SB.PCI0.LPCB.EC0.XQ15 ()
-            }
-        }
-
-        Method (_Q53, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (_OSI ("Darwin"))
-            {
-                If (((OSDF == 0x1A) || (OSDF == 0x1B)))
+                If (LOr(LEqual(OSDF, 0x1a), LEqual(OSDF, 0x1b)))
                 {
                     FNF4 (OSDF)
-                    Return (Zero)
+                    Return ()
                 }
             }
 
-            XQ53 ()
-            Return (Zero)
+            // call into original _Q53 method
+            XQ53()
+
+            Return ()
         }
     }
-}
 
+    // remap Fn+F5
+    Name (_SB.PCI0.LPCB.PS2K.RMCF, Package()
+    {
+        "Keyboard", Package()
+        {
+            "Custom PS2 Map", Package()
+            {
+                Package () {},
+                "76=64",  // Fn+F5=F13
+            },
+        },
+    })
+}

@@ -89,3 +89,9 @@
 >  `SSDT-ALS0` is deprecated for native NVRAM is now fully working
 - 删除 `FakePCIID.kext, FakePCIID_Intel_HDMIAudio.kext`，使用最新 `AppleALC` 和 `alc-delay` 参数修复声卡概率性丢失问题，感谢 [@bavelee](https://github.com/bavelee) 于 [#67](https://github.com/kirainmoe/hasee-tongfang-macos/issues/67) 的提议。
 >  `FakePCIID.kext, FakePCIID_Intel_HDMIAudio.kext` is deprecated and replaced by `AppleALC` with `alc-delay` device properties, see [#67](https://github.com/kirainmoe/hasee-tongfang-macos/issues/67)
+
+## 2020.5.4
+
+- 更新 OpenCore 为官方 0.5.8 版本，同时更新配置文件。此版本变动较大，稳定性仍然需要观察。
+- 更新 VoodooPS2 驱动为 acidanthera 官方版本；以后 Fn 热键将依赖于 @Goshin 的内核拓展 TongfangKeyboardUtility.kext 工作。所有用户需要重新安装 TongfangFnDaemon 快捷键守护程序。
+- 更新引导 GUI 图标。
