@@ -2,8 +2,8 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 cd /tmp
-curl -fsSL https://gitee.com/kirainmoe/hasee-tongfang-macos/raw/scripts/io.github.goshin.TongfangFnDaemon.plist -O
-curl -fsSL https://gitee.com/kirainmoe/hasee-tongfang-macos/raw/scripts/TongfangFnDaemon -O
+curl -fsSL https://gitee.com/kirainmoe/hasee-tongfang-macos/raw/scripts/io.github.goshin.TongfangFnDaemon.plist > /tmp/io.github.goshin.TongfangFnDaemon.plist
+curl -fsSL https://gitee.com/kirainmoe/hasee-tongfang-macos/raw/scripts/TongfangFnDaemon > /tmp/TongfangFnDaemon
 
 # remove old TongfangFnDaemon
 launchctl unload /Library/LaunchAgents/io.github.goshin.TongfangFnDaemon.plist > /dev/null 2>&1
