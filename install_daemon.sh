@@ -12,11 +12,11 @@ sudo rm /usr/local/bin/TongfangFnDaemon > /dev/null 2>&1
 
 sudo mkdir -p /usr/local/bin/
 sudo chmod -R 755 /usr/local/bin/
-sudo cp $DIR/TongfangFnDaemon /usr/local/bin/
+sudo cp /tmp/TongfangFnDaemon /usr/local/bin/
 sudo chmod 755 /usr/local/bin/TongfangFnDaemon
 sudo chown root:wheel /usr/local/bin/TongfangFnDaemon
 
-sudo cp $DIR/io.github.goshin.TongfangFnDaemon.plist /Library/LaunchAgents
+sudo cp /tmp/io.github.goshin.TongfangFnDaemon.plist /Library/LaunchAgents
 sudo chmod 644 /Library/LaunchAgents/io.github.goshin.TongfangFnDaemon.plist
 sudo chown root:wheel /Library/LaunchAgents/io.github.goshin.TongfangFnDaemon.plist
 
