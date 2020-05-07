@@ -95,3 +95,8 @@
 - 更新 OpenCore 为官方 0.5.8 版本，同时更新配置文件。此版本变动较大，稳定性仍然需要观察。
 - 更新 VoodooPS2 驱动为 acidanthera 官方版本；以后 Fn 热键将依赖于 @Goshin 的内核拓展 TongfangKeyboardUtility.kext 工作。所有用户需要重新安装 TongfangFnDaemon 快捷键守护程序。
 - 更新引导 GUI 图标。
+
+## 2020.5.7
+
+- 修复 SSDT-FN.aml 中 `TFKU` 设备缺少 _STA 方法导致 Windows 下出现未知设备的问题。
+> Fix: Missing _STA method of `TFKU` device in SSDT-FN.aml, which causes a unknown device in Windows.

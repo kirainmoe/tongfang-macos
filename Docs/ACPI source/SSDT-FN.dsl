@@ -11,6 +11,17 @@ DefinitionBlock ("", "SSDT", 2, "hack", "fnkey", 0x00000000)
     Device (TFKU)
     {
         Name(_HID, "TFU0007")
+        Method (_STA, 0, NotSerialized)  // _STA: Status
+        {
+            If (_OSI ("Darwin"))
+            {
+                Return (0x0F)
+            }
+            Else
+            {
+                Return (Zero)
+            }
+        }        
     }
 
     Scope (_SB.PCI0.LPCB.EC0)
