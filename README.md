@@ -2,9 +2,9 @@
     <img src="https://i.loli.net/2020/01/05/QilbpRdq4awGfSX.png" width="200px" alt="logo">
 </p>
 
-<h1 align="center">macOS on Hasee Tongfang Laptops</h1>
+<h1 align="center">macOS on Tongfang Laptops</h1>
 
-<p align="center">适用于神舟战神 8 / 9 代同方机型安装黑苹果的 OpenCore 配置文件</p>
+<p align="center">适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件</p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> 
@@ -25,6 +25,8 @@
 </h3>
 
 # 如何使用
+
+首先，请查看 [兼容性表格](#兼容性)，确认此配置文件支持你的机型、模具以及系统版本。
 
 ## 获取 & 更新配置文件
 
@@ -97,23 +99,38 @@
 | GK5CP5V | Z7M-CT5N1 |
 | GJ5CN64 | Z7-KP7S |
 
+### 炫龙系列
+
+已测试：
+
+| 模具代号 | 具体型号 |
+|---------|--------|
+| GK5CN6X | 炫龙 耀9000 II |
+| GK5CN5X | 炫龙 耀7000 |
+
+未测试：
+
+| 模具代号 | 具体型号 |
+|---------|--------|
+| GK7CP6R | 炫龙 炎魔T3Ti |
+| GI5CN54 | 炫龙 炎魔T2Ti |
+
+### 机械革命系列
+
+| 模具代号 | 具体型号 |
+|---------|--------|
+| GK5CN5X | 机械革命 Z2 Air |
+| GK5CN6Z <br> GK5CN5Z | 机械革命 Z2, X8Ti 系列 |
+| GK5CP6X <br> GK5CP5X | 机械革命 Z2-G <br> 机械革命 Z2 Air-G |
+| GK7CP6R | 机械革命 X3 |
+
 ### 如何确定我的笔记本是否兼容？
 
 **并不是配置相近就可以使用此仓库的 EFI**。如果你的模具型号没有出现在上述列表中，可以到 http://kfgl.hasee.com/lookup/book/bblist.asp 页面，查询你的笔记本型号所对应的准系统名称。
 
 若你的笔记本采用 **8/9 代**因特尔酷睿**标压**处理器，且查询到准系统名称中带有 **“（同方）”** 字样，则你的笔记本可以兼容此仓库的配置文件。
 
-### 其它品牌理论兼容机型
-
-| 模具代号 | 具体型号 |
-|---------|--------|
-| GK5CN5X | 炫龙 耀9000 II、炫龙 耀7000 <br> 机械革命 Z2 Air |
-| GK5CN6Z | 机械革命 Z2, X8Ti 系列 |
-| GK5CP6X <br> GK5CP5X | 机械革命 Z2 Air-G |
-| GK7CP6R | 炫龙 炎魔T3Ti <br> 机械革命 X3 |
-| GI5CN54 | 炫龙 炎魔T2Ti |
-
-如果上述机型的用户遇到 USB 接口无法识别或速度不正常的问题，建议参照 [此教程](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html) 自行定制 USB。
+对于其它品牌理论兼容的同方模具机型，若遇到 USB 接口无法识别或速度不正常的问题，建议参照 [此教程](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html) 自行定制 USB。
 
 # 配置概览
 
@@ -157,13 +174,14 @@
 - [x] 风扇转速（需使用 FakeSMC 和相应传感器驱动）
 - [x] 睡眠 *
 - [x] Fn 快捷键 *
-- [ ] 键盘灯 *
+- [ ] 键盘灯 (仅适用于 0.02 版本的 ITE Device 8291) *
 - [ ] 触摸板 (I2C HID 触摸板手势完美，PS/2 触摸板支持有限)
 - [ ] 随航（无线随航可能需要更换无线网卡）
 
 > 备注：
 > - 标 * 的功能表示需要在安装系统后使用 [Tongfang Hackintosh Utility](https://starbeat.kirainmoe.com) 程序修复。  
 > - 未打钩的项目表示该功能的驱动情况可能因机型而异，如 GI5CN54/GJ5CN64 的 PS/2 触摸板仅有有限的手势支持。
+> - 如果你的设备为 0.03 版本的 ITE Device 8291，请使用 [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center) 调节键盘灯。
 
 ### Not Working
 
@@ -189,13 +207,13 @@
 **请确保你在群里问问题之前，已经看过了[教学视频](https://www.bilibili.com/video/av81263778)、并使用了搜索功能查找并仔细阅读了[项目文档](https://hackintosh.kirainmoe.com)内的相关内容！**
 
 
-| 群名称 | 神舟战神黑苹果 1 群 | 神舟战神黑苹果 2 群 |
+| 群名称 | 神舟战神黑苹果 1 群 | 同方黑苹果 2 群 |
 |-----|------|---------|
 | 群号 | 833022235 | 815359928 |
 | 加群二维码 | <img src="https://i.loli.net/2020/01/05/sKh875UC14LFejv.png"> | <img src="https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png"> |
 | 加群链接 | https://jq.qq.com/?_wv=1027&k=5G82zlQ | https://jq.qq.com/?_wv=1027&k=5b7ZJWl |
 | 规模 | 1000 人群 | 500 人群 |
-| 特殊限制 | 因人数爆满，暂需付费 1 元入群 | **仅限清华同方模具的 8/9 代机型用户加入** |
+| 特殊限制 | 无机型限制，但因人数爆满，暂需付费 1 元入群 | **仅限同方模具的 8/9 代机型用户加入** |
 | 备注 | - | 新群人数较少，推荐新用户加入 2 群 |
 
 # 贡献者 & 鸣谢
@@ -206,11 +224,11 @@
 
 在 **[Maruyama License 协议](https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/LICENSE)** 的许可下，使用本仓库下的所有配置文件都是**免费**的。为了保护你的权益，建议你不要通过 **任何渠道** 以 **任何价格** 购买上述机型的配置文件，**同时也不允许任何人以任何价格出售此配置文件。**
 
-**若你在此配置文件的基础上适配其它机型的配置文件，则需要保留许可协议中的版权信息和上述鸣谢信息，同时需要为大众保留至少一个免费获取、下载的方式（若您不同意此规则，请不要在此配置文件基础上修改）。**
+**若你在此配置文件的基础上适配其它机型的配置文件，则需要保留版权和鸣谢信息，同时需要为大众保留至少一个免费获取、下载的方式（若您不同意此规则，请不要在此配置文件基础上修改）。**
 
-**若你在任何项目中，使用了从此配置文件中获取的任何由其他人创作的内容（包括但不限于 SSDT 补丁、内核拓展、引导主题等），则需要保留他人的版权信息。**
+**若你在任何项目中，使用了从此配置文件中获取的任何由其他人创作的内容，则需要保留他人的版权信息。**
 
-当然，如果您认可我的工作，也可以通过捐赠支持我。所有的捐赠将会成为我更新的动力。
+关于捐赠，如果您认可我的工作，也可以通过捐赠支持我。所有的捐赠将会成为我更新的动力。
 
 | 支付宝 | 微信 |
 |-------|------|
