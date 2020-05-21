@@ -100,3 +100,7 @@
 
 - 修复 SSDT-FN.aml 中 `TFKU` 设备缺少 _STA 方法导致 Windows 下出现未知设备的问题。
 > Fix: Missing _STA method of `TFKU` device in SSDT-FN.aml, which causes a unknown device in Windows.
+
+## 2020.5.21
+
+- 更新 SSDT-PLUG.aml 为 OpenCore 0.5.8 发行时自带的版本。
