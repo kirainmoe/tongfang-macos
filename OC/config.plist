@@ -530,12 +530,12 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
+				<key>alc-delay</key>
+				<integer>500</integer>
 				<key>device-id</key>
 				<data>cKEAAA==</data>
 				<key>layout-id</key>
 				<data>HQAAAA==</data>
-				<key>alc-delay</key>
-				<integer>500</integer>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -567,6 +567,8 @@
 				<data>AAAAgA==</data>
 			</dict>
 		</dict>
+		<key>Block</key>
+		<dict/>
 	</dict>
 	<key>Kernel</key>
 	<dict>
@@ -914,7 +916,7 @@
 				<key>Comment</key>
 				<string>Enable native power management for 3rd-party NVMe devices</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/NVMeFix</string>
 				<key>MaxKernel</key>
@@ -933,6 +935,22 @@
 				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IntelBluetoothFirmware</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>IntelBluetoothInjector.kext</string>
+				<key>Comment</key>
+				<string>Fix Intel bluetooth switch in System Preference Setting</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1179,7 +1197,7 @@
 				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
-			</dict>				
+			</dict>
 		</array>
 		<key>Block</key>
 		<array>
@@ -1276,8 +1294,6 @@
 			<false/>
 			<key>DisableIoMapper</key>
 			<true/>
-			<key>DisableRtcChecksum</key>
-			<false/>			
 			<key>DummyPowerManagement</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
@@ -1374,7 +1390,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 -wegnoegpu alcid=29 -alcbeta darkwake=0 igfxfw=2 ps2rst=0</string>
+				<string>keepsyms=1 debug=0x100 -wegnoegpu alcid=29 -alcbeta darkwake=0 ps2rst=0</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1456,19 +1472,6 @@
 	</dict>
 	<key>UEFI</key>
 	<dict>
-		<key>APFS</key>
-		<dict>
-			<key>EnableJumpstart</key>
-			<true/>
-			<key>HideVerbose</key>
-			<true/>
-			<key>JumpstartHotPlug</key>
-			<false/>
-			<key>MinDate</key>
-			<integer>0</integer>
-			<key>MinVersion</key>
-			<integer>0</integer>
-		</dict>		
 		<key>Audio</key>
 		<dict>
 			<key>AudioCodec</key>
@@ -1541,7 +1544,7 @@
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
 		</dict>
-		<key>ProtocolOverrides</key>
+		<key>Protocols</key>
 		<dict>
 			<key>AppleAudio</key>
 			<false/>
@@ -1559,8 +1562,6 @@
 			<false/>
 			<key>AppleUserInterfaceTheme</key>
 			<false/>
-			<key>AppleRtcRam</key>
-			<false/>			
 			<key>DataHub</key>
 			<false/>
 			<key>DeviceProperties</key>

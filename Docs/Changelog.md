@@ -104,3 +104,9 @@
 ## 2020.5.21
 
 - 更新 SSDT-PLUG.aml 为 OpenCore 0.5.8 发行时自带的版本。
+
+## 2020.5.27
+
+- 更新 Lilu, Whatevergreen, VirtualSMC, IntelBluetooth 为官方最新版本。
+- 不再默认加载 NVMeFix.kext
+- 八代机型不再默认加载 Apple GuC 核显固件
