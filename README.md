@@ -13,10 +13,12 @@
 
 <img src="https://img.shields.io/badge/supported_macOS_version-10.15.x-9cf.svg"/>
 
+<img src="https://img.shields.io/badge/preliminary_support-11.0_Beta-blueviolet.svg"/>
+
 <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-![QQ20200325-143522@2x.jpg](https://i.loli.net/2020/03/25/LoQyVpiABHuwmW9.jpg)
+![QQ20200628-145250.jpg](https://i.loli.net/2020/06/28/pmwk47CVTGJshrF.jpg)
 
 <h3 align="center">
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
@@ -68,7 +70,9 @@
 
 ## 兼容的系统
 
-最新配置文件仅兼容 **macOS Catalina 10.15** 及以上版本，目前已测试的最新兼容版本是 **10.15.5 (19F96)**.
+最新配置文件仅兼容 **macOS Catalina 10.15** 及以上版本，目前已测试的最新兼容版本是 **10.15.5 (19F96)** (Catalina) 和 **11.0 Beta (20A4299v)** (Big Sur).
+
+请不要直接 OTA 更新到 Big Sur。安装 macOS Big Sur 的详细方式，请参考：[#75](https://github.com/kirainmoe/hasee-tongfang-macos/issues/75).
 
 ## 适用的机型
 
@@ -152,10 +156,9 @@
 
 ### 发行说明
 
-- OpenCore Bootloader 使用官方 0.5.8 版本。
+- OpenCore Bootloader 使用官方 0.6.0 版本，GUI 采用 OpenCanopy.
 - 配置文件的 SMBIOS 采用 `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
 - 默认支持 Windows 和 macOS 双引导，若需要引导其他操作系统需自行添加。
-- OpenCore 集成了 NdkBootPicker GUI 和定制的神舟引导主题。
 - 此版本对更换了 4K 屏幕的笔记本做了兼容；对于 GI5CN54 / GJ5CN64 模具改 4K 屏的用户，**需要先解锁 BIOS 或使用 UEFI Shell** 修改 `DVMT Pre-allocated` 为 `64MB` 以上。
 
 ### Working
@@ -171,7 +174,6 @@
 - [x] 电池状态显示
 - [x] 摄像头
 - [x] 文件保险箱 (FileVault)
-- [x] 风扇转速（需使用 FakeSMC 和相应传感器驱动）
 - [x] 睡眠 *
 - [x] Fn 快捷键 *
 - [ ] 键盘灯 (仅适用于 0.02 版本的 ITE Device 8291) *

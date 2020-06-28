@@ -14,10 +14,12 @@
 
 <img src="https://img.shields.io/badge/supported_macOS_version-10.15.x-9cf.svg"/>
 
+<img src="https://img.shields.io/badge/preliminary_support-11.0_Beta-blueviolet.svg"/>
+
 <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-![QQ20200106-200142@2x.jpg](https://i.loli.net/2020/01/06/jHEMaG3wPbiKWc2.jpg)
+![QQ20200628-145250.jpg](https://i.loli.net/2020/06/28/pmwk47CVTGJshrF.jpg)
 
 <h3 align="center">
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
@@ -56,7 +58,9 @@ This repo contains the OpenCore config for installing latest macOS on Tongfang (
 
 ### macOS version
 
-The latest EFI config only supports **macOS Catalina 10.15.x**. Currently tested version is **10.15.5 (19F96)**.
+The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested version is **10.15.5 (19F96)** (Catalina) and **11.0 Beta (20A4299v)** (Big Sur).
+
+For installing macOS Big Sur, refer to [#75](https://github.com/kirainmoe/hasee-tongfang-macos/issues/75).
 
 ### Barebones
 
@@ -126,7 +130,6 @@ It is recommended to create a USB map for your machine after installation if you
 - Sleep
 - Camera
 - FileVault
-- Fan Speed (only with FakeSMC)
 - etc.
 
 ### What's partially working
