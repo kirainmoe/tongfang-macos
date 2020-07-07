@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19E287</string>
+	<string>19F101</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -27,7 +27,7 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>11E503a</string>
+	<string>11E608c</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
@@ -35,11 +35,22 @@
 	<key>DTSDKName</key>
 	<string>macosx10.15</string>
 	<key>DTXcode</key>
-	<string>1141</string>
+	<string>1150</string>
 	<key>DTXcodeBuild</key>
-	<string>11E503a</string>
+	<string>11E608c</string>
 	<key>IOKitPersonalities</key>
 	<dict>
+		<key>ACPIPS2NubProxy</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>io.github.goshin.TongfangKeyboardUtility</string>
+			<key>IOClass</key>
+			<string>ACPIPS2NubProxy</string>
+			<key>IONameMatch</key>
+			<string>PNP0303</string>
+			<key>IOProviderClass</key>
+			<string>IOACPIPlatformDevice</string>
+		</dict>
 		<key>TongfangKeyboardUtility</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -47,7 +58,7 @@
 			<key>IOClass</key>
 			<string>TongfangKeyboardUtility</string>
 			<key>IONameMatch</key>
-			<string>TFU0007</string>
+			<string>PNP0C14</string>
 			<key>IOProviderClass</key>
 			<string>IOACPIPlatformDevice</string>
 		</dict>

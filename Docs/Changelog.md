@@ -110,3 +110,8 @@
 - 更新 Lilu, Whatevergreen, VirtualSMC, IntelBluetooth 为官方最新版本。
 - 不再默认加载 NVMeFix.kext
 - 八代机型不再默认加载 Apple GuC 核显固件
+
+## 2020.7.7
+
+- 更新 TongfangKeyboardUtility.kext，引入新的 Fn 快捷键实现方式。
+- 删除 SSDT-FN.aml 和相关 ACPI 重命名。
