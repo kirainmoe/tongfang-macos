@@ -1,0 +1,15 @@
+sudo: required
+os: osx
+language: node_js
+node_js:
+- 12
+install:
+- export buildName="hasee-tongfang-macos-$(cat Docs/.version).zip"
+- zip -r $buildName . -x '*.git*'
+script:
+- git clone https://kirainmoe:github.com/kirainmoe/hasee-tongfang-macos-build build
+- cp $buildName build/$buildName
+- cd build
+- git add .
+- git commit -m "Deploy version $buildName"
+- git push -f "https://${github_token}@github.com/kirainmoe/hasee-tongfang-macos-build"
