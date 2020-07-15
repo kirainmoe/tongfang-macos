@@ -7,13 +7,13 @@
 <p align="center">适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件</p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> 
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> 
 
 <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> 
 
 <img src="https://img.shields.io/badge/supported_macOS_version-10.15.x-9cf.svg"/>
 
-<img src="https://img.shields.io/badge/preliminary_support-11.0_Beta-blueviolet.svg"/>
+<img src="https://img.shields.io/badge/preliminary_support-11.0_Beta_2-blueviolet.svg"/>
 
 <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
@@ -70,7 +70,7 @@
 
 ## 兼容的系统
 
-最新配置文件仅兼容 **macOS Catalina 10.15** 及以上版本，目前已测试的最新兼容版本是 **10.15.5 (19F96)** (Catalina) 和 **11.0 Beta (20A4299v)** (Big Sur).
+最新配置文件仅兼容 **macOS Catalina 10.15** 及以上版本，目前已测试的最新兼容版本是 **10.15.5 (19F96)** (Catalina) 和 **11.0 Beta (20A4300b)** (Big Sur).
 
 请不要直接 OTA 更新到 Big Sur。安装 macOS Big Sur 的详细方式，请参考：[#75](https://github.com/kirainmoe/hasee-tongfang-macos/issues/75).
 
@@ -148,7 +148,7 @@
 | RAM | Micron Crucial 8GB+8GB | |
 | NVMe SSD | WD Black SN750 NVME SSD 500G | 请确保你的机器未装有：三星 PM981(a)、镁光 2200s、<br>傲腾、HP EX920 等 macOS 不支持的硬盘 | 
 | SATA SSD | Phison SATA SSD 128G | | 
-| Wireless | BCM94360CS2 | 原机自带的 Intel AC9462/AC9560 无法在 macOS 下驱动 |
+| Wireless | BCM94360CS2 | 原机自带的 Intel AC9462/AC9560 并不能完美驱动 |
 | Ethernet | Realtek RTL8168H | |
 | Audio | Realtek ALC269vc | |
 

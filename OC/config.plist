@@ -316,6 +316,8 @@
 			<false/>
 			<key>ProvideCustomSlide</key>
 			<false/>
+			<key>ProvideMaxSlide</key>
+			<integer>0</integer>
 			<key>RebuildAppleMemoryMap</key>
 			<true/>
 			<key>SetupVirtualMap</key>
@@ -682,6 +684,22 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
+				<string>TongfangKeyboardUtility.kext</string>
+				<key>Comment</key>
+				<string>Full Fn hotkey support extension, requires TongfangFnDaemon to be installed (credit @Goshin)</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/TongfangKeyboardUtility</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
 				<string>NVMeFix.kext</string>
 				<key>Comment</key>
 				<string>Enable native power management for 3rd-party NVMe devices</string>
@@ -721,6 +739,38 @@
 				<false/>
 				<key>ExecutablePath</key>
 				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>itlwm.kext</string>
+				<key>Comment</key>
+				<string>Intel Wi-Fi support for 1st gen cards (preview).</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/itlwm</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>itlwmx.kext</string>
+				<key>Comment</key>
+				<string>Intel Wi-Fi support for 2nd gen cards, especially for AX200 (preview).</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/itlwmx</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -897,22 +947,6 @@
 				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/ACPIBatteryManager</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>BundlePath</key>
-				<string>TongfangKeyboardUtility.kext</string>
-				<key>Comment</key>
-				<string>Full Fn hotkey support extension, requires TongfangFnDaemon to be installed (credit @Goshin)</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/TongfangKeyboardUtility</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1162,16 +1196,10 @@
 			<dict>
 				<key>boot-args</key>
 				<string>keepsyms=1 debug=0x100 darkwake=0 ps2rst=0</string>
-				<key>run-efi-updater</key>
-				<string>No</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
 				<data>emgtSGFuczoyNTI=</data>
-				<key>booter-fileset-basesystem</key>
-				<data>AA==</data>
-				<key>booter-fileset-kernel</key>
-				<data>AA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1255,10 +1283,12 @@
 		<dict>
 			<key>EnableJumpstart</key>
 			<true/>
+			<key>GlobalConnect</key>
+			<false/>
 			<key>HideVerbose</key>
 			<true/>
 			<key>JumpstartHotPlug</key>
-			<false/>
+			<true/>
 			<key>MinDate</key>
 			<integer>0</integer>
 			<key>MinVersion</key>
@@ -1333,6 +1363,8 @@
 			<false/>
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
+			<key>UgaPassThrough</key>
+			<false/>
 		</dict>
 		<key>ProtocolOverrides</key>
 		<dict>
@@ -1343,6 +1375,8 @@
 			<key>AppleDebugLog</key>
 			<false/>
 			<key>AppleEvent</key>
+			<false/>
+			<key>AppleFramebufferInfo</key>
 			<false/>
 			<key>AppleImageConversion</key>
 			<false/>
@@ -1374,7 +1408,7 @@
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>
-			<false/>
+			<true/>
 			<key>ReleaseUsbOwnership</key>
 			<false/>
 			<key>RequestBootVarRouting</key>

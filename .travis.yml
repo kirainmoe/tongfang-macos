@@ -12,4 +12,4 @@ script:
 - cd build
 - git add .
 - git commit -m "Deploy version $buildName"
-- git push -f "https://${github_token}@github.com/kirainmoe/hasee-tongfang-macos-build"
+- git push -f "https://${github_token}@github.com/kirainmoe/hasee-tongfang-macos-build" HEAD:master

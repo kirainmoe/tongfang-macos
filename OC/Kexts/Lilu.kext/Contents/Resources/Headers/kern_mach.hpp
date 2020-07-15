@@ -30,17 +30,20 @@ class MachInfo {
 	mach_vm_address_t prelink_vmaddr {0};    // prelink text base vm address (for kexts this is their actual slide)
 	uint32_t file_buf_size {0};              // read file data size
 	uint8_t *linkedit_buf {nullptr};         // pointer to __LINKEDIT buffer containing symbols to solve
+	bool linkedit_buf_ro {false};            // linkedit_buf is read-only (not copy).
 	uint64_t linkedit_fileoff {0};           // __LINKEDIT file offset so we can read
 	uint64_t linkedit_size {0};
 	uint32_t symboltable_fileoff {0};        // file offset to symbol table - used to position inside the __LINKEDIT buffer
 	uint32_t symboltable_nr_symbols {0};
 	uint32_t stringtable_fileoff {0};        // file offset to string table
 	mach_header_64 *running_mh {nullptr};    // pointer to mach-o header of running kernel item
+	mach_vm_address_t address_slots {0};     // pointer after mach-o header to store pointers
 	off_t fat_offset {0};                    // additional fat offset
 	size_t memory_size {HeaderSize};         // memory size
 	bool kaslr_slide_set {false};            // kaslr can be null, used for disambiguation
 	bool allow_decompress {true};            // allows mach decompression
 	bool prelink_slid {false};               // assume kaslr-slid kext addresses
+	bool kernel_collection {false};          // kernel collection (11.0+)
 	uint64_t self_uuid[2] {};                // saved uuid of the loaded kext or kernel
 
 	/**
@@ -148,6 +151,13 @@ class MachInfo {
 	 */
 	kern_return_t initFromFileSystem(const char * const paths[], size_t num);
 
+	/**
+	 *  Resolve mach data in the kernel via memory access
+	 *
+	 *  @return KERN_SUCCESS if loaded
+	 */
+	kern_return_t initFromMemory();
+
 public:
 
 	/**
@@ -192,6 +202,23 @@ public:
 	 *  Release the allocated memory, must be called regardless of the init error
 	 */
 	EXPORT void deinit();
+
+	/**
+	 *  Retrieve the mach header and __TEXT addresses for KC mode
+	 *
+	 *  @param slide load slide if calculating for kexts
+	 *
+	 *  @return KERN_SUCCESS on success
+	 */
+	kern_return_t kcGetRunningAddresses(mach_vm_address_t slide);
+
+	/**
+	 *  Get address slot if present
+	 *
+	 *  @return address slot on success
+	 *  @return NULL on success
+	 */
+	mach_vm_address_t getAddressSlot();
 
 	/**
 	 *  Retrieve the mach header and __TEXT addresses

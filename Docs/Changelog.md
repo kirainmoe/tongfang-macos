@@ -115,3 +115,8 @@
 
 - 更新 TongfangKeyboardUtility.kext，引入新的 Fn 快捷键实现方式。
 - 删除 SSDT-FN.aml 和相关 ACPI 重命名。
+
+## 2020.7.15
+
+- 更新 OpenCore 为最新编译版，更新核心 Kext。
+- 支持从 U 盘全新安装 macOS 11.0 Beta2 Big Sur，安装时选择安装到低版本系统的分区，即可从低版本升级到高版本而不丢失数据。

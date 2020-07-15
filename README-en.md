@@ -8,13 +8,13 @@
 
 
 <p align="center">
-<img src="https://img.shields.io/badge/build-passing-brightgreen.svg"/> 
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> 
 
 <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> 
 
 <img src="https://img.shields.io/badge/supported_macOS_version-10.15.x-9cf.svg"/>
 
-<img src="https://img.shields.io/badge/preliminary_support-11.0_Beta-blueviolet.svg"/>
+<img src="https://img.shields.io/badge/preliminary_support-11.0_Beta_2-blueviolet.svg"/>
 
 <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
@@ -58,7 +58,7 @@ This repo contains the OpenCore config for installing latest macOS on Tongfang (
 
 ### macOS version
 
-The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested version is **10.15.5 (19F96)** (Catalina) and **11.0 Beta (20A4299v)** (Big Sur).
+The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested version is **10.15.5 (19F96)** (Catalina) and **11.0 Beta (20A4300b)** (Big Sur).
 
 For installing macOS Big Sur, refer to [#75](https://github.com/kirainmoe/hasee-tongfang-macos/issues/75).
 
