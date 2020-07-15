@@ -7,9 +7,11 @@ install:
 - export buildName="hasee-tongfang-macos-$(cat Docs/.version).zip"
 - zip -r $buildName . -x '*.git*'
 script:
-- git clone https://github.com/kirainmoe/hasee-tongfang-macos-build build
+- git clone https://${github_token}@github.com/kirainmoe/hasee-tongfang-macos-build build
 - cp $buildName build/$buildName
 - cd build
 - git add .
+- git config --global user.name "Ami Bot"
+- git config --global user.email "ami@kirainmoe.com" 
 - git commit -m "Deploy version $buildName"
-- git push -f "https://${github_token}@github.com/kirainmoe/hasee-tongfang-macos-build" HEAD:master
+- git push
