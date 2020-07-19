@@ -3,15 +3,16 @@ os: osx
 language: node_js
 node_js:
 - 12
-install:
+
+script:
+- echo "[Task] Deploying to repository..."
 - export buildName="hasee-tongfang-macos-$(cat Docs/.version).zip"
 - zip -r $buildName . -x '*.git*'
-script:
 - git clone https://${github_token}@github.com/kirainmoe/hasee-tongfang-macos-build build
 - cp $buildName build/$buildName
 - cd build
 - git add .
-- git config --global user.name "Ami Bot"
-- git config --global user.email "ami@kirainmoe.com" 
+- git config --global user.name "tongfang-ci-bot"
+- git config --global user.email "tongfang@kirainmoe.com" 
 - git commit -m "Deploy version $buildName"
 - git push

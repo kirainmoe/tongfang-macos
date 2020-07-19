@@ -18,13 +18,36 @@
 <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-![QQ20200628-145250.jpg](https://i.loli.net/2020/06/28/pmwk47CVTGJshrF.jpg)
+![QQ20200719-162026.jpg](https://i.loli.net/2020/07/19/cGSXuHmzObEitLD.jpg)
 
 <h3 align="center">
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
     <a href="https://hackintosh.kirainmoe.com">帮助文档</a> |
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Adapting-Guidance-zh-CN.md">同方机型适配指南</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README-en.md">English</a>
 </h3>
+
+<!-- omit in toc -->
+# 目录
+- [如何使用](#如何使用)
+  - [获取 & 更新配置文件](#获取--更新配置文件)
+  - [安装 macOS](#安装-macos)
+  - [手动定制配置文件](#手动定制配置文件)
+- [兼容性](#兼容性)
+  - [兼容的系统](#兼容的系统)
+  - [适用的机型](#适用的机型)
+    - [神舟战神系列](#神舟战神系列)
+    - [炫龙系列](#炫龙系列)
+    - [机械革命系列](#机械革命系列)
+    - [如何确定我的笔记本是否兼容？](#如何确定我的笔记本是否兼容)
+- [配置文件情况](#配置文件情况)
+    - [发行说明](#发行说明)
+    - [完美的功能](#完美的功能)
+    - [可用的功能](#可用的功能)
+    - [无法使用的功能](#无法使用的功能)
+- [问题反馈 & 交流](#问题反馈--交流)
+- [贡献者 & 鸣谢](#贡献者--鸣谢)
+- [许可协议 & 捐赠](#许可协议--捐赠)
+- [拓展阅读](#拓展阅读)
 
 # 如何使用
 
@@ -70,13 +93,14 @@
 
 ## 兼容的系统
 
-最新配置文件仅兼容 **macOS Catalina 10.15** 及以上版本，目前已测试的最新兼容版本是 **10.15.5 (19F96)** (Catalina) 和 **11.0 Beta (20A4300b)** (Big Sur).
+最新配置文件仅兼容 **macOS Catalina 10.15** 及以上版本，目前已测试的最新兼容版本是：
 
-请不要直接 OTA 更新到 Big Sur。安装 macOS Big Sur 的详细方式，请参考：[#75](https://github.com/kirainmoe/hasee-tongfang-macos/issues/75).
+- macOS Catalina **10.15.6 (19G73)**
+- macOS Big Sur **11.0 Beta 2 (20A4300b)**，支持 OTA 更新和全新安装
 
 ## 适用的机型
 
-理论上所有使用清华同方模具的**标压** 8/9 代机型均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型**。详细的兼容型号表格如下：
+理论上所有使用 **清华同方模具的标压 8/9 代机型** 均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型**。详细的兼容型号表格如下：
 
 ### 神舟战神系列
 
@@ -116,8 +140,10 @@
 
 | 模具代号 | 具体型号 |
 |---------|--------|
-| GK7CP6R | 炫龙 炎魔T3Ti |
-| GI5CN54 | 炫龙 炎魔T2Ti |
+| GK7CP6R | 炫龙 T3Ti 710S5R |
+| GK7CP6R | 炫龙 T3Ti 710S5V |
+| GK7CP6R | 炫龙 T3Ti 510S5R |
+| GI5CN54 | 炫龙 T2Ti |
 
 ### 机械革命系列
 
@@ -125,7 +151,8 @@
 |---------|--------|
 | GK5CN5X | 机械革命 Z2 Air |
 | GK5CN6Z <br> GK5CN5Z | 机械革命 Z2, X8Ti 系列 |
-| GK5CP6X <br> GK5CP5X | 机械革命 Z2-G <br> 机械革命 Z2 Air-G |
+| GK5CP6Z <br> GK5CP5Z | 机械革命 Z2-G，机械革命 Z2-R |
+| GK5CP6X <br> GK5CP5X | 机械革命 Z2 Air-G |
 | GK7CP6R | 机械革命 X3 |
 
 ### 如何确定我的笔记本是否兼容？
@@ -136,32 +163,16 @@
 
 对于其它品牌理论兼容的同方模具机型，若遇到 USB 接口无法识别或速度不正常的问题，建议参照 [此教程](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html) 自行定制 USB。
 
-# 配置概览
-
-## 参考配置
-
-| Component | Model | Comments |
-|--|--|---|
-| CPU | Intel Core(TM) i7-8750H |  |
-| IGPU | Intel UHD Graphics 630 | |
-| DGPU | Nvidia Geforce GTX 1060 | 8 代以上同方机型的 Nvidia 独显无法在任何版本的 macOS 下被驱动 <br>关于具体的原因猜测，请参见[此文章](http://www.bswaterb.club/?p=285) |
-| RAM | Micron Crucial 8GB+8GB | |
-| NVMe SSD | WD Black SN750 NVME SSD 500G | 请确保你的机器未装有：三星 PM981(a)、镁光 2200s、<br>傲腾、HP EX920 等 macOS 不支持的硬盘 | 
-| SATA SSD | Phison SATA SSD 128G | | 
-| Wireless | BCM94360CS2 | 原机自带的 Intel AC9462/AC9560 并不能完美驱动 |
-| Ethernet | Realtek RTL8168H | |
-| Audio | Realtek ALC269vc | |
-
-## 配置文件
+# 配置文件情况
 
 ### 发行说明
 
-- OpenCore Bootloader 使用官方 0.6.0 版本，GUI 采用 OpenCanopy.
+- OpenCore Bootloader 使用官方 0.6.0 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
 - 配置文件的 SMBIOS 采用 `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
 - 默认支持 Windows 和 macOS 双引导，若需要引导其他操作系统需自行添加。
 - 此版本对更换了 4K 屏幕的笔记本做了兼容；对于 GI5CN54 / GJ5CN64 模具改 4K 屏的用户，**需要先解锁 BIOS 或使用 UEFI Shell** 修改 `DVMT Pre-allocated` 为 `64MB` 以上。
 
-### Working
+### 完美的功能
 
 - [x] CPU 睿频、变频
 - [x] 核芯显卡 Intel UHD Graphics 630 (platform-id: `3E9B0000`)
@@ -174,49 +185,55 @@
 - [x] 电池状态显示
 - [x] 摄像头
 - [x] 文件保险箱 (FileVault)
-- [x] 睡眠 *
+- [x] 睡眠
 - [x] Fn 快捷键 *
-- [ ] 键盘灯 (仅适用于 0.02 版本的 ITE Device 8291) *
+- [x] 键盘灯 *
 - [ ] 触摸板 (I2C HID 触摸板手势完美，PS/2 触摸板支持有限)
-- [ ] 随航（无线随航可能需要更换无线网卡）
+- [ ] 有线随航
 
 > 备注：
-> - 标 * 的功能表示需要在安装系统后使用 [Tongfang Hackintosh Utility](https://starbeat.kirainmoe.com) 程序修复。  
+> - 标 * 的功能表示需要在安装系统后配合 [Tongfang Hackintosh Utility](https://starbeat.kirainmoe.com) 软件使用。
 > - 未打钩的项目表示该功能的驱动情况可能因机型而异，如 GI5CN54/GJ5CN64 的 PS/2 触摸板仅有有限的手势支持。
-> - 如果你的设备为 0.03 版本的 ITE Device 8291，请使用 [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center) 调节键盘灯。
+> - Tongfang Hackintosh Utility 已支持 0.03 版本的 ITE Device 8291 控制键盘灯。如果你的设备为 0.03 版本的 ITE Device 8291，也可以选择使用 [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center) 调节键盘灯。
 
-### Not Working
+### 可用的功能
 
-- [ ] 独立显卡 （已使用 `SSDT-DDGPU.aml` 屏蔽）
-- [ ] Intel 无线网卡
-- [ ] 读卡器
+- [x] Intel 无线网卡 (AC9462, AC9560, AX200)，基于 [OpenIntelWireless/itlwm 项目](https://github.com/OpenIntelWireless/itlwm) 和 [HeliPort](https://github.com/OpenIntelWireless/HeliPort).
 
 > 备注：
-> - 同方 8 代以上模具的 HDMI / miniDP 接口直连独显，因此**无法在 macOS 下使用 HDMI/miniDP 接口外接显示器**。如有需要外接需购买 USB 转 HDMI 转换器（请注意不是普通的拓展坞），请参考 [此页面](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da#na-wo-zen-yang-wai-jie-xian-shi-qi) 中提供的解决方案。
-> - **本仓库支持的同方模具的 Type-C 接口没有视频输出功能。**
-> - 由于原装的 Intel AC9462（AC9560） 暂时没有可用驱动，因此 Wi-Fi 功能将不可用，这是常识。
-> - 若要使用网络，可以使用以太网、USB 共享网络、蓝牙共享网络、外接 USB 无线网卡，或更换内置无线网卡。
-> - 由于**隔空投送 (Airdrop) 和接力 (Handoff)** 功能依赖于 WiFi 和低功耗蓝牙，因此默认情况下此两项功能将不可用。
+> - 请注意 itlwm 项目仍然处于开发阶段，目前并不稳定，可能出现频繁的断网或无法联网等问题。
+> - 在生成 EFI 时勾选添加 Intel 无线网卡驱动并在 macOS 下使用 HeliPort 客户端管理网络，即可实现使用 Intel 无线网卡链接 Wi-Fi。
+> - 若想要稳定地使用网络，可以使用以太网、USB 共享网络、蓝牙共享网络、外接 USB 无线网卡，或更换内置无线网卡。
 > - 请注意：**DW1820A 无线网卡在同方模具上有已知的兼容性问题**，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡。
 > - 若有更换无线网卡的需求，推荐更换 [BCM94360CS2 + NGFF 转接卡] 方案。
+
+
+### 无法使用的功能
+
+- [ ] 独立显卡 （已使用 `SSDT-DDGPU.aml` 屏蔽）
+- [ ] 隔空投送 AirDrop、接力 Handoff、无线随航 Sidecar
+- [ ] SD 读卡器
+
+> 备注：
+> - 同方 8 代以上模具的 HDMI / miniDP 接口直连独显，因此**无法在 macOS 下使用 HDMI/miniDP 接口外接显示器**。如有需要外接需购买 USB 转 HDMI 转换器（请注意不是普通的拓展坞），请参考 [此页面](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da#na-wo-zen-yang-wai-jie-xian-shi-qi) 中提供的解决方案。**本仓库支持的同方模具的 Type-C 接口均没有视频输出功能。**
+> - 8 代以上同方模具的独显无法在 **任何 macOS 版本（包括但不限于 10.13.x）** 被驱动，关于具体的原因猜测，详见[此文章](http://www.bswaterb.club/?p=285)。
+> - 由于**隔空投送 (Airdrop) 和接力 (Handoff)** 功能依赖于 WiFi 和低功耗蓝牙，因此默认情况下此两项功能将不可用。
+> - 由于读卡器通过 USB 2.0 协议连接电脑，没有驱动案例，故内置 SD 读卡器无法使用。
 
 # 问题反馈 & 交流
 
 你可以通过在 GitHub 上提 issue 的方式反馈问题，或者向 kirainmoe@gmail.com 发送问题报告邮件。
 
-## QQ 交流群
-
-**请确保你在群里问问题之前，已经看过了[教学视频](https://www.bilibili.com/video/av81263778)、并使用了搜索功能查找并仔细阅读了[项目文档](https://hackintosh.kirainmoe.com)内的相关内容！**
+你也可以加入以下 QQ 群聊获取帮助，但**请确保你在群里问问题之前，已经看过了[教学视频](https://www.bilibili.com/video/av81263778)、并使用了搜索功能查找并仔细阅读了[项目文档](https://hackintosh.kirainmoe.com)内的相关内容！**
 
 
 | 群名称 | 神舟战神黑苹果 1 群 | 同方黑苹果 2 群 |
 |-----|------|---------|
 | 群号 | 833022235 | 815359928 |
-| 加群二维码 | <img src="https://i.loli.net/2020/01/05/sKh875UC14LFejv.png"> | <img src="https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png"> |
+| 加群二维码 | ![1群二维码](https://i.loli.net/2020/01/05/sKh875UC14LFejv.png) | ![2群二维码](https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png) |
 | 加群链接 | https://jq.qq.com/?_wv=1027&k=5G82zlQ | https://jq.qq.com/?_wv=1027&k=5b7ZJWl |
 | 规模 | 1000 人群 | 500 人群 |
 | 特殊限制 | 无机型限制，但因人数爆满，暂需付费 1 元入群 | **仅限同方模具的 8/9 代机型用户加入** |
-| 备注 | - | 新群人数较少，推荐新用户加入 2 群 |
 
 # 贡献者 & 鸣谢
 
@@ -224,11 +241,13 @@
 
 # 许可协议 & 捐赠
 
-在 **[Maruyama License 协议](https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/LICENSE)** 的许可下，使用本仓库下的所有配置文件都是**免费**的。为了保护你的权益，建议你不要通过 **任何渠道** 以 **任何价格** 购买上述机型的配置文件，**同时也不允许任何人以任何价格出售此配置文件。**
+使用本仓库下的所有配置文件都是**免费**的，惟需遵守以下规则：
 
-**若你在此配置文件的基础上适配其它机型的配置文件，则需要保留版权和鸣谢信息，同时需要为大众保留至少一个免费获取、下载的方式（若您不同意此规则，请不要在此配置文件基础上修改）。**
+- **不允许任何人以任何形式、任何价格出售此配置文件（包括但不限于交易下载、付费下载）。** 同时，为了保护你的权益，建议你不要通过 **任何渠道** 以 **任何价格** 购买上述机型的配置文件。
 
-**若你在任何项目中，使用了从此配置文件中获取的任何由其他人创作的内容，则需要保留他人的版权信息。**
+- 若你在此配置文件的基础上适配其它机型的配置文件，则**需要保留对本项目的引用和鸣谢 (Credits) 信息，同时需要为大众保留至少一个免费获取、下载的方式**（若您不同意此规则，请不要在此配置文件基础上修改）。
+
+- **若你在任何项目中，使用了从此配置文件中获取的任何由其他人创作的内容，则需要保留对本项目的引用和他人的版权信息。**
 
 关于捐赠，如果您认可我的工作，也可以通过捐赠支持我。所有的捐赠将会成为我更新的动力。
 
