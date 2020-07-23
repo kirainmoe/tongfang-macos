@@ -13,7 +13,7 @@
 
 <img src="https://img.shields.io/badge/supported_macOS_version-10.15.x-9cf.svg"/>
 
-<img src="https://img.shields.io/badge/preliminary_support-11.0_Beta_2-blueviolet.svg"/>
+<img src="https://img.shields.io/badge/preliminary_support-11.0_Beta_3-blueviolet.svg"/>
 
 <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
@@ -39,11 +39,12 @@
     - [炫龙系列](#炫龙系列)
     - [机械革命系列](#机械革命系列)
     - [如何确定我的笔记本是否兼容？](#如何确定我的笔记本是否兼容)
-- [配置文件情况](#配置文件情况)
+- [配置文件概况](#配置文件概况)
     - [发行说明](#发行说明)
     - [完美的功能](#完美的功能)
-    - [可用的功能](#可用的功能)
-    - [无法使用的功能](#无法使用的功能)
+    - [勉强可用的功能](#勉强可用的功能)
+    - [购买或更换硬件后可用的功能](#购买或更换硬件后可用的功能)
+    - [无论如何无法使用的功能](#无论如何无法使用的功能)
 - [问题反馈 & 交流](#问题反馈--交流)
 - [贡献者 & 鸣谢](#贡献者--鸣谢)
 - [许可协议 & 捐赠](#许可协议--捐赠)
@@ -96,7 +97,9 @@
 最新配置文件仅兼容 **macOS Catalina 10.15** 及以上版本，目前已测试的最新兼容版本是：
 
 - macOS Catalina **10.15.6 (19G73)**
-- macOS Big Sur **11.0 Beta 2 (20A4300b)**，支持 OTA 更新和全新安装
+- macOS Big Sur **11.0 Beta 3 (20A5323l)**，支持 OTA 更新和全新安装
+
+> 提示：OTA 更新 macOS Big Sur Beta 3 时，日志可能会长时间停留在 `Forcing cs_runtime for entitlement`，此时是更新程序正在创建系统快照，请耐心等待约半小时后即可正常更新。
 
 ## 适用的机型
 
@@ -163,7 +166,7 @@
 
 对于其它品牌理论兼容的同方模具机型，若遇到 USB 接口无法识别或速度不正常的问题，建议参照 [此教程](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html) 自行定制 USB。
 
-# 配置文件情况
+# 配置文件概况
 
 ### 发行说明
 
@@ -175,50 +178,62 @@
 ### 完美的功能
 
 - [x] CPU 睿频、变频
-- [x] 核芯显卡 Intel UHD Graphics 630 (platform-id: `3E9B0000`)
-- [x] 声卡 Realtek ALC269vc (layout-id: `29`)
+    - 可使用 [one-key-cpufriend](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/blob/master/one-key-cpufriend/README_CN.md) 调节 CPU 性能方案，默认为节能
+
+- [x] 核芯显卡 Intel UHD Graphics 630
+    - 使用 `platform-id: 3E9B0000`
+  
+- [x] 声卡 Realtek ALC269vc
+    - 使用 `layout-id: 29`
+
+- [x] Fn 快捷键
+    - 需要安装 [同方黑苹果助手](https://github.com/kirainmoe/tongfang-hackintosh-utility) 或 [同方快捷键守护程序](https://github.com/Goshin/TongfangKeyboardUtility) 实现 OSD
+
+- [x] 键盘灯控制
+    - 需要安装 [同方黑苹果助手](https://github.com/kirainmoe/tongfang-hackintosh-utility) 或 [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center) 控制键盘灯
+
+- [x] 触摸板
+    - GI5CN54/GJ5CN64 模具使用的 PS/2 触摸板没有原生手势支持
+    - 其它机型的 I2C 触摸板可以正常使用手势
+
 - [x] 有线网卡 Realtek RTL8168H
-- [x] Intel 蓝牙 (AC9462, AC9560, AX200)
+- [x] Intel 蓝牙（无需热启动）
+    - 基于 [OpenIntelWireless/IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) 项目
+
 - [x] USB 3.0, Type-C 
 - [x] 亮度调节
-- [x] 原生电源管理
-- [x] 电池状态显示
+- [x] 原生电源管理 & 电池状态显示
 - [x] 摄像头
-- [x] 文件保险箱 (FileVault)
-- [x] 睡眠
-- [x] Fn 快捷键 *
-- [x] 键盘灯 *
-- [ ] 触摸板 (I2C HID 触摸板手势完美，PS/2 触摸板支持有限)
-- [ ] 有线随航
+- [x] 文件保险箱 (FileVault 2)
+- [x] S3 睡眠、唤醒
 
-> 备注：
-> - 标 * 的功能表示需要在安装系统后配合 [Tongfang Hackintosh Utility](https://starbeat.kirainmoe.com) 软件使用。
-> - 未打钩的项目表示该功能的驱动情况可能因机型而异，如 GI5CN54/GJ5CN64 的 PS/2 触摸板仅有有限的手势支持。
-> - Tongfang Hackintosh Utility 已支持 0.03 版本的 ITE Device 8291 控制键盘灯。如果你的设备为 0.03 版本的 ITE Device 8291，也可以选择使用 [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center) 调节键盘灯。
+### 勉强可用的功能
 
-### 可用的功能
+- [x] Intel 无线网卡 (AC9462, AC9560, AX200)
+    - 基于仍然处于开发阶段的 [OpenIntelWireless/itlwm 项目](https://github.com/OpenIntelWireless/itlwm) 和 [HeliPort](https://github.com/OpenIntelWireless/HeliPort) 项目，目前并不稳定，可能出现频繁的断网或无法联网等问题。
+   - 在生成 EFI 时勾选添加 Intel 无线网卡驱动并在 macOS 下使用 HeliPort 客户端管理网络，即可实现使用 Intel 无线网卡链接 Wi-Fi。
 
-- [x] Intel 无线网卡 (AC9462, AC9560, AX200)，基于 [OpenIntelWireless/itlwm 项目](https://github.com/OpenIntelWireless/itlwm) 和 [HeliPort](https://github.com/OpenIntelWireless/HeliPort).
+### 购买或更换硬件后可用的功能
 
-> 备注：
-> - 请注意 itlwm 项目仍然处于开发阶段，目前并不稳定，可能出现频繁的断网或无法联网等问题。
-> - 在生成 EFI 时勾选添加 Intel 无线网卡驱动并在 macOS 下使用 HeliPort 客户端管理网络，即可实现使用 Intel 无线网卡链接 Wi-Fi。
-> - 若想要稳定地使用网络，可以使用以太网、USB 共享网络、蓝牙共享网络、外接 USB 无线网卡，或更换内置无线网卡。
-> - 请注意：**DW1820A 无线网卡在同方模具上有已知的兼容性问题**，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡。
-> - 若有更换无线网卡的需求，推荐更换 [BCM94360CS2 + NGFF 转接卡] 方案。
-
-
-### 无法使用的功能
-
-- [ ] 独立显卡 （已使用 `SSDT-DDGPU.aml` 屏蔽）
+- [ ] 原生 IO80211 支持的 Wi-Fi 和低功耗蓝牙
 - [ ] 隔空投送 AirDrop、接力 Handoff、无线随航 Sidecar
-- [ ] SD 读卡器
+  - 若有更换无线网卡的需求，推荐更换 [BCM94360CS2 + NGFF 转接卡] 方案。
+  - 请注意：**DW1820A 无线网卡在同方模具上有已知的兼容性问题**，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡。
 
-> 备注：
-> - 同方 8 代以上模具的 HDMI / miniDP 接口直连独显，因此**无法在 macOS 下使用 HDMI/miniDP 接口外接显示器**。如有需要外接需购买 USB 转 HDMI 转换器（请注意不是普通的拓展坞），请参考 [此页面](https://hackintosh.kirainmoe.com/an-zhuang-hou/an-zhuang-hou-de-chang-jian-wen-ti-jie-da#na-wo-zen-yang-wai-jie-xian-shi-qi) 中提供的解决方案。**本仓库支持的同方模具的 Type-C 接口均没有视频输出功能。**
-> - 8 代以上同方模具的独显无法在 **任何 macOS 版本（包括但不限于 10.13.x）** 被驱动，关于具体的原因猜测，详见[此文章](http://www.bswaterb.club/?p=285)。
-> - 由于**隔空投送 (Airdrop) 和接力 (Handoff)** 功能依赖于 WiFi 和低功耗蓝牙，因此默认情况下此两项功能将不可用。
-> - 由于读卡器通过 USB 2.0 协议连接电脑，没有驱动案例，故内置 SD 读卡器无法使用。
+- [ ] 外接显示器
+    - 同方 8 代以上模具的 HDMI / miniDP 接口直连独显，因此无法在 macOS 下使用 HDMI/miniDP 接口外接显示。
+    - 本仓库支持的同方模具的 Type-C 接口均没有视频输出功能。
+    - 购买 [此链接](https://github.com/kirainmoe/hasee-tongfang-macos/issues/10) 中测试的产品可能可以满足部分外接显示器的需要。
+
+### 无论如何无法使用的功能
+
+- [ ] 独立显卡
+  - 8 代以上同方模具的独显无法在 **任何 macOS 版本（包括但不限于 10.13.x）** 被驱动，关于具体的原因猜测，详见[此文章](http://www.bswaterb.club/?p=285)。
+  - 已使用 `SSDT-DDGPU.aml` 屏蔽
+
+- [ ] SD 读卡器
+  - 由于读卡器通过 USB 2.0 协议连接电脑，没有驱动案例，故内置 SD 读卡器无法使用。
+
 
 # 问题反馈 & 交流
 
