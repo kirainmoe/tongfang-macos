@@ -52,11 +52,11 @@
 
 # 如何使用
 
-首先，请查看 [兼容性表格](#兼容性)，确认此配置文件支持你的机型、模具以及系统版本。
+第一步，请先查看 [兼容性表格](#兼容性)，确认此配置文件支持你的机型、模具以及系统版本。
 
 ## 获取 & 更新配置文件
 
-请下载对应平台的 [Tongfang Hackintosh Utility](https://starbeat.kirainmoe.com) 程序，根据你的型号与实际硬件配置，定制 OpenCore 配置文件。
+请下载对应平台的 [同方黑苹果助手](https://github.com/kirainmoe/tongfang-hackintosh-utility)，根据你的型号与实际硬件配置，定制 OpenCore 配置文件。
 
 请不要使用 GitHub 上的 "Download Zip" 功能，如下图所示：
 
@@ -72,7 +72,7 @@
 
 请参照 [安装教学视频](https://www.bilibili.com/video/av81263778) 里的指引，使用上一步得到的配置文件安装好 macOS。
 
-替换配置文件后，请在 macOS 下使用 [Tongfang Hackintosh Utility](https://starbeat.kirainmoe.com) 程序的工具箱，执行修复睡眠等优化操作。
+替换配置文件后，请在 macOS 下使用 [同方黑苹果助手](https://github.com/kirainmoe/tongfang-hackintosh-utility) 执行修复睡眠等优化操作。
 
 ## 手动定制配置文件
 
@@ -94,7 +94,9 @@
 
 ## 兼容的系统
 
-最新配置文件仅兼容 **macOS Catalina 10.15** 及以上版本，目前已测试的最新兼容版本是：
+最新配置文件仅完美兼容 `macOS Catalina 10.15` 及以上版本，**不兼容 `macOS High Sierra 10.13.x` 版本**。
+
+目前已测试的最新兼容版本是：
 
 - macOS Catalina **10.15.6 (19G73)**
 - macOS Big Sur **11.0 Beta 3 (20A5323l)**，支持 OTA 更新和全新安装
@@ -171,8 +173,11 @@
 ### 发行说明
 
 - OpenCore Bootloader 使用官方 0.6.0 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
+
 - 配置文件的 SMBIOS 采用 `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
+
 - 默认支持 Windows 和 macOS 双引导，若需要引导其他操作系统需自行添加。
+
 - 此版本对更换了 4K 屏幕的笔记本做了兼容；对于 GI5CN54 / GJ5CN64 模具改 4K 屏的用户，**需要先解锁 BIOS 或使用 UEFI Shell** 修改 `DVMT Pre-allocated` 为 `64MB` 以上。
 
 ### 完美的功能
@@ -210,7 +215,9 @@
 ### 勉强可用的功能
 
 - [x] Intel 无线网卡 (AC9462, AC9560, AX200)
+
     - 基于仍然处于开发阶段的 [OpenIntelWireless/itlwm 项目](https://github.com/OpenIntelWireless/itlwm) 和 [HeliPort](https://github.com/OpenIntelWireless/HeliPort) 项目，目前并不稳定，可能出现频繁的断网或无法联网等问题。
+
    - 在生成 EFI 时勾选添加 Intel 无线网卡驱动并在 macOS 下使用 HeliPort 客户端管理网络，即可实现使用 Intel 无线网卡链接 Wi-Fi。
 
 ### 购买或更换硬件后可用的功能
