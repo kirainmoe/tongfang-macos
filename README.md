@@ -1,10 +1,9 @@
-<p align="center">
-    <img src="https://i.loli.net/2020/01/05/QilbpRdq4awGfSX.png" width="200px" alt="logo">
-</p>
+<!-- omit in toc -->
+#  macOS on Tongfang Laptops
 
-<h1 align="center">macOS on Tongfang Laptops</h1>
+<img align="right" src="https://i.loli.net/2020/07/28/p6YFWyzeNE2Iqcn.png" width="200px" alt="logo">
 
-<p align="center">适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件</p>
+适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件
 
 <p align="center">
 <img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> 
@@ -18,7 +17,6 @@
 <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 </p>
 
-![QQ20200719-162026.jpg](https://i.loli.net/2020/07/19/cGSXuHmzObEitLD.jpg)
 
 <h3 align="center">
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
@@ -76,7 +74,9 @@
 
 ## 手动定制配置文件
 
-我们推荐所有用户使用 Tongfang Hackintosh Utility 定制对应机型的配置文件。如果因为某些原因你无法使用此工具定制配置文件，请参考以下方式手动定制：
+“同方黑苹果助手”会针对用户的不同硬件情况和需求，定制适合用户机型和硬件情况的 EFI，我们推荐所有用户使用“同方黑苹果助手”定制对应机型的配置文件。
+
+如果因为某些原因你无法使用此工具定制配置文件，请参考以下方式手动修改配置文件，以兼容你的机型：
 
 <details>
 <summary>手动定制方式</summary>
@@ -120,16 +120,14 @@
 | GK5CP6X | Z7-CT7GK、Z7-CT5GA、Z7-CT7GA |
 | GK5CP5X | Z7M-CT7GS、Z7M-CT5GA |
 | GK7CP6R | G7-CT7VK、G7-CT7RA |
-| GK5CP6V | Z7-CT7VH、Z7-CT7VA、Z7-CT5VH |
-| GK5CP5V | Z7M-CT5VH、Z7M-CT7VH |
+| GK5CP6V | Z7-CT7VH、Z7-CT7VA、Z7-CT5VH、Z7-CT5N1 |
+| GK5CP5V | Z7M-CT5VH、Z7M-CT7VH、Z7M-CT5N1 |
 
 未测试：
 
 | 模具代号 | 具体型号 |
 |---------|--------|
 | GK5CR0V | Z8-CT7VK |
-| GK5CP6V | Z7-CT5N1 |
-| GK5CP5V | Z7M-CT5N1 |
 | GJ5CN64 | Z7-KP7S |
 
 ### 炫龙系列
@@ -206,6 +204,8 @@
     - 基于 [OpenIntelWireless/IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) 项目
 
 - [x] USB 3.0, Type-C 
+    - 本仓库支持的同方模具的 Type-C 接口均没有视频输出功能。
+
 - [x] 亮度调节
 - [x] 原生电源管理 & 电池状态显示
 - [x] 摄像头
@@ -229,7 +229,6 @@
 
 - [ ] 外接显示器
     - 同方 8 代以上模具的 HDMI / miniDP 接口直连独显，因此无法在 macOS 下使用 HDMI/miniDP 接口外接显示。
-    - 本仓库支持的同方模具的 Type-C 接口均没有视频输出功能。
     - 购买 [此链接](https://github.com/kirainmoe/hasee-tongfang-macos/issues/10) 中测试的产品可能可以满足部分外接显示器的需要。
 
 ### 无论如何无法使用的功能
