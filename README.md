@@ -5,20 +5,18 @@
 
 适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件
 
-<p align="center">
 <img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> 
 
 <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> 
 
-<img src="https://img.shields.io/badge/supported_macOS_version-10.15.x-9cf.svg"/>
+<img src="https://img.shields.io/badge/support_macOS-10.15.x-9cf.svg"/>
 
-<img src="https://img.shields.io/badge/preliminary_support-11.0_Beta_3-blueviolet.svg"/>
+<img src="https://img.shields.io/badge/support_macOS-11.0_Beta_3-blueviolet.svg"/>
 
 <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
-</p>
 
 
-<h3 align="center">
+<h3>
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
     <a href="https://hackintosh.kirainmoe.com">帮助文档</a> |
     <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Adapting-Guidance-zh-CN.md">同方机型适配指南</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README-en.md">English</a>
