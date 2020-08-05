@@ -141,7 +141,7 @@
         <tr>
             <td>GK5CP6V</td>
             <td>Z7-CT7VH、Z7-CT7VA、Z7-CT5VH、Z7-CT5N1</td>
-            <td rowspan=4>?</td>
+            <td rowspan=5>?</td>
             <td rowspan=3>?</td>
         </tr>
         <tr>
@@ -152,6 +152,11 @@
             <td>GK5CR0V</td>
             <td>Z8-CT7VK</td>
         </tr>
+        <tr>
+            <td>GK5CN6Z <br> GK5CN5Z</td>
+            <td> ? </td>
+            <td> Z2 / X8Ti 系列（8 代） </td>
+        </tr>        
         <tr>
             <td>GK5CP6Z <br> GK5CP5Z</td>
             <td> ? </td>
