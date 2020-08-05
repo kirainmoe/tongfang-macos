@@ -5,7 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_3-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_4-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 
 
 <h3>
@@ -23,12 +23,8 @@
 - [兼容性](#兼容性)
   - [兼容的系统](#兼容的系统)
   - [适用的机型](#适用的机型)
-    - [神舟战神系列](#神舟战神系列)
-    - [炫龙系列](#炫龙系列)
-    - [机械革命系列](#机械革命系列)
-    - [如何确定我的笔记本是否兼容？](#如何确定我的笔记本是否兼容)
+  - [如何确定我的笔记本是否兼容？](#如何确定我的笔记本是否兼容)
 - [配置文件概况](#配置文件概况)
-    - [发行说明](#发行说明)
     - [完美的功能](#完美的功能)
     - [勉强可用的功能](#勉强可用的功能)
     - [购买或更换硬件后可用的功能](#购买或更换硬件后可用的功能)
@@ -89,66 +85,82 @@
 目前已测试的最新兼容版本是：
 
 - macOS Catalina **10.15.6 (19G73)**
-- macOS Big Sur **11.0 Beta 3 (20A5323l)**，支持 OTA 更新和全新安装
+- macOS Big Sur **11.0 Beta 4 (20A5343i)**，支持 OTA 更新和全新安装
 
-> 提示：OTA 更新 macOS Big Sur Beta 3 时，日志可能会长时间停留在 `Forcing cs_runtime for entitlement`，此时是更新程序正在创建系统快照，请耐心等待约半小时后即可正常更新。
+> 提示：OTA 更新 macOS Big Sur Beta 时，日志可能会长时间停留在 `Forcing cs_runtime for entitlement`，此时是更新程序正在创建系统快照，请耐心等待约 20 分钟后即可正常更新。
 
 ## 适用的机型
 
 理论上所有使用 **清华同方模具的标压 8/9 代机型** 均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型**。详细的兼容型号表格如下：
 
-### 神舟战神系列
+<table>
+    <thead>
+        <th>模具型号</th>
+        <th>神舟战神</th>
+        <th>炫龙</th>
+        <th>机械革命</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>GK5CN6X</td>
+            <td>Z7-KP7GZ、Z7-KP7Z</td>
+            <td>耀 9000 II</td>
+            <td rowspan=2> Z2 Air (8 代) </td>
+        </tr>
+        <tr>
+            <td>GK5CN5X</td>
+            <td>Z7M-KP7GZ、Z7M-KP7Z、 Z7M-KP5GZ、 Z7M-KP5Z</td>
+            <td>耀 7000</td>
+        </tr>
+        <tr>
+            <td>GJ5CN64</td>
+            <td>Z7-KP7EC、Z7-KP7GC、 Z7-KP7GA、 Z7-KP7GE、 Z7-KP7GH</td>
+            <td rowspan=2>炎魔 T2 Ti</td>
+            <td rowspan=2> ? </td>
+        </tr>
+        <tr>
+            <td>GI5CN54</td>
+            <td>Z7M-KP7GC、Z7M-KP5GC、Z7M-KP7GA、Z7M-KP5GA<br> Z7M-KP7GE、Z7M-KP5GE、Z7M-KP7GH、Z7M-KP5GH</td>
+        </tr>
+        <tr>
+            <td>GK5CP6X</td>
+            <td>Z7-CT7GK、Z7-CT5GA、Z7-CT7GA</td>
+            <td rowspan=2> ? </td>
+            <td rowspan=2>Z2 Air (9 代)、Z2 Air-G</td>
+        </tr>
+        <tr>
+            <td>GK5CP5X</td>
+            <td>Z7M-CT7GS、Z7M-CT5GA</td>
+        </tr>
+        <tr>
+            <td>GK7CP6R</td>
+            <td>G7-CT7VK、G7-CT7RA</td>
+            <td>炎魔 T3Ti 710S5R / 710S5V / 510S5R</td>
+            <td>X3</td>
+        </tr>
+        <tr>
+            <td>GK5CP6V</td>
+            <td>Z7-CT7VH、Z7-CT7VA、Z7-CT5VH、Z7-CT5N1</td>
+            <td rowspan=4>?</td>
+            <td rowspan=3>?</td>
+        </tr>
+        <tr>
+            <td>GK5CP5V</td>
+            <td>Z7M-CT5VH、Z7M-CT7VH、Z7M-CT5N1</td>
+        </tr>
+        <tr>
+            <td>GK5CR0V</td>
+            <td>Z8-CT7VK</td>
+        </tr>
+        <tr>
+            <td>GK5CP6Z <br> GK5CP5Z</td>
+            <td> ? </td>
+            <td> Z2-G、Z2-R（9 代） </td>
+        </tr>
+    </tbody>
+</table>
 
-已测试：
-
-| 模具代号 | 具体型号 |
-|---------|--------|
-| GK5CN6X | Z7-KP7GZ、Z7-KP7Z | 
-| GK5CN5X | Z7M-KP7GZ、Z7M-KP7Z、 Z7M-KP5GZ、 Z7M-KP5Z |
-| GJ5CN64 | Z7-KP7EC、Z7-KP7GC、 Z7-KP7GA、 Z7-KP7GE、 Z7-KP7GH |
-| GI5CN54 | Z7M-KP7GC、Z7M-KP5GC、Z7M-KP7GA、Z7M-KP5GA<br> Z7M-KP7GE、Z7M-KP5GE、Z7M-KP7GH、Z7M-KP5GH |
-| GK5CP6X | Z7-CT7GK、Z7-CT5GA、Z7-CT7GA |
-| GK5CP5X | Z7M-CT7GS、Z7M-CT5GA |
-| GK7CP6R | G7-CT7VK、G7-CT7RA |
-| GK5CP6V | Z7-CT7VH、Z7-CT7VA、Z7-CT5VH、Z7-CT5N1 |
-| GK5CP5V | Z7M-CT5VH、Z7M-CT7VH、Z7M-CT5N1 |
-
-未测试：
-
-| 模具代号 | 具体型号 |
-|---------|--------|
-| GK5CR0V | Z8-CT7VK |
-| GJ5CN64 | Z7-KP7S |
-
-### 炫龙系列
-
-已测试：
-
-| 模具代号 | 具体型号 |
-|---------|--------|
-| GK5CN6X | 炫龙 耀9000 II |
-| GK5CN5X | 炫龙 耀7000 |
-
-未测试：
-
-| 模具代号 | 具体型号 |
-|---------|--------|
-| GK7CP6R | 炫龙 T3Ti 710S5R |
-| GK7CP6R | 炫龙 T3Ti 710S5V |
-| GK7CP6R | 炫龙 T3Ti 510S5R |
-| GI5CN54 | 炫龙 T2Ti |
-
-### 机械革命系列
-
-| 模具代号 | 具体型号 |
-|---------|--------|
-| GK5CN5X | 机械革命 Z2 Air |
-| GK5CN6Z <br> GK5CN5Z | 机械革命 Z2, X8Ti 系列 |
-| GK5CP6Z <br> GK5CP5Z | 机械革命 Z2-G，机械革命 Z2-R |
-| GK5CP6X <br> GK5CP5X | 机械革命 Z2 Air-G |
-| GK7CP6R | 机械革命 X3 |
-
-### 如何确定我的笔记本是否兼容？
+## 如何确定我的笔记本是否兼容？
 
 **并不是配置相近就可以使用此仓库的 EFI**。如果你的模具型号没有出现在上述列表中，可以到 http://kfgl.hasee.com/lookup/book/bblist.asp 页面，查询你的笔记本型号所对应的准系统名称。
 
@@ -157,8 +169,6 @@
 对于其它品牌理论兼容的同方模具机型，若遇到 USB 接口无法识别或速度不正常的问题，建议参照 [此教程](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html) 自行定制 USB。
 
 # 配置文件概况
-
-### 发行说明
 
 - OpenCore Bootloader 使用官方 0.6.0 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
 

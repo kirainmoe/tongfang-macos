@@ -1,31 +1,17 @@
-<p align="center">
+<!-- omit in toc -->
+#  macOS on Tongfang Laptops
 
-<img src="https://i.loli.net/2020/01/06/6ZNseqdxyGVlwPb.png" width="300px" alt="logo">
+<img align="right" src="https://i.loli.net/2020/07/28/p6YFWyzeNE2Iqcn.png" width="200px" alt="logo">
 
-</p>
+OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generation platform laptops.
 
-<h1 align="center">macOS on Tongfang Laptops</h1>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_4-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
 
-
-<p align="center">
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> 
-
-<img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> 
-
-<img src="https://img.shields.io/badge/supported_macOS_version-10.15.x-9cf.svg"/>
-
-<img src="https://img.shields.io/badge/preliminary_support-11.0_Beta_2-blueviolet.svg"/>
-
-<img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
-</p>
-
-![QQ20200719-162026.jpg](https://i.loli.net/2020/07/19/cGSXuHmzObEitLD.jpg)
-
-<h3 align="center">
-    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
+<h3>
+<a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
 </h3>
 
-This repo contains the OpenCore config for installing latest macOS on Tongfang (Tsinghua Tongfang) barebones-based 8th/9th generation platform laptops, like some Hasee, Mechrevo, OverPowered, Monster, Avell devices.
+
 
 <!-- omit in toc -->
 # Table of Contents
@@ -38,7 +24,6 @@ This repo contains the OpenCore config for installing latest macOS on Tongfang (
     - [macOS version](#macos-version)
     - [Barebones](#barebones)
     - [Models](#models)
-      - [Tips](#tips)
 - [Current Status](#current-status)
   - [What are working](#what-are-working)
   - [What are partially working](#what-are-partially-working)
@@ -64,22 +49,21 @@ This repo contains the OpenCore config for installing latest macOS on Tongfang (
 
 > **Do not download the full repository using "Download Zip" button.**<details><summary>Example</summary><img src="https://i.loli.net/2020/03/11/uV8n9Cmj7cT5vLB.png" alt="download from github" ><img src="https://i.loli.net/2020/03/11/tBXgf7lGFZbW2UQ.png" alt="tongfang hackintosh utility"></details>
 
+- Check if this repo's config supports your laptop, see *[Compatibility](#compatibility)*
 - Download a latest version of macOS from somewhere. You can refer to [this guide](https://khronokernel-2.gitbook.io/opencore-vanilla-desktop-guide/opencore-efi/winblows-install)
 - Use BalenaEtcher / Unibeast / etc. to make a installer flash
 - Part your disk that you are going to install macOS (You should have a GUID partition table and a 200M+ ESP)
-- Copy `BOOT` and `OC` folder you obtained in the first step
+- Copy `BOOT` and `OC` folder you obtained in the first step to the ESP of your flash disk
 - Disable `Secure Boot`, `Launch CSM` and change to `UEFI Mode` in BIOS
-- Boot from flash and install macOS
-- After boot into the system, use [Tongfang Hackintosh Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility/releases) (for macOS) to fix the sleep
+- Boot OpenCore from flash and install macOS
+- After boot into the system, use [Tongfang Hackintosh Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility/releases) (for macOS) to improve the experience
 - Enjoy your hackintosh build!
 
 # Compatibility
 
 ### macOS version
 
-The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested version is **10.15.5 (19F96)** (Catalina) and **11.0 Beta (20A4300b)** (Big Sur).
-
-For installing macOS Big Sur, refer to [#75](https://github.com/kirainmoe/hasee-tongfang-macos/issues/75).
+The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested version is **10.15.6 (19G73)** (Catalina) and **11.0 Beta 4 (20A5343i)** (Big Sur).
 
 ### Barebones
 
@@ -110,6 +94,7 @@ If you have 9th gen platform laptops but the barebone model is not in the list, 
 > Notes: I was not sure that some models can work perfectly with this config. The models listed in the following table are those would be theoretically supported gussing by their barebone model.  
 **If you have any Tongfang laptop and successfully installed with one of the following configs, please open an issue and tell me.**
 
+<!-- omit in toc -->
 #### Tips
 
 It is recommended to create a USB map for your machine after installation if your barebone model is not in the following table.
@@ -122,6 +107,10 @@ It is recommended to create a USB map for your machine after installation if you
 | GK5CP6X<br>GK5CP5X | Mechrevo Z2 Air-G <br> EVOO 15.6" model laptops (LP4 / LP5)| 9th Generation | 
 
 # Current Status
+
+- OpenCore: 0.6.0 (official)
+- SMBIOS: MacBook Pro 15-inch 2019 (MacBookPro15,3)
+- Dual-Boot of Windows & macOS is supported
 
 ## What are working
 
@@ -138,7 +127,7 @@ It is recommended to create a USB map for your machine after installation if you
 - Camera
 - FileVault 2
 - Fn shortcut keys with OSD
-- Keyboard light controlling with [Tongfang Hackintosh Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility)
+- Keyboard light controlling with [Tongfang Hackintosh Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility) or [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center)
 - etc.
 
 ## What are partially working
@@ -149,7 +138,7 @@ It is recommended to create a USB map for your machine after installation if you
 ## What are not working
 
 - nVidia discrete GPU (used SSDT to disable it)
-- HDMI/mini DP (which is connected to DGPU directly)
+- HDMI/mini DP (connected to non-working DGPU directly, buy a USB Display Adapter to extend the screen)
 - AirDrop & Handoff & Wireless Sidecar (Replace a Wi-Fi card that is compatible to macOS can solve this)
 - SD Card reader
 
