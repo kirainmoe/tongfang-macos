@@ -120,3 +120,10 @@
 
 - 更新 OpenCore 为最新编译版，更新核心 Kext。
 - 支持从 U 盘全新安装 macOS 11.0 Beta2 Big Sur，安装时选择安装到低版本系统的分区，即可从低版本升级到高版本而不丢失数据。
+
+## 2020.8.16
+
+- 修复：使用 OpenCore 引导 Windows 系统时，无法正常休眠到硬盘的 BUG
+- 修复：AirportBrcmFixup.kext 在 macOS 10.15 下无法正常加载的 BUG
+- 更换全新的启动界面 GUI 图标
+- 启用引导声音，下一版本将完善无障碍的适配
