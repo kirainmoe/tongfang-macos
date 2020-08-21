@@ -63,7 +63,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested version is **10.15.6 (19G73)** (Catalina) and **11.0 Beta 4 (20A5343i)** (Big Sur).
+The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested version is **10.15.6 (19G73)** (Catalina) and **11.0 Beta 5 (20A5354i)** (Big Sur).
 
 ### Barebones
 

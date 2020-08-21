@@ -85,7 +85,7 @@
 目前已测试的最新兼容版本是：
 
 - macOS Catalina **10.15.6 (19G73)**
-- macOS Big Sur **11.0 Beta 4 (20A5343i)**，支持 OTA 更新和全新安装
+- macOS Big Sur **11.0 Developer Beta 5 / Public Beta 2 (20A5354i)**，支持 OTA 更新和全新安装
 
 > 提示：OTA 更新 macOS Big Sur Beta 时，日志可能会长时间停留在 `Forcing cs_runtime for entitlement`，此时是更新程序正在创建系统快照，请耐心等待约 20 分钟后即可正常更新。
 

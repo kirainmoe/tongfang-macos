@@ -283,7 +283,7 @@
 			<key>ResetHwSig</key>
 			<false/>
 			<key>ResetLogoStatus</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>Booter</key>
@@ -1203,7 +1203,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>efi-version</key>
-				<string>20.8.18</string>
+				<string>20.8.21</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
