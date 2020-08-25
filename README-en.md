@@ -5,7 +5,7 @@
 
 OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generation platform laptops.
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_4-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_5-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
 
 <h3>
 <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
@@ -63,7 +63,9 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested version is **10.15.6 (19G73)** (Catalina) and **11.0 Beta 5 (20A5354i)** (Big Sur).
+The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested version is **10.15.6 (19G73)** (Catalina) and **11.0 Developer Beta 5 (20A5354i) / Public Beta 2 (20A5354j)** (Big Sur).
+
+> Tips: while updating & reinstalling macOS Big Sur Beta, the log may stick on "Forcing CS_RUNTIME for entitlement" for about 15-20 minutes. Don't worry about it.
 
 ### Barebones
 
@@ -108,7 +110,7 @@ It is recommended to create a USB map for your machine after installation if you
 
 # Current Status
 
-- OpenCore: 0.6.0 (official)
+- OpenCore: 0.6.1 (official)
 - SMBIOS: MacBook Pro 15-inch 2019 (MacBookPro15,3)
 - Dual-Boot of Windows & macOS is supported
 

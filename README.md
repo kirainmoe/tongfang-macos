@@ -5,7 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_4-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_5-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> 
 
 
 <h3>
@@ -85,9 +85,9 @@
 目前已测试的最新兼容版本是：
 
 - macOS Catalina **10.15.6 (19G73)**
-- macOS Big Sur **11.0 Developer Beta 5 / Public Beta 2 (20A5354i)**，支持 OTA 更新和全新安装
+- macOS Big Sur **11.0 Developer Beta 5 (20A5354i) / Public Beta 2 (20A5354j)**，支持 OTA 更新和全新安装
 
-> 提示：OTA 更新 macOS Big Sur Beta 时，日志可能会长时间停留在 `Forcing cs_runtime for entitlement`，此时是更新程序正在创建系统快照，请耐心等待约 20 分钟后即可正常更新。
+> 提示：OTA 更新或全新安装 macOS Big Sur Beta 时，日志可能会长时间停留在 `Forcing CS_RUNTIME for entitlement`，此时是更新程序正在创建系统快照，请耐心等待约 15-20 分钟后即可正常更新。
 
 ## 适用的机型
 
@@ -175,7 +175,7 @@
 
 # 配置文件概况
 
-- OpenCore Bootloader 使用官方 0.6.0 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
+- OpenCore Bootloader 使用官方 0.6.1 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
 
 - 配置文件的 SMBIOS 采用 `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
 
