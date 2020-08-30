@@ -11,7 +11,9 @@
 <h3>
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
     <a href="https://hackintosh.kirainmoe.com">帮助文档</a> |
-    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">更新日志</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Adapting-Guidance-zh-CN.md">同方机型适配指南</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README-en.md">English</a>
+    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">更新日志</a> | 
+    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Adapting-Guidance-zh-CN.md">同方机型适配指南</a> |
+    <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README-en.md">English</a>
 </h3>
 
 <!-- omit in toc -->
@@ -285,6 +287,7 @@
 
 提示：涉及硬件层面的修改请谨慎操作。
 
-- [GJ5CN64 / GI5CN54 模具 PS/2 触摸板优化方案 (by @anhor)](https://ts.ryanhor.com/2020/03/12/how-to-hack-perfect/)
+- [GJ5CN64 / GI5CN54 模具 PS/2 触摸板优化方案 (by @anhor)](https://ryanhor.com/2020/03/12/how-to-hack-perfect/)
 - [Aptio V BIOS 解锁全功能教程 (by @bswaterb)](http://www.bswaterb.club/?p=218)
 - [不刷新 BIOS 的前提下修改 DVMT Pre-allocated](https://www.misonsky.cn/115.html)
+- [其它长期维护机型 EFI 列表](https://github.com/daliansky/hackintosh)

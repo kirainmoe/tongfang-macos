@@ -63,7 +63,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested version is **10.15.6 (19G73)** (Catalina) and **11.0 Developer Beta 5 (20A5354i) / Public Beta 2 (20A5354j)** (Big Sur).
+The latest EFI config only supports **macOS Catalina 10.15.x** (or higher version). Currently tested versions are **10.15.6 (19G73)** (Catalina) and **11.0 Developer Beta 5 (20A5354i) / Public Beta 2 (20A5354j)** (Big Sur).
 
 > Tips: while updating & reinstalling macOS Big Sur Beta, the log may stick on "Forcing CS_RUNTIME for entitlement" for about 15-20 minutes. Don't worry about it.
 
