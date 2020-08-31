@@ -177,7 +177,7 @@
 
 # 配置文件概况
 
-- OpenCore Bootloader 使用官方 0.6.1 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
+- OpenCore Bootloader 使用官方 0.6.0 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
 
 - 配置文件的 SMBIOS 采用 `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
 
