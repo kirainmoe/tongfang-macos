@@ -5,7 +5,8 @@
 
 OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generation platform laptops.
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_5-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_5-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> <a href="https://discord.gg/CDQNnMc
+"><img src="https://img.shields.io/discord/750367447688937503?label=chat%20on%20discord"></a>
 
 <h3>
 <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
@@ -16,10 +17,10 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 <!-- omit in toc -->
 # Table of Contents
 
+- [Simple Tutorial](#simple-tutorial)
 - [Community Resources](#community-resources)
     - [Tutorials](#tutorials)
-    - [Utilities](#utilities)
-- [Simple Tutorial](#simple-tutorial)
+    - [Tools](#tools)
 - [Compatibility](#compatibility)
     - [macOS version](#macos-version)
     - [Barebones](#barebones)
@@ -30,18 +31,6 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
   - [What are not working](#what-are-not-working)
 - [Contribute](#contribute)
 - [License](#license)
-
-# Community Resources
-
-### Tutorials
-
-[Monster Laptop Hackintosh Tutorial (@sutsurup)](https://github.com/sutsurup/MONSTER-Hackintosh) (in Turkish)
-
-### Utilities
-
-[Tongfang Hackintosh Utility (@kirainmoe)](https://github.com/kirainmoe/project-starbeat/releases): : all-in-one hackintosh toolbox and keyboard light controlling for ITE devices with revision 0.02
-
-[AUCC (@rodgomesc)](https://github.com/rodgomesc/avell-unofficial-control-center):   keyboard light controlling for ITE devices with revision 0.03
 
 # Simple Tutorial
 
@@ -58,6 +47,19 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 - Boot OpenCore from flash and install macOS
 - After boot into the system, use [Tongfang Hackintosh Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility/releases) (for macOS) to improve the experience
 - Enjoy your hackintosh build!
+
+# Community Resources
+
+### Tutorials
+
+[Monster Laptop Hackintosh Tutorial (@sutsurup)](https://github.com/sutsurup/MONSTER-Hackintosh) (in Turkish)
+
+### Tools
+
+[Tongfang Hackintosh Utility (@kirainmoe)](https://github.com/kirainmoe/project-starbeat/releases): : all-in-one hackintosh toolbox and keyboard light controlling for ITE devices with revision 0.02
+
+[AUCC (@rodgomesc)](https://github.com/rodgomesc/avell-unofficial-control-center):   keyboard light controlling for ITE devices with revision 0.03
+
 
 # Compatibility
 
