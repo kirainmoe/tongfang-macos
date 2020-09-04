@@ -5,7 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_5-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_6-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
 
 
 <h3>
@@ -83,20 +83,20 @@
 
 ### 兼容的系统
 
-当前配置文件的版本是 `20.8.31`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `20.9.4`，兼容的 macOS 系统版本如下表所示：
 
-| macOS 版本 | 兼容状态 | 支持全新安装 | 支持 OTA | 已测试最新兼容版本 | 原因 |
+| macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
-| macOS 10.13 High Sierra | ❌ 不兼容 | 否 | 否 | 不兼容 | 10.13 不兼容 `MacBookPro15,3` SMBIOS 和 CoffeeLake CPU 变频 |
-| macOS 10.14 Mojave | ✅ 部分兼容 | 未测试 |  未测试 | 未测试 | 部分内核拓展可能无法在 10.14 上工作 |
-| macOS 10.15 Catalina | ✅ 完美兼容 | 是 | 是 | 10.15.6 (19G73) | |
-| macOS 11.0 Big Sur | ✅ 部分兼容 | 是 | 是 | 11.0 Developer Beta 5 (20A5354i) <br> 11.0 Public Beta 2 (20A5354j) | - 仍处于公测阶段，稳定性无法保证 <br>- 4K 屏幕暂无法在 11.0 下驱动 |
+| 10.13 High Sierra | ❌不兼容 | 不支持 | 不支持 | 不兼容 | 10.13 不兼容 `MacBookPro15,3` SMBIOS 和 CoffeeLake CPU 变频 |
+| 10.14 Mojave | ⭕️未知 | 未知 |  未知 | 未知 | 部分内核拓展可能无法在 10.14 上工作 |
+| 10.15 Catalina | ✅完美 | 支持 | 支持 | 10.15.6 (19G73) | |
+| 11.0 Big Sur | 💡部分 | 支持 | 支持 | 11.0 Developer Beta 6 (20A5364e) <br> 11.0 Public Beta 3 (20A5364f) | 4K 屏幕暂无法在 11.0 下驱动 |
 
 > 提示：OTA 更新或全新安装 macOS Big Sur Beta 时，日志可能会长时间停留在 `Forcing CS_RUNTIME for entitlement`，此时是更新程序正在创建系统快照，请耐心等待约 15-20 分钟后即可正常更新。
 
 ### 适用的机型
 
-理论上所有使用 **清华同方模具的标压 8/9 代机型** 均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型**。详细的兼容型号表格如下：
+理论上所有使用 **清华同方模具的标压 8/9 代机型** 均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型、低压处理器机型**。详细的兼容型号表格如下：
 
 <table>
     <thead>
