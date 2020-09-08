@@ -83,7 +83,7 @@
 
 ### 兼容的系统
 
-当前配置文件的版本是 `20.9.4`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `20.9.8`，兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
@@ -182,7 +182,7 @@
 
 # 配置文件概况
 
-- OpenCore Bootloader 使用官方 0.6.0 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
+- OpenCore Bootloader 使用官方 0.6.1 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
 
 - 配置文件的 SMBIOS 采用 `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
 
