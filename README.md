@@ -193,7 +193,7 @@
 ### 完美的功能
 
 - [x] CPU 睿频、变频
-    - 可使用 [one-key-cpufriend](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/blob/master/one-key-cpufriend/README_CN.md) 调节 CPU 性能方案，默认为节能
+    - 可使用 [one-key-cpufriend](https://github.com/stevezhengshiqi/one-key-cpufriend/blob/master/README_CN.md) 调节 CPU 性能方案，默认为节能
 
 - [x] 核芯显卡 Intel UHD Graphics 630
     - 使用 `platform-id: 3E9B0000`
