@@ -53,6 +53,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 ### Tutorials
 
 [Monster Laptop Hackintosh Tutorial (@sutsurup)](https://github.com/sutsurup/MONSTER-Hackintosh) (in Turkish)
+
 [EVOO Hackintosh Guide](https://github.com/N0tJust1n/EVOO-LP5-LP4-Hackintosh) (in English)
 
 ### Tools
