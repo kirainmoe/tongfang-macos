@@ -73,12 +73,12 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `20.9.8`. This release is compatible with the following macOS version:
+Current EFI release is `20.9.17`. This release is compatible with the following macOS version:
 
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
 |-------------|--------|---------------|--------|-----------|------|
-| 10.13 High Sierra | ❌ | ❌ | ❌ | None | |
+| 10.13 High Sierra | ❌ | ❌ | ❌ | None | High Sierra does not recognize SMBIOS `MacbookPro15,3` |
 | 10.14 Mojave | ❓ | ❓ |  ❓ | Untested | Some kext may not work |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.6 (19G73) | |
 | 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Developer Beta 6 (20A5364e) <br> 11.0 Public Beta 3 (20A5364f) | 4K display is currently not available |
@@ -195,6 +195,13 @@ Issues & Pull request & Translation are welcomed.
 
 # License
 
-`hasee-tongfang-macos` is [MARUYAMA](https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/LICENSE) Licensed.
+You can use the config from this repo for free, as long as you agree the following rules: 
 
-You can use the config for free under this license, but we are **NOT** guaranteed for any damage of your device.
+- **Commercial use of the config and its \*derivatives\* is prohibited.** This includes but not limited to:
+  - Sell the config provided by this repo at any price.
+  - Redistribute the config provided by this repo and provide paid download service.
+  - If you are creating a new config which is based on this config, your product must also be free for all users.
+  
+- **Reserve the copyright and credit statement when you create a new config which is based on this config for other model.**
+
+- **Authors and contributors are not guaranteed for any damage of your device**.
