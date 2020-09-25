@@ -64,14 +64,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Motherboard: Fix RTC</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-AWAC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Motherboard: Fix HPET, IRIQ</string>
 				<key>Enabled</key>
 				<true/>
@@ -101,6 +93,14 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-PWBTN.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Motherboard: Fix RTC (deprecated)</string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-AWAC.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -1370,7 +1370,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>efi-version</key>
-				<string>20.9.21</string>
+				<string>20.9.25</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1383,6 +1383,7 @@
 			<array>
 				<string>boot-args</string>
 				<string>efi-version</string>
+				<string>efi-model</string>
 			</array>
 		</dict>
 		<key>LegacyEnable</key>

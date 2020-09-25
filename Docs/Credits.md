@@ -45,13 +45,14 @@ This statement has no effect for bootloader, you can delete it safely when you u
 
 [Goshin](https://github.com/Goshin) for:
 
-- [TongfangKeyboardUtility](https://github.com/Goshin/TongfangKeyboardUtility)
+- [TongfangKeyboardUtility (a.k.a VoodooWMI)](https://github.com/Goshin/TongfangKeyboardUtility)
 
 [RehabMan](https://github.com/RehabMan) for:
 
 - [USBInjectAll](https://github.com/RehabMan/USBInjectAll)
 - [VoodooPS2](https://github.com/RehabMan/VoodooPS2)
 
-[zxystd](https://github.com/zxystd) for:
+[OpenIntelWireless](https://github.com/OpenIntelWireless) for:
 
-- [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware)
+- [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+- [itlwm](https://github.com/OpenIntelWireless/itlwm)

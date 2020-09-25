@@ -5,7 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_7-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_8-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
 
 
 <h3>
@@ -83,14 +83,14 @@
 
 ### 兼容的系统
 
-当前配置文件的版本是 `20.9.21`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `20.9.25`，兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
 | 10.13 High Sierra | ❌ | ❌ | ❌ | 不兼容任何版本 | 10.13 不兼容 `MacBookPro15,3` SMBIOS 和 CoffeeLake CPU 变频 |
 | 10.14 Mojave | ❓ | ❓ |  ❓ | 未测试 | 部分内核拓展可能无法在 10.14 上工作 |
-| 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.6 (19G73) | |
-| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Developer Beta 7 (20A5374g) <br> 11.0 Public Beta 4 (20A5374h) | 4K 屏幕暂无法在 11.0 下驱动 |
+| 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H2) | |
+| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Developer Beta 8 (20A5374i) <br> 11.0 Public Beta 4 (20A5374h) | 4K 屏幕暂无法在 11.0 下驱动 |
 
 > 提示：OTA 更新或全新安装 macOS Big Sur Beta 时，日志可能会长时间停留在 `Forcing CS_RUNTIME for entitlement`，此时是更新程序正在创建系统快照，请耐心等待约 15-20 分钟后即可正常更新。
 
