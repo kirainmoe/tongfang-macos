@@ -150,4 +150,4 @@
 
 ## 2020.9.26
 
-- 新增可修改 BIOS 选项的 GRUB 版 UEFI Shell
+- 新增可修改 BIOS 选项的 GRUB 版 UEFI Shell，具体使用方法请参考[此教程](Unlock-CFG-and-DVMT.md)
