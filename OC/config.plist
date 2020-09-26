@@ -1348,6 +1348,20 @@
 				<key>Path</key>
 				<string>VerifyMsrE2.efi</string>
 			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Auxiliary</key>
+				<true/>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Name</key>
+				<string>Setup Shell</string>
+				<key>Path</key>
+				<string>EFIShell.efi</string>
+			</dict>
 		</array>
 	</dict>
 	<key>NVRAM</key>
@@ -1370,7 +1384,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>efi-version</key>
-				<string>20.9.25</string>
+				<string>20.9.26</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
