@@ -73,7 +73,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `20.9.25`. This release is compatible with the following macOS version:
+Current EFI release is `20.9.26`. This release is compatible with the following macOS version:
 
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
@@ -131,6 +131,8 @@ It is recommended to create a USB map for your machine after installation if you
 - OpenCore: 0.6.1 (official)
 - SMBIOS: MacBook Pro 15-inch 2019 (MacBookPro15,3)
 - Dual-Boot of Windows & macOS is supported
+- 4K resolution inner monitor support (only macOS Catalina)
+  - For Tongfang GI5\* / GJ5\* laptop users, you need to set DVMT pre-allocated memory to 64MB to make 4K monitor work, [Tutorial](Docs/Unlock-CFG-and-DVMT-en.md).
 
 ## What are working
 

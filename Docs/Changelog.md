@@ -147,3 +147,7 @@
 - 更新 AirportItlwm 支持
 - 调整部分驱动加载顺序
 - 按需加载部分 ACPI 补丁
+
+## 2020.9.26
+
+- 新增可修改 BIOS 选项的 GRUB 版 UEFI Shell
