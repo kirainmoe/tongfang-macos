@@ -83,7 +83,7 @@
 
 ### 兼容的系统
 
-当前配置文件的版本是 `20.9.26`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `20.9.30`，兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
@@ -208,9 +208,7 @@
 - [x] 键盘灯控制
     - 需要安装 [同方黑苹果助手](https://github.com/kirainmoe/tongfang-hackintosh-utility) 或 [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center) 控制键盘灯
 
-- [x] 触摸板
-    - GI5CN54/GJ5CN64 模具使用的 PS/2 触摸板没有原生手势支持
-    - 其它机型的 I2C 触摸板可以正常使用手势
+- [x] 触摸板 (PS/2 和 I2C 协议触摸板均支持手势)
 
 - [x] 有线网卡 Realtek RTL8168H
 - [x] Intel 蓝牙（无需热启动）

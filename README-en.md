@@ -73,7 +73,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `20.9.26`. This release is compatible with the following macOS version:
+Current EFI release is `20.9.30`. This release is compatible with the following macOS version:
 
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
@@ -152,9 +152,7 @@ It is recommended to create a USB map for your machine after installation if you
 
 - Brightness control
 
-- Touchpad
-  - PS/2 Touchpad (GJ5CN64, GI5CN54) has limited gesture support
-  - I2C Touchpad has full gesture support
+- Touchpad (both PS/2 and I2C TouchPad have gesture support now)
 
 - Battery status
 
