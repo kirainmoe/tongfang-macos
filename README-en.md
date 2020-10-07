@@ -73,7 +73,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `20.10.7`. This release is compatible with the following macOS version:
+Current EFI release is `20.10.8`. This release is compatible with the following macOS version:
 
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
