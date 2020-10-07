@@ -5,7 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_8-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_9-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
 
 
 <h3>
@@ -90,13 +90,13 @@
 | 10.13 High Sierra | ❌ | ❌ | ❌ | 不兼容任何版本 | 10.13 不兼容 `MacBookPro15,3` SMBIOS 和 CoffeeLake CPU 变频 |
 | 10.14 Mojave | ❓ | ❓ |  ❓ | 未测试 | 部分内核拓展可能无法在 10.14 上工作 |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H2) | |
-| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Developer Beta 9 (20A5384c) | 4K 屏幕暂无法在 11.0 下驱动 <br> HEVC 硬件解码在 11.0 Beta 9 下失效 |
+| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Beta 9 (20A5384c) | 4K 屏幕暂无法在 11.0 下驱动 <br> HEVC 硬件解码在 11.0 Beta 9 下失效 |
 
 > 提示：OTA 更新或全新安装 macOS Big Sur Beta 时，日志可能会长时间停留在 `Forcing CS_RUNTIME for entitlement`，此时是更新程序正在创建系统快照，请耐心等待约 15-20 分钟后即可正常更新。
 
 ### 适用的机型
 
-理论上所有使用 **清华同方模具的标压 8/9 代机型** 均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型、低压处理器机型**。详细的兼容型号表格如下：
+理论上所有使用 **清华同方模具的标压 8/9 代机型** （机械革命 Umi Air 等其它使用同方 QC7 模具的设备除外，这些机型可能无法完美兼容）均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型、低压处理器机型**。详细的兼容型号表格如下：
 
 <table>
     <thead>
@@ -182,7 +182,7 @@
 
 # 配置文件概况
 
-- OpenCore Bootloader 使用官方 0.6.1 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
+- OpenCore Bootloader 使用官方 0.6.2 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
 
 - 配置文件的 SMBIOS 采用 `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
 

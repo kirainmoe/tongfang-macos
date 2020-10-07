@@ -5,7 +5,7 @@
 
 OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generation platform laptops.
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_8-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> <a href="https://discord.gg/CDQNnMc
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_9-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> <a href="https://discord.gg/CDQNnMc
 "><img src="https://img.shields.io/discord/750367447688937503?label=chat%20on%20discord"></a>
 
 <h3>
@@ -81,7 +81,7 @@ Current EFI release is `20.10.7`. This release is compatible with the following 
 | 10.13 High Sierra | ❌ | ❌ | ❌ | None | High Sierra does not recognize SMBIOS `MacbookPro15,3` |
 | 10.14 Mojave | ❓ | ❓ |  ❓ | Untested | Some kext may not work |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H2) | |
-| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Developer Beta 9 (20A5384c) | 4K display is currently not available <br> HEVC is broken on macOS 11.0 Beta 9 |
+| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Beta 9 (20A5384c) | 4K display is currently not available <br> HEVC is broken on macOS 11.0 Beta 9 |
 
 > Tips: while updating & reinstalling macOS Big Sur Beta, the log may stick on "Forcing CS_RUNTIME for entitlement" for about 15-20 minutes. Don't worry about it.
 
@@ -128,7 +128,7 @@ It is recommended to create a USB map for your machine after installation if you
 
 # Current Status
 
-- OpenCore: 0.6.1 (official)
+- OpenCore: 0.6.2 (official)
 - SMBIOS: MacBook Pro 15-inch 2019 (MacBookPro15,3)
 - Dual-Boot of Windows & macOS is supported
 - 4K resolution inner monitor support (only macOS Catalina)
