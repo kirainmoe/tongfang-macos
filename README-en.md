@@ -73,7 +73,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `20.10.1`. This release is compatible with the following macOS version:
+Current EFI release is `20.10.7`. This release is compatible with the following macOS version:
 
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
@@ -81,13 +81,13 @@ Current EFI release is `20.10.1`. This release is compatible with the following 
 | 10.13 High Sierra | ❌ | ❌ | ❌ | None | High Sierra does not recognize SMBIOS `MacbookPro15,3` |
 | 10.14 Mojave | ❓ | ❓ |  ❓ | Untested | Some kext may not work |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H2) | |
-| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Developer Beta 8 (20A5374i) <br> 11.0 Public Beta 4 (20A5374h) | 4K display is currently not available |
+| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Developer Beta 9 (20A5384c) | 4K display is currently not available <br> HEVC is broken on macOS 11.0 Beta 9 |
 
 > Tips: while updating & reinstalling macOS Big Sur Beta, the log may stick on "Forcing CS_RUNTIME for entitlement" for about 15-20 minutes. Don't worry about it.
 
 ### Barebones
 
-Currently, this config is known to be compatible with all 8th / 9th generation Tongfang barebones (although some barebones models are not listed in the following table). For example:
+Currently, this config is known to be compatible with all 8th / 9th generation Tongfang barebones (**except Intel Tongfang QC7**, although some barebones models are not listed in the following table). For example:
 
 | Barebone | Platform Generation |
 |----------|---------------------|
