@@ -83,12 +83,12 @@
 
 ### 兼容的系统
 
-当前配置文件的版本是 `20.10.8`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `20.10.15`，兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
 | 10.13 High Sierra | ❌ | ❌ | ❌ | 不兼容任何版本 | 10.13 不兼容 `MacBookPro15,3` SMBIOS 和 CoffeeLake CPU 变频 |
-| 10.14 Mojave | ❓ | ❓ |  ❓ | 未测试 | 部分内核拓展可能无法在 10.14 上工作 |
+| 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H2) | |
 | 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Beta 9 (20A5384c) | 4K 屏幕暂无法在 11.0 下驱动 <br> HEVC 硬件解码在 11.0 Beta 9 下失效 |
 
@@ -202,7 +202,7 @@
 - [x] 声卡 Realtek ALC269vc
     - 使用 `layout-id: 29`
 
-- [x] Fn 快捷键
+- [x] Fn 快捷键 & 双击禁用触摸板
     - 需要安装 [同方黑苹果助手](https://github.com/kirainmoe/tongfang-hackintosh-utility) 或 [同方快捷键守护程序](https://github.com/Goshin/TongfangKeyboardUtility) 实现 OSD
 
 - [x] 键盘灯控制
