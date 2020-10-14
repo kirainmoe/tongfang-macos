@@ -3,7 +3,7 @@
 
 <img align="right" src="https://i.loli.net/2020/07/28/p6YFWyzeNE2Iqcn.png" width="200px" alt="logo">
 
-适用于神舟战神、机械革命等品牌 8/9 代同方机型安装黑苹果的 OpenCore 配置文件
+适用于神舟战神、机械革命等品牌 7/8/9 代同方机型安装黑苹果的 OpenCore 配置文件
 
 <img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_9-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
 
@@ -96,7 +96,7 @@
 
 ### 适用的机型
 
-理论上所有使用 **清华同方模具的标压 8/9 代机型** （机械革命 Umi Air 等其它使用同方 QC7 模具的设备除外，这些机型可能无法完美兼容）均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、七代（含）以下机型、低压处理器机型**。详细的兼容型号表格如下：
+理论上所有使用 **清华同方模具的标压 7/8/9 代机型** （机械革命 Umi Air 等其它使用同方 QC7 模具的设备除外，这些机型可能无法完美兼容）均可使用对应的配置文件，**不兼容蓝天模具机型、广达模具机型、六代（含）以下机型、低压处理器机型**。详细的兼容型号表格如下：
 
 <table>
     <thead>
@@ -160,13 +160,19 @@
         <tr>
             <td>GK5CN6Z <br> GK5CN5Z</td>
             <td> ? </td>
-            <td> Z2 / X8Ti 系列（8 代） </td>
+            <td>Z2 / X8Ti 系列（8 代）</td>
         </tr>        
         <tr>
             <td>GK5CP6Z <br> GK5CP5Z</td>
             <td> ? </td>
-            <td> Z2-G、Z2-R（9 代） </td>
+            <td>Z2-G、Z2-R（9 代）</td>
         </tr>
+        <tr>
+            <td>GJ5KN64<br>GJ5KN6A<br>(实验性支持)</td>
+            <td>Z7-KP7GT、Z7-KP7D2</td>
+            <td> ? </td>
+            <td>X1</td>
+        </tr>        
     </tbody>
 </table>
 
@@ -176,7 +182,7 @@
 
 如果你是神舟笔记本，且模具型号没有出现在上述列表中，可以到 http://kfgl.hasee.com/lookup/book/bblist.asp 页面，查询你的笔记本型号所对应的准系统名称。
 
-若你的笔记本采用 **8/9 代**因特尔酷睿**标压**处理器，且查询到准系统名称中带有 **“（同方）”** 字样，则你的笔记本可以兼容此仓库的配置文件。
+若你的笔记本采用 **7/8/9 代**因特尔酷睿**标压**处理器，且查询到准系统名称中带有 **“（同方）”** 字样，则你的笔记本可以兼容此仓库的配置文件。
 
 对于其它品牌理论兼容的同方模具机型，若遇到 USB 接口无法识别或速度不正常的问题，建议参照 [此教程](https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html) 自行定制 USB。
 
@@ -184,7 +190,9 @@
 
 - OpenCore Bootloader 使用官方 0.6.2 版本，GUI 采用 OpenCanopy 模拟白苹果原生 BootCamp 界面.
 
-- 配置文件的 SMBIOS 采用 `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
+- 配置文件的 SMBIOS 采用：
+  - 8 代 / 9 代机型： `MacBookPro15,3` （MacBook Pro 15 inch, 2019）
+  - 7 代机型：`MacBookPro14,3` (MacBook Pro 15 inch, 2017)
 
 - 默认支持 Windows 和 macOS 双引导，若需要引导其他操作系统需自行添加。
 
@@ -249,7 +257,7 @@
   - 已使用 `SSDT-DDGPU.aml` 屏蔽
 
 - [ ] SD 读卡器
-  - 由于读卡器通过 USB 2.0 协议连接电脑，没有驱动案例，故内置 SD 读卡器无法使用。
+  - 由于读卡器通过 USB 2.0 协议连接电脑，没有驱动案例，故内置 SD 读卡器无法使用，**但可以在 macOS 下通过虚拟机挂载 USB 设备到 Windows 系统中使用**。
 
 ### 当前 EFI 存在的问题
 
