@@ -1,12 +1,11 @@
 <!-- omit in toc -->
 #  macOS on Tongfang Laptops
 
-<img align="right" src="https://i.loli.net/2020/07/28/p6YFWyzeNE2Iqcn.png" width="200px" alt="logo">
+<img align="right" src="https://i.loli.net/2020/10/28/p5FchMTzr37Ijb2.jpg" width="200px" alt="preview">
 
 OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generation platform laptops.
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_9-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/> <a href="https://discord.gg/CDQNnMc
-"><img src="https://img.shields.io/discord/750367447688937503?label=chat%20on%20discord"></a>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_10-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
 
 <h3>
 <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
@@ -73,7 +72,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `20.10.15`. This release is compatible with the following macOS version:
+Current EFI release is `20.10.28`. This release is compatible with the following macOS version:
 
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
@@ -81,7 +80,7 @@ Current EFI release is `20.10.15`. This release is compatible with the following
 | 10.13 High Sierra | ❌ | ❌ | ❌ | None | High Sierra does not recognize SMBIOS `MacbookPro15,3` |
 | 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H2) | |
-| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Beta 9 (20A5384c) | 4K display is currently not available <br> HEVC is broken on macOS 11.0 Beta 9 |
+| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Beta 10 (20A5395g) | 4K display is currently not available  |
 
 > Tips: while updating & reinstalling macOS Big Sur Beta, the log may stick on "Forcing CS_RUNTIME for entitlement" for about 15-20 minutes. Don't worry about it.
 
@@ -156,7 +155,9 @@ It is recommended to create a USB map for your machine after installation if you
 
 - Battery status
 
-- Sleep
+- S3 Sleep / Wake
+
+- S4 Hibernation / Wake
 
 - Camera
 
@@ -180,9 +181,6 @@ It is recommended to create a USB map for your machine after installation if you
 - SD Card reader
 
 ## Unsolved Problems
-
-- S4 hibernation cannot be recovered on macOS
-  - Have disabled hibernation in `config.plist`
 
 - S4 hibernation cannot be recovered on Windows
   - Do not use OpenCore to boot Windows if you rely on the S4 hiberanation.

@@ -1,11 +1,11 @@
 <!-- omit in toc -->
 #  macOS on Tongfang Laptops
 
-<img align="right" src="https://i.loli.net/2020/07/28/p6YFWyzeNE2Iqcn.png" width="200px" alt="logo">
+<img align="right" src="https://i.loli.net/2020/10/28/p5FchMTzr37Ijb2.jpg" width="200px" alt="preview">
 
 适用于神舟战神、机械革命等品牌 7/8/9 代同方机型安装黑苹果的 OpenCore 配置文件
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_9-9cf.svg"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-11.0_Beta_10-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
 
 
 <h3>
@@ -83,14 +83,14 @@
 
 ### 兼容的系统
 
-当前配置文件的版本是 `20.10.15`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `20.10.28`，兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
 | 10.13 High Sierra | ❌ | ❌ | ❌ | 不兼容任何版本 | 10.13 不兼容 `MacBookPro15,3` SMBIOS 和 CoffeeLake CPU 变频 |
 | 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H2) | |
-| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Beta 9 (20A5384c) | 4K 屏幕暂无法在 11.0 下驱动 <br> HEVC 硬件解码在 11.0 Beta 9 下失效 |
+| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0 Beta 10 (20A5395g) | 4K 屏幕暂无法在 11.0 下驱动 |
 
 > 提示：OTA 更新或全新安装 macOS Big Sur Beta 时，日志可能会长时间停留在 `Forcing CS_RUNTIME for entitlement`，此时是更新程序正在创建系统快照，请耐心等待约 15-20 分钟后即可正常更新。
 
@@ -229,7 +229,7 @@
 - [x] 原生电源管理 & 电池状态显示
 - [x] 摄像头
 - [x] 文件保险箱 (FileVault 2)
-- [x] S3 睡眠、唤醒
+- [x] S3 睡眠 & 唤醒（睡眠到内存）、S4 睡眠 & 唤醒（休眠到硬盘）
 
 ### 勉强可用
 
@@ -260,9 +260,6 @@
   - 由于读卡器通过 USB 2.0 协议连接电脑，没有驱动案例，故内置 SD 读卡器无法使用，**但可以在 macOS 下通过虚拟机挂载 USB 设备到 Windows 系统中使用**。
 
 ### 当前 EFI 存在的问题
-
-- [ ] macOS 下，S4 睡眠（挂起到硬盘）无法恢复
-  - 已在 OpenCore 配置文件中禁用 Hibernation.
 
 - [ ] 若使用 OpenCore 引导 Windows，可能导致 S4 睡眠（休眠）无法恢复
   - 若要使用休眠功能，请尽量避免使用 OpenCore 引导 Windows 系统。
