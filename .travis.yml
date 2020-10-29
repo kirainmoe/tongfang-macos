@@ -18,3 +18,4 @@ script:
 - git config --global user.email "tongfang@kirainmoe.com" 
 - git commit -m "Deploy version $buildName"
 - git push --force
+- curl https://api.kirainmoe.com/tongfang/update
