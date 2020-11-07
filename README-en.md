@@ -72,7 +72,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `20.10.28`. This release is compatible with the following macOS version:
+Current EFI release is `20.11.7`. This release is compatible with the following macOS version:
 
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
@@ -80,7 +80,7 @@ Current EFI release is `20.10.28`. This release is compatible with the following
 | 10.13 High Sierra | ❌ | ❌ | ❌ | None | High Sierra does not recognize SMBIOS `MacbookPro15,3` |
 | 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H2) | |
-| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0.1 Beta (20B5012d) | 4K display is currently not available  |
+| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0.1 Beta (20B5022a) | 4K display is currently not available  |
 
 > Tips: while updating & reinstalling macOS Big Sur Beta, the log may stick on "Forcing CS_RUNTIME for entitlement" for about 15-20 minutes. Don't worry about it.
 
