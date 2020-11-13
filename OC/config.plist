@@ -1352,7 +1352,7 @@
 			<key>BootProtect</key>
 			<string>None</string>
 			<key>DmgLoading</key>
-			<string>Disabled</string>
+			<string>Any</string>
 			<key>EnablePassword</key>
 			<false/>
 			<key>ExposeSensitiveData</key>
@@ -1442,7 +1442,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 darkwake=0 ps2rst=0 -hbfx-dump-nvram rtcfx_exclude=80-AB</string>
+				<string>keepsyms=1 debug=0x100 darkwake=0 ps2rst=0 rtcfx_exclude=80-AB</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1450,7 +1450,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>efi-version</key>
-				<string>20.11.7</string>
+				<string>20.11.13</string>
 			</dict>
 		</dict>
 		<key>Delete</key>

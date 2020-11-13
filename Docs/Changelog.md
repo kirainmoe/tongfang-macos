@@ -189,3 +189,9 @@ sudo pmset -a hibernatemode 25      # 一旦点击睡眠，强行进入 S4 睡�
 ## 2020.11.7
 
 - 更新 OpenCore 0.6.3
+
+## 2020.11.13
+
+- 修复了先前 EFI 版本无法进入 Recovery 的问题 (Thanks @haitun)
+- 去掉了 -hbfx-dump-nvram 参数，修复因此导致的部分 NVRAM 不更新问题
+- 支持 macOS Big Sur 11.0.1 正式版
