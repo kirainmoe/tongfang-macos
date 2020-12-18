@@ -72,14 +72,14 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `20.11.13`. This release is compatible with the following macOS version:
+Current EFI release is `20.12.18`. This release is compatible with the following macOS version:
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
 |-------------|--------|---------------|--------|-----------|------|
 | 10.13 High Sierra | ❌ | ❌ | ❌ | None | High Sierra does not recognize SMBIOS `MacbookPro15,3` |
 | 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H2) | |
-| 11.0 Big Sur | 💡 | ✅ | ✅ | 11.0.1 (20B29) | 4K display is currently not available  |
+| 11.0 Big Sur | ✅ | ✅ | ✅ | 11.1 (20C69) | |
 
 ### Barebones
 

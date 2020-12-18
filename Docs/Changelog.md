@@ -195,3 +195,8 @@ sudo pmset -a hibernatemode 25      # 一旦点击睡眠，强行进入 S4 睡�
 - 修复了先前 EFI 版本无法进入 Recovery 的问题 (Thanks @haitun)
 - 去掉了 -hbfx-dump-nvram 参数，修复因此导致的部分 NVRAM 不更新问题
 - 支持 macOS Big Sur 11.0.1 正式版
+
+## 2020.12.18
+
+- 更新了 OpenCore 0.6.4；由于这是一个 OC 变动较大的版本更新，请全量替换所有文件（包括 BOOTx64.efi），或在 macOS 下使用助手自动替换。
+- 更新了 Lilu 和 WhateverGreen，解决了 macOS Big Sur 下对 4K 60Hz 内屏的支持。
