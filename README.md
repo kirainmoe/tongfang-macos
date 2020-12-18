@@ -289,7 +289,6 @@
   - 使用 OpenCore 首次引导 Windows，会导致 Windows 无法从 S4 睡眠（休眠）恢复。
 
 - 支持更换了 4K 屏幕的笔记本。
-  - 由于上游驱动尚未更新，目前 macOS 11.0 Big Sur 暂时无法驱动 4K 屏幕（或只能工作于 48Hz 刷新率模式。
   - 对于 GI5CN54 / GJ5CN64 模具改 4K 屏的用户，**需要先解锁 BIOS 或使用 UEFI Shell** 修改 `DVMT Pre-allocated` 为 `64MB` 以上，具体做法请参考[此文章](Docs/Unlock-CFG-and-DVMT.md)。
 
 - 部分功能如键盘灯控制、Fn 快捷键、双击开关触摸板等需要额外的软件支持，具体请查看详情。
