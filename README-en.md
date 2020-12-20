@@ -83,6 +83,8 @@ Current EFI release is `20.12.18`. This release is compatible with the following
 
 ### Barebones
 
+> Notes: If you have a Intel Tongfang QC7 laptop, try https://github.com/szguomy/hackintosh
+
 Currently, this config is known to be compatible with all 8th / 9th generation Tongfang barebones (**except Intel Tongfang QC7**, although some barebones models are not listed in the following table). For example:
 
 | Barebone | Platform Generation |
@@ -108,7 +110,9 @@ If you have 9th gen platform laptops but the barebone model is not in the list, 
 ### Models
 
 > Notes: I was not sure that some models can work perfectly with this config. The models listed in the following table are those would be theoretically supported gussing by their barebone model.  
+
 **If you have any Tongfang laptop and successfully installed with one of the following configs, please open an issue and tell me.**
+
 
 <!-- omit in toc -->
 #### Tips
@@ -124,7 +128,7 @@ It is recommended to create a USB map for your machine after installation if you
 
 # Current Status
 
-- OpenCore: 0.6.2 (official)
+- OpenCore: 0.6.4 (official)
 - SMBIOS: MacBook Pro 15-inch 2019 (MacBookPro15,3)
 - Dual-Boot of Windows & macOS is supported
 - 4K resolution inner monitor support (only macOS Catalina)

@@ -199,6 +199,8 @@
 
 </details>
 
+> 提示：如果你正在使用同方 QC7 模具的设备，可以尝试[此 EFI](https://github.com/szguomy/hackintosh).
+
 <table>
     <thead>
         <th>模具型号</th>
