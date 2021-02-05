@@ -438,7 +438,7 @@
 				<key>BundlePath</key>
 				<string>Lilu.kext</string>
 				<key>Comment</key>
-				<string>Lilu is a kext and process patching extension</string>
+				<string>[Global] Lilu is a kext and process patching extension</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -456,7 +456,7 @@
 				<key>BundlePath</key>
 				<string>VirtualSMC.kext</string>
 				<key>Comment</key>
-				<string>next-generation SMC drivers</string>
+				<string>[SMC] next-generation SMC drivers</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -474,7 +474,7 @@
 				<key>BundlePath</key>
 				<string>WhateverGreen.kext</string>
 				<key>Comment</key>
-				<string>Injecting graphics card drivers</string>
+				<string>[Graphics] Injecting graphics card drivers</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -492,7 +492,7 @@
 				<key>BundlePath</key>
 				<string>USBInjectAll.kext</string>
 				<key>Comment</key>
-				<string>USB customize</string>
+				<string>[USB] Kext to inject USB ports mapping</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -510,7 +510,7 @@
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
-				<string>Enable native macOS audio support</string>
+				<string>[Audio] Enable native macOS audio support</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -528,7 +528,7 @@
 				<key>BundlePath</key>
 				<string>SMCBatteryManager.kext</string>
 				<key>Comment</key>
-				<string>VirtualSMC sensors family</string>
+				<string>[Battery] a member of VirtualSMC that parses battery info</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -546,7 +546,7 @@
 				<key>BundlePath</key>
 				<string>SMCProcessor.kext</string>
 				<key>Comment</key>
-				<string>VirtualSMC sensors family</string>
+				<string>[CPUMon] a member of VirtualSMC that provides power info of processor</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -562,9 +562,27 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
+				<string>ACPIBatteryManager.kext</string>
+				<key>Comment</key>
+				<string>[Battery] legacy ACPI battery driver that parses battery info</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/ACPIBatteryManager</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
 				<string>RealtekRTL8111.kext</string>
 				<key>Comment</key>
-				<string>Realtek Ethernet driver</string>
+				<string>[Ethernet] Realtek RT8168 Ethernet driver (supports up to 100Mbps)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -582,7 +600,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2C.kext/Contents/PlugIns/VoodooI2CServices.kext</string>
 				<key>Comment</key>
-				<string>I2C touchpad driver framework</string>
+				<string>[Touchpad] I2C touchpad driver framework</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -600,7 +618,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2C.kext/Contents/PlugIns/VoodooGPIO.kext</string>
 				<key>Comment</key>
-				<string>I2C touchpad driver framework</string>
+				<string>[Touchpad] I2C touchpad driver framework</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -618,7 +636,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2C.kext</string>
 				<key>Comment</key>
-				<string>I2C touchpad driver framework</string>
+				<string>[Touchpad] I2C touchpad driver framework</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -636,7 +654,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2C.kext/Contents/PlugIns/VoodooInput.kext</string>
 				<key>Comment</key>
-				<string>I2C touchpad driver framework</string>
+				<string>[Touchpad] I2C touchpad gesture provider</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -654,7 +672,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2CHID.kext</string>
 				<key>Comment</key>
-				<string>I2C HID touchpad driver</string>
+				<string>[Touchpad] I2C HID touchpad driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -672,7 +690,7 @@
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext</string>
 				<key>Comment</key>
-				<string>PS/2 keyboard / touchpad driver framework</string>
+				<string>[PS2] PS/2 keyboard / touchpad driver framework</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -690,7 +708,7 @@
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooInput.kext</string>
 				<key>Comment</key>
-				<string>PS/2 touchpad gesture framework</string>
+				<string>[Touchpad] PS/2 touchpad gesture provider</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -708,7 +726,7 @@
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Keyboard.kext</string>
 				<key>Comment</key>
-				<string>PS/2 keyboard driver</string>
+				<string>[Keyboard] PS/2 keyboard driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -726,7 +744,7 @@
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext</string>
 				<key>Comment</key>
-				<string>PS/2 touchpad driver</string>
+				<string>[Touchpad] PS/2 touchpad driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -744,7 +762,7 @@
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Trackpad.kext</string>
 				<key>Comment</key>
-				<string>PS/2 touchpad driver</string>
+				<string>[Touchpad] PS/2 touchpad driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -762,7 +780,7 @@
 				<key>BundlePath</key>
 				<string>HibernationFixup.kext</string>
 				<key>Comment</key>
-				<string>Kexts for fixing S4 hibernation &amp; wakeup</string>
+				<string>[Hibernate] Kexts for fixing S4 hibernation &amp; wakeup</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -780,7 +798,7 @@
 				<key>BundlePath</key>
 				<string>RTCMemoryFixup.kext</string>
 				<key>Comment</key>
-				<string>Kexts for fixing memory RTC region &amp; S4 hibernation &amp; wakeup</string>
+				<string>[Hibernate] Kexts for fixing memory RTC region &amp; S4 hibernation &amp; wakeup</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -798,7 +816,7 @@
 				<key>BundlePath</key>
 				<string>CPUFriend.kext</string>
 				<key>Comment</key>
-				<string>Adjust CPU performance</string>
+				<string>[Processor] Adjust CPU performance</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -816,7 +834,7 @@
 				<key>BundlePath</key>
 				<string>CPUFriendDataProvider.kext</string>
 				<key>Comment</key>
-				<string>CPUFriend config: Max Power Saving</string>
+				<string>[Processor] CPUFriend config: Max Power Saving</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -834,7 +852,7 @@
 				<key>BundlePath</key>
 				<string>CPUFriendDataProvider_Performance.kext</string>
 				<key>Comment</key>
-				<string>CPUFriend config: Best Performance</string>
+				<string>[Processor] CPUFriend config: Best Performance</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -852,7 +870,7 @@
 				<key>BundlePath</key>
 				<string>NoTouchID.kext</string>
 				<key>Comment</key>
-				<string>Disable Touch ID features</string>
+				<string>[Compat] Disable Touch ID features</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -870,7 +888,7 @@
 				<key>BundlePath</key>
 				<string>TongfangKeyboardUtility.kext</string>
 				<key>Comment</key>
-				<string>Full Fn hotkey support extension, requires TongfangFnDaemon to be installed (credit @Goshin)</string>
+				<string>[Keyboard] Full Fn hotkey support extension, requires TongfangFnDaemon to be installed (credit @Goshin)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -888,7 +906,7 @@
 				<key>BundlePath</key>
 				<string>NVMeFix.kext</string>
 				<key>Comment</key>
-				<string>Enable native power management for 3rd-party NVMe devices</string>
+				<string>[SSD] Enable native power management for 3rd-party NVMe devices</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -906,7 +924,7 @@
 				<key>BundlePath</key>
 				<string>itlwm.kext</string>
 				<key>Comment</key>
-				<string>Intel Wi-Fi support for 1st gen cards (preview).</string>
+				<string>[Intel Wi-Fi] Intel Wi-Fi card support (continuity NO, hotspot OK) (requires HeliPort.app)</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -924,7 +942,7 @@
 				<key>BundlePath</key>
 				<string>AirportItlwm-BigSur.kext</string>
 				<key>Comment</key>
-				<string>Intel Wi-Fi support (IO80211, for macOS Big Sur)</string>
+				<string>[Intel Wi-Fi] Intel Wi-Fi card support (continuity OK, hotspot NO) (based on IO80211, for macOS Big Sur)</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -942,7 +960,7 @@
 				<key>BundlePath</key>
 				<string>AirportItlwm-Catalina.kext</string>
 				<key>Comment</key>
-				<string>Intel Wi-Fi support (IO80211, for macOS Catalina)</string>
+				<string>[Intel Wi-Fi] Intel Wi-Fi card support (continuity OK, hotspot NO) (based on IO80211, for macOS Catalina)</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -960,7 +978,7 @@
 				<key>BundlePath</key>
 				<string>IntelBluetoothFirmware.kext</string>
 				<key>Comment</key>
-				<string>Injecting Intel bluetooth firmware without hot reboot</string>
+				<string>[Intel Bluetooth] Injecting Intel bluetooth firmware without hot reboot</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -978,7 +996,7 @@
 				<key>BundlePath</key>
 				<string>IntelBluetoothInjector.kext</string>
 				<key>Comment</key>
-				<string>Fix Intel bluetooth switch in System Preference Setting</string>
+				<string>[Intel Bluetooth] Fix Intel bluetooth switch in System Preference Setting</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -996,7 +1014,7 @@
 				<key>BundlePath</key>
 				<string>AirportBrcmFixup.kext</string>
 				<key>Comment</key>
-				<string>Broadcom wireless card (DW1830,DW1560, etc.) driver</string>
+				<string>[Wi-Fi] Broadcom wireless card (DW1830,DW1560, etc.) driver</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1014,7 +1032,7 @@
 				<key>BundlePath</key>
 				<string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcm4360_Injector.kext</string>
 				<key>Comment</key>
-				<string>BCM4360 Injector</string>
+				<string>[Wi-Fi] BCM4360 Injector (should only be loaded on macOS Catalina and below)</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1032,7 +1050,7 @@
 				<key>BundlePath</key>
 				<string>AirportBrcmFixup.kext/Contents/PlugIns/AirPortBrcmNIC_Injector.kext</string>
 				<key>Comment</key>
-				<string>BrcmNIC Injector</string>
+				<string>[Wi-Fi] BrcmNIC Injector</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1050,7 +1068,7 @@
 				<key>BundlePath</key>
 				<string>BrcmBluetoothInjector.kext</string>
 				<key>Comment</key>
-				<string>Injecting Broadcom bluetooth firmware</string>
+				<string>[Broadcom Bluetooth] Injecting Broadcom bluetooth firmware</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1068,7 +1086,7 @@
 				<key>BundlePath</key>
 				<string>BrcmFirmwareData.kext</string>
 				<key>Comment</key>
-				<string>Injecting Broadcom bluetooth firmware</string>
+				<string>[Broadcom Bluetooth] Injecting Broadcom bluetooth firmware</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1086,7 +1104,7 @@
 				<key>BundlePath</key>
 				<string>BrcmPatchRAM3.kext</string>
 				<key>Comment</key>
-				<string>Injecting Broadcom bluetooth firmware</string>
+				<string>[Broadcom Bluetooth] Injecting Broadcom bluetooth firmware</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1104,7 +1122,7 @@
 				<key>BundlePath</key>
 				<string>HoRNDIS.kext</string>
 				<key>Comment</key>
-				<string>USB network tethering driver</string>
+				<string>[USB Network] USB network tethering driver</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1138,7 +1156,7 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>System\Library\Extensions\IO80211Family.kext</string>
+				<string>System/Library/Extensions/IO80211Family.kext</string>
 				<key>Comment</key>
 				<string>Force loading IO80211Family.kext for AirportItlwm</string>
 				<key>Enabled</key>
@@ -1282,7 +1300,7 @@
 			<key>HideAuxiliary</key>
 			<true/>
 			<key>PickerAttributes</key>
-			<integer>0</integer>
+			<integer>3</integer>
 			<key>PickerAudioAssist</key>
 			<true/>
 			<key>PickerMode</key>
@@ -1362,7 +1380,7 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Name</key>
 				<string>CleanNvram</string>
 				<key>Path</key>
@@ -1448,7 +1466,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>efi-version</key>
-				<string>21.1.20</string>
+				<string>21.2.5</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
