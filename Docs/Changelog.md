@@ -200,3 +200,8 @@ sudo pmset -a hibernatemode 25      # 一旦点击睡眠，强行进入 S4 睡�
 
 - 更新了 OpenCore 0.6.4；由于这是一个 OC 变动较大的版本更新，请全量替换所有文件（包括 BOOTx64.efi），或在 macOS 下使用助手自动替换。
 - 更新了 Lilu 和 WhateverGreen，解决了 macOS Big Sur 下对 4K 60Hz 内屏的支持。
+
+## 2020.2.16
+
+- 更新 OpenCore 0.6.6
+- 修复 macOS Big Sur 下无法检测到系统更新的 BUG.
