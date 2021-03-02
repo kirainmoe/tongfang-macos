@@ -5,7 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 7/8/9 代同方机型安装 macOS 的 OpenCore 配置文件
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-11.2.1-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-11.2.2-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
 
 
 <h3>
@@ -167,14 +167,14 @@
 
 ### 兼容的系统
 
-当前配置文件的版本是 `21.2.16`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `21.3.2`，兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
 | 10.13 High Sierra | ❌ | ❌ | ❌ | 不兼容任何版本 | 10.13 不兼容 `MacBookPro15,3` SMBIOS 和 CoffeeLake CPU 变频 |
 | 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H114) | |
-| 11.0 Big Sur | ✅ | ✅ | ✅ | 11.2.1 (20D74) | |
+| 11.0 Big Sur | ✅ | ✅ | ✅ | 11.2.2 (20D80) | |
 
 如 macOS 后续无破坏 EFI 功能的重要版本系统更新，配置文件将暂停维护。
 
