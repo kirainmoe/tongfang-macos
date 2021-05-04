@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>20A5323l</string>
+	<string>20C69</string>
 	<key>CFBundleIdentifier</key>
 	<string>as.acidanthera.injector.BrcmBluetoothInjector</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -13,7 +13,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.5.3</string>
+	<string>2.5.9</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -21,21 +21,23 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.5.3</string>
+	<string>2.5.9</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>11E708</string>
+	<string>12C33</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>11.1</string>
 	<key>DTSDKBuild</key>
-	<string>19G68</string>
+	<string>20C63</string>
 	<key>DTSDKName</key>
-	<string>macosx10.15</string>
+	<string>macosx11.1</string>
 	<key>DTXcode</key>
-	<string>1160</string>
+	<string>1230</string>
 	<key>DTXcodeBuild</key>
-	<string>11E708</string>
+	<string>12C33</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>03f0_231d no firmware</key>
@@ -52,6 +54,21 @@
 			<integer>8989</integer>
 			<key>idVendor</key>
 			<integer>1008</integer>
+		</dict>
+		<key>0489_e030 no firmware</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOProbeScore</key>
+			<integer>3000</integer>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>57392</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
 		</dict>
 		<key>0489_e032</key>
 		<dict>
@@ -232,6 +249,21 @@
 			<integer>57505</integer>
 			<key>idVendor</key>
 			<integer>1161</integer>
+		</dict>
+		<key>04b4_f901</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOProbeScore</key>
+			<integer>3000</integer>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>63745</integer>
+			<key>idVendor</key>
+			<integer>1204</integer>
 		</dict>
 		<key>04ca_2003</key>
 		<dict>
@@ -668,6 +700,21 @@
 			<key>idVendor</key>
 			<integer>2652</integer>
 		</dict>
+		<key>0a5c_217d</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOProbeScore</key>
+			<integer>3000</integer>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>8573</integer>
+			<key>idVendor</key>
+			<integer>2652</integer>
+		</dict>
 		<key>0a5c_21d7</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -982,6 +1029,21 @@
 			<integer>29792</integer>
 			<key>idVendor</key>
 			<integer>2652</integer>
+		</dict>
+		<key>0b05_178a</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOProbeScore</key>
+			<integer>3000</integer>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>6026</integer>
+			<key>idVendor</key>
+			<integer>2821</integer>
 		</dict>
 		<key>0b05_17b5</key>
 		<dict>
@@ -1373,6 +1435,36 @@
 			<key>idVendor</key>
 			<integer>6655</integer>
 		</dict>
+		<key>33ba_03e8 no firmware</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOProbeScore</key>
+			<integer>3000</integer>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>1000</integer>
+			<key>idVendor</key>
+			<integer>13242</integer>
+		</dict>
+		<key>33ba_03e9 no firmware</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOProbeScore</key>
+			<integer>3000</integer>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>1001</integer>
+			<key>idVendor</key>
+			<integer>13242</integer>
+		</dict>
 		<key>413c_8143</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
@@ -1405,7 +1497,7 @@
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.9</string>
+	<string>10.8</string>
 	<key>OSBundleRequired</key>
 	<string>Root</string>
 </dict>
