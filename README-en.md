@@ -72,14 +72,14 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `21.3.6`. This release is compatible with the following macOS version:
+Current EFI release is `21.5.4`. This release is compatible with the following macOS version:
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
 |-------------|--------|---------------|--------|-----------|------|
 | 10.13 High Sierra | ❌ | ❌ | ❌ | None | High Sierra does not recognize SMBIOS `MacbookPro15,3` |
 | 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H114) | |
-| 11.0 Big Sur | ✅ | ✅ | ✅ | 11.2.2 (20D80) | |
+| 11.0 Big Sur | ✅ | ✅ | ✅ | 11.3.1 (20E241) | |
 
 ### Barebones
 
@@ -128,7 +128,7 @@ It is recommended to create a USB map for your machine after installation if you
 
 # Current Status
 
-- OpenCore: 0.6.7 (official)
+- OpenCore: 0.6.9 (official)
 - SMBIOS: MacBook Pro 15-inch 2019 (MacBookPro15,3)
 - Dual-Boot of Windows & macOS is supported
 - 4K resolution inner monitor support (only macOS Catalina)
