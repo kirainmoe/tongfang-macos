@@ -5,7 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 7/8/9 代同方机型安装 macOS 的 OpenCore 配置文件
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-11.2.2-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-11.3.1-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
 
 
 <h3>

@@ -5,7 +5,7 @@
 
 OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generation platform laptops.
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-11.2.2-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-11.3.1-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
 
 <h3>
 <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
