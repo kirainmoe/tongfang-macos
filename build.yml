@@ -1,0 +1,690 @@
+project: "tongfang-macos"
+author: "kirainmoe"
+link: "https://github.com/kirainmoe/hasee-tongfang-macos"
+
+# 📒 EFI 版本信息 (version info)
+efi-version: "21.5.4"
+efi-build: 318
+require-utility-build: 2105040
+
+# 💻 支持的机型列表 (Supported Laptop Models List)
+# 字段描述 (Description):
+#      vendor: String                        厂商 (vendor string)
+#      product: String                       型号 (product model string)
+#      barebones: String | Array<String>     使用的模具，可以是字符串或列表 (barebones a.k.a. motherboard model string)
+#      generation: Number                    使用 Intel CPU 代数 (generation of Intel CPU)
+#      usbmap?: String                       使用的 USB 配置文件，可选 (USB port mapping config)
+support-models:
+  # General Barebones (No brand specified)
+  - vendor: "Tongfang"
+    product: "GK5CN6X / GK5CN5X / GK5CN4X"
+    barebones:
+      - "GK5CN6X"
+      - "GK5CN5X"
+      - "GK5CN4X"
+    generation: 8
+    usbmap: "GK5CN6X"
+  - vendor: "Tongfang"
+    product: "GK5CN6Z / GK5CN5Z"
+    barebones:
+      - "GK5CN6Z"
+      - "GK5CN5Z"
+    generation: 8
+    usbmap: "GK5CN6Z"
+  - vendor: "Tongfang"
+    product: "GK7CN6S / GK7CN5S"
+    barebones:
+      - "GK7CN6S"
+      - "GK7CN5S"
+    generation: 8
+    usbmap: "GK5CN6Z"
+  - vendor: "Tongfang"
+    product: "GJ5CN64"
+    barebones: "GJ5CN64"
+    generation: 8
+    usbmap: "GJ5CN64"
+  - vendor: "Tongfang"
+    product: "GI5CN54"
+    barebones: "GI5CN54"
+    generation: 8
+    usbmap: "GI5CN54"
+  - vendor: "Tongfang"
+    product: "GK7CP6R / GK7CR0V"
+    barebones:
+      - "GK7CP6R"
+      - "GK7CR0V"
+    generation: 9
+    usbmap: "GK7CP6R"
+  - vendor: "Tongfang"
+    product: "GK5CP6Z / GK5CP5Z"
+    barebones:
+      - "GK5CP6Z"
+      - "GK5CP5Z"
+    generation: 9
+    usbmap: "GK5CP6X"
+  - vendor: "Tongfang"
+    product: "GK5CP6X / Gk5CP5X"
+    barebones:
+      - "GK5CP6X"
+      - "Gk5CP5X"
+    generation: 9
+    usbmap: "GK5CP6X"
+  - vendor: "Tongfang"
+    product: "GK5CP6V / GK5CP5V"
+    barebones:
+      - "GK5CP6V"
+      - "GK5CP5V"
+    generation: 9
+    usbmap: "GK7CP6R"
+  - vendor: "Tongfang"
+    product: "GJ5KN64 / GJ5KN6A"
+    barebones:
+      - "GJ5KN64"
+      - "GJ5KN6A"
+    generation: 7
+  - vendor: "Tongfang"
+    product: "GI5KN4A"
+    barebones: "GI5KN4A"
+    generation: 7
+
+  # 神舟 (Hasee)
+  ## GK5CN
+  - vendor: "Hasee"
+    product: "Z7-KP7GZ"
+    barebones: "GK5CN6X"
+    generation: 8
+    usbmap: "GK5CN6X"
+  - vendor: "Hasee"
+    product: "Z7-KP7Z"
+    barebones: "GK5CN6X"
+    generation: 8
+    usbmap: "GK5CN6X"
+  - vendor: "Hasee"
+    product: "Z7M-KP7GZ"
+    barebones: "GK5CN5X"
+    generation: 8
+    usbmap: "GK5CN6X"
+  - vendor: "Hasee"
+    product: "Z7M-KP7Z"
+    barebones: "GK5CN5X"
+    generation: 8
+    usbmap: "GK5CN6X"
+  - vendor: "Hasee"
+    product: "Z7M-KP5GZ"
+    barebones: "GK5CN5X"
+    generation: 8
+    usbmap: "GK5CN6X"
+  - vendor: "Hasee"
+    product: "Z7M-KP5Z"
+    barebones: "GK5CN5X"
+    generation: 8
+    usbmap: "GK5CN6X"
+  ## GJ5CN64
+  - vendor: "Hasee"
+    product: "Z7-KP7EC"
+    barebones: "GJ5CN64"
+    generation: 8
+    uspmap: "GJ5CN64"
+  - vendor: "Hasee"
+    product: "Z7-KP7GC"
+    barebones: "GJ5CN64"
+    generation: 8
+    uspmap: "GJ5CN64"
+  - vendor: "Hasee"
+    product: "Z7-KP7GA"
+    barebones: "GJ5CN64"
+    generation: 8
+    uspmap: "GJ5CN64"
+  - vendor: "Hasee"
+    product: "Z7-KP7GE"
+    barebones: "GJ5CN64"
+    generation: 8
+    uspmap: "GJ5CN64"
+  - vendor: "Hasee"
+    product: "Z7-KP7GH"
+    barebones: "GJ5CN64"
+    generation: 8
+    uspmap: "GJ5CN64"
+  ## GI5CN54
+  - vendor: "Hasee"
+    product: "Z7M-KP7GC"
+    barebones: "GI5CN54"
+    generation: 8
+    uspmap: "GI5CN54"
+  - vendor: "Hasee"
+    product: "Z7M-KP5GC"
+    barebones: "GI5CN54"
+    generation: 8
+    uspmap: "GI5CN54"
+  - vendor: "Hasee"
+    product: "Z7M-KP7GA"
+    barebones: "GI5CN54"
+    generation: 8
+    usbmap: "GI5CN54"
+  - vendor: "Hasee"
+    product: "Z7M-KP5GA"
+    barebones: "GI5CN54"
+    generation: 8
+    usbmap: "GI5CN54"
+  - vendor: "Hasee"
+    product: "Z7M-KP7GE"
+    barebones: "GI5CN54"
+    generation: 8
+    usbmap: "GI5CN54"
+  - vendor: "Hasee"
+    product: "Z7M-KP5GE"
+    barebones: "GI5CN54"
+    generation: 8
+    usbmap: "GI5CN54"
+  - vendor: "Hasee"
+    product: "Z7M-KP7GH"
+    barebones: "GI5CN54"
+    generation: 8
+    usbmap: "GI5CN54"
+  - vendor: "Hasee"
+    product: "Z7M-KP5GH"
+    barebones: "GI5CN54"
+    generation: 8
+    usbmap: "GI5CN54"
+  ## GK5CP
+  - vendor: "Hasee"
+    product: "Z7-CT7GK"
+    barebones: "GK5CP6X"
+    generation: 9
+    usbmamp: "GK7CP6R"
+  - vendor: "Hasee"
+    product: "Z7-CT5GA"
+    barebones: "GK5CP6X"
+    generation: 9
+    usbmamp: "GK7CP6R"
+  - vendor: "Hasee"
+    product: "Z7-CT7VH"
+    barebones: "GK5CP6V"
+    generation: 9
+    usbmamp: "GK7CP6R"
+  - vendor: "Hasee"
+    product: "Z7-CT7VA"
+    barebones: "GK5CP6V"
+    generation: 9
+    usbmamp: "GK7CP6R"
+  - vendor: "Hasee"
+    product: "Z7-CT5VH"
+    barebones: "GK5CP6V"
+    generation: 9
+    usbmamp: "GK7CP6R"
+  - vendor: "Hasee"
+    product: "Z7-CT5N1"
+    barebones: "GK5CP6V"
+    generation: 9
+    usbmap: "GK5CP6X"
+  - vendor: "Hasee"
+    product: "Z7M-CT5VH"
+    barebones: "GK5CP5V"
+    generation: 9
+    usbmap: "GK5CP6X"
+  - vendor: "Hasee"
+    product: "Z7M-CT7VH"
+    barebones: "GK5CP5V"
+    generation: 9
+    usbmap: "GK5CP6X"
+  - vendor: "Hasee"
+    product: "Z7M-CT5N1"
+    barebones: "GK5CP5V"
+    generation: 9
+    usbmap: "GK5CP6X"
+  - vendor: "Hasee"
+    product: "Z7M-CT7GS"
+    barebones: "GK5CP5X"
+    generation: 9
+    usbmap: "GK5CP6X"
+  - vendor: "Hasee"
+    product: "Z7M-CT5GA"
+    barebones: "GK5CP5X"
+    generation: 9
+    usbmap: "GK5CP6X"
+  ## GK7CP
+  - vendor: "Hasee"
+    product: "G7-CT7VK"
+    barebones: "GK7CP6R"
+    generation: 9
+    usbmap: "GK7CP6R"
+  - vendor: "Hasee"
+    product: "G7-CT7RA"
+    barebones: "GK7CP6R"
+    generation: 9
+    usbmap: "GK7CP6R"
+  ## GK5CR
+  - vendor: "Hasee"
+    product: "Z8-CT7VK"
+    barebones: "GK5CR0V"
+    generation: 9
+    usbmap: "GK7CP6R"
+  ## GJ5KN
+  - vendor: "Hasee"
+    product: "Z7-KP7GT"
+    barebones: "GJ5KN64"
+    generation: 7
+  - vendor: "Hasee"
+    product: "Z7-KP7D2"
+    barebones: "GJ5KN64"
+    generation: 7
+
+  # 炫龙 (Shinelon)
+  - vendor: "Shinelon"
+    product: "Yao 7000"
+    barebones: "GK5CN5X"
+    generation: 8
+    usbmap: "GK5CN6X"
+  - vendor: "Shinelon"
+    product: "Yao 9000 II"
+    barebones: "GK5CN6X"
+    generation: 8
+    usbmap: "GK5CN6X"
+  - vendor: "Shinelon"
+    product: "T2Ti"
+    barebones: "GI5CN54"
+    generation: 8
+    usbmap: "GI5CN54"
+  - vendor: "Shinelon"
+    product: "T3Ti - 710S5R"
+    barebones: "GK7CP6R"
+    generation: 9
+    usbmap: "GK7CP6R"
+  - vendor: "Shinelon"
+    product: "T3Ti - 710S5V"
+    barebones: "GK7CP6R"
+    generation: 9
+    usbmap: "GK7CP6R"
+
+  # 机械革命 (Mechrevo)
+  - vendor: "Mechrevo"
+    product: "Z2 Series (8th)"
+    barebones: "GK5CN6Z"
+    generation: 8
+    usbmap: "GK5CN6Z"
+  - vendor: "Mechrevo"
+    product: "Z2 Air (8th)"
+    barebones: "GK5CN6X"
+    generation: 8
+    usbmap: "GK5CN6X"
+  - vendor: "Mechrevo"
+    product: "X8Ti (8th)"
+    barebones: "GK5CN5Z"
+    generation: 8
+    usbmap: "GK5CN6Z"
+  - vendor: "Mechrevo"
+    product: "Z2 Series (9th)"
+    barebones: "GK5CP6Z"
+    generation: 9
+    usbmap: "GK5CP6X"
+  - vendor: "Mechrevo"
+    product: "Z2-R / Z2-G"
+    barebones: "GK5CP6Z"
+    generation: 9
+    usbmap: "GK5CP6X"
+  - vendor: "Mechrevo"
+    product: "X3 Series"
+    barebones: "GK7CP6R"
+    generation: 9
+    usbmap: "GK7CP6R"
+  - vendor: "Mechrevo"
+    product: "X8Ti-G (9th)"
+    barebones: "GK7CP6R"
+    generation: 9
+    usbmap: "GK7CP6R"
+  - vendor: "Mechrevo"
+    product: "X9Ti Series"
+    barebones: "GK7CP6R"
+    generation: 9
+    usbmap: "GK7CP6R"
+  
+  # Monster
+  - vendor: "Monster"
+    product: "Monster Abra A7 v10.1"
+    barebones: "GK7CN6S"
+    generation: 8
+    usbmap: "GK5CN6Z"
+  - vendor: "Monster"
+    product: "Monster Abra A5 v13.4"
+    barebones: "GK7CN6S"
+    generation: 8
+    usbmap: "GK5CN6Z"
+  - vendor: "Monster"
+    product: "Monster Tulpar T7 v19.3"
+    barebones: "GK7CP6R"
+    generation: 9
+    usbmap: "GK7CP6R"
+  - vendor: "Monster"
+    product: "Monster Tulpar T7 v20.1"
+    barebones: "GK7CP6R"
+    generation: 9
+    usbmap: "GK7CP6R"
+  
+  # EVOO
+  - vendor: "EVOO"
+    product: "15.6' model laptops LP4/LP5"
+    barebones: "GK5CP6X"
+    generation: 8
+    usbmap: "GK5CP6X"
+  
+
+# 🔨 生成选项 (Build Actions)
+# ⚠️ 警告：以下内容将会影响 Tongfang Utility 生成 EFI 时的行为。如果你不了解以下的内容，请不要随意修改。
+#    Warning: The following contents will affect the final config generated by Tongfang Utility.
+#             Unless you know what you are doing, do not modify the following contents arbitrarily.
+
+build-actions:
+  # Enable support for PS/2 trackpads and disable I2C drivers
+  - test: "options.barebone.startsWith('GJ') || options.barebone.startsWith('GI')"
+    action:
+      - type: "set-kext"
+        name: 
+          - "VoodooI2C"
+          - "VoodooGPIO"
+        value: false
+      - type: "set-kext"
+        name: "VoodooPS2Controller/Contents/PlugIns/VoodooInput"
+        value: true
+      - type: "set-ssdt"
+        name: "SSDT-USTP"
+        value: false
+  
+  # Enable AppleGUC for 9th gen (or later) laptops & specified 8th gen users
+  - test: "options.generation >= 9 || options.appleGuC == true"
+    action:
+      - type: "add-boot-arguments"
+        value: "-igfxfw=2"
+  
+  # 7th generation support
+  - test: "options.generation == 7"
+    action:
+      # disable SSDT-PMC (native NVRAM patch)
+      - type: "set-ssdt"
+        name: "SSDT-PMC"
+        value: false
+      
+      # disable USBInjectAll and use USBPorts
+      - type: "set-kext"
+        name: "USBInjectAll"
+        value: false
+      - type: "copy-dir"
+        source: "$repoPath/Compat/Kexts/USBPorts.kext"
+        destination: "$workspace/OC/Kexts/USBPorts.kext"
+      - type: "add-kext"
+        name: "USBPorts.kext"
+        comment: "USB mapping for 7th gen devices"
+        executable: false
+        plist: true
+
+      # boot options for Kaby Lake
+      - type: "set-config"
+        path: "Booter/Quirks/DevirtualiseMmio"
+        value: false
+      - type: "set-config"
+        path: "Booter/Quirks/DiscardHibernateMap"
+        value: false
+      - type: "set-config"
+        path: "Booter/Quirks/SyncRuntimePermissions"
+        value: false
+      - type: "set-config"
+        path: "Booter/Quirks/SetupVirtualMap"
+        value: true
+
+      # Kaby Lake sounds
+      - type: "remove-device-properties"
+        path: "PciRoot(0x0)/Pci(0x1f,0x3)"
+        key: "device-id"
+      
+      # fake Kaby Lake IGPU as Skylake
+      - type: "set-device-properties"
+        path: "PciRoot(0x0)/Pci(0x2,0x0)"
+        key: "AAPL,ig-platform-id"
+        valueType: "DATA"
+        value: 
+          - 0x0
+          - 0x0
+          - 0x16
+          - 0x19
+      - type: "set-device-properties"
+        path: "PciRoot(0x0)/Pci(0x2,0x0)"
+        key: "device-id"
+        valueType: "DATA"
+        value:
+          - 0x16
+          - 0x19
+          - 0x0
+          - 0x0
+      - type: "add-boot-arguments"
+        value: "lilucpu=8 -disablegfxfirmware"
+  
+  # wiress card (Wi-Fi & Bluetooth) drivers injection
+  ## Apple 
+  - test: "options.wirelessCard === 'apple'"
+    action: 
+      - type: "set-kext"
+        name: "AirportBrcmFixup"
+        value: true
+    children:
+      - test: "window.navigator.language === 'zh-CN'"
+        action:
+          - type: "add-boot-arguments"
+            value: "brcmfx-country=CN"
+      - test: "window.navigator.language !== 'zh-CN'"
+        action:
+          - type: "add-boot-arguments"
+            value: "brcmfx-country=#a"
+  ## Broadcom (Dell Wireless)
+  - test: "options.wirelessCard === 'broadcom'"
+    action:
+      - type: "set-kext"
+        name:
+          - "AirportBrcmFixup"
+          - "BrcmBluetoothInjector"
+          - "BrcmFirmwareData"
+          - "BrcmPatchRAM3"
+        value: true
+  ## Intel
+  - test: "options.wirelessCard === 'intel'"
+    action:
+      - type: "copy-dir"
+        source: "$appPath/IntelBluetoothFirmware.kext"
+        destination: "$workspace/OC/Kexts/IntelBluetoothFirmware.kext"
+      - type: "copy-dir"
+        source: "$appPath/IntelBluetoothInjector.kext"
+        destination: "$workspace/OC/Kexts/IntelBluetoothInjector.kext"
+      - type: "set-kext"
+        name: "IntelBluetooth"
+        value: true
+    children:
+      - test: "options.useAirportItlwm === true && options.osVersion === 'catalina'"
+        action:
+          - type: "copy-dir"
+            source: "$appPath/AirportItlwm-Catalina.kext"
+            destination: "$workspace/OC/Kexts/AirportItlwm-Catalina.kext"
+          - type: "set-kext"
+            name: "AirportItlwm-Catalina"
+            value: true
+      - test: "options.useAirportItlwm === true && options.osVersion === 'bigsur'"
+        action:
+          - type: "copy-dir"
+            source: "$appPath/AirportItlwm-BigSur.kext"
+            destination: "$workspace/OC/Kexts/AirportItlwm-BigSur.kext"
+          - type: "set-kext"
+            name: "AirportItlwm-BigSur"
+            value: true
+      - test: "options.useAirportItlwm === false"
+        action:
+          - type: "copy-dir"
+            source: "$appPath/itlwm.kext"
+            destination: "$workspace/OC/Kexts/itlwm.kext"
+          - type: "set-kext"
+            name: "itlwm.kext"
+            value: true
+  
+  # Enable Android tethering support
+  - test: "options.tethering === true"
+    action: 
+      - type: "set-kext"
+        name: "HoRNDIS"
+        value: true
+  
+  # Disable incompatible NVMe drives
+  - text: "options.disableNVMe === true"
+    action:
+      - type: "set-ssdt"
+        name: "SSDT-DNVME"
+        value: true
+      - type: "set-nvram-var"
+        name: "nvme-disabled"
+        value: "true"
+  
+  # disable GUI for accessibility
+  - test: "options.accessibility === true"
+    action:
+      - type: "set-config"
+        path: "Misc/Boot/PickerMode"
+        value: "Builtin"
+
+  # bootchime related
+  - test: "options.bootChime === false && options.accessibility === false"
+    action:
+      - type: "set-config"
+        path: "Misc/Boot/PickerAudioAssist"
+        value: false
+      - type: "set-config"
+        path: "UEFI/Audio/PlayChime"
+        value: ""
+      - type: "set-config"
+        path: "UEFI/Audio/AudioSupport"
+        value: false
+      - type: "delete-config"
+        path: "UEFI/Drivers/4"
+  
+  # macOS Big Sur SIP
+  - test: "options.osVersion === 'bigsur'"
+    action:
+      - type: "set-config"
+        path: "NVRAM/Add/7C436110-AB2A-4BBB-A880-FE41995C9F82/csr-active-config"
+        valueType: "DATA"
+        value: 
+          - 0x00
+          - 0x00
+          - 0x00
+          - 0x00
+  
+  # cpufriend best performace mode
+  - test: "options.cpuBestPerformance === true"
+    action:
+      - type: "set-kext"
+        name: "CPUFriendDataProvider.kext"
+        value: false
+      - type: "set-kext"
+        name: "CPUFriendDataProvider_Performance.kext"
+        value: true
+  
+  # iGPU patches
+  - test: "options.resolution == '4k' || (options.resolution === '1080p144sol2' || options.osVersion === 'bigsur')"
+    action:
+      - type: "set-device-properties"
+        path: "PciRoot(0x0)/Pci(0x2,0x0)"
+        pairs:
+          - key: "enable-dpcd-max-link-rate-fix"
+            valueType: "DATA"
+            value:
+              - 0x1
+              - 0x0
+              - 0x0
+              - 0x0
+          - key: "framebuffer-con0-enable"
+            valueType: "DATA"
+            value:
+              - 0x1
+              - 0x0
+              - 0x0
+              - 0x0
+          - key: "framebuffer-con0-pipe"
+            valueType: "DATA"
+            value:
+              - 18
+              - 0
+              - 0
+              - 0
+          - key: "framebuffer-con1-enable"
+            valueType: "DATA"
+            value:
+              - 0x1
+              - 0x0
+              - 0x0
+              - 0x0
+          - key: "framebuffer-con1-pipe"
+            valueType: "DATA"
+            value:
+              - 18
+              - 0
+              - 0
+              - 0
+          - key: "framebuffer-con2-enable"
+            valueType: "DATA"
+            value:
+              - 0x1
+              - 0x0
+              - 0x0
+              - 0x0
+          - key: "framebuffer-con2-pipe"
+            valueType: "DATA"
+            value:
+              - 18
+              - 0
+              - 0
+              - 0
+  - test: "options.resolution === '4k'"
+    action:
+      - type: "set-device-properties"
+        path: "PciRoot(0x0)/Pci(0x2,0x0)"
+        pairs:
+          - key: "enable-hdmi20"
+            valueType: "DATA"
+            value:
+              - 0x1
+              - 0x0
+              - 0x0
+              - 0x0
+          - key: "enable-max-pixel-clock-override"
+            valueType: "DATA"
+            value:
+              - 0x1
+              - 0x0
+              - 0x0
+              - 0x0
+          - key: "dpcd-max-link-rate"
+            valueType: "DATA"
+            value:
+              - 20
+              - 0
+              - 0
+              - 0
+      - type: "delete-device-properties"
+        path: "PciRoot(0x0)/Pci(0x2,0x0)"
+        name:
+          - "framebuffer-stolenmem"
+          - "framebuffer-fbmem"
+      - type: "set-config"
+        path: "NVRAM/Add/4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14/UIScale"
+        valueType: "DATA"
+        value:
+          - 0x2
+  
+  - test: "options.NVMeFix === true"
+    actions:
+      - type: "set-kext"
+        name: "NVMeFix"
+        value: true
+
+  - test: "options.useCompatACPI === true"
+    actions: 
+      - type: "set-kext"
+        name: "SMCBatteryManager"
+        value: false
+      - type: "set-kext"
+        name: "ACPIBatteryManager"
+        value: true
