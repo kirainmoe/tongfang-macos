@@ -3,8 +3,8 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/hasee-tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "21.6.8"
-efi-build: 319
+efi-version: "21.6.8.1"
+efi-build: 320
 require-utility-build: 2105040
 
 # 💻 支持的机型列表 (Supported Laptop Models List)
