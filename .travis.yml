@@ -5,7 +5,7 @@ node_js:
 - 12
 
 install:
-- export buildName="hasee-tongfang-macos-$(cat Docs/.version).zip"
+- export buildName="hasee-tongfang-macos-$(cat Docs/.version).js"
 - zip -r $buildName . -x '*.git*'
 
 script:
