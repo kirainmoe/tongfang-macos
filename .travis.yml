@@ -11,6 +11,7 @@ install:
 script:
 - git clone https://${github_token}@github.com/kirainmoe/hasee-tongfang-macos-build build
 - rm -rf build/*.zip
+- rm -rf build/*.js
 - cp $buildName build/$buildName
 - cd build
 - git add .

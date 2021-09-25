@@ -5,7 +5,9 @@ link: "https://github.com/kirainmoe/hasee-tongfang-macos"
 # 📒 EFI 版本信息 (version info)
 efi-version: "21.9.15"
 efi-build: 320
-require-utility-build: 2105040
+require-utility-version: "4.0.0-alpha"
+require-utility-build: 2109250
+opencore-version: "0.7.3"
 
 # 💻 支持的机型列表 (Supported Laptop Models List)
 # 字段描述 (Description):
@@ -375,7 +377,7 @@ support-models:
 
 build-actions:
   # Enable support for PS/2 trackpads and disable I2C drivers
-  - test: "options.barebone.startsWith('GJ') || options.barebone.startsWith('GI')"
+  - test: "config.barebone.startsWith('GJ') || config.barebone.startsWith('GI')"
     action:
       - type: "set-kext"
         name: 
@@ -390,13 +392,13 @@ build-actions:
         value: false
   
   # Enable AppleGUC for 9th gen (or later) laptops & specified 8th gen users
-  - test: "options.generation >= 9 || options.appleGuC == true"
+  - test: "config.generation >= 9 || config.enableAppleGuC == true"
     action:
       - type: "add-boot-arguments"
         value: "-igfxfw=2"
   
   # 7th generation support
-  - test: "options.generation == 7"
+  - test: "config.generation == 7"
     action:
       # disable SSDT-PMC (native NVRAM patch)
       - type: "set-ssdt"
@@ -459,22 +461,22 @@ build-actions:
   
   # wiress card (Wi-Fi & Bluetooth) drivers injection
   ## Apple 
-  - test: "options.wirelessCard === 'apple'"
+  - test: "config.wirelessAdapterType === 'apple'"
     action: 
       - type: "set-kext"
         name: "AirportBrcmFixup"
         value: true
     children:
-      - test: "window.navigator.language === 'zh-CN'"
+      - test: "ui.language === 'zh-cn'"
         action:
           - type: "add-boot-arguments"
             value: "brcmfx-country=CN"
-      - test: "window.navigator.language !== 'zh-CN'"
+      - test: "ui.language !== 'zh-cn'"
         action:
           - type: "add-boot-arguments"
             value: "brcmfx-country=#a"
   ## Broadcom (Dell Wireless)
-  - test: "options.wirelessCard === 'broadcom'"
+  - test: "config.wirelessAdapterType === 'broadcom'"
     action:
       - type: "set-kext"
         name:
@@ -484,52 +486,68 @@ build-actions:
           - "BrcmPatchRAM3"
         value: true
   ## Intel
-  - test: "options.wirelessCard === 'intel'"
+  - test: "config.wirelessAdapterType === 'intel'"
     action:
       - type: "copy-dir"
-        source: "$appPath/IntelBluetoothFirmware.kext"
+        source: "$driverPath/intel-bluetooth/$driverVersion/general/IntelBluetoothFirmware.kext"
         destination: "$workspace/OC/Kexts/IntelBluetoothFirmware.kext"
       - type: "copy-dir"
-        source: "$appPath/IntelBluetoothInjector.kext"
+        source: "$driverPath/intel-bluetooth/$driverVersion/general/IntelBluetoothInjector.kext"
         destination: "$workspace/OC/Kexts/IntelBluetoothInjector.kext"
       - type: "set-kext"
         name: "IntelBluetooth"
         value: true
     children:
-      - test: "options.useAirportItlwm === true && options.osVersion === 'catalina'"
+      - test: "config.useAirportItlwm === true && config.osVersion === 'mojave'"
         action:
           - type: "copy-dir"
-            source: "$appPath/AirportItlwm-Catalina.kext"
-            destination: "$workspace/OC/Kexts/AirportItlwm-Catalina.kext"
+            source: "$driverPath/intel-wifi/$driverVersion/mojave/AirportItlwm.kext"
+            destination: "$workspace/OC/Kexts/AirportItlwm.kext"
           - type: "set-kext"
-            name: "AirportItlwm-Catalina"
+            name: "AirportItlwm"
             value: true
-      - test: "options.useAirportItlwm === true && options.osVersion === 'bigsur'"
+      - test: "config.useAirportItlwm === true && config.osVersion === 'catalina'"
         action:
           - type: "copy-dir"
-            source: "$appPath/AirportItlwm-BigSur.kext"
-            destination: "$workspace/OC/Kexts/AirportItlwm-BigSur.kext"
+            source: "$driverPath/intel-wifi/$driverVersion/catalina/AirportItlwm.kext"
+            destination: "$workspace/OC/Kexts/AirportItlwm.kext"
           - type: "set-kext"
-            name: "AirportItlwm-BigSur"
+            name: "AirportItlwm"
             value: true
-      - test: "options.useAirportItlwm === false"
+      - test: "config.useAirportItlwm === true && config.osVersion === 'bigsur'"
         action:
           - type: "copy-dir"
-            source: "$appPath/itlwm.kext"
+            source: "$driverPath/intel-wifi/$driverVersion/bigsur/AirportItlwm.kext"
+            destination: "$workspace/OC/Kexts/AirportItlwm.kext"
+          - type: "set-kext"
+            name: "AirportItlwm"
+            value: true
+      - test: "config.useAirportItlwm === true && config.osVersion === 'monterey'"
+        action:
+          - type: "copy-dir"
+            source: "$driverPath/intel-wifi/$driverVersion/monterey/AirportItlwm.kext"
+            destination: "$workspace/OC/Kexts/AirportItlwm.kext"
+          - type: "set-kext"
+            name: "AirportItlwm"
+            value: true                        
+      - test: "config.useAirportItlwm === false"
+        action:
+          - type: "copy-dir"
+            source: "$driverPath/intel-wifi/$driverVersion/general/itlwm.kext"
             destination: "$workspace/OC/Kexts/itlwm.kext"
           - type: "set-kext"
             name: "itlwm.kext"
             value: true
   
   # Enable Android tethering support
-  - test: "options.tethering === true"
+  - test: "config.usbTetheringSupport === true"
     action: 
       - type: "set-kext"
         name: "HoRNDIS"
         value: true
   
   # Disable incompatible NVMe drives
-  - text: "options.disableNVMe === true"
+  - text: "config.disableIncompatibleNVMe > 0"
     action:
       - type: "set-ssdt"
         name: "SSDT-DNVME"
@@ -537,16 +555,9 @@ build-actions:
       - type: "set-nvram-var"
         name: "nvme-disabled"
         value: "true"
-  
-  # disable GUI for accessibility
-  - test: "options.accessibility === true"
-    action:
-      - type: "set-config"
-        path: "Misc/Boot/PickerMode"
-        value: "Builtin"
 
   # bootchime related
-  - test: "options.bootChime === false && options.accessibility === false"
+  - test: "config.enableBootChime === false"
     action:
       - type: "set-config"
         path: "Misc/Boot/PickerAudioAssist"
@@ -560,8 +571,8 @@ build-actions:
       - type: "delete-config"
         path: "UEFI/Drivers/4"
   
-  # macOS Big Sur SIP
-  - test: "options.osVersion === 'bigsur'"
+  # disable SIP on macOS Big Sur and later
+  - test: "config.osVersion === 'bigsur' || config.osVersion === 'monterey'"
     action:
       - type: "set-config"
         path: "NVRAM/Add/7C436110-AB2A-4BBB-A880-FE41995C9F82/csr-active-config"
@@ -573,7 +584,7 @@ build-actions:
           - 0x00
   
   # cpufriend best performace mode
-  - test: "options.cpuBestPerformance === true"
+  - test: "config.cpuPerformanceMode === true"
     action:
       - type: "set-kext"
         name: "CPUFriendDataProvider.kext"
@@ -583,7 +594,7 @@ build-actions:
         value: true
   
   # iGPU patches
-  - test: "options.resolution == '4k' || (options.resolution === '1080p144sol2' || options.osVersion === 'bigsur')"
+  - test: "config.internalMonitorType == '4k' || (config.internalMonitorType === '1080p144sol2' || (config.osVersion === 'bigsur' || config.osVersion === 'monterey'))"
     action:
       - type: "set-device-properties"
         path: "PciRoot(0x0)/Pci(0x2,0x0)"
@@ -637,7 +648,7 @@ build-actions:
               - 0
               - 0
               - 0
-  - test: "options.resolution === '4k'"
+  - test: "config.resolution === '4k'"
     action:
       - type: "set-device-properties"
         path: "PciRoot(0x0)/Pci(0x2,0x0)"
@@ -674,17 +685,8 @@ build-actions:
         value:
           - 0x2
   
-  - test: "options.NVMeFix === true"
+  - test: "config.enableNVMeFix === true"
     actions:
       - type: "set-kext"
         name: "NVMeFix"
-        value: true
-
-  - test: "options.useCompatACPI === true"
-    actions: 
-      - type: "set-kext"
-        name: "SMCBatteryManager"
-        value: false
-      - type: "set-kext"
-        name: "ACPIBatteryManager"
         value: true
