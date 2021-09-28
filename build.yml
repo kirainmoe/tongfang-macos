@@ -3,7 +3,7 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/hasee-tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "21.9.28"
+efi-version: "21.9.29"
 efi-build: 324
 require-utility-version: "4.0.0-alpha"
 require-utility-build: 2109250
@@ -501,7 +501,7 @@ build-actions:
       - test: "config.useAirportItlwm === true"
         action:
           - type: "copy-dir"
-            source: "$driverPath/intel-wifi/$driverVersion/$osVersion/AirportItlwm.kext"
+            source: "$driverPath/intel-wifi/$wifiDriverVersion/$osVersion/AirportItlwm.kext"
             destination: "$workspace/OC/Kexts/AirportItlwm.kext"
           - type: "set-kext"
             name: "AirportItlwm"
@@ -509,7 +509,7 @@ build-actions:
       - test: "config.useAirportItlwm === false"
         action:
           - type: "copy-dir"
-            source: "$driverPath/intel-wifi/$driverVersion/general/itlwm.kext"
+            source: "$driverPath/intel-wifi/$wifiDriverVersion/$osVersion/itlwm.kext"
             destination: "$workspace/OC/Kexts/itlwm.kext"
           - type: "set-kext"
             name: "itlwm.kext"
