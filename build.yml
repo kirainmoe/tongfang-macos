@@ -3,11 +3,11 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/hasee-tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "21.9.15"
-efi-build: 320
+efi-version: "21.9.28"
+efi-build: 324
 require-utility-version: "4.0.0-alpha"
 require-utility-build: 2109250
-opencore-version: "0.7.3"
+opencore-version: "0.7.4"
 
 # 💻 支持的机型列表 (Supported Laptop Models List)
 # 字段描述 (Description):
@@ -489,47 +489,23 @@ build-actions:
   - test: "config.wirelessAdapterType === 'intel'"
     action:
       - type: "copy-dir"
-        source: "$driverPath/intel-bluetooth/$driverVersion/general/IntelBluetoothFirmware.kext"
+        source: "$driverPath/intel-bluetooth/$bluetoothDriverVersion/general/IntelBluetoothFirmware.kext"
         destination: "$workspace/OC/Kexts/IntelBluetoothFirmware.kext"
       - type: "copy-dir"
-        source: "$driverPath/intel-bluetooth/$driverVersion/general/IntelBluetoothInjector.kext"
+        source: "$driverPath/intel-bluetooth/$bluetoothDriverVersion/general/IntelBluetoothInjector.kext"
         destination: "$workspace/OC/Kexts/IntelBluetoothInjector.kext"
       - type: "set-kext"
         name: "IntelBluetooth"
         value: true
     children:
-      - test: "config.useAirportItlwm === true && config.osVersion === 'mojave'"
+      - test: "config.useAirportItlwm === true"
         action:
           - type: "copy-dir"
-            source: "$driverPath/intel-wifi/$driverVersion/mojave/AirportItlwm.kext"
+            source: "$driverPath/intel-wifi/$driverVersion/$osVersion/AirportItlwm.kext"
             destination: "$workspace/OC/Kexts/AirportItlwm.kext"
           - type: "set-kext"
             name: "AirportItlwm"
             value: true
-      - test: "config.useAirportItlwm === true && config.osVersion === 'catalina'"
-        action:
-          - type: "copy-dir"
-            source: "$driverPath/intel-wifi/$driverVersion/catalina/AirportItlwm.kext"
-            destination: "$workspace/OC/Kexts/AirportItlwm.kext"
-          - type: "set-kext"
-            name: "AirportItlwm"
-            value: true
-      - test: "config.useAirportItlwm === true && config.osVersion === 'bigsur'"
-        action:
-          - type: "copy-dir"
-            source: "$driverPath/intel-wifi/$driverVersion/bigsur/AirportItlwm.kext"
-            destination: "$workspace/OC/Kexts/AirportItlwm.kext"
-          - type: "set-kext"
-            name: "AirportItlwm"
-            value: true
-      - test: "config.useAirportItlwm === true && config.osVersion === 'monterey'"
-        action:
-          - type: "copy-dir"
-            source: "$driverPath/intel-wifi/$driverVersion/monterey/AirportItlwm.kext"
-            destination: "$workspace/OC/Kexts/AirportItlwm.kext"
-          - type: "set-kext"
-            name: "AirportItlwm"
-            value: true                        
       - test: "config.useAirportItlwm === false"
         action:
           - type: "copy-dir"
@@ -547,7 +523,7 @@ build-actions:
         value: true
   
   # Disable incompatible NVMe drives
-  - text: "config.disableIncompatibleNVMe > 0"
+  - test: "config.disableIncompatibleNVMe > 0"
     action:
       - type: "set-ssdt"
         name: "SSDT-DNVME"
@@ -674,7 +650,7 @@ build-actions:
               - 0
               - 0
               - 0
-      - type: "delete-device-properties"
+      - type: "remove-device-properties"
         path: "PciRoot(0x0)/Pci(0x2,0x0)"
         name:
           - "framebuffer-stolenmem"
@@ -686,7 +662,7 @@ build-actions:
           - 0x2
   
   - test: "config.enableNVMeFix === true"
-    actions:
+    action:
       - type: "set-kext"
         name: "NVMeFix"
         value: true
