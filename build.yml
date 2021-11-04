@@ -1,13 +1,13 @@
 project: "tongfang-macos"
 author: "kirainmoe"
-link: "https://github.com/kirainmoe/hasee-tongfang-macos"
+link: "https://github.com/kirainmoe/tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "21.9.29"
-efi-build: 324
+efi-version: "21.11.4"
+efi-build: 329
 require-utility-version: "4.0.0-alpha"
-require-utility-build: 2109250
-opencore-version: "0.7.4"
+require-utility-build: 2111030
+opencore-version: "0.7.5"
 
 # 💻 支持的机型列表 (Supported Laptop Models List)
 # 字段描述 (Description):
@@ -481,10 +481,19 @@ build-actions:
       - type: "set-kext"
         name:
           - "AirportBrcmFixup"
-          - "BrcmBluetoothInjector"
           - "BrcmFirmwareData"
+          - "BrcmBluetoothInjector"
           - "BrcmPatchRAM3"
         value: true
+    children: 
+      - test: "config.osVersion === 'monterey'"
+        action:
+          - type: "set-kext"
+            name: "BrcmBluetoothInjector"
+            value: false
+          - type: "set-kext"
+            name: "BlueToolFixup"
+            value: true
   ## Intel
   - test: "config.wirelessAdapterType === 'intel'"
     action:
@@ -513,6 +522,14 @@ build-actions:
             destination: "$workspace/OC/Kexts/itlwm.kext"
           - type: "set-kext"
             name: "itlwm.kext"
+            value: true
+      - test: "config.osVersion === 'monterey'"
+        action:
+          - type: "set-kext"
+            name: "IntelBluetoothInjector"
+            value: false
+          - type: "set-kext"
+            name: "BlueToolFixup"
             value: true
   
   # Enable Android tethering support
@@ -570,7 +587,7 @@ build-actions:
         value: true
   
   # iGPU patches
-  - test: "config.internalMonitorType == '4k' || (config.internalMonitorType === '1080p144sol2' || (config.osVersion === 'bigsur' || config.osVersion === 'monterey'))"
+  - test: "config.internalMonitorType == '4k' || (config.internalMonitorType === '1080p144sol2' && (config.osVersion === 'bigsur' || config.osVersion === 'monterey'))"
     action:
       - type: "set-device-properties"
         path: "PciRoot(0x0)/Pci(0x2,0x0)"

@@ -5,7 +5,7 @@
 
 OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generation platform laptops.
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-12.0_Beta-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-12.0.1-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
 
 <h3>
 <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
@@ -72,15 +72,15 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `21.9.28`. This release is compatible with the following macOS version:
+Current EFI release is `21.11.4`. This release is compatible with the following macOS version:
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
 |-------------|--------|---------------|--------|-----------|------|
-| 10.13 High Sierra | ❌ | ❌ | ❌ | None | High Sierra does not recognize SMBIOS `MacbookPro15,3` |
+| 10.13 High Sierra | ⭕ | ⭕ | ⭕ | Untested | Installing High Sierra on 8th gen or later Tongfang laptops is not recommended |
 | 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H114) | |
-| 11 Big Sur | ✅ | ✅ | ✅ | 11.4 (20F71) | |
-| 12 Monterey | ✅ | ✅ | ✅ | 12.0 Beta 7 (21A5522h) | |
+| 11 Big Sur | ✅ | ✅ | ✅ | 11.6 (20G165) | |
+| 12 Monterey | ✅ | ✅ | ✅ | 12.0.1 (21A559) | |
 
 ### Barebones
 
@@ -129,7 +129,7 @@ It is recommended to create a USB map for your machine after installation if you
 
 # Current Status
 
-- OpenCore: 0.7.4 (official)
+- OpenCore: 0.7.5 (official)
 - SMBIOS: MacBook Pro 15-inch 2019 (MacBookPro15,3)
 - Dual-Boot of Windows & macOS is supported
 - 4K resolution inner monitor support (only macOS Catalina)
