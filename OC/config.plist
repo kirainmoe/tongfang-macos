@@ -539,7 +539,7 @@
 				<key>Comment</key>
 				<string>[Sensor] a member of VirtualSMC that reads fan speed</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCSuperIO</string>
 				<key>MaxKernel</key>

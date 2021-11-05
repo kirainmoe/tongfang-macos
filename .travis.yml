@@ -2,21 +2,21 @@ sudo: required
 os: osx
 language: node_js
 node_js:
-- 12
+  - 12
 
 install:
-- export buildName="hasee-tongfang-macos-$(cat Docs/.version).js"
-- zip -r $buildName . -x '*.git*'
+  - export VERSION=$(cat Docs/.version)
+  - export BUILD_NAME="hasee-tongfang-macos-"$VERSION".js"
+  - zip -r $BUILD_NAME . -x '*.git*'
 
 script:
-- git clone https://${github_token}@github.com/kirainmoe/hasee-tongfang-macos-build build
-- rm -rf build/*.zip
-- rm -rf build/*.js
-- cp $buildName build/$buildName
-- cd build
-- git add .
-- git config --global user.name "tongfang-ci-bot"
-- git config --global user.email "tongfang@kirainmoe.com" 
-- git commit -m "Deploy version $buildName"
-- git push --force
-- curl https://api.kirainmoe.com/tongfang/update
+  - git clone https://${github_token}@github.com/kirainmoe/hasee-tongfang-macos-build build
+  - rm -rf build/*.zip
+  - rm -rf build/*.js
+  - cp $BUILD_NAME build/$BUILD_NAME
+  - cd build
+  - git add .
+  - git config --global user.name "tongfang-ci-bot"
+  - git config --global user.email "tongfang@kirainmoe.com"
+  - git commit -m "Deploy version $BUILD_NAME"
+  - git push --force

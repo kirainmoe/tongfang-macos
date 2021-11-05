@@ -562,7 +562,7 @@ build-actions:
         path: "UEFI/Audio/AudioSupport"
         value: false
       - type: "delete-config"
-        path: "UEFI/Drivers/4"
+        path: "UEFI/Drivers/5"
   
   # disable SIP on macOS Big Sur and later
   - test: "config.osVersion === 'bigsur' || config.osVersion === 'monterey'"
