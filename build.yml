@@ -510,7 +510,7 @@ build-actions:
       - test: "config.useAirportItlwm === true"
         action:
           - type: "copy-dir"
-            source: "$driverPath/intel-wifi/$wifiDriverVersion/general/AirportItlwm.kext"
+            source: "$driverPath/intel-wifi/$wifiDriverVersion/$osVersion/AirportItlwm.kext"
             destination: "$workspace/OC/Kexts/AirportItlwm.kext"
           - type: "set-kext"
             name: "AirportItlwm"
@@ -518,7 +518,7 @@ build-actions:
       - test: "config.useAirportItlwm === false"
         action:
           - type: "copy-dir"
-            source: "$driverPath/intel-wifi/$wifiDriverVersion/$osVersion/itlwm.kext"
+            source: "$driverPath/intel-wifi/$wifiDriverVersion/general/itlwm.kext"
             destination: "$workspace/OC/Kexts/itlwm.kext"
           - type: "set-kext"
             name: "itlwm.kext"
