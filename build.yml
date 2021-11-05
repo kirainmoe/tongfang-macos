@@ -3,10 +3,10 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "21.11.4"
-efi-build: 329
-require-utility-version: "4.0.0-alpha"
-require-utility-build: 2111030
+efi-version: "21.11.6"
+efi-build: 331
+require-utility-version: "4.0.2"
+require-utility-build: 2111050
 opencore-version: "0.7.5"
 
 # 💻 支持的机型列表 (Supported Laptop Models List)
@@ -510,7 +510,7 @@ build-actions:
       - test: "config.useAirportItlwm === true"
         action:
           - type: "copy-dir"
-            source: "$driverPath/intel-wifi/$wifiDriverVersion/$osVersion/AirportItlwm.kext"
+            source: "$driverPath/intel-wifi/$wifiDriverVersion/general/AirportItlwm.kext"
             destination: "$workspace/OC/Kexts/AirportItlwm.kext"
           - type: "set-kext"
             name: "AirportItlwm"
