@@ -11,9 +11,8 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       
-      - run: export VERSION=$(cat Docs/.version)
-      - run: export BUILD_NAME="hasee-tongfang-macos-"$VERSION".js"
-      
+      - run: echo "VERSION=$(cat Docs/.version)" >> $GITHUB_ENV
+      - run: echo BUILD_NAME="hasee-tongfang-macos-"$VERSION".js" >> $GITHUB_ENV
       - run: zip -r $BUILD_NAME . -x '*.git*'
 
       - name: Release to jsdelivr repo
