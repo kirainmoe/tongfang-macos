@@ -3,10 +3,10 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "21.11.6"
-efi-build: 331
-require-utility-version: "4.0.2"
-require-utility-build: 2111050
+efi-version: "21.11.7"
+efi-build: 333
+require-utility-version: "4.0.4"
+require-utility-build: 2111061
 opencore-version: "0.7.5"
 
 # 💻 支持的机型列表 (Supported Laptop Models List)
@@ -325,6 +325,16 @@ support-models:
     generation: 9
     usbmap: "GK5CP6X"
   - vendor: "Mechrevo"
+    product: "Z2 Air (9th)"
+    barebones: "GK5CP6X"
+    generation: 9
+    usbmap: "GK5CP6X"
+  - vendor: "Mechrevo"
+    product: "Z2 Air-G"
+    barebones: "GK5CP6X"
+    generation: 9
+    usbmap: "GK5CP6X"    
+  - vendor: "Mechrevo"
     product: "X3 Series"
     barebones: "GK7CP6R"
     generation: 9
@@ -385,7 +395,7 @@ build-actions:
           - "VoodooGPIO"
         value: false
       - type: "set-kext"
-        name: "VoodooPS2Controller/Contents/PlugIns/VoodooInput"
+        name: "VoodooPS2Controller.kext/Contents/PlugIns/VoodooInput"
         value: true
       - type: "set-ssdt"
         name: "SSDT-USTP"
@@ -416,7 +426,7 @@ build-actions:
         name: "USBPorts.kext"
         comment: "USB mapping for 7th gen devices"
         executable: false
-        plist: true
+        plistPath: true
 
       # boot options for Kaby Lake
       - type: "set-config"
@@ -587,7 +597,7 @@ build-actions:
         value: true
   
   # iGPU patches
-  - test: "config.internalMonitorType == '4k' || (config.internalMonitorType === '1080p144sol2' && (config.osVersion === 'bigsur' || config.osVersion === 'monterey'))"
+  - test: "config.internalMonitorType === '4k' || (config.internalMonitorType === '1080p144sol2' && (config.osVersion === 'bigsur' || config.osVersion === 'monterey'))"
     action:
       - type: "set-device-properties"
         path: "PciRoot(0x0)/Pci(0x2,0x0)"
@@ -641,7 +651,7 @@ build-actions:
               - 0
               - 0
               - 0
-  - test: "config.resolution === '4k'"
+  - test: "config.internalMonitorType === '4k'"
     action:
       - type: "set-device-properties"
         path: "PciRoot(0x0)/Pci(0x2,0x0)"

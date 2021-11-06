@@ -1031,7 +1031,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string>20.9.9</string>
+				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -1475,7 +1475,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>efi-version</key>
-				<string>21.11.6</string>
+				<string>21.11.7</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
