@@ -18,11 +18,10 @@ jobs:
       - name: Release to jsdelivr repo
         env:
           token: ${{ secrets.token }}
-        run: git clone https://${token}@github.com/kirainmoe/hasee-tongfang-macos-build build
+        run: git clone https://${token}@github.com/kirainmoe/hasee-tongfang-macos-build /tmp/build
 
-      - run: rm -rf build/*.zip build/*.js
-      - run: cp $BUILD_NAME build/$BUILD_NAME
-      - run: cd build
+      - run: rm -rf /tmp/build/*.zip /tmp/build/*.js
+      - run: cp $BUILD_NAME /tmp/build/$BUILD_NAME
       - run: git config --global user.name "tongfang-ci-bot"
       - run: git config --global user.email "tongfang@kirainmoe.com"
-      - run: git add . && git commit -m "Deploy version $BUILD_NAME" && git push --force
+      - run: cd /tmp/build && git add . && git commit -m "Deploy version $BUILD_NAME" && git push --force
