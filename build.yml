@@ -3,8 +3,8 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "21.11.7"
-efi-build: 333
+efi-version: "21.11.8"
+efi-build: 346
 require-utility-version: "4.0.4"
 require-utility-build: 2111061
 opencore-version: "0.7.5"
@@ -679,9 +679,10 @@ build-actions:
               - 0
       - type: "remove-device-properties"
         path: "PciRoot(0x0)/Pci(0x2,0x0)"
-        name:
-          - "framebuffer-stolenmem"
-          - "framebuffer-fbmem"
+        key: "framebuffer-stolenmem"
+      - type: "remove-device-properties"
+        path: "PciRoot(0x0)/Pci(0x2,0x0)"
+        key: "framebuffer-fbmem"
       - type: "set-config"
         path: "NVRAM/Add/4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14/UIScale"
         valueType: "DATA"
