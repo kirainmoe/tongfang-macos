@@ -3,8 +3,8 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "21.11.8"
-efi-build: 346
+efi-version: "21.11.22"
+efi-build: 347
 require-utility-version: "4.0.4"
 require-utility-build: 2111061
 opencore-version: "0.7.5"
@@ -126,38 +126,38 @@ support-models:
     product: "Z7-KP7EC"
     barebones: "GJ5CN64"
     generation: 8
-    uspmap: "GJ5CN64"
+    usbmap: "GJ5CN64"
   - vendor: "Hasee"
     product: "Z7-KP7GC"
     barebones: "GJ5CN64"
     generation: 8
-    uspmap: "GJ5CN64"
+    usbmap: "GJ5CN64"
   - vendor: "Hasee"
     product: "Z7-KP7GA"
     barebones: "GJ5CN64"
     generation: 8
-    uspmap: "GJ5CN64"
+    usbmap: "GJ5CN64"
   - vendor: "Hasee"
     product: "Z7-KP7GE"
     barebones: "GJ5CN64"
     generation: 8
-    uspmap: "GJ5CN64"
+    usbmap: "GJ5CN64"
   - vendor: "Hasee"
     product: "Z7-KP7GH"
     barebones: "GJ5CN64"
     generation: 8
-    uspmap: "GJ5CN64"
+    usbmap: "GJ5CN64"
   ## GI5CN54
   - vendor: "Hasee"
     product: "Z7M-KP7GC"
     barebones: "GI5CN54"
     generation: 8
-    uspmap: "GI5CN54"
+    usbmap: "GI5CN54"
   - vendor: "Hasee"
     product: "Z7M-KP5GC"
     barebones: "GI5CN54"
     generation: 8
-    uspmap: "GI5CN54"
+    usbmap: "GI5CN54"
   - vendor: "Hasee"
     product: "Z7M-KP7GA"
     barebones: "GI5CN54"
@@ -193,27 +193,27 @@ support-models:
     product: "Z7-CT7GK"
     barebones: "GK5CP6X"
     generation: 9
-    usbmamp: "GK7CP6R"
+    usbmap: "GK7CP6R"
   - vendor: "Hasee"
     product: "Z7-CT5GA"
     barebones: "GK5CP6X"
     generation: 9
-    usbmamp: "GK7CP6R"
+    usbmap: "GK7CP6R"
   - vendor: "Hasee"
     product: "Z7-CT7VH"
     barebones: "GK5CP6V"
     generation: 9
-    usbmamp: "GK7CP6R"
+    usbmap: "GK7CP6R"
   - vendor: "Hasee"
     product: "Z7-CT7VA"
     barebones: "GK5CP6V"
     generation: 9
-    usbmamp: "GK7CP6R"
+    usbmap: "GK7CP6R"
   - vendor: "Hasee"
     product: "Z7-CT5VH"
     barebones: "GK5CP6V"
     generation: 9
-    usbmamp: "GK7CP6R"
+    usbmap: "GK7CP6R"
   - vendor: "Hasee"
     product: "Z7-CT5N1"
     barebones: "GK5CP6V"
