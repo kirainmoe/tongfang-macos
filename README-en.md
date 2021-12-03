@@ -72,7 +72,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `21.11.22`. This release is compatible with the following macOS version:
+Current EFI release is `21.12.3`. This release is compatible with the following macOS version:
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
 |-------------|--------|---------------|--------|-----------|------|
@@ -165,9 +165,13 @@ It is recommended to create a USB map for your machine after installation if you
 
 - FileVault 2
 
-- Fn shortcut keys with OSD
+- Fn shortcut keys with OSD & Double-tap disable touchpad
 
-- Keyboard light controlling with [Tongfang Hackintosh Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility) or [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center)
+- Keyboard light controlling with [Tongfang Utility](https://github.com/kirainmoe/tongfang-utility) or [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center)
+
+- Fan speed controlling with [Tongfang Utility](https://github.com/kirainmoe/tongfang-utility)
+
+- SD Card reader
 
 - etc.
 
@@ -180,7 +184,7 @@ It is recommended to create a USB map for your machine after installation if you
 - nVidia discrete GPU (used SSDT to disable it)
 - HDMI/mini DP (connected to non-working DGPU directly, buy a USB Display Adapter to extend the screen)
 - AirDrop & Handoff & Wireless Sidecar (Replace a Wi-Fi card that is compatible with macOS can solve this)
-- SD Card reader
+
 
 ## Unsolved Problems
 

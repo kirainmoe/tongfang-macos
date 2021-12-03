@@ -165,7 +165,7 @@
 
 ### 兼容的系统
 
-当前配置文件的版本是 `21.11.22`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `21.12.3`，兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
@@ -310,10 +310,13 @@
     - 使用 `layout-id: 29`
 
 - [x] Fn 快捷键 & 双击禁用触摸板
-    - 需要安装 [同方黑苹果助手](https://github.com/kirainmoe/tongfang-hackintosh-utility) 或 [同方快捷键守护程序](https://github.com/Goshin/TongfangKeyboardUtility) 实现 OSD
+    - 需要安装 [同方助手](https://github.com/kirainmoe/tongfang-utility) 实现
 
 - [x] 键盘灯控制
-    - 需要安装 [同方黑苹果助手](https://github.com/kirainmoe/tongfang-hackintosh-utility) 或 [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center) 控制键盘灯
+    - 需要安装 [同方助手](https://github.com/kirainmoe/tongfang-utility) 或 [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center) 控制键盘灯
+
+- [x] 风扇转速控制
+    - 需要安装 [同方助手](https://github.com/kirainmoe/tongfang-utility) 控制转速
 
 - [x] 触摸板 (PS/2 和 I2C 协议触摸板均支持手势)
 
@@ -329,6 +332,7 @@
 - [x] 摄像头
 - [x] 文件保险箱 (FileVault 2)
 - [x] S3 睡眠 & 唤醒（睡眠到内存）、S4 睡眠 & 唤醒（休眠到硬盘）
+- [x] SD 读卡器
 
 <h4>勉强可用的功能</h4>
 
@@ -354,9 +358,6 @@
 - [ ] 独立显卡
   - 8 代以上同方模具的独显无法在 **任何 macOS 版本（包括但不限于 10.13.x）** 被驱动，关于具体的原因猜测，详见[此文章](http://www.bswaterb.club/?p=285)。
   - 已使用 `SSDT-DDGPU.aml` 屏蔽
-
-- [ ] SD 读卡器
-  - 由于读卡器通过 USB 2.0 协议连接电脑，没有驱动案例，故内置 SD 读卡器无法使用，**但可以在 macOS 下通过虚拟机挂载 USB 设备到 Windows 系统中使用**。
 
 </details>
 

@@ -65,7 +65,7 @@ support-models:
     generation: 9
     usbmap: "GK5CP6X"
   - vendor: "Tongfang"
-    product: "GK5CP6X / Gk5CP5X"
+    product: "GK5CP6X / GK5CP5X"
     barebones:
       - "GK5CP6X"
       - "Gk5CP5X"

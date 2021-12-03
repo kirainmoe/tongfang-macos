@@ -3,78 +3,79 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>20A5384c</string>
+	<string>21A559</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>TongfangKeyboardUtility</string>
+	<string>RealtekCardReaderFriend</string>
 	<key>CFBundleIdentifier</key>
-	<string>io.github.goshin.TongfangKeyboardUtility</string>
+	<string>science.firewolf.rtsf</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>TongfangKeyboardUtility</string>
+	<string>RealtekCardReaderFriend</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.0.1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>11E801a</string>
+	<string>13A1030d</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>12.0</string>
 	<key>DTSDKBuild</key>
-	<string>19G68</string>
+	<string>21A344</string>
 	<key>DTSDKName</key>
-	<string>macosx10.15</string>
+	<string>macosx12.0</string>
 	<key>DTXcode</key>
-	<string>1170</string>
+	<string>1310</string>
 	<key>DTXcodeBuild</key>
-	<string>11E801a</string>
+	<string>13A1030d</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>ACPIPS2NubProxy</key>
+		<key>RealtekCardReaderFriend</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>io.github.goshin.TongfangKeyboardUtility</string>
+			<string>science.firewolf.rtsf</string>
 			<key>IOClass</key>
-			<string>ACPIPS2NubProxy</string>
-			<key>IONameMatch</key>
-			<string>PNP0303</string>
+			<string>RealtekCardReaderFriend</string>
+			<key>IOMatchCategory</key>
+			<string>RealtekCardReaderFriend</string>
 			<key>IOProviderClass</key>
-			<string>IOACPIPlatformDevice</string>
-		</dict>
-		<key>TongfangKeyboardUtility</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>io.github.goshin.TongfangKeyboardUtility</string>
-			<key>IOClass</key>
-			<string>TongfangKeyboardUtility</string>
-			<key>IONameMatch</key>
-			<string>PNP0C14</string>
-			<key>IOProviderClass</key>
-			<string>IOACPIPlatformDevice</string>
+			<string>IOResources</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.15</string>
+	<string>10.14</string>
 	<key>OSBundleLibraries</key>
 	<dict>
-		<key>com.apple.iokit.IOACPIFamily</key>
-		<string>1.0d1</string>
+		<key>as.vit9696.Lilu</key>
+		<string>1.4.7</string>
 		<key>com.apple.kpi.bsd</key>
-		<string>8.0.0</string>
+		<string>12.0.0</string>
+		<key>com.apple.kpi.dsep</key>
+		<string>12.0.0</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>9.0.0</string>
+		<string>12.0.0</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>9.0.0</string>
+		<string>12.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>12.0.0</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>12.0.0</string>
 	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
 </dict>
 </plist>
