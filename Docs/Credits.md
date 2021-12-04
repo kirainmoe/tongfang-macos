@@ -11,12 +11,12 @@ This statement has no effect for bootloader, you can delete it safely when you u
 ## Contributors
 
 - [kirainmoe](https://github.com/kirainmoe) for authoring and maintaining the config.
-- [Goshin](https://github.com/Goshin) for modifying some kexts and fixing several compatibility problems of 9th generation laptops and GK5CP5X test
+- [Goshin](https://github.com/Goshin) for authoring VoodooWMI fixing several compatibility problems of 9th generation laptops and GK5CP5X test
 - [haitun](#) for GI5CN54 USB map customization and test
 - [bswaterb](#) for GJ5CN64 USB map customization and test
 - [Chris](#) for GK5CP6X USB map customization
 - [448031516](https://github.com/448031516) for 4K solution
-
+- [BinaryTree](#) for suggestions about improving EFI structure 
 
 ## Credits
 

@@ -35,7 +35,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 # Quick Start
 
 - Check if this repo's config supports your laptop, see *[Compatibility](#compatibility)*.
-- Download [Tongfang Hackintosh Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility/releases) and customize the OpenCore config for your model. 
+- Download [Tongfang Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility/releases) and customize the OpenCore config for your model. 
   - You will have `Tongfang_EFI` folder on your `~/Desktop`.
   - **Do not download the full repository using "Download Zip" button.**
 
@@ -50,7 +50,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
   - After this progress you will have `EFI/BOOT` and `EFI/OC` on your ESP.
 - Disable `Secure Boot`, `Launch CSM` and change to `UEFI Mode` in BIOS.
 - Boot OpenCore from USB flash and install macOS.
-- After boot into the system, use [Tongfang Hackintosh Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility/releases) (for macOS) to improve the experience.
+- After boot into the system, use [Tongfang Utility](https://github.com/kirainmoe/tongfang-hackintosh-utility/releases) (for macOS) to improve the experience.
 - Enjoy your hackintosh build!
 
 # Community Resources
@@ -63,7 +63,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### Tools
 
-[Tongfang Hackintosh Utility (@kirainmoe)](https://github.com/kirainmoe/project-starbeat/releases): all-in-one hackintosh toolbox and keyboard light controlling for ITE devices with revision 0.02
+[Tongfang Utility (@kirainmoe)](https://github.com/kirainmoe/project-starbeat/releases): all-in-one hackintosh toolbox and keyboard light controlling for ITE devices with revision 0.02
 
 [AUCC (@rodgomesc)](https://github.com/rodgomesc/avell-unofficial-control-center):   keyboard light controlling for ITE devices with revision 0.03
 
@@ -105,7 +105,7 @@ If you have 8th gen platform laptops with PS/2 touchpad but the barebone model i
 
 If you have 9th gen platform laptops but the barebone model is not in the list, try one of *GK7CP6R, GK5CP6X, GK5CP5X, GK5CP6V, GK5CP5V, GK5CP6Z, GK5CP5Z...*
 
-**Please use [Tongfang Hackintosh Utility](https://github.com/kirainmoe/project-starbeat/releases) to download / customize the OC config.**
+**Please use [Tongfang Utility](https://github.com/kirainmoe/project-starbeat/releases) to download / customize the OC config.**
 
 
 ### Models

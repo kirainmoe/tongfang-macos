@@ -37,15 +37,15 @@
 
 请注意：由于本项目的维护方式与其它 Hackintosh 项目不同，请不要使用 GitHub 的 "Download Zip" 功能下载整个仓库。
 
-**正确使用方法是：你需要先下载对应平台的 [Tongfang Hackintosh Utility (同方黑苹果助手)](https://tongfang.kirainmoe.com) ，根据你使用的机型和实际的硬件配置，定制、下载或更新后续安装 macOS 所需的配置文件 (EFI)。**
+**正确使用方法是：你需要先下载对应平台的 [Tongfang Utility (同方助手)](https://tongfang.kirainmoe.com) ，根据你使用的机型和实际的硬件配置，定制、下载或更新后续安装 macOS 所需的配置文件 (EFI)。**
 
 
 <details>
-<summary>我为什么需要使用 “<b>同方黑苹果助手</b>”？</summary>
+<summary>我为什么需要使用 “<b>同方助手</b>”？</summary>
 
 <p>虽然配置文件大体相同，但由于采用“同方模具”的衍生机型很多，无法对每个机型单独维护；用户对硬件的自行更换，配置文件也需要做出修改才能兼容。基于以上考虑，作者做出了这款软件。</p>
 
-<p>“同方黑苹果助手”会针对用户的不同硬件情况和需求，定制适合用户机型和硬件情况的 EFI，并且可以确保在更新 EFI 时， Windows 不会丢失激活状态、macOS 不会重置 SMBIOS 识别码。因此，我们推荐所有用户使用“同方黑苹果助手”定制对应机型的配置文件。</p>
+<p>“同方助手”会针对用户的不同硬件情况和需求，定制适合用户机型和硬件情况的 EFI，并且可以确保在更新 EFI 时， Windows 不会丢失激活状态、macOS 不会重置 SMBIOS 识别码。因此，我们推荐所有用户使用“同方助手”定制对应机型的配置文件。</p>
 
 <p>如果因为某些原因你无法使用此工具定制配置文件，请参考以下方式手动修改配置文件，以兼容你的机型。</p>
 <details>
@@ -109,7 +109,7 @@
 <h4>Step 2. 获取安装 macOS 用的配置文件 (EFI)</h4>
 
 <ul>
-    <li>下载 <a href="https://tongfang.kirainmoe.com">同方黑苹果助手</a> 并安装。</li>
+    <li>下载 <a href="https://tongfang.kirainmoe.com">同方助手</a> 并安装。</li>
     <li>切换到“配置文件”选项卡，根据引导选择机型、安装的系统版本和特定硬件型号，然后点击“生成 EFI”。</li>
     <li>此时你可以在桌面上名为 <b>"Tongfang_EFI"</b> 的文件夹。</li>
 </ul>
@@ -145,19 +145,19 @@
     <li>其余步骤与在 Mac 上安装 macOS 无异。需要注意安装过程中将多次重启，请留意 OpenCore 中是否出现新的启动项。</li>
 </ul>
 
-安装完成进入系统后，可以下载 [同方黑苹果助手 for macOS](https://github.com/kirainmoe/tongfang-hackintosh-utility) 优化后续使用体验。
+安装完成进入系统后，可以下载 [同方助手 for macOS](https://github.com/kirainmoe/tongfang-hackintosh-utility) 优化后续使用体验。
 
 
 </details>
 
 ### 更新 macOS
 
-请确保你正在使用最新版本的配置文件（可以使用 [同方黑苹果助手 for macOS](https://tongfang.kirainmoe.com) 检查更新），然后从 macOS  **系统偏好设置 => 软件更新** 里直接 OTA 更新。
+请确保你正在使用最新版本的配置文件（可以使用 [同方助手 for macOS](https://tongfang.kirainmoe.com) 检查更新），然后从 macOS  **系统偏好设置 => 软件更新** 里直接 OTA 更新。
 
 
 ### 更新配置文件 / 从 Clover 迁移至 OpenCore
 
-请直接在 macOS 环境下，使用 [同方黑苹果助手 for macOS](https://tongfang.kirainmoe.com) 定制和下载最新配置文件，然后使用工具自带的自动替换功能更新 EFI。
+请直接在 macOS 环境下，使用 [同方助手 for macOS](https://tongfang.kirainmoe.com) 定制和下载最新配置文件，然后使用工具自带的自动替换功能更新 EFI。
 
 **如果从 Clover 迁移到 OpenCore，还需要进入 Windows 中，设置 UEFI 启动项指向 ESP 分区中的 `EFI/OC/OpenCore.efi`。**
 
@@ -300,7 +300,6 @@
 <h4>完美的功能</h4>
 
 - [x] CPU 睿频、变频
-    - 可使用 [one-key-cpufriend](https://github.com/stevezhengshiqi/one-key-cpufriend/blob/master/README_CN.md) 调节 CPU 性能方案，默认为节能
 
 - [x] 核芯显卡 Intel UHD Graphics 630
     - 使用 `platform-id: 3E9B0000`

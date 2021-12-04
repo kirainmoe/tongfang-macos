@@ -1,7 +1,9 @@
 name: Publish EFI archive to jsdelivr CDN
 on: 
   push: 
-    branches: [ $default_branch ]
+    branches: [ $default-branch ]
+    tags:
+      - "*"
   workflow_dispatch: 
 
 jobs:
