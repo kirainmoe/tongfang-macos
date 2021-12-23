@@ -1,4 +1,4 @@
-name: Publish EFI archive to jsdelivr CDN
+name: build
 on: 
   push: 
     branches: [ $default-branch ]
