@@ -5,7 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 7/8/9 代同方机型安装 macOS 的 OpenCore 配置文件
 
-<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-12.0.1-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
+<img src="https://img.shields.io/travis/com/kirainmoe/hasee-tongfang-macos/oc-general?style=flat-square&logo=travis"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-12.1-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
 
 
 <h3>
@@ -165,7 +165,7 @@
 
 ### 兼容的系统
 
-当前配置文件的版本是 `21.12.3`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `21.12.23`，兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
@@ -173,7 +173,7 @@
 | 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H114) | |
 | 11 Big Sur | ✅ | ✅ | ✅ | 11.6 (20G165) | |
-| 12 Monterey | ✅ | ✅ | ✅ | 12.0.1 (21A559) | |
+| 12 Monterey | ✅ | ✅ | ✅ | 12.1 (21C52) | |
 
 ### 适用的机型
 
@@ -189,7 +189,7 @@
 <li>本仓库的 EFI 不兼容蓝天模具机型、广达模具机型、六代（含）以下机型、低压处理器机型。</li>
 <li>如果你是神舟笔记本，且模具型号没有出现在上述列表中，可以到 http://kfgl.hasee.com/lookup/book/bblist.asp 页面，查询你的笔记本型号所对应的准系统名称。</li>
 
-<li>若你的笔记本采用 **7/8/9 代**因特尔酷睿**标压**处理器，且查询到准系统名称中带有 **“（同方）”** 字样，则你的笔记本可以兼容此仓库的配置文件。</li>
+<li>若你的笔记本采用 **7/8/9 代因特尔酷睿标压**处理器，且查询到准系统名称中带有 “（同方）” 字样，则你的笔记本可以兼容此仓库的配置文件。</li>
 
 <li>对于其它品牌理论兼容的同方模具机型，若遇到 USB 接口无法识别或速度不正常的问题，建议参照 <a href="https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html">此教程</a> 自行定制 USB。</li>
 </ul>
@@ -278,7 +278,7 @@
 
 # 配置文件概况
 
-- 引导程序为 OpenCore 0.7.5，支持引导 macOS 和 Windows；若需要引导其他操作系统需自行添加。
+- 引导程序为 OpenCore 0.7.6，支持引导 macOS 和 Windows；若需要引导其他操作系统需自行添加。
 
 - 除以下硬件/功能不完美或无法驱动外，其它功能均可正常使用。
   - Intel 蓝牙无法连接部分只支持蓝牙 4.x 的 HID 设备，尤其是部分罗技无线键鼠。

@@ -3,11 +3,11 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "21.12.3"
-efi-build: 348
+efi-version: "21.12.23"
+efi-build: 352
 require-utility-version: "4.0.5"
 require-utility-build: 2112030
-opencore-version: "0.7.5"
+opencore-version: "0.7.6"
 
 # 💻 支持的机型列表 (Supported Laptop Models List)
 # 字段描述 (Description):
@@ -684,10 +684,8 @@ build-actions:
         path: "PciRoot(0x0)/Pci(0x2,0x0)"
         key: "framebuffer-fbmem"
       - type: "set-config"
-        path: "NVRAM/Add/4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14/UIScale"
-        valueType: "DATA"
-        value:
-          - 0x2
+        path: "UEFI/Output/UIScale"
+        value: 2
   
   - test: "config.enableNVMeFix === true"
     action:
