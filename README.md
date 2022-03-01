@@ -5,7 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 7/8/9 代同方机型安装 macOS 的 OpenCore 配置文件
 
-<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-12.1-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
+<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-12.3-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
 
 
 <h3>
@@ -165,7 +165,7 @@
 
 ### 兼容的系统
 
-当前配置文件的版本是 `21.12.23`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `22.3.1`，兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
@@ -173,7 +173,7 @@
 | 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H114) | |
 | 11 Big Sur | ✅ | ✅ | ✅ | 11.6 (20G165) | |
-| 12 Monterey | ✅ | ✅ | ✅ | 12.1 (21C52) | |
+| 12 Monterey | ✅ | ✅ | ✅ | 12.3 (21E5206e) | |
 
 ### 适用的机型
 
@@ -278,7 +278,7 @@
 
 # 配置文件概况
 
-- 引导程序为 OpenCore 0.7.6，支持引导 macOS 和 Windows；若需要引导其他操作系统需自行添加。
+- 引导程序为 OpenCore 0.7.8，支持引导 macOS 和 Windows；若需要引导其他操作系统需自行添加。
 
 - 除以下硬件/功能不完美或无法驱动外，其它功能均可正常使用。
   - Intel 蓝牙无法连接部分只支持蓝牙 4.x 的 HID 设备，尤其是部分罗技无线键鼠。

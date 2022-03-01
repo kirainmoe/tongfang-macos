@@ -3,11 +3,11 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "21.12.23"
+efi-version: "22.3.1"
 efi-build: 352
-require-utility-version: "4.0.5"
-require-utility-build: 2112030
-opencore-version: "0.7.6"
+require-utility-version: "4.0.9"
+require-utility-build: 2201090
+opencore-version: "0.7.8"
 
 # 💻 支持的机型列表 (Supported Laptop Models List)
 # 字段描述 (Description):
