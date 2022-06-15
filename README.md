@@ -5,7 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 7/8/9 代同方机型安装 macOS 的 OpenCore 配置文件
 
-<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-12.3-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
+<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-13.0%20Beta-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Bellaris-ff69b4.svg?style=flat-square"/>
 
 
 <h3>
@@ -21,14 +21,15 @@
 - [快速开始](#快速开始)
     - [全新安装 macOS](#全新安装-macos)
     - [更新 macOS](#更新-macos)
-    - [更新配置文件 / 从 Clover 迁移至 OpenCore](#更新配置文件--从-clover-迁移至-opencore)
+    - [更新配置文件](#更新配置文件)
 - [兼容性](#兼容性)
     - [兼容的系统](#兼容的系统)
     - [适用的机型](#适用的机型)
 - [配置文件概况](#配置文件概况)
-- [问题反馈 & 交流](#问题反馈--交流)
-- [贡献者 & 鸣谢](#贡献者--鸣谢)
-- [许可协议 & 捐赠](#许可协议--捐赠)
+- [问题反馈和社区帮助](#问题反馈和社区帮助)
+- [鸣谢](#鸣谢)
+- [许可协议](#许可协议)
+- [捐赠](#捐赠)
 - [拓展阅读](#拓展阅读)
 
 # 快速开始
@@ -155,17 +156,15 @@
 请确保你正在使用最新版本的配置文件（可以使用 [同方助手 for macOS](https://tongfang.kirainmoe.com) 检查更新），然后从 macOS  **系统偏好设置 => 软件更新** 里直接 OTA 更新。
 
 
-### 更新配置文件 / 从 Clover 迁移至 OpenCore
+### 更新配置文件
 
 请直接在 macOS 环境下，使用 [同方助手 for macOS](https://tongfang.kirainmoe.com) 定制和下载最新配置文件，然后使用工具自带的自动替换功能更新 EFI。
-
-**如果从 Clover 迁移到 OpenCore，还需要进入 Windows 中，设置 UEFI 启动项指向 ESP 分区中的 `EFI/OC/OpenCore.efi`。**
 
 # 兼容性
 
 ### 兼容的系统
 
-当前配置文件的版本是 `22.3.1`，兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `22.6.15`，兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
 |-------------|--------|---------------|--------|-----------|------|
@@ -174,6 +173,7 @@
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H114) | |
 | 11 Big Sur | ✅ | ✅ | ✅ | 11.6 (20G165) | |
 | 12 Monterey | ✅ | ✅ | ✅ | 12.3 (21E5206e) | |
+| 13 Ventura | ✅ | ✅ | ✅ | 13.0 Beta (22A5266r) | |
 
 ### 适用的机型
 
@@ -189,7 +189,7 @@
 <li>本仓库的 EFI 不兼容蓝天模具机型、广达模具机型、六代（含）以下机型、低压处理器机型。</li>
 <li>如果你是神舟笔记本，且模具型号没有出现在上述列表中，可以到 http://kfgl.hasee.com/lookup/book/bblist.asp 页面，查询你的笔记本型号所对应的准系统名称。</li>
 
-<li>若你的笔记本采用 **7/8/9 代因特尔酷睿标压**处理器，且查询到准系统名称中带有 “（同方）” 字样，则你的笔记本可以兼容此仓库的配置文件。</li>
+<li>若你的笔记本采用 7/8/9 代因特尔酷睿标压处理器，且查询到准系统名称中带有 “（同方）” 字样，则你的笔记本可以兼容此仓库的配置文件。</li>
 
 <li>对于其它品牌理论兼容的同方模具机型，若遇到 USB 接口无法识别或速度不正常的问题，建议参照 <a href="https://blog.daliansky.net/Intel-FB-Patcher-tutorial-and-insertion-pose.html">此教程</a> 自行定制 USB。</li>
 </ul>
@@ -278,7 +278,7 @@
 
 # 配置文件概况
 
-- 引导程序为 OpenCore 0.7.8，支持引导 macOS 和 Windows；若需要引导其他操作系统需自行添加。
+- 引导程序为 OpenCore 0.8.2，支持引导 macOS 和 Windows；若需要引导其他操作系统需自行添加。
 
 - 除以下硬件/功能不完美或无法驱动外，其它功能均可正常使用。
   - Intel 蓝牙无法连接部分只支持蓝牙 4.x 的 HID 设备，尤其是部分罗技无线键鼠。
@@ -360,27 +360,27 @@
 </details>
 
 
-# 问题反馈 & 交流
+# 问题反馈和社区帮助
 
 推荐通过 [GitHub issue](https://github.com/kirainmoe/hasee-tongfang-macos/issues/new) 的方式反馈问题，或者向 kirainmoe@gmail.com 发送问题报告邮件。
 
 你也可以加入以下交流平台获取帮助，**但请确保你在群里问问题之前，已经看过了[教学视频](https://www.bilibili.com/video/av81263778)**！
 
 
-| 群名称 | 神舟战神黑苹果 1 群 | 神舟同方黑苹果 2 群 | Tongfang Hackintosh Community |
+| 群名称 | 神舟战神黑苹果 1 群 | 神舟同方黑苹果 2 群 |
 |-----|------|---------|--------|
-| 类型 | QQ 群 | QQ 群 | Discord |
-| 群号 | 833022235 | 815359928 | 750367447688937503 |
-| 加群二维码 | ![1群二维码](https://i.loli.net/2020/01/05/sKh875UC14LFejv.png) | ![2群二维码](https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png) | ![discord](https://i.loli.net/2020/09/01/EIJBYs5Vy8hao2q.png) |
-| 加群链接 | https://jq.qq.com/?_wv=1027&k=5G82zlQ | https://jq.qq.com/?_wv=1027&k=5b7ZJWl | https://discord.gg/CDQNnMc |
-| 规模 | 1000 人群 | 500 人群 | 无限制 | 
-| 特殊限制 | 无机型限制，但因人数爆满，暂需付费 1 元入群 | **仅限同方模具的 8/9 代机型用户加入** | **仅限同方模具的 8/9 代机型用户加入** |
+| 类型 | QQ 群 | QQ 群 
+| 群号 | 833022235 | 815359928 |
+| 加群二维码 | ![1群二维码](https://i.loli.net/2020/01/05/sKh875UC14LFejv.png) | ![2群二维码](https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png) |
+| 加群链接 | https://jq.qq.com/?_wv=1027&k=5G82zlQ | https://jq.qq.com/?_wv=1027&k=5b7ZJWl | 
+| 规模 | 1000 人群 | 1000 人群 |
+| 特殊限制 | 无机型限制 | **仅限同方模具的 8/9 代机型用户加入** |
 
-# 贡献者 & 鸣谢
+# 鸣谢
 
 请转到 [《贡献者与鸣谢名单》](Docs/Credits.md) 查看所有的贡献者及版权声明。
 
-# 许可协议 & 捐赠
+# 许可协议
 
 声明：**对于本仓库配置文件的一切开发、维护旨在学习，请勿用于商业用途和非法用途。**
 
@@ -398,7 +398,7 @@
 - 在此配置文件的基础上适配其他机型的 EFI 并提供上述付费下载服务。
 - 重新分发此 EFI 或适配其它机型 EFI 时，删除版权信息或鸣谢声明。
 
----
+# 捐赠
 
 关于捐赠，如果您认可我的工作，也可以通过捐赠支持我。所有的捐赠将会成为我更新的动力。
 

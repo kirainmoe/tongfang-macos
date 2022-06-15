@@ -3,11 +3,11 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "22.3.1"
-efi-build: 352
-require-utility-version: "4.0.9"
-require-utility-build: 2201090
-opencore-version: "0.7.8"
+efi-version: "22.6.15"
+efi-build: 357
+require-utility-version: "4.1.1"
+require-utility-build: 2206150
+opencore-version: "0.8.2"
 
 # 💻 支持的机型列表 (Supported Laptop Models List)
 # 字段描述 (Description):
@@ -496,7 +496,7 @@ build-actions:
           - "BrcmPatchRAM3"
         value: true
     children: 
-      - test: "config.osVersion === 'monterey'"
+      - test: "['monterey', 'ventura'].includes(config.osVersion)"
         action:
           - type: "set-kext"
             name: "BrcmBluetoothInjector"
@@ -533,7 +533,7 @@ build-actions:
           - type: "set-kext"
             name: "itlwm.kext"
             value: true
-      - test: "config.osVersion === 'monterey'"
+      - test: "['monterey', 'ventura'].includes(config.osVersion)"
         action:
           - type: "set-kext"
             name: "IntelBluetoothInjector"
@@ -575,7 +575,7 @@ build-actions:
         path: "UEFI/Drivers/5"
   
   # disable SIP on macOS Big Sur and later
-  - test: "config.osVersion === 'bigsur' || config.osVersion === 'monterey'"
+  - test: "['bigsur', 'monterey', 'ventura'].includes(config.osVersion)"
     action:
       - type: "set-config"
         path: "NVRAM/Add/7C436110-AB2A-4BBB-A880-FE41995C9F82/csr-active-config"
@@ -597,7 +597,7 @@ build-actions:
         value: true
   
   # iGPU patches
-  - test: "config.internalMonitorType === '4k' || (config.internalMonitorType === '1080p144sol2' && (config.osVersion === 'bigsur' || config.osVersion === 'monterey'))"
+  - test: "config.internalMonitorType === '4k' || (config.internalMonitorType === '1080p144sol2' && ['bigsur', 'monterey', 'ventura'].includes(config.osVersion))"
     action:
       - type: "set-device-properties"
         path: "PciRoot(0x0)/Pci(0x2,0x0)"

@@ -5,7 +5,7 @@
 
 OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generation platform laptops.
 
-<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-12.3-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Yume_Maruyama-ff69b4.svg?style=flat-square"/>
+<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-13.0%20Beta-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Bellaris-ff69b4.svg?style=flat-square"/>
 
 <h3>
 <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
@@ -72,7 +72,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `22.3.1`. This release is compatible with the following macOS version:
+Current EFI release is `22.6.15`. This release is compatible with the following macOS version:
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
 |-------------|--------|---------------|--------|-----------|------|
@@ -81,6 +81,8 @@ Current EFI release is `22.3.1`. This release is compatible with the following m
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H114) | |
 | 11 Big Sur | ✅ | ✅ | ✅ | 11.6 (20G165) | |
 | 12 Monterey | ✅ | ✅ | ✅ | 12.3 (21E5206e) | |
+| 13 Ventura | ✅ | ✅ | ✅ | 13.0 Beta (22A5266r) | |
+
 
 ### Barebones
 
@@ -129,7 +131,7 @@ It is recommended to create a USB map for your machine after installation if you
 
 # Current Status
 
-- OpenCore: 0.7.8 (official)
+- OpenCore: 0.8.2 (official)
 - SMBIOS: MacBook Pro 15-inch 2019 (MacBookPro15,3)
 - Dual-Boot of Windows & macOS is supported
 - 4K resolution inner monitor support (only macOS Catalina)
