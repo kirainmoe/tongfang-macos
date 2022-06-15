@@ -1556,7 +1556,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>efi-version</key>
-				<string>22.3.1</string>
+				<string>22.6.15</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
