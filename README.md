@@ -5,8 +5,7 @@
 
 适用于神舟战神、机械革命等品牌 7/8/9 代同方机型安装 macOS 的 OpenCore 配置文件
 
-<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-13.0%20Beta-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Bellaris-ff69b4.svg?style=flat-square"/>
-
+<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-13.0%20Beta-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/> <img src="https://img.shields.io/badge/built_by-Bellaris-ff69b4.svg?style=flat-square"/>
 
 <h3>
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
@@ -18,31 +17,30 @@
 
 <!-- omit in toc -->
 # 目录
-- [快速开始](#快速开始)
-    - [全新安装 macOS](#全新安装-macos)
-    - [更新 macOS](#更新-macos)
-    - [更新配置文件](#更新配置文件)
-- [兼容性](#兼容性)
-    - [兼容的系统](#兼容的系统)
-    - [适用的机型](#适用的机型)
-- [配置文件概况](#配置文件概况)
-- [问题反馈和社区帮助](#问题反馈和社区帮助)
-- [鸣谢](#鸣谢)
-- [许可协议](#许可协议)
-- [捐赠](#捐赠)
-- [拓展阅读](#拓展阅读)
 
-# 快速开始
+- [🚀 快速开始](#-快速开始)
+    - [📦 全新安装 macOS](#-全新安装-macos)
+    - [🔧 更新 macOS 或配置文件](#-更新-macos-或配置文件)
+- [🍀 兼容性](#-兼容性)
+    - [🍎 兼容的系统](#-兼容的系统)
+    - [💻 适用的机型](#-适用的机型)
+- [👀 配置文件概况](#-配置文件概况)
+  - [😊 基础功能](#-基础功能)
+  - [🤓 高级特性](#-高级特性)
+- [🤯 问题反馈和社区帮助](#-问题反馈和社区帮助)
+- [🙇‍♂️ 致谢](#️-致谢)
+- [🧑‍💻 许可协议](#-许可协议)
+- [🎁 捐赠](#-捐赠)
+- [📔 拓展阅读](#-拓展阅读)
+
+# 🚀 快速开始
 
 在开始之前，请先查看 [兼容性表格](#兼容性)，确认此配置文件支持你的机型、模具以及系统版本；同时备份好电脑中的重要数据。
 
-请注意：由于本项目的维护方式与其它 Hackintosh 项目不同，请不要使用 GitHub 的 "Download Zip" 功能下载整个仓库。
-
-**正确使用方法是：你需要先下载对应平台的 [Tongfang Utility (同方助手)](https://tongfang.kirainmoe.com) ，根据你使用的机型和实际的硬件配置，定制、下载或更新后续安装 macOS 所需的配置文件 (EFI)。**
-
+> 🎯 **注意：由于本项目的维护方式与其它 Hackintosh 项目不同，请不要使用 GitHub 的 "Download Zip" 功能下载整个仓库。正确使用方法是：你需要先下载对应平台的 [Tongfang Utility (同方助手)](https://tongfang.kirainmoe.com) ，根据你使用的机型和实际的硬件配置，定制、下载或更新后续安装 macOS 所需的配置文件 (EFI)。**
 
 <details>
-<summary>我为什么需要使用 “<b>同方助手</b>”？</summary>
+<summary>我为什么需要使用 “<b>同方助手</b>” 🤔？</summary>
 
 <p>虽然配置文件大体相同，但由于采用“同方模具”的衍生机型很多，无法对每个机型单独维护；用户对硬件的自行更换，配置文件也需要做出修改才能兼容。基于以上考虑，作者做出了这款软件。</p>
 
@@ -62,7 +60,7 @@
 
 得到配置文件后，请参考下面的教程安装或更新系统：
 
-### 全新安装 macOS
+### 📦 全新安装 macOS
 
 若你是首次安装 macOS：
 
@@ -148,37 +146,33 @@
 
 安装完成进入系统后，可以下载 [同方助手 for macOS](https://github.com/kirainmoe/tongfang-hackintosh-utility) 优化后续使用体验。
 
-
 </details>
 
-### 更新 macOS
+### 🔧 更新 macOS 或配置文件
 
-请确保你正在使用最新版本的配置文件（可以使用 [同方助手 for macOS](https://tongfang.kirainmoe.com) 检查更新），然后从 macOS  **系统偏好设置 => 软件更新** 里直接 OTA 更新。
+可以使用 [同方助手 for macOS](https://tongfang.kirainmoe.com) 检查并更新 EFI 配置文件，并使用助手的自动替换功能更新 EFI。
+
+配置文件支持 OTA 升级 macOS 系统，更新前请确保你正在使用最新版本的配置文件，然后从 macOS **系统偏好设置 => 软件更新** 里直接 OTA 更新。
 
 
-### 更新配置文件
+# 🍀 兼容性
 
-请直接在 macOS 环境下，使用 [同方助手 for macOS](https://tongfang.kirainmoe.com) 定制和下载最新配置文件，然后使用工具自带的自动替换功能更新 EFI。
+### 🍎 兼容的系统
 
-# 兼容性
+当前配置文件的版本是 `22.6.15`，基于 OpenCore `0.8.2`；兼容的 macOS 系统版本如下表所示：
 
-### 兼容的系统
+| macOS 版本        | 兼容状态 | 全新安装 | OTA | 已测试最新版本       | 原因                                                  |
+| ----------------- | -------- | -------- | --- | -------------------- | ----------------------------------------------------- |
+| 10.13 High Sierra | ⭕       | ⭕       | ⭕  | 未测试               | 不推荐任何 8 代或以上的同方机型安装 macOS High Sierra |
+| 10.14 Mojave      | ✅       | ✅       | ✅  | 10.14.6 (18G103)     |                                                       |
+| 10.15 Catalina    | ✅       | ✅       | ✅  | 10.15.7 (19H114)     |                                                       |
+| 11 Big Sur        | ✅       | ✅       | ✅  | 11.6 (20G165)        |                                                       |
+| 12 Monterey       | ✅       | ✅       | ✅  | 12.3 (21E5206e)      |                                                       |
+| 13 Ventura        | ✅       | ✅       | ✅  | 13.0 Beta (22A5266r) |                                                       |
 
-当前配置文件的版本是 `22.6.15`，兼容的 macOS 系统版本如下表所示：
-
-| macOS 版本 | 兼容状态 | 全新安装 | OTA | 已测试最新版本 | 原因 |
-|-------------|--------|---------------|--------|-----------|------|
-| 10.13 High Sierra | ⭕ | ⭕ | ⭕ | 未测试 | 不推荐任何 8 代或以上的同方机型安装 macOS High Sierra |
-| 10.14 Mojave | ✅ | ✅ |  ✅ | 10.14.6 (18G103) | |
-| 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H114) | |
-| 11 Big Sur | ✅ | ✅ | ✅ | 11.6 (20G165) | |
-| 12 Monterey | ✅ | ✅ | ✅ | 12.3 (21E5206e) | |
-| 13 Ventura | ✅ | ✅ | ✅ | 13.0 Beta (22A5266r) | |
-
-### 适用的机型
+### 💻 适用的机型
 
 理论上所有使用 **清华同方模具的标压 7/8/9 代机型** （机械革命 Umi Air 等其它使用同方 QC7 模具的设备除外，这些机型可能无法完美兼容）均可使用对应的配置文件。详细的兼容型号表格如下：
-
 
 <details>
 <summary>如何确定我的笔记本是否兼容？</summary>
@@ -276,115 +270,68 @@
     </tbody>
 </table>
 
-# 配置文件概况
+# 👀 配置文件概况
 
-- 引导程序为 OpenCore 0.8.2，支持引导 macOS 和 Windows；若需要引导其他操作系统需自行添加。
+## 😊 基础功能
 
-- 除以下硬件/功能不完美或无法驱动外，其它功能均可正常使用。
-  - Intel 蓝牙无法连接部分只支持蓝牙 4.x 的 HID 设备，尤其是部分罗技无线键鼠。
-  - Intel 无线网卡暂时处于勉强可用状态；且不支持隔空投送、部分接力场景、无线随航。
-  - **nVidia 独立显卡在任何系统版本（包括但不限于 10.13.6）无法驱动。基于此原因，你将无法通过 HDMI / miniDP 接口外接显示器。**
-  - 使用 OpenCore 首次引导 Windows，会导致 Windows 无法从 S4 睡眠（休眠）恢复。
+| 功能 | 状态 |
+|-----|------|
+| 双系统引导 | ✅ 正常 |
+| OTA 升级 macOS | ✅ 正常 |
+| CPU（变频、睿频） | ✅ 正常 | 
+| 核显（硬件加速） | ✅ 正常 |
+| 声音（扬声器、耳机、麦克风）| ✅ 正常 |
+| 电源管理（电池状态）| ✅ 正常 |
+| 有线网卡 | ✅ 正常 |
+| 亮度调节 | ✅ 正常 |
+| 摄像头 | ✅ 正常 |
+| SD 读卡器 | ✅ 正常 |
+| USB | ✅ 正常 |
+| 触摸板及手势 | ✅ 正常 |
+| S3 睡眠唤醒 | ✅ 正常 |
+| 风扇转速 | ✅ 正常 |
+| 全盘加密（FileVault）| ✅ 正常 |
+| Apple / Broadcom 蓝牙、无线网卡 | ✅ 正常 | 
+| Intel 蓝牙、无线网卡 | ⭕️ 有限支持 |
+| nVIDIA 独立显卡 | ❌ 无法驱动 * |
 
-- 支持更换了 4K 屏幕的笔记本。
-  - 对于 GI5CN54 / GJ5CN64 模具改 4K 屏的用户，**需要先解锁 BIOS 或使用 UEFI Shell** 修改 `DVMT Pre-allocated` 为 `64MB` 以上，具体做法请参考[此文章](Docs/Unlock-CFG-and-DVMT.md)。
-  
-- 配置文件在不同的笔记本上，可能以极小的概率出现一些特殊的问题。这些问题和可能的原因列在 [#92](https://github.com/kirainmoe/hasee-tongfang-macos/issues/92) 中，可能需要时间修复（或无法修复）。
+*\* 七代 Kaby Lake 机型除外。*
 
-- 部分功能如键盘灯控制、Fn 快捷键、双击开关触摸板等需要额外的软件支持，具体请查看详情。
+## 🤓 高级特性
 
-
-<details>
-<summary>查看各项功能/硬件驱动详情</summary>
-
-<h4>完美的功能</h4>
-
-- [x] CPU 睿频、变频
-
-- [x] 核芯显卡 Intel UHD Graphics 630
-    - 使用 `platform-id: 3E9B0000`
-  
-- [x] 声卡 Realtek ALC269vc
-    - 使用 `layout-id: 29`
-
-- [x] Fn 快捷键 & 双击禁用触摸板
-    - 需要安装 [同方助手](https://github.com/kirainmoe/tongfang-utility) 实现
-
-- [x] 键盘灯控制
-    - 需要安装 [同方助手](https://github.com/kirainmoe/tongfang-utility) 或 [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center) 控制键盘灯
-
-- [x] 风扇转速控制
-    - 需要安装 [同方助手](https://github.com/kirainmoe/tongfang-utility) 控制转速
-
-- [x] 触摸板 (PS/2 和 I2C 协议触摸板均支持手势)
-
-- [x] 有线网卡 Realtek RTL8168H
-- [x] Intel 蓝牙（无需热启动）
-    - 基于 [OpenIntelWireless/IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) 项目
-
-- [x] USB 3.0, Type-C 
-    - 本仓库支持的同方模具的 Type-C 接口均没有视频输出功能。
-
-- [x] 亮度调节
-- [x] 原生电源管理 & 电池状态显示
-- [x] 摄像头
-- [x] 文件保险箱 (FileVault 2)
-- [x] S3 睡眠 & 唤醒（睡眠到内存）、S4 睡眠 & 唤醒（休眠到硬盘）
-- [x] SD 读卡器
-
-<h4>勉强可用的功能</h4>
-
-- [x] Intel 无线网卡 (AC9462, AC9560, AX200)
-
-    - 基于仍然处于开发阶段的 [OpenIntelWireless/itlwm 项目](https://github.com/OpenIntelWireless/itlwm) 和 [HeliPort](https://github.com/OpenIntelWireless/HeliPort) 项目，目前并不稳定，可能出现频繁的断网或无法联网等问题。
-
-   - 在生成 EFI 时勾选添加 Intel 无线网卡驱动并在 macOS 下使用 HeliPort 客户端管理网络，即可实现使用 Intel 无线网卡链接 Wi-Fi。
-
-<h4>购买或更换硬件后可用的功能</h4>
-
-- [ ] 原生 IO80211 支持的 Wi-Fi 和低功耗蓝牙
-- [ ] 隔空投送 AirDrop、接力 Handoff、无线随航 Sidecar
-  - 若有更换无线网卡的需求，推荐更换 [BCM94360CS2 + NGFF 转接卡] 方案。
-  - 请注意：**DW1820A 无线网卡在同方模具上有已知的兼容性问题**，包括双系统使用时可能导致 Windows 蓝屏、重启后找不到无线网卡等，请尽量避免更换此网卡。
-
-- [ ] 外接显示器
-    - 同方 8 代以上模具的 HDMI / miniDP 接口直连独显，因此无法在 macOS 下使用 HDMI/miniDP 接口外接显示。
-    - 购买 [此链接](https://github.com/kirainmoe/hasee-tongfang-macos/issues/10) 中测试的产品可能可以满足部分外接显示器的需要。
-
-<h4>无论如何无法使用的功能</h4>
-
-- [ ] 独立显卡
-  - 8 代以上同方模具的独显无法在 **任何 macOS 版本（包括但不限于 10.13.x）** 被驱动，关于具体的原因猜测，详见[此文章](http://www.bswaterb.club/?p=285)。
-  - 已使用 `SSDT-DDGPU.aml` 屏蔽
-
-</details>
+| 功能 | 状态 | 备注 |
+|-----|-----|---|
+| S4 休眠唤醒 | ✅  支持| 需自行调整 `hibernatemode` |
+| Fn 快捷键 | ✅  支持 |  需要在 [同方助手](https://github.com/kirainmoe/tongfang-utility) 中安装增强功能 |
+| 双击开关触摸板 | ✅ 支持 | 需要在 [同方助手](https://github.com/kirainmoe/tongfang-utility) 中安装增强功能 |
+| 键盘背光调节 | ✅ 支持 | ITE revision 2 需要安装 [同方助手](https://github.com/kirainmoe/tongfang-utility) 实现<br>ITE revision 3 需要使用 [AUCC](https://github.com/rodgomesc/avell-unofficial-control-center) |
+| 风扇转速控制 | ✅ 支持 | 需要安装 [同方助手](https://github.com/kirainmoe/tongfang-utility) |
+| 外接显示器 | ⭕️ 有限支持 | 除 KabyLake 机型以外的同方机型所有视频输出通道均直连独显<br>需购买 DisplayLink 协议的 USB 显示适配器外接，参考 [#10](https://github.com/kirainmoe/tongfang-macos/issues/10) |
+| 4K 屏幕 | ⭕️ 有限支持 | **部分机型需要先解锁 BIOS 或使用 UEFI Shell** 修改 `DVMT Pre-allocated` 为 `64MB` 以上，参考[此文章](Docs/Unlock-CFG-and-DVMT.md) |
 
 
-# 问题反馈和社区帮助
+# 🤯 问题反馈和社区帮助
 
 推荐通过 [GitHub issue](https://github.com/kirainmoe/hasee-tongfang-macos/issues/new) 的方式反馈问题，或者向 kirainmoe@gmail.com 发送问题报告邮件。
 
 你也可以加入以下交流平台获取帮助，**但请确保你在群里问问题之前，已经看过了[教学视频](https://www.bilibili.com/video/av81263778)**！
 
-
-| 群名称 | 神舟战神黑苹果 1 群 | 神舟同方黑苹果 2 群 |
-|-----|------|---------|--------|
-| 类型 | QQ 群 | QQ 群 
-| 群号 | 833022235 | 815359928 |
+| 群名称     | 神舟战神黑苹果 1 群                                             | 神舟同方黑苹果 2 群                                             |
+| ---------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| 类型       | QQ 群                                                           | QQ 群                                                           |
+| 群号       | 833022235                                                       | 815359928                                                       |
 | 加群二维码 | ![1群二维码](https://i.loli.net/2020/01/05/sKh875UC14LFejv.png) | ![2群二维码](https://i.loli.net/2019/11/23/Fzkeprn9PA7bf6q.png) |
-| 加群链接 | https://jq.qq.com/?_wv=1027&k=5G82zlQ | https://jq.qq.com/?_wv=1027&k=5b7ZJWl | 
-| 规模 | 1000 人群 | 1000 人群 |
-| 特殊限制 | 无机型限制 | **仅限同方模具的 8/9 代机型用户加入** |
+| 加群链接   | https://jq.qq.com/?_wv=1027&k=5G82zlQ                           | https://jq.qq.com/?_wv=1027&k=5b7ZJWl                           |
+| 规模       | 1000 人群                                                       | 1000 人群                                                       |
+| 特殊限制   | 无机型限制                                                      | **仅限同方模具的 8/9 代机型用户加入**                           |
 
-# 鸣谢
+# 🙇‍♂️ 致谢
 
-请转到 [《贡献者与鸣谢名单》](Docs/Credits.md) 查看所有的贡献者及版权声明。
+请转到 [《贡献者与致谢名单》](Docs/Credits.md) 查看所有的贡献者及版权声明。
 
-# 许可协议
+# 🧑‍💻 许可协议
 
-声明：**对于本仓库配置文件的一切开发、维护旨在学习，请勿用于商业用途和非法用途。**
-
-**使用本仓库提供的配置文件时，需遵守 [LICENSE](LICENSE) 和以下规则：**
+**对于本仓库配置文件的一切开发、维护旨在学习，请勿用于商业用途和非法用途。同时，使用本仓库提供的配置文件时，需遵守以下规则：**
 
 - 使用本仓库下的所有配置文件是完全免费的。不允许任何人以任何形式、任何价格出售和重新分发此配置文件。
 
@@ -398,15 +345,15 @@
 - 在此配置文件的基础上适配其他机型的 EFI 并提供上述付费下载服务。
 - 重新分发此 EFI 或适配其它机型 EFI 时，删除版权信息或鸣谢声明。
 
-# 捐赠
+# 🎁 捐赠
 
 关于捐赠，如果您认可我的工作，也可以通过捐赠支持我。所有的捐赠将会成为我更新的动力。
 
-| 支付宝 | 微信 |
-|-------|------|
+| 支付宝                                                                      | 微信                                                                        |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | <img src="https://i.loli.net/2019/09/19/j8doaIVYWtMXlNJ.png" width="200px"> | <img src="https://i.loli.net/2019/09/19/xkoHIsuZLvtzDSP.png" width="200px"> |
 
-# 拓展阅读
+# 📔 拓展阅读
 
 提示：涉及硬件层面的修改请谨慎操作。
 
