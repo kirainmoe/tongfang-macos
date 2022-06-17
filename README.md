@@ -1,9 +1,9 @@
 <!-- omit in toc -->
 #  macOS on Tongfang Laptops
 
-<img align="right" src="https://i.loli.net/2020/10/28/p5FchMTzr37Ijb2.jpg" width="200px" alt="preview">
+<img align="right" src="https://s2.loli.net/2022/06/17/grWb1ACDOlEskUG.png" width="200px" alt="preview">
 
-适用于神舟战神、机械革命等品牌 7/8/9 代同方机型安装 macOS 的 OpenCore 配置文件
+适用于神舟、机械革命等品牌 7/8/9 代同方机型安装 macOS 的 OpenCore 配置文件
 
 <img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-13.0%20Beta-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/> <img src="https://img.shields.io/badge/built_by-Bellaris-ff69b4.svg?style=flat-square"/>
 
