@@ -72,7 +72,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `22.6.15`. This release is compatible with the following macOS version:
+Current EFI release is `22.7.17`. This release is compatible with the following macOS version:
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
 |-------------|--------|---------------|--------|-----------|------|
@@ -81,7 +81,7 @@ Current EFI release is `22.6.15`. This release is compatible with the following 
 | 10.15 Catalina | ✅ | ✅ | ✅ | 10.15.7 (19H114) | |
 | 11 Big Sur | ✅ | ✅ | ✅ | 11.6 (20G165) | |
 | 12 Monterey | ✅ | ✅ | ✅ | 12.3 (21E5206e) | |
-| 13 Ventura | ✅ | ✅ | ✅ | 13.0 Beta (22A5266r) | |
+| 13 Ventura        | ✅       | ✅       | ✅  | 13.0 Beta 3 (22A5295h) |                                                       |
 
 
 ### Barebones

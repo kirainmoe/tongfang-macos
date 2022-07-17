@@ -5,7 +5,7 @@
 
 适用于神舟、机械革命等品牌 7/8/9 代同方机型安装 macOS 的 OpenCore 配置文件
 
-<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-13.0%20Beta-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/> <img src="https://img.shields.io/badge/built_by-Bellaris-ff69b4.svg?style=flat-square"/>
+<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-13.0%20Beta%203-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/> <img src="https://img.shields.io/badge/built_by-Bellaris-ff69b4.svg?style=flat-square"/>
 
 <h3>
     <a href="https://www.bilibili.com/video/av81263778">安装视频教程</a> | 
@@ -158,7 +158,7 @@
 
 ### 🍎 兼容的系统
 
-当前配置文件的版本是 `22.6.15`，基于 OpenCore `0.8.2`；兼容的 macOS 系统版本如下表所示：
+当前配置文件的版本是 `22.7.17`，基于 OpenCore `0.8.3`；兼容的 macOS 系统版本如下表所示：
 
 | macOS 版本        | 兼容状态 | 全新安装 | OTA | 已测试最新版本       | 原因                                                  |
 | ----------------- | -------- | -------- | --- | -------------------- | ----------------------------------------------------- |
@@ -167,7 +167,7 @@
 | 10.15 Catalina    | ✅       | ✅       | ✅  | 10.15.7 (19H114)     |                                                       |
 | 11 Big Sur        | ✅       | ✅       | ✅  | 11.6 (20G165)        |                                                       |
 | 12 Monterey       | ✅       | ✅       | ✅  | 12.3 (21E5206e)      |                                                       |
-| 13 Ventura        | ✅       | ✅       | ✅  | 13.0 Beta (22A5266r) |                                                       |
+| 13 Ventura        | ✅       | ✅       | ✅  | 13.0 Beta 3 (22A5295h) |                                                       |
 
 ### 💻 适用的机型
 
