@@ -3,8 +3,8 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "22.6.15"
-efi-build: 357
+efi-version: "22.7.17"
+efi-build: 363
 require-utility-version: "4.1.1"
 require-utility-build: 2206150
 opencore-version: "0.8.2"
