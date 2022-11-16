@@ -3,10 +3,12 @@ author: "kirainmoe"
 link: "https://github.com/kirainmoe/tongfang-macos"
 
 # 📒 EFI 版本信息 (version info)
-efi-version: "22.11.15"
-efi-build: 364
-require-utility-version: "4.1.1"
-require-utility-build: 2206150
+efi-version: "22.11.16"
+efi-build: 366
+require-utility-version: "4.1.3"
+require-utility-build: 2211160
+require-itlwm-driver-version: 2.2.0
+require-intel-bluetooth-driver-version: 2.2.0
 opencore-version: "0.8.6"
 
 # 💻 支持的机型列表 (Supported Laptop Models List)
@@ -540,6 +542,9 @@ build-actions:
             value: false
           - type: "set-kext"
             name: "BlueToolFixup"
+            value: true
+          - type: "set-kext"
+            name: "IntelBTPatcher"
             value: true
   
   # Enable Android tethering support
