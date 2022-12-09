@@ -537,6 +537,9 @@ build-actions:
             value: true
       - test: "['monterey', 'ventura'].includes(config.osVersion)"
         action:
+          - type: "copy-dir"
+            source: "$driverPath/intel-bluetooth/$bluetoothDriverVersion/general/IntelBTPatcher.kext"
+            destination: "$workspace/OC/Kexts/IntelBTPatcher.kext"
           - type: "set-kext"
             name: "IntelBluetoothInjector"
             value: false
