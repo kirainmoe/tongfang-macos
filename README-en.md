@@ -5,7 +5,7 @@
 
 OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generation platform laptops.
 
-<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-13.0%20Beta-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Bellaris-ff69b4.svg?style=flat-square"/>
+<img src="https://github.com/kirainmoe/tongfang-macos/actions/workflows/release.yml/badge.svg"/> <img src="https://img.shields.io/badge/bootloader-OpenCore-lightgrey.svg?style=flat-square&logo=microsoft-edge"/> <img src="https://img.shields.io/badge/support_macOS-13.1-9cf.svg?style=flat-square&logo=apple&logoColor=fff"/>  <img src="https://img.shields.io/badge/built_by-Bellaris-ff69b4.svg?style=flat-square"/>
 
 <h3>
 <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Changelog.md">Changelog</a> | <a href="https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/README.md">简体中文</a>
@@ -29,7 +29,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
   - [What are partially working](#what-are-partially-working)
   - [What are not working](#what-are-not-working)
   - [Unsolved Problems](#unsolved-problems)
-- [Contribute & Support](#contribute--support)
+- [Contribute \& Support](#contribute--support)
 - [License](#license)
 
 # Quick Start
@@ -72,7 +72,7 @@ OpenCore config for "hackintoshing" on Tongfang barebones-based 8th/9th generati
 
 ### macOS version
 
-Current EFI release is `22.7.17`. This release is compatible with the following macOS version:
+Current EFI release is `22.12.9`. This release is compatible with the following macOS version:
 
 | macOS | Compatible | Fresh Install | OTA | Tested version | Notes |
 |-------------|--------|---------------|--------|-----------|------|
@@ -131,7 +131,7 @@ It is recommended to create a USB map for your machine after installation if you
 
 # Current Status
 
-- OpenCore: 0.8.2 (official)
+- OpenCore: 0.8.8 (official)
 - SMBIOS: MacBook Pro 15-inch 2019 (MacBookPro15,3)
 - Dual-Boot of Windows & macOS is supported
 - 4K resolution inner monitor support (only macOS Catalina)
