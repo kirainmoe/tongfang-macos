@@ -355,7 +355,7 @@
 提示：涉及硬件层面的修改请谨慎操作。
 
 - [GJ5CN64 / GI5CN54 模具 PS/2 触摸板优化方案 (by @anhor)](https://ryanhor.com/2020/03/12/how-to-hack-perfect/)
-- [Aptio V BIOS 解锁全功能教程 (by @bswaterb)](http://www.bswaterb.club/?p=218)
+- [Aptio V BIOS 解锁全功能教程 (by @bswaterb)](https://www.bswaterb.cn/2020/02/11/aptio-v-bios%e9%80%9a%e7%94%a8%e4%bf%ae%e6%94%b9%e6%95%99%e7%a8%8b/)
 - [同方机型 EFI 适配不完全指南](https://github.com/kirainmoe/hasee-tongfang-macos/blob/oc-general/Docs/Adapting-Guidance-zh-CN.md)
 - [不刷新 BIOS 的前提下修改 DVMT Pre-allocated](Docs/Unlock-CFG-and-DVMT.md)
 - [其它长期维护机型 EFI 列表](https://github.com/daliansky/hackintosh)
